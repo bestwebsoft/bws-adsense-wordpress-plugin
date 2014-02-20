@@ -2,6 +2,7 @@
 ===============================
 
 Google AdSense Plugin allows setting of ads displaying parameters, such as format (text ad, image, text with an image or as links), size, color of the elements at the ad block, rounded corners and also position of the ad block at the website.
+<img src="http://bestwebsoft.com/wp-content/uploads/2011/12/google-adsense-plugin.jpg" />
 
 <a href="http://bestwebsoft.com/plugin/google-adsense-plugin/#description" target=_blank>Description</a> | 
 <a href="http://bestwebsoft.com/plugin/google-adsense-plugin/#installation" target=_blank>Installation</a> | 
