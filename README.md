@@ -1,9 +1,16 @@
-Google Adsense Wordpress Plugin
+<a href="http://bestwebsoft.com/plugin/google-adsense-plugin/" target=_blank>Google Adsense Wordpress Plugin</a>
 ===============================
 
 Google AdSense Plugin allows setting of ads displaying parameters, such as format (text ad, image, text with an image or as links), size, color of the elements at the ad block, rounded corners and also position of the ad block at the website.
 
-Official plugin page: http://bestwebsoft.com/plugin/google-adsense-plugin/
+<img src="http://bestwebsoft.com/wp-content/uploads/2011/12/google-adsense-plugin.jpg" />
+
+<a href="http://bestwebsoft.com/plugin/google-adsense-plugin/#description" target=_blank>Description</a> | 
+<a href="http://bestwebsoft.com/plugin/google-adsense-plugin/#installation" target=_blank>Installation</a> | 
+<a href="http://bestwebsoft.com/plugin/google-adsense-plugin/#faq" target=_blank>FAQ</a> | 
+<a href="http://bestwebsoft.com/plugin/google-adsense-plugin/#screenshots" target=_blank>Screenshots</a> | 
+<a href="http://bestwebsoft.com/plugin/google-adsense-plugin/#changelog" target=_blank>Changelog</a> | 
+<a href="http://bestwebsoft.com/plugin/google-adsense-plugin/#download" target=_blank>Download</a>
 
 
 Features
