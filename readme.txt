@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
 Tags: google, adsense, ads, bestwebsoft, google adsense, google plugin, adsense plugin, ads plugin, gogle
 Requires at least: 3.0
-Tested up to: 3.8.1
-Stable tag: 1.27
+Tested up to: 3.8.2
+Stable tag: 1.28
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,6 +38,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pl
 * German (de_DE) (thanks to Psyflex)
 * Hebrew (he_IL) (thanks to Ahrale)
 * Indonesian (id_ID) (thanks to <a href="mailto:nasrulhaq81@gmail.com">Nasrulhaq Muiz</a>, www.al-badar.net)
+* Italian (it_IT) (thanks to <a href="mailto:ernesto@scaletti.net">Ernesto Scaletti</a>)
 * Polish (pl_PL) (thanks to Tomasz Łaziuk)
 * Russian (ru_RU)
 * Spanish (es_ES) (thanks to <a href="mailto:mrjosefernando@gmail.com">José Fernando De Leon</a>)
@@ -76,7 +77,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: <a href="http://bestwebsoft.com/wp-content/uploads/manual/wp_plugin/general/System_Status.pdf" target="_blank">System_Status.pdf</a>
+4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instuction on System Status</a>
 
 == Screenshots ==
 
@@ -85,7 +86,13 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Changelog ==
 
-= V1.27 - 07.02.2014 = 
+= V1.28 - 11.04.2014 =
+* Update : BWS plugins section is updated.
+* Update : The Italian language file is added to the plugin.
+* Update : We updated all functionality for wordpress 3.8.2.
+* Bugfix : Plugin optimization is done.
+
+= V1.27 - 07.02.2014 =
 * Update : Screenshots are updated.
 * Update : BWS plugins section is updated.
 * Update : We updated all functionality for wordpress 3.8.1.
@@ -193,6 +200,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Changed : Usability at the settings page of the plugin was improved.
 
 == Upgrade Notice ==
+
+= V1.28 =
+BWS plugins section is updated. The Italian language file is added to the plugin. We updated all functionality for wordpress 3.8.2. Plugin optimization is done.
 
 = V1.27 =
 Screenshots are updated. BWS plugins section is updated. We updated all functionality for wordpress 3.8.1.

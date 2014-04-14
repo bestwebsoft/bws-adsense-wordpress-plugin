@@ -21,7 +21,7 @@ class adsns {
 	/* Show ads after post on a single page */
 	function adsns_end_post_ad( $content ) {
 		global $adsns_count;
-		$this->adsns_donate();  /* Calling a donate function */
+		/*$this->adsns_donate();*/  /* Calling a donate function */
 		if ( ! is_feed() && is_single() && $adsns_count < $this->adsns_options['max_ads'] && $adsns_count < $this->adsns_options['max_homepostads'] ) {  /* Checking if we are on a single page */
 			$content.= '<div id="end_post_ad" class="ads">' . $this->adsns_options['code'] . '</div>';  /* Adding an ad code on page */
 			$this->adsns_options['num_show'] ++;  /* Counting views */
@@ -34,7 +34,7 @@ class adsns {
 	/* Show ads after comment form */
 	function adsns_end_comment_ad() {
 		global $adsns_count;
-		$this->adsns_donate();
+		/*$this->adsns_donate();*/
 		if( ! is_feed() && $adsns_count < $this->adsns_options['max_ads'] && $adsns_count < $this->adsns_options['max_homepostads'] ) {
 			echo '<div id="end_comment_ad" class="ads">' . $this->adsns_options['code'] . '</div>';
 			$this->adsns_options['num_show'] ++;  // Counting views
@@ -47,9 +47,9 @@ class adsns {
 	function adsns_end_home_post_ad( $content ) {
 		global $adsns_count;
 		if ( $adsns_count < $this->adsns_options['max_ads'] && $adsns_count < $this->adsns_options['max_homepostads'] ) {
-			if( ! is_feed() && ( is_home() || is_front_page() ) ) {
+			if ( ! is_feed() && ( is_home() || is_front_page() ) ) {
 		/*	if( ! is_feed() && is_home() ) { */
-				$this->adsns_donate();		/* Calling a donate function */
+				/*$this->adsns_donate();*/		/* Calling a donate function */
 				$content .= '<div class="ads">' . $this->adsns_options['code'] . '</div>';
 				$this->adsns_options['num_show'] ++;  /* Counting views */
 				update_option( 'adsns_settings', $this->adsns_options );
@@ -62,7 +62,7 @@ class adsns {
 	/* Show ads in footer */
 	function adsns_end_footer_ad() {
 		global $adsns_count;
-		$this->adsns_donate();
+		/*$this->adsns_donate();*/
 		if( ! is_feed() && $adsns_count < $this->adsns_options['max_ads'] && $adsns_count < $this->adsns_options['max_homepostads'] ) {
 			echo '<div id="end_footer_ad" class="ads">' . $this->adsns_options['code'] . '</div>';
 			$this->adsns_options['num_show'] ++;  /* Counting views */
@@ -73,6 +73,47 @@ class adsns {
 
 	/* Add 'BWS Plugins' menu at the left side in administer panel */
 	function adsns_add_admin_menu() {
+		global $bstwbsftwppdtplgns_options, $wpmu, $bstwbsftwppdtplgns_added_menu;
+		$bws_menu_version = '1.2.6';
+		$base = plugin_basename( __FILE__ );
+
+		if ( ! isset( $bstwbsftwppdtplgns_options ) ) {
+			if ( 1 == $wpmu ) {
+				if ( ! get_site_option( 'bstwbsftwppdtplgns_options' ) )
+					add_site_option( 'bstwbsftwppdtplgns_options', array(), '', 'yes' );
+				$bstwbsftwppdtplgns_options = get_site_option( 'bstwbsftwppdtplgns_options' );
+			} else {
+				if ( ! get_option( 'bstwbsftwppdtplgns_options' ) )
+					add_option( 'bstwbsftwppdtplgns_options', array(), '', 'yes' );
+				$bstwbsftwppdtplgns_options = get_option( 'bstwbsftwppdtplgns_options' );
+			}
+		}
+
+		if ( isset( $bstwbsftwppdtplgns_options['bws_menu_version'] ) ) {
+			$bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] = $bws_menu_version;
+			unset( $bstwbsftwppdtplgns_options['bws_menu_version'] );
+			update_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options, '', 'yes' );
+			require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
+		} else if ( ! isset( $bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] ) || $bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] < $bws_menu_version ) {
+			$bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] = $bws_menu_version;
+			update_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options, '', 'yes' );
+			require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
+		} else if ( ! isset( $bstwbsftwppdtplgns_added_menu ) ) {
+			$plugin_with_newer_menu = $base;
+			foreach ( $bstwbsftwppdtplgns_options['bws_menu']['version'] as $key => $value ) {
+				if ( $bws_menu_version < $value && is_plugin_active( $base ) ) {
+					$plugin_with_newer_menu = $key;
+				}
+			}
+			$plugin_with_newer_menu = explode( '/', $plugin_with_newer_menu );
+			$wp_content_dir = defined( 'WP_CONTENT_DIR' ) ? basename( WP_CONTENT_DIR ) : 'wp-content';
+			if ( file_exists( ABSPATH . $wp_content_dir . '/plugins/' . $plugin_with_newer_menu[0] . '/bws_menu/bws_menu.php' ) )
+				require_once( ABSPATH . $wp_content_dir . '/plugins/' . $plugin_with_newer_menu[0] . '/bws_menu/bws_menu.php' );
+			else
+				require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
+			$bstwbsftwppdtplgns_added_menu = true;
+		}
+
 		add_menu_page( 'BWS Plugins', 'BWS Plugins', 'manage_options', 'bws_plugins', 'bws_add_menu_render', plugins_url( "images/px.png", __FILE__ ), 1001 );
 		add_submenu_page( 'bws_plugins', __( 'AdSense Settings', 'adsense'), __( 'AdSense', 'adsense' ), 'manage_options', "adsense-plugin.php", array( $this, 'adsns_settings_page' ) );
 	}
@@ -97,45 +138,73 @@ class adsns {
 		return $links;
 	}
 
+	function adsns_plugin_init() {
+		/* Internationalization */
+		load_plugin_textdomain( 'adsense', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+		/* Call register settings function */
+		if ( ! is_admin() || ( isset( $_GET['page'] ) && "adsense-plugin.php" == $_GET['page'] ) )
+			$this->adsns_activate();
+	}
+
+	function adsns_plugin_admin_init() {
+		global $bws_plugin_info, $adsns_plugin_info;
+		
+		if ( ! $adsns_plugin_info )
+			$adsns_plugin_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "adsense-plugin.php" );
+
+		if ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) )
+			$bws_plugin_info = array( 'id' => '80', 'version' => $adsns_plugin_info["Version"] );
+
+		$this->adsns_version_check();
+	}
+
 	/* Creating a default options for showing ads. Starts on plugin activation. */
 	function adsns_activate() {
-		global $wpmu, $adsns_options, $count, $current_count, $adsns_count, $max_ads;
-		$new_options = array(
-			'num_show'			=>	'0',
-			'donate'			=>	'0',
-			'max_ads'			=>	'3',
-			'max_homepostads'	=>	'1',
-			'clientid'			=>	'',
-			'clientid_prefix'	=>	'pub',
-			'donate_id'			=>	'1662250046693311',
-			'adtypeselect'		=>	'text',
-			'donate_width'		=>	'',
-			'donate_height'		=>	'',
-			'default'			=>	'468x60',
-			'image_only'		=>	'',
-			'link_unit'			=>	'',
-			'adtype'			=>	'adunit',
-			'corner_style'		=>	'none',
-			'border'			=>	'#FFFFFF',
-			'title'				=>	'#0000FF',
-			'background'		=>	'#FFFFFF',
-			'text'				=>	'#000000',
-			'url'				=>	'#008000',
-			'pallete'			=>	'Default Google pallete',
-			'position'			=>	'homepostend',
-			'widget_title'		=>	'',
-			'code'				=> '	<script type="text/javascript">
-											google_ad_client	=	"pub-1662250046693311";
-											google_ad_width		=	468;
-											google_ad_height	=	60;
-											google_ad_format	=	"468x60_as";
-											google_ad_type		=	"text";
-											google_color_border	=	"#FFFFFF";
-											google_color_bg		=	"#FFFFFF";
-											google_color_link	=	"#0000FF";
-											google_color_text	=	"#000000";
-											google_color_url	=	"#008000";
-										</script><input type="hidden" value="Version: 1.11" />'
+		global $wpmu, $adsns_options, $count, $current_count, $adsns_count, $max_ads, $adsns_plugin_info;
+
+		if ( ! $adsns_plugin_info ) {
+			if ( ! function_exists( 'get_plugin_data' ) )
+				require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+			$adsns_plugin_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "adsense-plugin.php" );
+		}
+
+		$adsns_options_defaults = array(
+			'plugin_option_version'	=>	$adsns_plugin_info["Version"],
+			'num_show'				=>	'0',
+			'donate'				=>	'0',
+			'max_ads'				=>	'3',
+			'max_homepostads'		=>	'1',
+			'clientid'				=>	'',
+			'clientid_prefix'		=>	'pub',
+			'donate_id'				=>	'1662250046693311',
+			'adtypeselect'			=>	'text',
+			'donate_width'			=>	'',
+			'donate_height'			=>	'',
+			'default'				=>	'468x60',
+			'image_only'			=>	'',
+			'link_unit'				=>	'',
+			'adtype'				=>	'adunit',
+			'corner_style'			=>	'none',
+			'border'				=>	'#FFFFFF',
+			'title'					=>	'#0000FF',
+			'background'			=>	'#FFFFFF',
+			'text'					=>	'#000000',
+			'url'					=>	'#008000',
+			'pallete'				=>	'Default Google pallete',
+			'position'				=>	'homepostend',
+			'widget_title'			=>	'',
+			'code'					=> '	<script type="text/javascript">
+												google_ad_client	=	"pub-1662250046693311";
+												google_ad_width		=	468;
+												google_ad_height	=	60;
+												google_ad_format	=	"468x60_as";
+												google_ad_type		=	"text";
+												google_color_border	=	"#FFFFFF";
+												google_color_bg		=	"#FFFFFF";
+												google_color_link	=	"#0000FF";
+												google_color_text	=	"#000000";
+												google_color_url	=	"#008000";
+											</script><input type="hidden" value="Version: 1.11" />'
 		);
 
 		if ( 1 == $wpmu ) {
@@ -145,20 +214,28 @@ class adsns {
 			if ( ! get_option( 'adsns_settings' ) )
 				add_option( 'adsns_settings', $new_options, '', 'yes' );
 		}
+
 		$count			=	0;	/* Current number of showed ads */
 		$current_count	=	0; 	/* Tmp var for storing a number of already showed ads */
 		$adsns_count	=	0; 	/* Number of posts on home page */
+
 		if ( 1 == $wpmu )
 			$adsns_options = get_site_option( 'adsns_settings' );
 		else
 			$adsns_options = get_option( 'adsns_settings' );
-		$adsns_options = array_merge( $new_options, $adsns_options );
-		update_option( 'adsns_settings', $adsns_options );
+
+		/* Array merge incase this version has added new options */
+		if ( ! isset( $adsns_options['plugin_option_version'] ) || $adsns_options['plugin_option_version'] != $adsns_plugin_info["Version"] ) {
+			$adsns_options = array_merge( $adsns_options_defaults, $adsns_options );
+			$adsns_options['plugin_option_version'] = $adsns_plugin_info["Version"];
+			update_option( 'adsns_settings', $adsns_options );
+		}
+
 		$max_ads = $adsns_options['max_ads']; /* Max number of ads */
 	}
 
 	/* Donate settings */
-	function adsns_donate() {
+	function adsns_donate() {		
 		if ( $this->adsns_options['donate'] > 0 ) {
 			$don = intval( 100/$this->adsns_options['donate'] ); /* Calculating number of donate ads for showing */
 		}
@@ -233,37 +310,27 @@ class adsns {
 
 	/* Function check if plugin is compatible with current WP version  */
 	function adsns_version_check() {
-		global $wp_version, $bws_plugin_info;
-		
-		if ( function_exists( 'get_plugin_data' ) && ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) ) ) {
-			$plugin_info = get_plugin_data(plugin_dir_path(__FILE__) . "adsense-plugin.php" );
-			$bws_plugin_info = array( 'id' => '80', 'version' => $plugin_info["Version"] );
-		};
-		
-		$plugin_data	=	get_plugin_data( plugin_dir_path( __FILE__ ) . "adsense-plugin.php", false );
+		global $wp_version, $adsns_plugin_info;
 		$require_wp		=	"3.0"; /* Wordpress at least requires version */
-		$plugin			=	plugin_basename( __FILE__ );
+		$plugin			=	plugin_basename( plugin_dir_path( __FILE__ ) . "adsense-plugin.php" );
 		if ( version_compare( $wp_version, $require_wp, "<" ) ) {
 			if ( is_plugin_active( $plugin ) ) {
 				deactivate_plugins( $plugin );
-				wp_die( "<strong>" . $plugin_data['Name'] . " </strong> " . __( 'requires', 'adsense' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'adsense') . "<br /><br />" . __( 'Back to the WordPress', 'adsense') . " <a href='" . get_admin_url( null, 'plugins.php' ) . "'>" . __( 'Plugins page', 'adsense') . "</a>." );
+				wp_die( "<strong>" . $adsns_plugin_info['Name'] . " </strong> " . __( 'requires', 'adsense' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'adsense') . "<br /><br />" . __( 'Back to the WordPress', 'adsense') . " <a href='" . get_admin_url( null, 'plugins.php' ) . "'>" . __( 'Plugins page', 'adsense') . "</a>." );
 			}
 		}
 	}
 
 	/* Saving settings */
 	function adsns_settings_page() {
-		/* Run once */
-		if ( ! $adsns_options = get_option( 'adsns_settings' ) ) {
-			$this->adsns_activate();
-		}
+		global $adsns_plugin_info, $adsns_options;
 		echo '
 		<div class="wrap" id="adsns_wrap">
 		<div class="icon32 icon32-bws" id="icon-options-general"></div>
 		<h2>' . $this->page_title . '</h2>';
 		if ( isset( $_REQUEST['adsns_update'] ) && check_admin_referer( plugin_basename(__FILE__), 'adsns_nonce_name' )  ) { /* if click on Save Changes button */
-			if ( strlen( $_REQUEST['client_id'] ) > 0 ) {
-				echo "<div class='updated'><p>".__( "Settings saved", 'adsense' )."</p></div>";
+			if ( 0 < strlen( $_REQUEST['client_id'] ) ) {
+				echo "<div class='updated'><p>" . __( "Settings saved", 'adsense' ) . "</p></div>";
 				if ( 3 <= strlen( trim( $_REQUEST['clientid_prefix'] ) ) && 'pub' == substr( trim( $_REQUEST['clientid_prefix'] ) , -3, 3 ) ) {
 					$this->adsns_options['clientid_prefix'] = $_REQUEST['clientid_prefix'];
 					if ( isset( $_REQUEST['client_id'] ) ) { /* client */
@@ -354,8 +421,8 @@ class adsns {
 						$type = '';
 					}
 
-					$this->adsns_options['donate_width'] = $dimensions[0]; /* Width */
-					$this->adsns_options['donate_height'] = $dimensions[1]; /* Height */
+					$this->adsns_options['donate_width']	=	$dimensions[0]; /* Width */
+					$this->adsns_options['donate_height']	=	$dimensions[1]; /* Height */
 					$don_code = '<script type="text/javascript">
 									google_ad_client	=	"'. $this->adsns_options['clientid_prefix'] . '-' . $this->adsns_options['clientid'] . '";
 									google_ad_width		=	' . $this->adsns_options['donate_width'] . ';
@@ -368,7 +435,7 @@ class adsns {
 									google_color_text	=	"' . $this->adsns_options['text'] . '";
 									google_color_url	=	"' . $this->adsns_options['url'] . '";
 								</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script><input type="hidden" value="Version: 1.11" />';
-					$this->adsns_options['code'] = $don_code;
+					$this->adsns_options['code']					=	$don_code;
 					update_option( 'adsns_settings', $this->adsns_options );
 				} else
 					echo "<div class='error'><p>" . __( "Please enter valid Publisher ID.", 'adsense' ) . "</p></div>";
@@ -381,12 +448,8 @@ class adsns {
 
 	/* Admin interface of plugin */
 	function adsns_view_options_page() {
-		global $wpmu;
+		global $wpmu, $adsns_options;
 		static $sp_nonce_flag = false;
-		if ( 1 == $wpmu )
-			$this->adsns_options = get_site_option( 'adsns_settings' );
-		else
-			$this->adsns_options = get_option( 'adsns_settings' );
 		?>
 		<div id="adsns_settings_notice" class="updated fade" style="display:none"><p><strong><?php _e( "Notice:", 'adsense' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'adsense' ); ?></p></div>
 		<form id="adsns_settings_form" name="option" action="" method="post">
@@ -626,7 +689,7 @@ class adsns {
 					</td>
 				</tr>
 				<tr class="adsns_empty"></tr>
-				<tr class="settings_head_5">
+				<!--<tr class="settings_head_5">
 					<th colspan="2"><?php _e( 'Donations', 'adsense' ); ?></th>
 				</tr>
 				<tr class="settings_body_5">
@@ -649,24 +712,23 @@ class adsns {
 							<div id="ads_generate"></div>
 						</div>
 					</td>
-				</tr>
+				</tr>-->
 				<tr>
-					<td colspan="2">
+					<td colspan="2" class="adsns_save_button">
 						<input type="submit" class="button-primary" name="adsns_update" id="adsns_update" value="<?php _e( 'Save Changes', 'adsense' ) ?>" />
 					</td>
 				</tr>
 			</table>
 				<?php wp_nonce_field( plugin_basename(__FILE__), 'adsns_nonce_name' ); ?>
 		</form>
-		<br />
 		<div class="bws-plugin-reviews">
 			<div class="bws-plugin-reviews-rate">
-			<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'adsense' ); ?>: 
-			<a href="http://wordpress.org/support/view/plugin-reviews/adsense-plugin" target="_blank" title="Google AdSense reviews"><?php _e( 'Rate the plugin', 'adsense' ); ?></a><br/>
+				<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'adsense' ); ?>: 
+				<a href="http://wordpress.org/support/view/plugin-reviews/adsense-plugin" target="_blank" title="Google AdSense reviews"><?php _e( 'Rate the plugin', 'adsense' ); ?></a>
 			</div>
 			<div class="bws-plugin-reviews-support">
-			<?php _e( 'If there is something wrong about it, please contact us', 'adsense' ); ?>: 
-			<a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a>
+				<?php _e( 'If there is something wrong about it, please contact us', 'adsense' ); ?>: 
+				<a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a>
 			</div>
 		</div>
 	<?php
@@ -675,41 +737,16 @@ class adsns {
 	/* Including scripts and stylesheets for admin interface of plugin */
 	public function adsns_write_admin_head() {
 		global $wp_version;
-		if ( $wp_version < 3.8 )
-			wp_enqueue_style( 'adsnsStylesheet', plugins_url( 'css/style_wp_before_3.8.css', __FILE__ ) );	
-		else
-			wp_enqueue_style( 'adsnsStylesheet', plugins_url( 'css/style.css', __FILE__ ) );
-
-		if ( ( is_admin() ) && ( isset( $_GET['page'] ) ) && ( "adsense-plugin.php" == $_GET['page'] ) ) {
+		if ( isset( $_GET['page'] ) && "adsense-plugin.php" == $_GET['page'] ) {
+			if ( $wp_version < 3.8 )
+				wp_enqueue_style( 'adsns_stylesheet', plugins_url( 'css/style_wp_before_3.8.css', __FILE__ ) );	
+			else
+				wp_enqueue_style( 'adsns_stylesheet', plugins_url( 'css/style.css', __FILE__ ) );
 			wp_enqueue_script( 'adsns_admin_script', plugins_url( 'js/admin.js' , __FILE__ ) );
 			wp_enqueue_script( 'adsns_numeric_script', plugins_url( 'js/numeric.js' , __FILE__ ) );
 			wp_enqueue_script( 'adsns_farbtastic_script', plugins_url( 'farbtastic/farbtastic.js' , __FILE__ ) );
-			wp_register_style( 'adsnsFarbtasticStylesheet', plugins_url( 'farbtastic/farbtastic.css' , __FILE__ ) ) ;
-			wp_enqueue_style( 'adsnsFarbtasticStylesheet' );
+			wp_enqueue_style( 'adsns_farbtastic_stylesheet', plugins_url( 'farbtastic/farbtastic.css' , __FILE__ ) ) ;
 		}
-	}
-
-	function adsns_admin_js() {
-		if ( isset( $_GET['page'] ) && "adsense-plugin.php" == $_GET['page'] ) {
-			/* add notice about changing in the settings page */
-			?>
-			<script type="text/javascript">
-				(function($) {
-					$(document).ready( function() {
-						$( '#adsns_settings_form input' ).bind( "change click select", function() {
-							if ( $( this ).attr( 'type' ) != 'submit' ) {
-								$( '.updated.fade' ).css( 'display', 'none' );
-								$( '#adsns_settings_notice' ).css( 'display', 'block' );
-							};
-						});
-						$( '#adsns_settings_form select' ).bind( "change", function() {
-								$( '.updated.fade' ).css( 'display', 'none' );
-								$( '#adsns_settings_notice' ).css( 'display', 'block' );
-						});
-					});
-				})(jQuery);
-			</script>
-		<?php }
 	}
 
 	/* Stylesheets for ads */
@@ -730,21 +767,18 @@ EOF;
 	*@return array()
 	*/
 	function adsns_widget_display() {
-		global $wpmu, $adsns_count;
-		if ( 1 == $wpmu )
-			$this->adsns_options = get_site_option( 'adsns_settings' );
-		else
-			$this->adsns_options = get_option( 'adsns_settings' );
+		global $wpmu, $adsns_count, $adsns_options;
 		$title = $this->adsns_options['widget_title'];
-		echo '<li class="widget-container"><h3 class="widget-title">' . $title . '</h3>';
+		echo '<aside class="widget widget-container adsns_widget"><h1 class="widget-title">' . $title . '</h1>';
 		if ( $adsns_count < $this->adsns_options['max_ads'] ) {
 			$this->adsns_donate();
 			echo '<div class="ads">' . $this->adsns_options['code'] . '</div>';
 			$this->adsns_options['num_show']++;
+			
 			update_option( 'adsns_settings', $this->adsns_options );
 			$adsns_count = $this->adsns_options['num_show'];
 		}
-		echo "</li>";
+		echo "</aside>";
 	}
 
 	/*
@@ -770,7 +804,8 @@ EOF;
 	*@return array
 	*/
 	function adsns_widget_control() {
-		if( isset( $_POST["adsns-widget-submit"] ) ) {
+		global $adsns_options;
+		if ( isset( $_POST["adsns-widget-submit"] ) ) {
 			$this->adsns_options['widget_title'] = strip_tags( stripslashes( $_POST["adsns-widget-title"] ) );
 			update_option( 'adsns_settings', $this->adsns_options );
 		}

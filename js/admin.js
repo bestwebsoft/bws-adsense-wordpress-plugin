@@ -353,3 +353,17 @@ function arrows() {
 		});
 	})(jQuery);
 }
+(function($) {
+	$(document).ready( function() {
+		$( '#adsns_settings_form input' ).bind( "change click select", function() {
+			if ( $( this ).attr( 'type' ) != 'submit' ) {
+				$( '.updated.fade' ).css( 'display', 'none' );
+				$( '#adsns_settings_notice' ).css( 'display', 'block' );
+			};
+		});
+		$( '#adsns_settings_form select' ).bind( "change", function() {
+				$( '.updated.fade' ).css( 'display', 'none' );
+				$( '#adsns_settings_notice' ).css( 'display', 'block' );
+		});
+	});
+})(jQuery);

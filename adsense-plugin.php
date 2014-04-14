@@ -4,7 +4,7 @@ Plugin Name: Google AdSense
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: This plugin allows implementing Google AdSense to your website.
 Author: BestWebSoft
-Version: 1.27
+Version: 1.28
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -26,7 +26,6 @@ License: GPLv2 or later
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
 include_once( 'adsense-plugin.class.php' ); /* Including a class which contains a plugin functions */
 $this_adsns_plugin	=	plugin_basename(__FILE__); /* Path to this file(from plugins dir) */
 $adsns_plugin		=	new adsns(); /* Creating a variable with type of our class */
@@ -58,13 +57,6 @@ if ( ! function_exists ( 'adsns_show_ads' ) ) {
 	}
 }
 
-if ( ! function_exists ( 'adsns_plugin_init' ) ) {
-	function adsns_plugin_init() {
-		/* Internationalization */
-		load_plugin_textdomain( 'adsense', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-	}
-}
-
 /* Function fo uninstall */
 if ( ! function_exists ( 'adsns_uninstall' ) ) {
 	function adsns_uninstall() {
@@ -75,20 +67,17 @@ if ( ! function_exists ( 'adsns_uninstall' ) ) {
 
 /* Activation hook */
 register_activation_hook( __FILE__, array( $adsns_plugin, 'adsns_activate' ) );
-
-add_action( 'init', 'adsns_plugin_init' );
-add_action( 'init', array( $adsns_plugin, 'adsns_activate' ) );
-add_action( 'admin_init', array( $adsns_plugin, 'adsns_write_admin_head' ) );
-add_action( 'admin_init', array( $adsns_plugin, 'adsns_version_check' ) );
+/* Adding 'BWS Plugins' admin menu */
+add_action( 'admin_menu', array( $adsns_plugin, 'adsns_add_admin_menu' ) );
+add_action( 'init', array( $adsns_plugin, 'adsns_plugin_init') );
+add_action( 'admin_init', array( $adsns_plugin, 'adsns_plugin_admin_init') );
+add_action( 'admin_enqueue_scripts', array( $adsns_plugin, 'adsns_write_admin_head' ) );
 /* Action for adsns_show_ads */
 add_action( 'after_setup_theme', 'adsns_show_ads' );
 /* Display the plugin widget */
 add_action( 'widgets_init', array( $adsns_plugin, 'adsns_register_widget' ) );
 /* Adding ads stylesheets */
 add_action( 'wp_head', array( $adsns_plugin, 'adsns_head' ) );
-/* Adding 'BWS Plugins' admin menu */
-add_action( 'admin_menu', array( $adsns_plugin, 'adsns_add_admin_menu' ) );
-add_action( 'admin_head', array( $adsns_plugin, 'adsns_admin_js' ) );
 
 /* Add "Settings" link to the plugin action page */
 add_filter( 'plugin_action_links', array( $adsns_plugin, 'adsns_plugin_action_links'), 10, 2 );
