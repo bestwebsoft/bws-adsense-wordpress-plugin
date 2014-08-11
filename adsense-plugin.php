@@ -4,16 +4,16 @@ Plugin Name: Google AdSense
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: This plugin allows implementing Google AdSense to your website.
 Author: BestWebSoft
-Version: 1.29
+Version: 1.30
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
 
-/*  
+/*
 	© Copyright 2014  BestWebSoft  ( http://support.bestwebsoft.com )
 
     This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License, version 2, as 
+    it under the terms of the GNU General Public License, version 2, as
     published by the Free Software Foundation.
 
     This program is distributed in the hope that it will be useful,

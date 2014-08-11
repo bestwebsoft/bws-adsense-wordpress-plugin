@@ -48,7 +48,6 @@ class adsns {
 		global $adsns_count;
 		if ( $adsns_count < $this->adsns_options['max_ads'] && $adsns_count < $this->adsns_options['max_homepostads'] ) {
 			if ( ! is_feed() && ( is_home() || is_front_page() ) ) {
-		/*	if( ! is_feed() && is_home() ) { */
 				/*$this->adsns_donate();*/		/* Calling a donate function */
 				$content .= '<div class="ads">' . $this->adsns_options['code'] . '</div>';
 				$this->adsns_options['num_show'] ++;  /* Counting views */
@@ -149,7 +148,7 @@ class adsns {
 
 	function adsns_plugin_admin_init() {
 		global $bws_plugin_info, $adsns_plugin_info;
-		
+
 		if ( ! $adsns_plugin_info )
 			$adsns_plugin_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "adsense-plugin.php" );
 
@@ -220,10 +219,7 @@ class adsns {
 		$current_count	=	0; 	/* Tmp var for storing a number of already showed ads */
 		$adsns_count	=	0; 	/* Number of posts on home page */
 
-		if ( 1 == $wpmu )
-			$adsns_options = get_site_option( 'adsns_settings' );
-		else
-			$adsns_options = get_option( 'adsns_settings' );
+		$adsns_options = ( 1 == $wpmu ) ? get_site_option( 'adsns_settings' ) : get_option( 'adsns_settings' );
 
 		/* Array merge incase this version has added new options */
 		if ( ! isset( $adsns_options['plugin_option_version'] ) || $adsns_options['plugin_option_version'] != $adsns_plugin_info["Version"] ) {
@@ -236,11 +232,11 @@ class adsns {
 	}
 
 	/* Donate settings */
-	function adsns_donate() {		
+	function adsns_donate() {
 		if ( $this->adsns_options['donate'] > 0 ) {
 			$don = intval( 100/$this->adsns_options['donate'] ); /* Calculating number of donate ads for showing */
 		}
-		if ( $this->adsns_options['donate'] > 0 && $this->adsns_options['num_show'] % $don == 0) { /* Checking if now showing ad must be a donate ad */
+		if ( $this->adsns_options['donate'] > 0 && $this->adsns_options['num_show'] % $don == 0 ) { /* Checking if now showing ad must be a donate ad */
 			$dimensions = explode( "x", $this->adsns_options['default'] ); /* Calculating dimensions of ad block */
 			$this->adsns_options['donate_width']	=	$dimensions[0]; /* Width */
 			$this->adsns_options['donate_height']	=	$dimensions[1]; /* Height */
@@ -289,6 +285,7 @@ class adsns {
 				$features = '';
 			else
 				$features = 'google_ui_features = "rc:' . $this->adsns_options['corner_style'] . '";';
+			
 			$this->adsns_options['donate_width']	=	$dimensions[0]; /* Width */
 			$this->adsns_options['donate_height']	=	$dimensions[1]; /* Height */
 			$don_code = '<script type="text/javascript">
@@ -333,9 +330,9 @@ class adsns {
 			if ( 0 < strlen( $_REQUEST['client_id'] ) ) {
 				echo "<div class='updated'><p>" . __( "Settings saved", 'adsense' ) . "</p></div>";
 				if ( 3 <= strlen( trim( $_REQUEST['clientid_prefix'] ) ) && 'pub' == substr( trim( $_REQUEST['clientid_prefix'] ) , -3, 3 ) ) {
-					$this->adsns_options['clientid_prefix'] = $_REQUEST['clientid_prefix'];
+					$this->adsns_options['clientid_prefix'] = stripslashes( esc_html( $_REQUEST['clientid_prefix'] ) );
 					if ( isset( $_REQUEST['client_id'] ) ) { /* client */
-						$this->adsns_options['clientid'] = $_REQUEST['client_id'];
+						$this->adsns_options['clientid'] = stripslashes( esc_html( $_REQUEST['client_id'] ) );
 					}
 					if ( isset( $_REQUEST['mycode'] ) ) { /* ad code */
 						$id = stripslashes( $_REQUEST['mycode'] );
@@ -376,19 +373,19 @@ class adsns {
 						$this->adsns_options['pallete'] = $_REQUEST['pallete'];
 					}
 					if ( isset( $_REQUEST['border'] ) ) { /* border */
-						$this->adsns_options['border'] = $_REQUEST['border'];
+						$this->adsns_options['border'] = stripslashes( esc_html( $_REQUEST['border'] ) );
 					}
 					if ( isset( $_REQUEST['title'] ) ) { /* title */
-						$this->adsns_options['title'] = $_REQUEST['title'];
+						$this->adsns_options['title'] = stripslashes( esc_html( $_REQUEST['title'] ) );
 					}
 					if ( isset( $_REQUEST['background'] ) ) { /* background */
-						$this->adsns_options['background'] = $_REQUEST['background'];
+						$this->adsns_options['background'] = stripslashes( esc_html( $_REQUEST['background'] ) );
 					}
 					if ( isset( $_REQUEST['text'] ) ) { /* text */
-						$this->adsns_options['text'] = $_REQUEST['text'];
+						$this->adsns_options['text'] = stripslashes( esc_html( $_REQUEST['text'] ) );
 					}
 					if ( isset( $_REQUEST['url'] ) ) { /* url */
-						$this->adsns_options['url'] = $_REQUEST['url'];
+						$this->adsns_options['url'] = stripslashes( esc_html( $_REQUEST['url'] ) );
 					}
 					if ( isset( $_REQUEST['position'] ) ) { /* position */
 						$this->adsns_options['position'] = $_REQUEST['position'];
@@ -728,11 +725,11 @@ class adsns {
 		</form>
 		<div class="bws-plugin-reviews">
 			<div class="bws-plugin-reviews-rate">
-				<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'adsense' ); ?>: 
+				<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'adsense' ); ?>:
 				<a href="http://wordpress.org/support/view/plugin-reviews/adsense-plugin" target="_blank" title="Google AdSense reviews"><?php _e( 'Rate the plugin', 'adsense' ); ?></a>
 			</div>
 			<div class="bws-plugin-reviews-support">
-				<?php _e( 'If there is something wrong about it, please contact us', 'adsense' ); ?>: 
+				<?php _e( 'If there is something wrong about it, please contact us', 'adsense' ); ?>:
 				<a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a>
 			</div>
 		</div>
@@ -744,7 +741,7 @@ class adsns {
 		global $wp_version;
 		if ( isset( $_GET['page'] ) && "adsense-plugin.php" == $_GET['page'] ) {
 			if ( $wp_version < 3.8 )
-				wp_enqueue_style( 'adsns_stylesheet', plugins_url( 'css/style_wp_before_3.8.css', __FILE__ ) );	
+				wp_enqueue_style( 'adsns_stylesheet', plugins_url( 'css/style_wp_before_3.8.css', __FILE__ ) );
 			else
 				wp_enqueue_style( 'adsns_stylesheet', plugins_url( 'css/style.css', __FILE__ ) );
 			wp_enqueue_script( 'adsns_admin_script', plugins_url( 'js/admin.js' , __FILE__ ) );
@@ -779,7 +776,7 @@ EOF;
 			$this->adsns_donate();
 			echo '<div class="ads">' . $this->adsns_options['code'] . '</div>';
 			$this->adsns_options['num_show']++;
-			
+
 			update_option( 'adsns_settings', $this->adsns_options );
 			$adsns_count = $this->adsns_options['num_show'];
 		}

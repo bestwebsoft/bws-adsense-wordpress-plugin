@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: google, adsense, bestwebsoft, google adsense, google plugin, adsense plugin, ads plugin, gogle, ad, ads, adds, ad banner, ad block, ad color, ads display, ad format, ads in widgets, ad links block, add several adds, ads on website, ad parameters, ad type, advertisements, Google ads, Google AdSense, Google AddSense, Goggle AdSense, Gogle AdSense, image, insert ads, insert ads automatically, insert Google ads, text ads, text and image ads. 
 Requires at least: 3.0
-Tested up to: 3.9.1
-Stable tag: 1.29
+Tested up to: 3.9.2
+Stable tag: 1.30
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ This plugin allows Google AdSense implementation into your website.
 
 == Description ==
 
-Google AdSense Plugin allows you to set parameters of the ads displaying, such as format (text ad, image, text with an image or link), size, color of the elements in the ad block, rounded corners and the ad block position on the website.
+Google AdSense Plugin creates blocks to display ads on your website. It allows to customize the ads displaying, such as format (text ad, image, text with an image or link), size, color of the elements in the ad block, rounded corners and the ad block position on the website. It provides possibility to make ads unique and original.
 
 http://www.youtube.com/watch?v=Z4KUyT4puSo
 
@@ -74,6 +74,18 @@ Go to the Settings page and change the value of the 'Publisher ID' field.
 
 On the plugin settings page open the menu item 'Position & Numbers of Ads' and choose position from the list.
 
+= Ads are not displayed =
+
+1. Please make sure Adblocker (or some other similar extensions that block ads) is disabled in the browser
+2. Please make sure that your theme contains the hooks 'the_content' for the ads displaying. The plugin will not wok without such hooks.
+If you do not know how to do it please install a standard WordPress theme and check if the ads will be displayed or not, if yes it means that there aren't the necessary hooks in your theme.
+3. Probably you did not set up 'google ads' account
+
+= What should i do if the plugin is not displayed in the plugins list or the tab with the settings page is not displayed either? =
+
+If you have an extention in your browser that hides ads (e.g. AdBlock or something like that) - it can hide AdSense displaying on this page, as it is set to search by words like AdSense and similar. 
+Please make sure Adblocker (or some other similar extensions that block ads) is disabled in the browser
+
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
 Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
@@ -88,6 +100,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 2. AdSense Settings page additional settings.
 
 == Changelog ==
+
+= V1.30 - 08.08.2014 =
+* Bugfix : Security Exploit was fixed.
 
 = V1.29 - 13.05.2014 =
 * Update : The Ukrainian language is updated in the plugin.
@@ -208,6 +223,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Changed : Usability at the settings page of the plugin was improved.
 
 == Upgrade Notice ==
+
+= V1.30 =
+Security Exploit was fixed.
 
 = V1.29 =
 The Ukrainian language is updated in the plugin. We updated all functionality for wordpress 3.9.1. Problem with amount of ads on settings page is fixed.
