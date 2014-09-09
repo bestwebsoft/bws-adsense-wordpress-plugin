@@ -3,7 +3,7 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: google, adsense, bestwebsoft, google adsense, google plugin, adsense plugin, ads plugin, gogle, ad, ads, adds, ad banner, ad block, ad color, ads display, ad format, ads in widgets, ad links block, add several adds, ads on website, ad parameters, ad type, advertisements, Google ads, Google AdSense, Google AddSense, Goggle AdSense, Gogle AdSense, image, insert ads, insert ads automatically, insert Google ads, text ads, text and image ads. 
 Requires at least: 3.0
-Tested up to: 3.9.2
+Tested up to: 4.0
 Stable tag: 1.30
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -99,7 +99,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 1. AdSense Settings page main settings.
 2. AdSense Settings page additional settings.
 
-== Changelog ==
+== Changelog == 
 
 = V1.30 - 08.08.2014 =
 * Bugfix : Security Exploit was fixed.
