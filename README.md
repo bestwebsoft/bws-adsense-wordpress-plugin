@@ -5,12 +5,12 @@ Google AdSense Plugin allows setting of ads displaying parameters, such as forma
 
 <img src="http://bestwebsoft.com/wp-content/uploads/2011/12/google-adsense-plugin.jpg" />
 
-<a href="http://bestwebsoft.com/plugin/google-adsense-plugin/#description" target=_blank>Description</a> | 
-<a href="http://bestwebsoft.com/plugin/google-adsense-plugin/#installation" target=_blank>Installation</a> | 
-<a href="http://bestwebsoft.com/plugin/google-adsense-plugin/#faq" target=_blank>FAQ</a> | 
-<a href="http://bestwebsoft.com/plugin/google-adsense-plugin/#screenshots" target=_blank>Screenshots</a> | 
-<a href="http://bestwebsoft.com/plugin/google-adsense-plugin/#changelog" target=_blank>Changelog</a> | 
-<a href="http://bestwebsoft.com/plugin/google-adsense-plugin/#download" target=_blank>Download</a>
+<a href="http://bestwebsoft.com/products/google-adsense/description" target=_blank>Description</a> | 
+<a href="http://bestwebsoft.com/products/google-adsense/installation" target=_blank>Installation</a> | 
+<a href="http://bestwebsoft.com/products/google-adsense/faq" target=_blank>FAQ</a> | 
+<a href="http://bestwebsoft.com/products/google-adsense/screenshots" target=_blank>Screenshots</a> | 
+<a href="http://bestwebsoft.com/products/google-adsense/changelog" target=_blank>Changelog</a> | 
+<a href="http://bestwebsoft.com/products/google-adsense/download" target=_blank>Download</a>
 
 
 Features
