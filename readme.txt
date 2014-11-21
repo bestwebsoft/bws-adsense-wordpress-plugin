@@ -1,4 +1,4 @@
-=== Google AdSense ===
+=== Google AdSense by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: google, adsense, bestwebsoft, google adsense, google plugin, adsense plugin, ads plugin, gogle, ad, ads, adds, ad banner, ad block, ad color, ads display, ad format, ads in widgets, ad links block, add several adds, ads on website, ad parameters, ad type, advertisements, Google ads, Google AdSense, Google AddSense, Goggle AdSense, Gogle AdSense, image, insert ads, insert ads automatically, insert Google ads, text ads, text and image ads. 

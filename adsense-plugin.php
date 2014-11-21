@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Google AdSense
+Plugin Name: Google AdSense by BestWebSoft
 Plugin URI: http://bestwebsoft.com/plugin/
 Description: This plugin allows implementing Google AdSense to your website.
 Author: BestWebSoft
