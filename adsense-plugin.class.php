@@ -141,6 +141,8 @@ class adsns {
 	function adsns_plugin_init() {
 		/* Internationalization */
 		load_plugin_textdomain( 'adsense', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+
+		$this->adsns_version_check();
 		/* Call register settings function */
 		if ( ! is_admin() || ( isset( $_GET['page'] ) && "adsense-plugin.php" == $_GET['page'] ) )
 			$this->adsns_activate();
@@ -153,9 +155,7 @@ class adsns {
 			$adsns_plugin_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "adsense-plugin.php" );
 
 		if ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) )
-			$bws_plugin_info = array( 'id' => '80', 'version' => $adsns_plugin_info["Version"] );
-
-		$this->adsns_version_check();
+			$bws_plugin_info = array( 'id' => '80', 'version' => $adsns_plugin_info["Version"] );		
 	}
 
 	/* Creating a default options for showing ads. Starts on plugin activation. */
@@ -312,9 +312,13 @@ class adsns {
 		$require_wp		=	"3.0"; /* Wordpress at least requires version */
 		$plugin			=	plugin_basename( plugin_dir_path( __FILE__ ) . "adsense-plugin.php" );
 		if ( version_compare( $wp_version, $require_wp, "<" ) ) {
+			include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 			if ( is_plugin_active( $plugin ) ) {
+				$admin_url = ( function_exists( 'get_admin_url' ) ) ? get_admin_url( null, 'plugins.php' ) : esc_url( '/wp-admin/plugins.php' );
+				if ( ! $adsns_plugin_info )
+					$adsns_plugin_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "adsense-plugin.php" );
 				deactivate_plugins( $plugin );
-				wp_die( "<strong>" . $adsns_plugin_info['Name'] . " </strong> " . __( 'requires', 'adsense' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'adsense') . "<br /><br />" . __( 'Back to the WordPress', 'adsense') . " <a href='" . get_admin_url( null, 'plugins.php' ) . "'>" . __( 'Plugins page', 'adsense') . "</a>." );
+				wp_die( "<strong>" . $adsns_plugin_info['Name'] . " </strong> " . __( 'requires', 'adsense' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'adsense') . "<br /><br />" . __( 'Back to the WordPress', 'adsense') . " <a href='" . $admin_url . "'>" . __( 'Plugins page', 'adsense') . "</a>." );
 			}
 		}
 	}
@@ -452,7 +456,7 @@ class adsns {
 		<div id="adsns_settings_notice" class="updated fade" style="display:none"><p><strong><?php _e( "Notice:", 'adsense' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'adsense' ); ?></p></div>
 		<h2 class="nav-tab-wrapper">
 			<a class="nav-tab nav-tab-active" href="admin.php?page=adsense-plugin.php"><?php _e( 'Settings', 'adsense' ); ?></a>
-			<a class="nav-tab" href="http://bestwebsoft.com/plugin/google-adsense-plugin/#faq" target="_blank"><?php _e( 'FAQ', 'adsense' ); ?></a>
+			<a class="nav-tab" href="http://bestwebsoft.com/products/google-adsense/faq" target="_blank"><?php _e( 'FAQ', 'adsense' ); ?></a>
 		</h2>
 		<form id="adsns_settings_form" name="option" action="" method="post">
 			<table id="adsns_main">

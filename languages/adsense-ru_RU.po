@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-12-25 15:18+0300\n"
 "PO-Revision-Date: \n"
-"Last-Translator: \n"
+"Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <support@bestwebsoft.com>\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
@@ -16,15 +16,18 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: adsense-plugin.class.php:77 adsense-plugin.php:33
+#: adsense-plugin.class.php:77
+#: adsense-plugin.php:33
 msgid "AdSense Settings"
 msgstr "Опции AdSense"
 
-#: adsense-plugin.class.php:77 adsense-plugin.php:34
+#: adsense-plugin.class.php:77
+#: adsense-plugin.php:34
 msgid "AdSense"
 msgstr "AdSense"
 
-#: adsense-plugin.class.php:84 adsense-plugin.class.php:93
+#: adsense-plugin.class.php:84
+#: adsense-plugin.class.php:93
 msgid "Settings"
 msgstr "Настройки"
 
@@ -41,12 +44,8 @@ msgid "requires"
 msgstr "требует"
 
 #: adsense-plugin.class.php:243
-msgid ""
-"or higher, that is why it has been deactivated! Please upgrade WordPress and "
-"try again."
-msgstr ""
-"или выше, поэтому он был деактивирован! Пожалуйста обновите WordPress и "
-"попробуйте еще раз."
+msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
+msgstr "или выше, поэтому он был деактивирован! Пожалуйста, обновите WordPress и попробуйте еще раз."
 
 #: adsense-plugin.class.php:243
 msgid "Back to the WordPress"
@@ -73,12 +72,8 @@ msgid "Notice:"
 msgstr "Внимание:"
 
 #: adsense-plugin.class.php:385
-msgid ""
-"The plugin's settings have been changed. In order to save them please don't "
-"forget to click the 'Save Changes' button."
-msgstr ""
-"Настройки плагина были изменены. Для того, чтобы сохранить их, пожалуйста, "
-"не забудьте нажать кнопку \"Сохранить\"."
+msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
+msgstr "Настройки плагина были изменены. Для того, чтобы сохранить их, пожалуйста, не забудьте нажать кнопку \"Сохранить\"."
 
 #: adsense-plugin.class.php:389
 msgid "Network"
@@ -180,7 +175,8 @@ msgstr "Цвета:"
 msgid "Border"
 msgstr "Окантовка"
 
-#: adsense-plugin.class.php:543 adsense-plugin.class.php:774
+#: adsense-plugin.class.php:543
+#: adsense-plugin.class.php:774
 msgid "Title"
 msgstr "Заголовок"
 
@@ -254,8 +250,7 @@ msgstr "Сильно закругленные углы"
 
 #: adsense-plugin.class.php:619
 msgid "Corner style property will help you to make your Ad corners rounded."
-msgstr ""
-"С помощью данного свойства Вы можете закруглить углы Вашего рекламного блока."
+msgstr "С помощью данного свойства Вы можете закруглить углы Вашего рекламного блока."
 
 #: adsense-plugin.class.php:624
 msgid "Donations"
@@ -270,12 +265,8 @@ msgid "Support us by Donating Ad Space."
 msgstr "Поддержите наш проект предоставляя рекламное пространство."
 
 #: adsense-plugin.class.php:634
-msgid ""
-"Please enter a percentage value of the ad slots you are ready to share "
-"[Default: 0%]."
-msgstr ""
-"Введите процент от просмотра рекламы, которым вы можете пожертвовать [По "
-"умолчанию: 0%]."
+msgid "Please enter a percentage value of the ad slots you are ready to share [Default: 0%]."
+msgstr "Введите процент от просмотра рекламы, которым вы можете пожертвовать [По умолчанию: 0%]."
 
 #: adsense-plugin.class.php:649
 msgid "Save Changes"
@@ -292,3 +283,4 @@ msgstr "Оценить плагин"
 #: adsense-plugin.class.php:662
 msgid "If there is something wrong about it, please contact us"
 msgstr "Если у вас есть какие-то вопросы, обращайтесь"
+

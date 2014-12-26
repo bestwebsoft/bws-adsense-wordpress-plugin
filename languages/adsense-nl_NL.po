@@ -2,380 +2,291 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adsense\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-25 15:18+0300\n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2014-12-26 15:37+0300\n"
+"PO-Revision-Date: 2014-12-26 15:37+0300\n"
+"Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Paul Göttgens <paulgottgens@gmail.com>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Loco-Source-Locale: nl_NL\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Generator: Poedit 1.5.4\n"
+"X-Loco-Parser: loco_parse_po\n"
+"X-Loco-Target-Locale: nl_NL\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: adsense-plugin.class.php:77 adsense-plugin.php:33
-#, fuzzy
+#: adsense-plugin.class.php:118
+#: adsense-plugin.php:32
 msgid "AdSense Settings"
-msgstr "AdSense opties"
+msgstr "AdSense instellingen"
 
-#: adsense-plugin.class.php:77 adsense-plugin.php:34
+#: adsense-plugin.class.php:118
+#: adsense-plugin.php:33
 msgid "AdSense"
 msgstr "AdSense"
 
-#: adsense-plugin.class.php:84 adsense-plugin.class.php:93
+#: adsense-plugin.class.php:125
+#: adsense-plugin.class.php:134
+#: adsense-plugin.class.php:454
 msgid "Settings"
 msgstr "Instellingen"
 
-#: adsense-plugin.class.php:94
+#: adsense-plugin.class.php:135
+#: adsense-plugin.class.php:455
 msgid "FAQ"
 msgstr "Veel gestelde vragen"
 
-#: adsense-plugin.class.php:95
+#: adsense-plugin.class.php:136
 msgid "Support"
 msgstr "Ondersteuning"
 
-#: adsense-plugin.class.php:243
+#: adsense-plugin.class.php:317
 msgid "requires"
-msgstr ""
+msgstr "benodigd"
 
-#: adsense-plugin.class.php:243
-msgid ""
-"or higher, that is why it has been deactivated! Please upgrade WordPress and "
-"try again."
-msgstr ""
+#: adsense-plugin.class.php:317
+msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
+msgstr "of hoger, daarom is het gedeactiveerd! Upgrade Wordpress en prbeer het nog een keer."
 
-#: adsense-plugin.class.php:243
+#: adsense-plugin.class.php:317
 msgid "Back to the WordPress"
-msgstr ""
+msgstr "terug naar Wordpress"
 
-#: adsense-plugin.class.php:243
-#, fuzzy
+#: adsense-plugin.class.php:317
 msgid "Plugins page"
-msgstr "Aanbevolen plugins"
+msgstr "Plugins pagina"
 
-#: adsense-plugin.class.php:260
-#, fuzzy
+#: adsense-plugin.class.php:331
 msgid "Settings saved"
-msgstr "Instellingen"
+msgstr "Instellingen opgeslagen"
 
-#: adsense-plugin.class.php:368
-#, fuzzy
+#: adsense-plugin.class.php:439
 msgid "Please enter valid Publisher ID."
-msgstr "Voer je Publisher ID."
+msgstr "Voer je Uitgevers ID in."
 
-#: adsense-plugin.class.php:370
+#: adsense-plugin.class.php:441
 msgid "Please enter your Publisher ID."
 msgstr "Voer je Publisher ID."
 
-#: adsense-plugin.class.php:385
+#: adsense-plugin.class.php:452
 msgid "Notice:"
-msgstr ""
+msgstr "Opmerking:"
 
-#: adsense-plugin.class.php:385
-msgid ""
-"The plugin's settings have been changed. In order to save them please don't "
-"forget to click the 'Save Changes' button."
-msgstr ""
+#: adsense-plugin.class.php:452
+msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
+msgstr "De instellingen van de plugin zijn gewijzigd. Vergeet niet op de knop 'Instellinge opslaan' te klikken om ze op te slaan."
 
-#: adsense-plugin.class.php:389
+#: adsense-plugin.class.php:460
 msgid "Network"
-msgstr "Adsense publisher ID"
+msgstr "Netwerk"
 
-#: adsense-plugin.class.php:392
-#, fuzzy
+#: adsense-plugin.class.php:463
 msgid "Publisher ID:"
 msgstr "Uitgevers-id:"
 
-#: adsense-plugin.class.php:399
-#, fuzzy
+#: adsense-plugin.class.php:470
 msgid "Publisher ID is a unique identifier of"
 msgstr "Uitgevers-id is een unieke identificatie van"
 
-#: adsense-plugin.class.php:399
+#: adsense-plugin.class.php:470
 msgid "your account"
 msgstr "uw account"
 
-#: adsense-plugin.class.php:399
-#, fuzzy
+#: adsense-plugin.class.php:470
 msgid "in Google AdSense."
 msgstr "bij Google AdSense."
 
-#: adsense-plugin.class.php:404
+#: adsense-plugin.class.php:475
 msgid "Ad Type &amp; Format"
 msgstr "Advertentie type &amp; formaat"
 
-#: adsense-plugin.class.php:407
+#: adsense-plugin.class.php:478
 msgid "Type:"
 msgstr "Type:"
 
-#: adsense-plugin.class.php:411
+#: adsense-plugin.class.php:482
 msgid "Ad block"
-msgstr ""
+msgstr "Voeg blok toe"
 
-#: adsense-plugin.class.php:414
+#: adsense-plugin.class.php:485
 msgid "Text and image ads"
 msgstr "Tekst en afbeelding advertenties"
 
-#: adsense-plugin.class.php:415
+#: adsense-plugin.class.php:486
 msgid "Text ads only (default)"
 msgstr "Alleen tekst advertenties"
 
-#: adsense-plugin.class.php:416
+#: adsense-plugin.class.php:487
 msgid "Image ads only"
 msgstr "Alleen afbeelding advertenties"
 
-#: adsense-plugin.class.php:420
+#: adsense-plugin.class.php:491
 msgid "Block of links"
-msgstr ""
+msgstr "Blok met links"
 
-#: adsense-plugin.class.php:424
+#: adsense-plugin.class.php:495
 msgid "Format:"
 msgstr "Formaat:"
 
-#: adsense-plugin.class.php:487
-#, fuzzy
+#: adsense-plugin.class.php:558
 msgid "Position &amp; amount of ads"
 msgstr "Positie &amp; Aantal advertenties"
 
-#: adsense-plugin.class.php:490
+#: adsense-plugin.class.php:561
 msgid "Position:"
 msgstr "Positie:"
 
-#: adsense-plugin.class.php:494
-#, fuzzy
+#: adsense-plugin.class.php:565
 msgid "Below the post (Single post page)"
 msgstr "Tekst na het bericht (Enkele pagina)"
 
-#: adsense-plugin.class.php:495
-#, fuzzy
+#: adsense-plugin.class.php:566
 msgid "Below the post (Home page)"
 msgstr "Tekst na het bericht (Startpagina)"
 
-#: adsense-plugin.class.php:496
-#, fuzzy
+#: adsense-plugin.class.php:567
 msgid "Below the post (Single post page and Home page)"
 msgstr "Tekst na het bericht (Enkele pagina en Startpagina)"
 
-#: adsense-plugin.class.php:497
-#, fuzzy
+#: adsense-plugin.class.php:568
 msgid "Below the comment form"
 msgstr "Onder de reacties"
 
-#: adsense-plugin.class.php:498
-#, fuzzy
+#: adsense-plugin.class.php:569
 msgid "Above the footer"
 msgstr "Voor de voettekst"
 
-#: adsense-plugin.class.php:503
+#: adsense-plugin.class.php:574
 msgid "Number of Ads:"
 msgstr "Aantal advertenties:"
 
-#: adsense-plugin.class.php:512
-#, fuzzy
+#: adsense-plugin.class.php:583
 msgid "Number of ads below the posts on the home page."
 msgstr "Aantal advertenties achter de teksten op uw berichten pagina."
 
-#: adsense-plugin.class.php:517
+#: adsense-plugin.class.php:588
 msgid "Visualisation"
 msgstr "Visualisatie"
 
-#: adsense-plugin.class.php:521
-#, fuzzy
+#: adsense-plugin.class.php:592
 msgid "Colors:"
 msgstr "Kleur:"
 
-#: adsense-plugin.class.php:532
+#: adsense-plugin.class.php:603
 msgid "Border"
 msgstr "Rand"
 
-#: adsense-plugin.class.php:543 adsense-plugin.class.php:774
+#: adsense-plugin.class.php:614
+#: adsense-plugin.class.php:815
 msgid "Title"
 msgstr "Titel"
 
-#: adsense-plugin.class.php:554
+#: adsense-plugin.class.php:625
 msgid "Background"
 msgstr "Achtergrond"
 
-#: adsense-plugin.class.php:565
+#: adsense-plugin.class.php:636
 msgid "Text"
 msgstr "Tekst"
 
-#: adsense-plugin.class.php:576
+#: adsense-plugin.class.php:647
 msgid "URL"
 msgstr "URL"
 
-#: adsense-plugin.class.php:589
+#: adsense-plugin.class.php:660
 msgid "Palette:"
 msgstr "Palet:"
 
-#: adsense-plugin.class.php:593
+#: adsense-plugin.class.php:664
 msgid "Default Google pallete"
 msgstr "Standaard Google palette"
 
-#: adsense-plugin.class.php:596
+#: adsense-plugin.class.php:667
 msgid "Open Air"
 msgstr "Open lucht"
 
-#: adsense-plugin.class.php:597
+#: adsense-plugin.class.php:668
 msgid "Seaside"
 msgstr "Kust"
 
-#: adsense-plugin.class.php:598
+#: adsense-plugin.class.php:669
 msgid "Shadow"
 msgstr "Schaduw"
 
-#: adsense-plugin.class.php:599
+#: adsense-plugin.class.php:670
 msgid "Blue Mix"
 msgstr "Blauwe mix"
 
-#: adsense-plugin.class.php:600
+#: adsense-plugin.class.php:671
 msgid "Ink"
 msgstr "Inkt"
 
-#: adsense-plugin.class.php:601
+#: adsense-plugin.class.php:672
 msgid "Graphite"
 msgstr "Grafiet"
 
-#: adsense-plugin.class.php:605
-#, fuzzy
+#: adsense-plugin.class.php:676
 msgid "These are the standard Google color palettes."
 msgstr "Dit is een standaard Google kleurenpalet."
 
-#: adsense-plugin.class.php:609
+#: adsense-plugin.class.php:680
 msgid "Corner Style:"
 msgstr "Hoek Stijl:"
 
-#: adsense-plugin.class.php:613
-#, fuzzy
+#: adsense-plugin.class.php:684
 msgid "Select a corner style"
 msgstr "Selecteer hoek stijl"
 
-#: adsense-plugin.class.php:614
+#: adsense-plugin.class.php:685
 msgid "Square corners"
 msgstr "Rechte hoeken"
 
-#: adsense-plugin.class.php:615
+#: adsense-plugin.class.php:686
 msgid "Slightly rounded corners"
 msgstr "Licht afgeronde hoeken"
 
-#: adsense-plugin.class.php:616
-#, fuzzy
+#: adsense-plugin.class.php:687
 msgid "Rounded corners"
 msgstr "Sterk afgeronde hoeken"
 
-#: adsense-plugin.class.php:619
-#, fuzzy
+#: adsense-plugin.class.php:690
 msgid "Corner style property will help you to make your Ad corners rounded."
 msgstr "Hoekstijl instelling om afgeronde hoeken te maken."
 
-#: adsense-plugin.class.php:624
-#, fuzzy
+#: adsense-plugin.class.php:695
 msgid "Donations"
 msgstr "Schenken"
 
-#: adsense-plugin.class.php:627
-#, fuzzy
+#: adsense-plugin.class.php:698
 msgid "Donate:"
-msgstr "Schenken"
+msgstr "Schenken:"
 
-#: adsense-plugin.class.php:632
+#: adsense-plugin.class.php:703
 msgid "Support us by Donating Ad Space."
 msgstr "Steun ons door het doneren van Ad Space."
 
-#: adsense-plugin.class.php:634
-#, fuzzy
-msgid ""
-"Please enter a percentage value of the ad slots you are ready to share "
-"[Default: 0%]."
+#: adsense-plugin.class.php:705
+msgid "Please enter a percentage value of the ad slots you are ready to share [Default: 0%]."
 msgstr "Percentage van de advertentie voor de ontwikkelaar [Standaard: 0%]."
 
-#: adsense-plugin.class.php:649
+#: adsense-plugin.class.php:720
 msgid "Save Changes"
 msgstr "Instellingen opslaan"
 
-#: adsense-plugin.class.php:658
+#: adsense-plugin.class.php:728
 msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
-msgstr ""
+msgstr "Geef de plugin 5 sterren in Wordpress als je er plezier aan beleefd"
 
-#: adsense-plugin.class.php:659
-#, fuzzy
+#: adsense-plugin.class.php:729
 msgid "Rate the plugin"
 msgstr "Aanbevolen plugins"
 
-#: adsense-plugin.class.php:662
+#: adsense-plugin.class.php:732
 msgid "If there is something wrong about it, please contact us"
-msgstr ""
+msgstr "Neem met ons contact op als er iets mis mee is"
 
-#~ msgid "Activated plugins"
-#~ msgstr "Geactiveerd plugins"
-
-#~ msgid "Read more"
-#~ msgstr "Lees meer"
-
-#~ msgid "Installed plugins"
-#~ msgstr "Geïnstalleerde plugins"
-
-#~ msgid "Recommended plugins"
-#~ msgstr "Aanbevolen plugins"
-
-#~ msgid "Download"
-#~ msgstr "Download"
-
-#~ msgid "Install %s"
-#~ msgstr "Installeer %s"
-
-#~ msgid "Install now from wordpress.org"
-#~ msgstr "Installeer direct van Wordpress.org"
-
-#, fuzzy
-#~ msgid "Active Plugins"
-#~ msgstr "Geactiveerd plugins"
-
-#, fuzzy
-#~ msgid "Inactive Plugins"
-#~ msgstr "Geactiveerd plugins"
-
-#, fuzzy
-#~ msgid "Send to support"
-#~ msgstr "Ondersteuning"
-
-#, fuzzy
-#~ msgid ""
-#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
-#~ "or fill out the contact form on our website"
-#~ msgstr ""
-#~ "Als u vragen heeft, neem dan contact met ons op via plugin@bestwebsoft."
-#~ "com of door ons contact formulier in te vullen op onze site"
-
-#~ msgid "Options saved."
-#~ msgstr "Opties opgeslagen."
-
-#~ msgid "Ad unit"
-#~ msgstr "Advertentie eenheid"
-
-#~ msgid "Link unit"
-#~ msgstr "Link eenheid"
-
-#~ msgid "Donate us:"
-#~ msgstr "Doneer ons:"
-
-#~ msgid "Install Now"
-#~ msgstr "Nu installeren"
-
-#, fuzzy
-#~ msgid "Publisher  ID is the unique identifer of "
-#~ msgstr "Uitgevers-id is een unieke identifier van"
-
-#, fuzzy
-#~ msgid "Pallete:"
-#~ msgstr "Palet:"
-
-#, fuzzy
-#~ msgid "This is a standart Google color pallete."
-#~ msgstr "Dit is een standart Google kleurenpalet."
-
-#~ msgid "Input percentage of ad slots to share [Default: 5%]."
-#~ msgstr "Input percentage van de advertentie slots te delen [Default: 5%]."

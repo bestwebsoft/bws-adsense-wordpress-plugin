@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: google, adsense, bestwebsoft, google adsense, google plugin, adsense plugin, ads plugin, gogle, ad, ads, adds, ad banner, ad block, ad color, ads display, ad format, ads in widgets, ad links block, add several adds, ads on website, ad parameters, ad type, advertisements, Google ads, Google AdSense, Google AddSense, Goggle AdSense, Gogle AdSense, image, insert ads, insert ads automatically, insert Google ads, text ads, text and image ads. 
 Requires at least: 3.0
-Tested up to: 4.0
-Stable tag: 1.30
+Tested up to: 4.1
+Stable tag: 1.31
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,7 +31,7 @@ http://www.youtube.com/watch?v=Z4KUyT4puSo
 The author of the Google AdSense also recommends the following plugins:
 
 * <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
-There is also a premium version of the plugin <a href="http://bestwebsoft.com/plugin/updater-pro/?k=9bfbc38d14047beca03dbc74f96cc135">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
+There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/updater-pro/?k=9bfbc38d14047beca03dbc74f96cc135">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
 
 = Translation =
 
@@ -45,7 +45,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pl
 * Polish (pl_PL) (thanks to Tomasz Łaziuk)
 * Russian (ru_RU)
 * Spanish (es_ES) (thanks to <a href="mailto:mrjosefernando@gmail.com">José Fernando De Leon</a>)
-* Turkish (tr) (thanks to <a href="mailto:erhankocabuga@gmail.com">Erhan KOCABUGA</a>, www.erhankocabuga.com)
+* Turkish (tr) (thanks to Erhan KOCABUGA, www.erhankocabuga.com)
 * Ukrainian (uk)
 
 If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
@@ -100,6 +100,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 2. AdSense Settings page additional settings.
 
 == Changelog == 
+
+= V1.31 - 26.12.2014 =
+* Update : The Hebrew, Turkish, Dutch and Brazilian Portuguese language files are updated.
 
 = V1.30 - 08.08.2014 =
 * Bugfix : Security Exploit was fixed.
@@ -223,6 +226,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Changed : Usability at the settings page of the plugin was improved.
 
 == Upgrade Notice ==
+
+= V1.31 =
+The Hebrew, Turkish, Dutch and Brazilian Portuguese language files are updated.
 
 = V1.30 =
 Security Exploit was fixed.
