@@ -4,13 +4,13 @@ Plugin Name: Google AdSense by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: This plugin allows implementing Google AdSense to your website.
 Author: BestWebSoft
-Version: 1.31
+Version: 1.32
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
 
 /*
-	© Copyright 2014  BestWebSoft  ( http://support.bestwebsoft.com )
+	© Copyright 2015  BestWebSoft  ( http://support.bestwebsoft.com )
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as
@@ -27,30 +27,26 @@ License: GPLv2 or later
 */
 
 include_once( 'adsense-plugin.class.php' ); /* Including a class which contains a plugin functions */
-$this_adsns_plugin	=	plugin_basename(__FILE__); /* Path to this file(from plugins dir) */
-$adsns_plugin		=	new adsns(); /* Creating a variable with type of our class */
-$adsns_plugin->page_title	=	__( 'AdSense Settings', 'adsense' ); /* Title for options page */
-$adsns_plugin->menu_title	=	__( 'AdSense', 'adsense' ); /* Name in menu */
+$adsns_plugin =	new adsns(); /* Creating a variable with type of our class */
+
 /* This function showing ads at the choosen position */
-if ( ! function_exists ( 'adsns_show_ads' ) ) {
+if ( ! function_exists( 'adsns_show_ads' ) ) {
 	function adsns_show_ads() {
-		global $adsns_options, $max_ads, $count, $current_count, $adsns_count, $adsns_plugin;
+		global $adsns_options, $adsns_plugin;
+		if ( empty( $adsns_plugin ) )
+			return;
 		$adsns_plugin->adsns_activate();
 		/* Checking in what position we should show an ads */
 		if ( 'postend' == $adsns_options['position'] ) { /* If we choose ad position after post(single page) */
 			add_filter( 'the_content', array( $adsns_plugin, 'adsns_end_post_ad' ) ); /* Adding ad after post */
-		}
-		else if ( 'homepostend' == $adsns_options['position'] ) { /* If we choose ad position after post(home page) */
+		} else if ( 'homepostend' == $adsns_options['position'] ) { /* If we choose ad position after post(home page) */
 			add_filter( 'the_content', array( $adsns_plugin, 'adsns_end_home_post_ad' ) ); /* Adding ad after post */
-		}
-		else if ( 'homeandpostend' == $adsns_options['position'] ) { /* If we choose ad position after post(home page) */
+		} else if ( 'homeandpostend' == $adsns_options['position'] ) { /* If we choose ad position after post(home page) */
 			add_filter( 'the_content', array( $adsns_plugin, 'adsns_end_home_post_ad' ) ); /* Adding ad after post */
 			add_filter( 'the_content', array( $adsns_plugin, 'adsns_end_post_ad' ) ); /* Adding ad after post */
-		}
-		else if ( 'commentform' == $adsns_options['position'] ) { /* If we choose ad position after comment form */
+		} else if ( 'commentform' == $adsns_options['position'] ) { /* If we choose ad position after comment form */
 			add_filter( 'comment_id_fields', array( $adsns_plugin, 'adsns_end_comment_ad' ) ); /* Adding ad after comment form */
-		}
-		else if ( 'footer' == $adsns_options['position'] ) { /* If we choose ad position in a footer */
+		} else if ( 'footer' == $adsns_options['position'] ) { /* If we choose ad position in a footer */
 			add_filter( 'get_footer', array( $adsns_plugin, 'adsns_end_footer_ad' ) ); /* Adding footer ad */
 		}
 		/* End checking */
@@ -58,10 +54,9 @@ if ( ! function_exists ( 'adsns_show_ads' ) ) {
 }
 
 /* Function fo uninstall */
-if ( ! function_exists ( 'adsns_uninstall' ) ) {
+if ( ! function_exists( 'adsns_uninstall' ) ) {
 	function adsns_uninstall() {
 		delete_option( 'adsns_settings' );
-		delete_site_option( 'adsns_settings' );
 	}
 }
 

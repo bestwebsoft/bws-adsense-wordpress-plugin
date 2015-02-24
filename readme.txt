@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: google, adsense, bestwebsoft, google adsense, google plugin, adsense plugin, ads plugin, gogle, ad, ads, adds, ad banner, ad block, ad color, ads display, ad format, ads in widgets, ad links block, add several adds, ads on website, ad parameters, ad type, advertisements, Google ads, Google AdSense, Google AddSense, Goggle AdSense, Gogle AdSense, image, insert ads, insert ads automatically, insert Google ads, text ads, text and image ads. 
 Requires at least: 3.0
-Tested up to: 4.1
-Stable tag: 1.31
+Tested up to: 4.1.1
+Stable tag: 1.32
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +100,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 2. AdSense Settings page additional settings.
 
 == Changelog == 
+
+= V1.32 - 24.02.2015 =
+* Update : BWS plugins section is updated.
+* Update : We updated all functionality for wordpress 4.1.1.
 
 = V1.31 - 26.12.2014 =
 * Update : The Hebrew, Turkish, Dutch and Brazilian Portuguese language files are updated.
@@ -226,6 +230,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Changed : Usability at the settings page of the plugin was improved.
 
 == Upgrade Notice ==
+
+= V1.32 =
+BWS plugins section is updated. We updated all functionality for wordpress 4.1.1.
 
 = V1.31 =
 The Hebrew, Turkish, Dutch and Brazilian Portuguese language files are updated.
