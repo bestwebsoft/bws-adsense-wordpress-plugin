@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
 Tags: google, adsense, bestwebsoft, google adsense, google plugin, adsense plugin, ads plugin, gogle, ad, ads, adds, ad banner, ad block, ad color, ads display, ad format, ads in widgets, ad links block, add several adds, ads on website, ad parameters, ad type, advertisements, Google ads, Google AdSense, Google AddSense, Goggle AdSense, Gogle AdSense, image, insert ads, insert ads automatically, insert Google ads, text ads, text and image ads. 
 Requires at least: 3.0
-Tested up to: 4.1.1
-Stable tag: 1.32
+Tested up to: 4.2.1
+Stable tag: 1.33
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,8 @@ This plugin allows Google AdSense implementation into your website.
 Google AdSense Plugin creates blocks to display ads on your website. It allows to customize the ads displaying, such as format (text ad, image, text with an image or link), size, color of the elements in the ad block, rounded corners and the ad block position on the website. It provides possibility to make ads unique and original.
 
 http://www.youtube.com/watch?v=Z4KUyT4puSo
+
+<a href="http://www.youtube.com/watch?v=Nkp267vxZ84" target="_blank">Video instruction on Installation</a>
 
 <a href="http://wordpress.org/plugins/adsense-plugin/faq/" target="_blank">FAQ</a>
 
@@ -64,6 +66,10 @@ We can fix some things for free for the users who provide translation of our plu
 2. Activate the plugin via the 'Plugins' menu in WordPress.
 3. The plugin settings are located in "BWS Plugins"->"AdSense".
 
+<a href="https://docs.google.com/document/d/1P-Jb5oYadIAsJz63wbsppxhOnCX-Z27S3XzE6HNcrbI/edit" target="_blank">View a Step-by-step Instruction on AdSense Installation</a>.
+
+http://www.youtube.com/watch?v=Nkp267vxZ84
+
 == Frequently Asked Questions ==
 
 = How to change Publisher ID =
@@ -100,6 +106,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 2. AdSense Settings page additional settings.
 
 == Changelog == 
+
+= V1.33 - 29.04.2015 =
+* Bugfix : Plugin optimization is done.
+* Update : We updated all functionality for wordpress 4.2.1.
 
 = V1.32 - 24.02.2015 =
 * Update : BWS plugins section is updated.
@@ -230,6 +240,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Changed : Usability at the settings page of the plugin was improved.
 
 == Upgrade Notice ==
+
+= V1.33 =
+Plugin optimization is done. We updated all functionality for wordpress 4.2.1.
 
 = V1.32 =
 BWS plugins section is updated. We updated all functionality for wordpress 4.1.1.

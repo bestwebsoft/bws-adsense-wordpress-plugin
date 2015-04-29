@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adsense\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-26 15:35+0300\n"
+"POT-Creation-Date: 2015-04-29 13:12+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Ahrale, Atar4U.com <contact@atar4u.com>\n"
@@ -25,27 +25,18 @@ msgstr ""
 # add_submenu_page( 'bws_plugins', __( 'AdSense Settings', 'adsense'), __( 'AdSense', 'adsense' ), 'manage_options', "adsense-plugin.php", array( $this, 'adsns_settings_page' ) );
 # }
 # wpml-name: 734c7b024714d1aa5de4ec28da9ac5e4
-#: ../adsense-plugin.class.php:118
-#: ../adsense-plugin.php:32
+#: ../adsense-plugin.class.php:70
+#: ../adsense-plugin.class.php:259
 msgid "AdSense Settings"
 msgstr "הגדרות AdSense"
-
-# add_menu_page( 'BWS Plugins', 'BWS Plugins', 'manage_options', 'bws_plugins', 'bws_add_menu_render', plugins_url( "images/px.png", __FILE__ ), 1001 );
-# add_submenu_page( 'bws_plugins', __( 'AdSense Settings', 'adsense'), __( 'AdSense', 'adsense' ), 'manage_options', "adsense-plugin.php", array( $this, 'adsns_settings_page' ) );
-# }
-# wpml-name: b73464f6099c032d96db776b4c776a85
-#: ../adsense-plugin.class.php:118
-#: ../adsense-plugin.php:33
-msgid "AdSense"
-msgstr "AdSense"
 
 # <h2 class="nav-tab-wrapper">
 # <a class="nav-tab nav-tab-active" href="admin.php?page=adsense-plugin.php"><?php _e( 'Settings', 'adsense' ); ?></a>
 # <a class="nav-tab" href="http://bestwebsoft.com/plugin/google-adsense-plugin/#faq" target="_blank"><?php _e( 'FAQ', 'adsense' ); ?></a>
 # wpml-name: f4f70727dc34561dfde1a3c529b6205c
-#: ../adsense-plugin.class.php:125
-#: ../adsense-plugin.class.php:134
-#: ../adsense-plugin.class.php:454
+#: ../adsense-plugin.class.php:77
+#: ../adsense-plugin.class.php:87
+#: ../adsense-plugin.class.php:370
 msgid "Settings"
 msgstr "הגדרות"
 
@@ -53,8 +44,8 @@ msgstr "הגדרות"
 # <a class="nav-tab" href="http://bestwebsoft.com/plugin/google-adsense-plugin/#faq" target="_blank"><?php _e( 'FAQ', 'adsense' ); ?></a>
 # </h2>
 # wpml-name: 1fe917b01f9a3f87fa2d7d3b7643fac1
-#: ../adsense-plugin.class.php:135
-#: ../adsense-plugin.class.php:455
+#: ../adsense-plugin.class.php:88
+#: ../adsense-plugin.class.php:371
 msgid "FAQ"
 msgstr "שאלות ותשובות"
 
@@ -62,47 +53,15 @@ msgstr "שאלות ותשובות"
 # $links[]	=	'<a href="http://support.bestwebsoft.com">' . __( 'Support', 'adsense' ) . '</a>';
 # }
 # wpml-name: db5eb84117d06047c97c9a0191b5fffe
-#: ../adsense-plugin.class.php:136
+#: ../adsense-plugin.class.php:89
 msgid "Support"
 msgstr "תמיכה"
-
-# deactivate_plugins( $plugin );
-# wp_die( "<strong>" . $adsns_plugin_info['Name'] . " </strong> " . __( 'requires', 'adsense' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'adsense') . "<br /><br />" . __( 'Back to the WordPress', 'adsense') . " <a href='" . get_admin_url( null, 'plugins.php' ) . "'>" . __( 'Plugins page', 'adsense') . "</a>." );
-# }
-# wpml-name: 4862ee9c9b69ca7c7ac6e012cd7665b7
-#: ../adsense-plugin.class.php:317
-msgid "requires"
-msgstr "דורש"
-
-# deactivate_plugins( $plugin );
-# wp_die( "<strong>" . $adsns_plugin_info['Name'] . " </strong> " . __( 'requires', 'adsense' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'adsense') . "<br /><br />" . __( 'Back to the WordPress', 'adsense') . " <a href='" . get_admin_url( null, 'plugins.php' ) . "'>" . __( 'Plugins page', 'adsense') . "</a>." );
-# }
-# wpml-name: 1e421f268151554d769a5eb3b028561d
-#: ../adsense-plugin.class.php:317
-msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
-msgstr "או גבוה יותר, לכן הוא כובה! נא לשדרג את וורדפרס ולנסות שוב."
-
-# deactivate_plugins( $plugin );
-# wp_die( "<strong>" . $adsns_plugin_info['Name'] . " </strong> " . __( 'requires', 'adsense' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'adsense') . "<br /><br />" . __( 'Back to the WordPress', 'adsense') . " <a href='" . get_admin_url( null, 'plugins.php' ) . "'>" . __( 'Plugins page', 'adsense') . "</a>." );
-# }
-# wpml-name: b9ad569e7b0b858eef137d6b8e84f1fd
-#: ../adsense-plugin.class.php:317
-msgid "Back to the WordPress"
-msgstr "חזרה לוורדפרס"
-
-# deactivate_plugins( $plugin );
-# wp_die( "<strong>" . $adsns_plugin_info['Name'] . " </strong> " . __( 'requires', 'adsense' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'adsense') . "<br /><br />" . __( 'Back to the WordPress', 'adsense') . " <a href='" . get_admin_url( null, 'plugins.php' ) . "'>" . __( 'Plugins page', 'adsense') . "</a>." );
-# }
-# wpml-name: 1322131f3c30c72ef8ca5c0ef33ab65e
-#: ../adsense-plugin.class.php:317
-msgid "Plugins page"
-msgstr "עמוד התוספים"
 
 # if ( 0 < strlen( $_REQUEST['client_id'] ) ) {
 # echo "<div class='updated'><p>" . __( "Settings saved", 'adsense' ) . "</p></div>";
 # if ( 3 <= strlen( trim( $_REQUEST['clientid_prefix'] ) ) && 'pub' == substr( trim( $_REQUEST['clientid_prefix'] ) , -3, 3 ) ) {
 # wpml-name: 96d4dadd096605d5813d2c6bdf82e82c
-#: ../adsense-plugin.class.php:331
+#: ../adsense-plugin.class.php:262
 msgid "Settings saved"
 msgstr "ההגדרות נשמרו"
 
@@ -110,7 +69,7 @@ msgstr "ההגדרות נשמרו"
 # echo "<div class='error'><p>" . __( "Please enter valid Publisher ID.", 'adsense' ) . "</p></div>";
 # } else
 # wpml-name: 48397c6117b43113ff07e78c61349b9d
-#: ../adsense-plugin.class.php:439
+#: ../adsense-plugin.class.php:357
 msgid "Please enter valid Publisher ID."
 msgstr "נא להזין Publisher ID תקין."
 
@@ -118,7 +77,7 @@ msgstr "נא להזין Publisher ID תקין."
 # echo "<div class='error'><p>" . __( "Please enter your Publisher ID.", 'adsense' ) . "</p></div>";
 # } /* Click on Save Changes button end */
 # wpml-name: 35832793748f5ba7dc8fc30ab0882bad
-#: ../adsense-plugin.class.php:441
+#: ../adsense-plugin.class.php:359
 msgid "Please enter your Publisher ID."
 msgstr "בבקשה הזן את מזהה המפרסם שלך."
 
@@ -126,7 +85,7 @@ msgstr "בבקשה הזן את מזהה המפרסם שלך."
 # <div id="adsns_settings_notice" class="updated fade" style="display:none"><p><strong><?php _e( "Notice:", 'adsense' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'adsense' ); ?></p></div>
 # <h2 class="nav-tab-wrapper">
 # wpml-name: 893b50b5ba267d0df8d24aa77329f9a7
-#: ../adsense-plugin.class.php:452
+#: ../adsense-plugin.class.php:368
 msgid "Notice:"
 msgstr "הערה:"
 
@@ -134,7 +93,7 @@ msgstr "הערה:"
 # <div id="adsns_settings_notice" class="updated fade" style="display:none"><p><strong><?php _e( "Notice:", 'adsense' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'adsense' ); ?></p></div>
 # <h2 class="nav-tab-wrapper">
 # wpml-name: d005efe8fe73d50929be4490768452bd
-#: ../adsense-plugin.class.php:452
+#: ../adsense-plugin.class.php:368
 msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
 msgstr "הגדרות התוסף שונו. כדי לשמור אותם, נא לא לשכוח ללחוץ על כפתור 'שמירה'."
 
@@ -142,7 +101,7 @@ msgstr "הגדרות התוסף שונו. כדי לשמור אותם, נא לא 
 # <th colspan="2"><?php _e( 'Network', 'adsense' ); ?></th>
 # </tr>
 # wpml-name: eec89088ee408b80387155272b113256
-#: ../adsense-plugin.class.php:460
+#: ../adsense-plugin.class.php:376
 msgid "Network"
 msgstr "רשת"
 
@@ -150,7 +109,7 @@ msgstr "רשת"
 # <td id="network" class="left" ><?php _e( 'Publisher ID:', 'adsense' ); ?></td>
 # <td class="right">
 # wpml-name: 55511ed474fb519dc3572e7e090e21a3
-#: ../adsense-plugin.class.php:463
+#: ../adsense-plugin.class.php:379
 msgid "Publisher ID:"
 msgstr "Publisher ID:"
 
@@ -158,7 +117,7 @@ msgstr "Publisher ID:"
 # <span class="description"><?php _e( 'Publisher ID is a unique identifier of', 'adsense' ); ?> <a target="_blank" href="https://www.google.com/adsense"><?php _e( 'your account', 'adsense' ); ?></a> <?php _e( 'in Google AdSense.', 'adsense' ); ?></span>
 # </td>
 # wpml-name: f0fbf7efc7b76a9392ffd48f479ade1e
-#: ../adsense-plugin.class.php:470
+#: ../adsense-plugin.class.php:386
 msgid "Publisher ID is a unique identifier of"
 msgstr "Publisher ID הוא מספר ייחודי לזיהוי"
 
@@ -166,7 +125,7 @@ msgstr "Publisher ID הוא מספר ייחודי לזיהוי"
 # <span class="description"><?php _e( 'Publisher ID is a unique identifier of', 'adsense' ); ?> <a target="_blank" href="https://www.google.com/adsense"><?php _e( 'your account', 'adsense' ); ?></a> <?php _e( 'in Google AdSense.', 'adsense' ); ?></span>
 # </td>
 # wpml-name: 046bd7ee0d1aa97e71526d5ede9c4fc3
-#: ../adsense-plugin.class.php:470
+#: ../adsense-plugin.class.php:386
 msgid "your account"
 msgstr "החשבון שלך"
 
@@ -174,7 +133,7 @@ msgstr "החשבון שלך"
 # <span class="description"><?php _e( 'Publisher ID is a unique identifier of', 'adsense' ); ?> <a target="_blank" href="https://www.google.com/adsense"><?php _e( 'your account', 'adsense' ); ?></a> <?php _e( 'in Google AdSense.', 'adsense' ); ?></span>
 # </td>
 # wpml-name: dd2609313b715e58587df0de02d9df44
-#: ../adsense-plugin.class.php:470
+#: ../adsense-plugin.class.php:386
 msgid "in Google AdSense."
 msgstr "ב Google AdSense."
 
@@ -182,7 +141,7 @@ msgstr "ב Google AdSense."
 # <th colspan="2"><?php _e( 'Ad Type &amp; Format', 'adsense' ); ?></th>
 # </tr>
 # wpml-name: 1f9e2215ef4f4c93ba37d421ae9577f4
-#: ../adsense-plugin.class.php:475
+#: ../adsense-plugin.class.php:391
 msgid "Ad Type &amp; Format"
 msgstr "סוג ופורמט המודעה"
 
@@ -190,7 +149,7 @@ msgstr "סוג ופורמט המודעה"
 # <td class="left"><?php _e( 'Type:', 'adsense' ); ?></td>
 # <td class="right">
 # wpml-name: e659b52eba1f0299b2d8ca3483919e72
-#: ../adsense-plugin.class.php:478
+#: ../adsense-plugin.class.php:394
 msgid "Type:"
 msgstr "סוג:"
 
@@ -198,7 +157,7 @@ msgstr "סוג:"
 # <label for="ad_type1"><?php _e( 'Ad block', 'adsense' ); ?></label>
 # <input type="hidden" id="adtypesel_val" value="<?php echo $this->adsns_options['adtypeselect'] ?>">
 # wpml-name: 9384efd4e88fa746dee2f6bc2765c564
-#: ../adsense-plugin.class.php:482
+#: ../adsense-plugin.class.php:398
 msgid "Ad block"
 msgstr "תיבת מודעה"
 
@@ -206,7 +165,7 @@ msgstr "תיבת מודעה"
 # <option value="default_image" <?php if ( 'default_image' == $this->adsns_options['adtypeselect'] || 'text_image' == $this->adsns_options['adtypeselect'] ) echo 'selected="selected"'; ?>><?php _e( 'Text and image ads', 'adsense' ); ?></option>
 # <option value="default" <?php if ( 'default' == $this->adsns_options['adtypeselect'] || 'text' == $this->adsns_options['adtypeselect'] ) echo 'selected="selected"'; ?>><?php _e( 'Text ads only (default)', 'adsense' ); ?></option>
 # wpml-name: 98113dada411ecddfeab1302ffab56b6
-#: ../adsense-plugin.class.php:485
+#: ../adsense-plugin.class.php:401
 msgid "Text and image ads"
 msgstr "פרסומות טקסט ותמונה"
 
@@ -214,7 +173,7 @@ msgstr "פרסומות טקסט ותמונה"
 # <option value="default" <?php if ( 'default' == $this->adsns_options['adtypeselect'] || 'text' == $this->adsns_options['adtypeselect'] ) echo 'selected="selected"'; ?>><?php _e( 'Text ads only (default)', 'adsense' ); ?></option>
 # <option value="image_only" <?php if ( 'image_only' == $this->adsns_options['adtypeselect'] || 'image' == $this->adsns_options['adtypeselect'] ) echo 'selected="selected"'; ?>><?php _e( 'Image ads only', 'adsense' ); ?></option>
 # wpml-name: 65d82928fb5ab0c8b404505f8323ad22
-#: ../adsense-plugin.class.php:486
+#: ../adsense-plugin.class.php:402
 msgid "Text ads only (default)"
 msgstr "פרסומת טקסט בלבד (ברירת המחדל)"
 
@@ -222,7 +181,7 @@ msgstr "פרסומת טקסט בלבד (ברירת המחדל)"
 # <option value="image_only" <?php if ( 'image_only' == $this->adsns_options['adtypeselect'] || 'image' == $this->adsns_options['adtypeselect'] ) echo 'selected="selected"'; ?>><?php _e( 'Image ads only', 'adsense' ); ?></option>
 # </select>
 # wpml-name: 4f78db9434639ca07672f574a96109ee
-#: ../adsense-plugin.class.php:487
+#: ../adsense-plugin.class.php:403
 msgid "Image ads only"
 msgstr "פרסומת תמונה בלבד"
 
@@ -230,7 +189,7 @@ msgstr "פרסומת תמונה בלבד"
 # <label for="ad_type2"><?php _e( 'Block of links', 'adsense' ); ?></label>
 # </td>
 # wpml-name: 4edaa3d9dc9a3834c3c2969083819777
-#: ../adsense-plugin.class.php:491
+#: ../adsense-plugin.class.php:407
 msgid "Block of links"
 msgstr "בלוק של קישורים"
 
@@ -238,7 +197,7 @@ msgstr "בלוק של קישורים"
 # <td class="left"><?php _e( 'Format:', 'adsense' ); ?></td>
 # <td class="right">
 # wpml-name: fb2ea703b13d059f6b7ea5da806021df
-#: ../adsense-plugin.class.php:495
+#: ../adsense-plugin.class.php:411
 msgid "Format:"
 msgstr "פורמט:"
 
@@ -246,7 +205,7 @@ msgstr "פורמט:"
 # <th colspan="2"><?php _e( 'Position &amp; amount of ads', 'adsense' ); ?></th>
 # </tr>
 # wpml-name: fd71ce1c8e05d03046015eda0d99b8a5
-#: ../adsense-plugin.class.php:558
+#: ../adsense-plugin.class.php:474
 msgid "Position &amp; amount of ads"
 msgstr "מיקום וכמות הפרסומות"
 
@@ -254,7 +213,7 @@ msgstr "מיקום וכמות הפרסומות"
 # <td class="left"><?php _e( 'Position:', 'adsense' ); ?></td>
 # <td class="right">
 # wpml-name: ec16e90b650301f5d0e870f03a1b8e3c
-#: ../adsense-plugin.class.php:561
+#: ../adsense-plugin.class.php:477
 msgid "Position:"
 msgstr "מיקום:"
 
@@ -262,7 +221,7 @@ msgstr "מיקום:"
 # <option value="postend" <?php if ( 'postend' == $this->adsns_options['position'] ) echo 'selected="selected"'; ?>><?php _e( 'Below the post (Single post page)', 'adsense' ); ?></option>
 # <option value="homepostend" <?php if ( 'homepostend' == $this->adsns_options['position'] ) echo 'selected="selected"'; ?>><?php _e( 'Below the post (Home page)', 'adsense' ); ?></option>
 # wpml-name: a4851f973e61c79da571d80a1f91b92c
-#: ../adsense-plugin.class.php:565
+#: ../adsense-plugin.class.php:481
 msgid "Below the post (Single post page)"
 msgstr "מתחת לפוסט (בדף פוסט יחיד)"
 
@@ -270,7 +229,7 @@ msgstr "מתחת לפוסט (בדף פוסט יחיד)"
 # <option value="homepostend" <?php if ( 'homepostend' == $this->adsns_options['position'] ) echo 'selected="selected"'; ?>><?php _e( 'Below the post (Home page)', 'adsense' ); ?></option>
 # <option value="homeandpostend" <?php if ( 'homeandpostend' == $this->adsns_options['position'] ) echo 'selected="selected"'; ?>><?php _e( 'Below the post (Single post page and Home page)', 'adsense' ); ?></option>
 # wpml-name: ee861899176bb1dfaf2d6459c0ba742a
-#: ../adsense-plugin.class.php:566
+#: ../adsense-plugin.class.php:482
 msgid "Below the post (Home page)"
 msgstr "מתחת לפוסט (בדף הבית)"
 
@@ -278,7 +237,7 @@ msgstr "מתחת לפוסט (בדף הבית)"
 # <option value="homeandpostend" <?php if ( 'homeandpostend' == $this->adsns_options['position'] ) echo 'selected="selected"'; ?>><?php _e( 'Below the post (Single post page and Home page)', 'adsense' ); ?></option>
 # <option value="commentform" <?php if ( 'commentform' == $this->adsns_options['position'] ) echo 'selected="selected"'; ?>><?php _e( 'Below the comment form', 'adsense' ); ?></option>
 # wpml-name: 54cb8e3a7706c24e293b255660a2bb77
-#: ../adsense-plugin.class.php:567
+#: ../adsense-plugin.class.php:483
 msgid "Below the post (Single post page and Home page)"
 msgstr "מתחת לפוסט (בדף פוסט יחיד ובדף הבית)"
 
@@ -286,7 +245,7 @@ msgstr "מתחת לפוסט (בדף פוסט יחיד ובדף הבית)"
 # <option value="commentform" <?php if ( 'commentform' == $this->adsns_options['position'] ) echo 'selected="selected"'; ?>><?php _e( 'Below the comment form', 'adsense' ); ?></option>
 # <option value="footer" <?php if ( 'footer' == $this->adsns_options['position'] ) echo 'selected="selected"'; ?>><?php _e( 'Above the footer', 'adsense' ); ?></option>
 # wpml-name: d7167bd47a455d7a27f55128df21f5c0
-#: ../adsense-plugin.class.php:568
+#: ../adsense-plugin.class.php:484
 msgid "Below the comment form"
 msgstr "מתחת לטופס התגובות"
 
@@ -294,7 +253,7 @@ msgstr "מתחת לטופס התגובות"
 # <option value="footer" <?php if ( 'footer' == $this->adsns_options['position'] ) echo 'selected="selected"'; ?>><?php _e( 'Above the footer', 'adsense' ); ?></option>
 # </select>
 # wpml-name: 094370cdeda1c2b4e797f1527db80215
-#: ../adsense-plugin.class.php:569
+#: ../adsense-plugin.class.php:485
 msgid "Above the footer"
 msgstr "מעל לסרגל התחתון"
 
@@ -302,7 +261,7 @@ msgstr "מעל לסרגל התחתון"
 # <td class="left"><?php _e( 'Number of Ads:', 'adsense' ); ?></td>
 # <td class="right">
 # wpml-name: dc1285dc005c5b99ef4890a1e66e5df9
-#: ../adsense-plugin.class.php:574
+#: ../adsense-plugin.class.php:490
 msgid "Number of Ads:"
 msgstr "מספר הפרסומות:"
 
@@ -310,7 +269,7 @@ msgstr "מספר הפרסומות:"
 # <span class="description"><?php _e( 'Number of ads below the posts on the home page.', 'adsense' ); ?></span>
 # </td>
 # wpml-name: 95b2c06f63294a248b90596b6da2910c
-#: ../adsense-plugin.class.php:583
+#: ../adsense-plugin.class.php:499
 msgid "Number of ads below the posts on the home page."
 msgstr "מספר הפרסומות מתחת לפוסטים בדף הבית."
 
@@ -318,7 +277,7 @@ msgstr "מספר הפרסומות מתחת לפוסטים בדף הבית."
 # <th colspan="2"><?php _e( 'Visualisation', 'adsense' ); ?></th>
 # </tr>
 # wpml-name: cf8615b1133b2d4a59af9c030e66a114
-#: ../adsense-plugin.class.php:588
+#: ../adsense-plugin.class.php:504
 msgid "Visualisation"
 msgstr "ויזואליזציה"
 
@@ -326,7 +285,7 @@ msgstr "ויזואליזציה"
 # <label for="Border" class="left"><?php _e( 'Colors:', 'adsense' ); ?></label>
 # <input type="hidden" id="border_val" value="<?php echo $this->adsns_options['border'] ?>" />
 # wpml-name: 540dd4f8f6af9705ad2ebda751206931
-#: ../adsense-plugin.class.php:592
+#: ../adsense-plugin.class.php:508
 msgid "Colors:"
 msgstr "צבעים:"
 
@@ -334,7 +293,7 @@ msgstr "צבעים:"
 # <label for="Border"><?php _e( 'Border', 'adsense' ); ?>&nbsp;&nbsp;&nbsp;</label>
 # </td>
 # wpml-name: 070554647306343cbea29ebfdd278ba8
-#: ../adsense-plugin.class.php:603
+#: ../adsense-plugin.class.php:519
 msgid "Border"
 msgstr "גבול"
 
@@ -342,8 +301,8 @@ msgstr "גבול"
 # <label for="Title"><?php _e( 'Title', 'adsense' ); ?>&nbsp;&nbsp;&nbsp;</label>
 # </td>
 # wpml-name: b78a3223503896721cca1303f776159b
-#: ../adsense-plugin.class.php:614
-#: ../adsense-plugin.class.php:815
+#: ../adsense-plugin.class.php:530
+#: ../adsense-plugin.class.php:721
 msgid "Title"
 msgstr "כותרת"
 
@@ -351,7 +310,7 @@ msgstr "כותרת"
 # <label for="Background"><?php _e( 'Background', 'adsense' ); ?>&nbsp;&nbsp;&nbsp;</label>
 # </td>
 # wpml-name: a9ded1e5ce5d75814730bb4caaf49419
-#: ../adsense-plugin.class.php:625
+#: ../adsense-plugin.class.php:541
 msgid "Background"
 msgstr "רקע"
 
@@ -359,7 +318,7 @@ msgstr "רקע"
 # <label for="Text"><?php _e( 'Text', 'adsense' ); ?>&nbsp;&nbsp;&nbsp;</label>
 # </td>
 # wpml-name: 9dffbf69ffba8bc38bc4e01abf4b1675
-#: ../adsense-plugin.class.php:636
+#: ../adsense-plugin.class.php:552
 msgid "Text"
 msgstr "טקסט"
 
@@ -367,7 +326,7 @@ msgstr "טקסט"
 # <label for="URL"><?php _e( 'URL', 'adsense' ); ?>&nbsp;&nbsp;&nbsp;</label>
 # </td>
 # wpml-name: e6b391a8d2c4d45902a23a8b6585703d
-#: ../adsense-plugin.class.php:647
+#: ../adsense-plugin.class.php:563
 msgid "URL"
 msgstr "URL"
 
@@ -375,7 +334,7 @@ msgstr "URL"
 # <td class="left"><?php _e( 'Palette:', 'adsense' ); ?></td>
 # <td class="right">
 # wpml-name: bdfc526e25e5c4cb08895a5d89456120
-#: ../adsense-plugin.class.php:660
+#: ../adsense-plugin.class.php:576
 msgid "Palette:"
 msgstr "צבעים:"
 
@@ -383,7 +342,7 @@ msgstr "צבעים:"
 # <option value="Default Google pallete" <?php if( 'Default Google pallete' == $this->adsns_options['pallete'] ) echo 'selected="selected"';?>><?php _e( 'Default Google pallete', 'adsense' ); ?></option>
 # </optgroup>
 # wpml-name: b7485d6d8901e1daf77f3ed82317111c
-#: ../adsense-plugin.class.php:664
+#: ../adsense-plugin.class.php:580
 msgid "Default Google pallete"
 msgstr "צבעי ברירת המחדל של גוגל"
 
@@ -391,7 +350,7 @@ msgstr "צבעי ברירת המחדל של גוגל"
 # <option value="Open Air" <?php if ( 'Open Air' == $this->adsns_options['pallete'] ) echo 'selected="selected"';?>><?php _e( 'Open Air', 'adsense' ); ?></option>
 # <option value="Seaside" <?php if ( 'Seaside' == $this->adsns_options['pallete'] ) echo 'selected="selected"';?>><?php _e( 'Seaside', 'adsense' ); ?></option>
 # wpml-name: fc0161e67daf51c1ebad7166c1d93e24
-#: ../adsense-plugin.class.php:667
+#: ../adsense-plugin.class.php:583
 msgid "Open Air"
 msgstr "אוויר פתוח"
 
@@ -399,7 +358,7 @@ msgstr "אוויר פתוח"
 # <option value="Seaside" <?php if ( 'Seaside' == $this->adsns_options['pallete'] ) echo 'selected="selected"';?>><?php _e( 'Seaside', 'adsense' ); ?></option>
 # <option value="Shadow" <?php if ( 'Shadow' == $this->adsns_options['pallete'] ) echo 'selected="selected"';?>><?php _e( 'Shadow', 'adsense' ); ?></option>
 # wpml-name: b7ef96e933f1cf65df90b57a72f045bc
-#: ../adsense-plugin.class.php:668
+#: ../adsense-plugin.class.php:584
 msgid "Seaside"
 msgstr "חוף הים"
 
@@ -407,7 +366,7 @@ msgstr "חוף הים"
 # <option value="Shadow" <?php if ( 'Shadow' == $this->adsns_options['pallete'] ) echo 'selected="selected"';?>><?php _e( 'Shadow', 'adsense' ); ?></option>
 # <option value="Blue Mix" <?php if ( 'Blue Mix' == $this->adsns_options['pallete'] ) echo 'selected="selected"';?>><?php _e( 'Blue Mix', 'adsense' ); ?></option>
 # wpml-name: 3f39588bb19e28051d9aedfbb170025c
-#: ../adsense-plugin.class.php:669
+#: ../adsense-plugin.class.php:585
 msgid "Shadow"
 msgstr "צל"
 
@@ -415,7 +374,7 @@ msgstr "צל"
 # <option value="Blue Mix" <?php if ( 'Blue Mix' == $this->adsns_options['pallete'] ) echo 'selected="selected"';?>><?php _e( 'Blue Mix', 'adsense' ); ?></option>
 # <option value="Ink" <?php if ( 'Ink' == $this->adsns_options['pallete'] ) echo 'selected="selected"';?>><?php _e( 'Ink', 'adsense' ); ?></option>
 # wpml-name: 52c397fc4599f7906b2161fbbf5921ff
-#: ../adsense-plugin.class.php:670
+#: ../adsense-plugin.class.php:586
 msgid "Blue Mix"
 msgstr "תערובת כחול"
 
@@ -423,7 +382,7 @@ msgstr "תערובת כחול"
 # <option value="Ink" <?php if ( 'Ink' == $this->adsns_options['pallete'] ) echo 'selected="selected"';?>><?php _e( 'Ink', 'adsense' ); ?></option>
 # <option value="Graphite" <?php if ( 'Graphite' == $this->adsns_options['pallete'] ) echo 'selected="selected"';?>><?php _e( 'Graphite', 'adsense' ); ?></option>
 # wpml-name: 2bf0074bb2c7b5812e901258f98f91d3
-#: ../adsense-plugin.class.php:671
+#: ../adsense-plugin.class.php:587
 msgid "Ink"
 msgstr "דיו"
 
@@ -431,7 +390,7 @@ msgstr "דיו"
 # <option value="Graphite" <?php if ( 'Graphite' == $this->adsns_options['pallete'] ) echo 'selected="selected"';?>><?php _e( 'Graphite', 'adsense' ); ?></option>
 # </optgroup>
 # wpml-name: 9e23f5f57a219d77d81a9193c8cc2e2c
-#: ../adsense-plugin.class.php:672
+#: ../adsense-plugin.class.php:588
 msgid "Graphite"
 msgstr "גרפיט"
 
@@ -439,7 +398,7 @@ msgstr "גרפיט"
 # <span class="description"><?php _e( 'These are the standard Google color palettes.', 'adsense' ); ?></span>
 # </td>
 # wpml-name: d2dfa9b5d5a2b2393aac6cc977ee1cf2
-#: ../adsense-plugin.class.php:676
+#: ../adsense-plugin.class.php:592
 msgid "These are the standard Google color palettes."
 msgstr "אלו לוחות הצבעים הסטנדרטיים של גוגל."
 
@@ -447,7 +406,7 @@ msgstr "אלו לוחות הצבעים הסטנדרטיים של גוגל."
 # <td class="left"><?php _e( 'Corner Style:', 'adsense' ); ?></td>
 # <td class="right">
 # wpml-name: 42b8dd1f7e5e685a3e2e07c66e6956c4
-#: ../adsense-plugin.class.php:680
+#: ../adsense-plugin.class.php:596
 msgid "Corner Style:"
 msgstr "עיצוב פינה:"
 
@@ -455,7 +414,7 @@ msgstr "עיצוב פינה:"
 # <option value="none" <?php if ( 'none' == $this->adsns_options['corner_style'] ) echo 'selected="selected"';?>> <?php _e( 'Select a corner style', 'adsense' ); ?> </option>
 # <option value="0" <?php if ( '0' == $this->adsns_options['corner_style'] ) echo 'selected="selected"';?>> <?php _e( 'Square corners', 'adsense' ); ?> </option>
 # wpml-name: a8ffd06a99b80786cfb0cb570320849c
-#: ../adsense-plugin.class.php:684
+#: ../adsense-plugin.class.php:600
 msgid "Select a corner style"
 msgstr "בחר עיצוב פינה מעוגלת"
 
@@ -463,7 +422,7 @@ msgstr "בחר עיצוב פינה מעוגלת"
 # <option value="0" <?php if ( '0' == $this->adsns_options['corner_style'] ) echo 'selected="selected"';?>> <?php _e( 'Square corners', 'adsense' ); ?> </option>
 # <option value="6" <?php if ( '6' == $this->adsns_options['corner_style'] ) echo 'selected="selected"';?>> <?php _e( 'Slightly rounded corners', 'adsense' ); ?> </option>
 # wpml-name: 013c36608557895c86a85084328d6f02
-#: ../adsense-plugin.class.php:685
+#: ../adsense-plugin.class.php:601
 msgid "Square corners"
 msgstr "פינות מרובעות"
 
@@ -471,7 +430,7 @@ msgstr "פינות מרובעות"
 # <option value="6" <?php if ( '6' == $this->adsns_options['corner_style'] ) echo 'selected="selected"';?>> <?php _e( 'Slightly rounded corners', 'adsense' ); ?> </option>
 # <option value="10" <?php if ( '10' == $this->adsns_options['corner_style'] ) echo 'selected="selected"';?>> <?php _e( 'Rounded corners', 'adsense' ); ?> </option>
 # wpml-name: b6c2aaf611d79da3044a3f6f5075c67c
-#: ../adsense-plugin.class.php:686
+#: ../adsense-plugin.class.php:602
 msgid "Slightly rounded corners"
 msgstr "פינות מעוגלות במקצת"
 
@@ -479,7 +438,7 @@ msgstr "פינות מעוגלות במקצת"
 # <option value="10" <?php if ( '10' == $this->adsns_options['corner_style'] ) echo 'selected="selected"';?>> <?php _e( 'Rounded corners', 'adsense' ); ?> </option>
 # </select>
 # wpml-name: 22b4e7bf3118d625243554505037c3d4
-#: ../adsense-plugin.class.php:687
+#: ../adsense-plugin.class.php:603
 msgid "Rounded corners"
 msgstr "פינות מעוגלות"
 
@@ -487,7 +446,7 @@ msgstr "פינות מעוגלות"
 # <span class="description"><?php _e( 'Corner style property will help you to make your Ad corners rounded.', 'adsense' ); ?></span>
 # </td>
 # wpml-name: 1e5f0f81a9a5e8ca4e4cd8973a602d6d
-#: ../adsense-plugin.class.php:690
+#: ../adsense-plugin.class.php:606
 msgid "Corner style property will help you to make your Ad corners rounded."
 msgstr "תכונת עיצוב פינה מעוגלת תסייע לך לעגל את פינות מודעות הפרסומת שלך."
 
@@ -495,7 +454,7 @@ msgstr "תכונת עיצוב פינה מעוגלת תסייע לך לעגל א�
 # <th colspan="2"><?php _e( 'Donations', 'adsense' ); ?></th>
 # </tr>
 # wpml-name: 308f182147c89087faffe07e0177610e
-#: ../adsense-plugin.class.php:695
+#: ../adsense-plugin.class.php:611
 msgid "Donations"
 msgstr "תרומות"
 
@@ -503,7 +462,7 @@ msgstr "תרומות"
 # <td id="donate_menu" class="left"><?php _e( 'Donate:', 'adsense' ); ?></td>
 # <td class="right">
 # wpml-name: e84f9cb6a034bedb7facbe19802ede07
-#: ../adsense-plugin.class.php:698
+#: ../adsense-plugin.class.php:614
 msgid "Donate:"
 msgstr "תרום:"
 
@@ -511,7 +470,7 @@ msgstr "תרום:"
 # <span class="description"><?php _e( 'Support us by Donating Ad Space.', 'adsense' ); ?></span>
 # <br />
 # wpml-name: d90a0e37112cd11b73abdce56efd9078
-#: ../adsense-plugin.class.php:703
+#: ../adsense-plugin.class.php:619
 msgid "Support us by Donating Ad Space."
 msgstr "תמוך בנו על ידי תרומת קוביית פרסום."
 
@@ -519,7 +478,7 @@ msgstr "תמוך בנו על ידי תרומת קוביית פרסום."
 # <span class="description"><?php _e( 'Please enter a percentage value of the ad slots you are ready to share [Default: 0%].', 'adsense' ); ?></span>
 # </td>
 # wpml-name: 21f52498e36a26d01609df8b75bc323d
-#: ../adsense-plugin.class.php:705
+#: ../adsense-plugin.class.php:621
 msgid "Please enter a percentage value of the ad slots you are ready to share [Default: 0%]."
 msgstr "נא להזין ערך באחוזים של מיקומי פרסומות שאתה מוכן לחלוק [ברירת המחדל: 0%]."
 
@@ -527,31 +486,7 @@ msgstr "נא להזין ערך באחוזים של מיקומי פרסומות �
 # <input type="submit" class="button-primary" name="adsns_update" id="adsns_update" value="<?php _e( 'Save Changes', 'adsense' ) ?>" />
 # </td>
 # wpml-name: f5d6040ed78ca86ddc73296a49b18510
-#: ../adsense-plugin.class.php:720
+#: ../adsense-plugin.class.php:636
 msgid "Save Changes"
 msgstr "שמור שינויים"
-
-# <div class="bws-plugin-reviews-rate">
-# <?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'adsense' ); ?>:
-# <a href="http://wordpress.org/support/view/plugin-reviews/adsense-plugin" target="_blank" title="Google AdSense reviews"><?php _e( 'Rate the plugin', 'adsense' ); ?></a>
-# wpml-name: 4800d3302cb39657f77f3f69bebfec1d
-#: ../adsense-plugin.class.php:728
-msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
-msgstr "אם אתה נהנה מן התוסף הזה, אנא תן לנו דירוג של 5 כוכבים בוורדפרס"
-
-# <?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'adsense' ); ?>:
-# <a href="http://wordpress.org/support/view/plugin-reviews/adsense-plugin" target="_blank" title="Google AdSense reviews"><?php _e( 'Rate the plugin', 'adsense' ); ?></a>
-# </div>
-# wpml-name: 6838bbca7fc653a3eab594f92827303a
-#: ../adsense-plugin.class.php:729
-msgid "Rate the plugin"
-msgstr "דרג את התוסף הזה"
-
-# <div class="bws-plugin-reviews-support">
-# <?php _e( 'If there is something wrong about it, please contact us', 'adsense' ); ?>:
-# <a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a>
-# wpml-name: 092a67a5f40aa141eec9c19fea7a2b1e
-#: ../adsense-plugin.class.php:732
-msgid "If there is something wrong about it, please contact us"
-msgstr "אם משהו השתבש, נא ליצור עמנו קשר"
 

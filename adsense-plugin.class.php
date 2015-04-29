@@ -66,64 +66,14 @@ class adsns {
 
 	/* Add 'BWS Plugins' menu at the left side in administer panel */
 	function adsns_add_admin_menu() {
-		global $bstwbsftwppdtplgns_options, $bstwbsftwppdtplgns_added_menu;
-		$bws_menu_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "bws_menu/bws_menu.php" );
-		$bws_menu_version = $bws_menu_info["Version"];
-		$base = plugin_basename( __FILE__ );
-
-		if ( ! isset( $bstwbsftwppdtplgns_options ) ) {
-			if ( is_multisite() ) {
-				if ( ! get_site_option( 'bstwbsftwppdtplgns_options' ) )
-					add_site_option( 'bstwbsftwppdtplgns_options', array() );
-				$bstwbsftwppdtplgns_options = get_site_option( 'bstwbsftwppdtplgns_options' );
-			} else {
-				if ( ! get_option( 'bstwbsftwppdtplgns_options' ) )
-					add_option( 'bstwbsftwppdtplgns_options', array() );
-				$bstwbsftwppdtplgns_options = get_option( 'bstwbsftwppdtplgns_options' );
-			}
-		}
-
-		if ( isset( $bstwbsftwppdtplgns_options['bws_menu_version'] ) ) {
-			$bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] = $bws_menu_version;
-			unset( $bstwbsftwppdtplgns_options['bws_menu_version'] );
-			if ( is_multisite() )
-				update_site_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options );
-			else
-				update_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options );
-			require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
-		} else if ( ! isset( $bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] ) || $bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] < $bws_menu_version ) {
-			$bstwbsftwppdtplgns_options['bws_menu']['version'][ $base ] = $bws_menu_version;
-			if ( is_multisite() )
-				update_site_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options );
-			else
-				update_option( 'bstwbsftwppdtplgns_options', $bstwbsftwppdtplgns_options );
-			require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
-		} else if ( ! isset( $bstwbsftwppdtplgns_added_menu ) ) {
-			$plugin_with_newer_menu = $base;
-			foreach ( $bstwbsftwppdtplgns_options['bws_menu']['version'] as $key => $value ) {
-				if ( $bws_menu_version < $value && is_plugin_active( $base ) ) {
-					$plugin_with_newer_menu = $key;
-				}
-			}
-			$plugin_with_newer_menu = explode( '/', $plugin_with_newer_menu );
-			$wp_content_dir = defined( 'WP_CONTENT_DIR' ) ? basename( WP_CONTENT_DIR ) : 'wp-content';
-			if ( file_exists( ABSPATH . $wp_content_dir . '/plugins/' . $plugin_with_newer_menu[0] . '/bws_menu/bws_menu.php' ) )
-				require_once( ABSPATH . $wp_content_dir . '/plugins/' . $plugin_with_newer_menu[0] . '/bws_menu/bws_menu.php' );
-			else
-				require_once( dirname( __FILE__ ) . '/bws_menu/bws_menu.php' );
-			$bstwbsftwppdtplgns_added_menu = true;
-		}
-		add_menu_page( 'BWS Plugins', 'BWS Plugins', 'manage_options', 'bws_plugins', 'bws_add_menu_render', plugins_url( 'images/px.png', __FILE__ ), 1001 );
+		bws_add_general_menu( 'adsense-plugin/adsense-plugin.php' );
 		add_submenu_page( 'bws_plugins', __( 'AdSense Settings', 'adsense' ), 'AdSense', 'manage_options', "adsense-plugin.php", array( $this, 'adsns_settings_page' ) );
 	}
 
 	/* Add a link for settings page */
 	function adsns_plugin_action_links( $links, $file ) {
 		if ( ! is_network_admin() ) {
-			static $this_plugin;
-			if ( ! $this_plugin )
-				$this_plugin = 'adsense-plugin/adsense-plugin.php';
-			if ( $file == $this_plugin ) {
+			if ( $file == 'adsense-plugin/adsense-plugin.php' ) {
 				$settings_link = '<a href="admin.php?page=adsense-plugin.php">' . __( 'Settings', 'adsense' ) . '</a>';
 				array_unshift( $links, $settings_link );
 			}
@@ -132,10 +82,7 @@ class adsns {
 	}
 
 	function adsns_register_plugin_links( $links, $file ) {
-		static $this_plugin;
-		if ( ! $this_plugin )
-			$this_plugin = 'adsense-plugin/adsense-plugin.php';
-		if ( $file == $this_plugin ) {
+		if ( $file == 'adsense-plugin/adsense-plugin.php' ) {
 			if ( ! is_network_admin() )
 				$links[]	=	'<a href="admin.php?page=adsense-plugin.php">' . __( 'Settings', 'adsense' ) . '</a>';
 			$links[]	=	'<a href="http://wordpress.org/plugins/adsense-plugin/faq/" target="_blank">' . __( 'FAQ', 'adsense' ) . '</a>';
@@ -145,10 +92,21 @@ class adsns {
 	}
 
 	function adsns_plugin_init() {
+		global $adsns_plugin_info;
 		/* Internationalization */
 		load_plugin_textdomain( 'adsense', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
-		$this->adsns_version_check();
+		require_once( dirname( __FILE__ ) . '/bws_menu/bws_functions.php' );
+		
+		if ( empty( $adsns_plugin_info ) ) {
+			if ( ! function_exists( 'get_plugin_data' ) )
+				require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+			$adsns_plugin_info = get_plugin_data( dirname(__FILE__) . '/adsense-plugin.php' );
+		}
+
+		/* Function check if plugin is compatible with current WP version  */
+		bws_wp_version_check( 'adsense-plugin/adsense-plugin.php', $adsns_plugin_info, "3.0" );
+
 		/* Call register settings function */
 		if ( ! is_admin() || ( isset( $_GET['page'] ) && "adsense-plugin.php" == $_GET['page'] ) )
 			$this->adsns_activate();
@@ -157,9 +115,6 @@ class adsns {
 	function adsns_plugin_admin_init() {
 		global $bws_plugin_info, $adsns_plugin_info;
 
-		if ( ! $adsns_plugin_info )
-			$adsns_plugin_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "adsense-plugin.php" );
-
 		if ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) )
 			$bws_plugin_info = array( 'id' => '80', 'version' => $adsns_plugin_info["Version"] );		
 	}
@@ -167,12 +122,6 @@ class adsns {
 	/* Creating a default options for showing ads. Starts on plugin activation. */
 	function adsns_activate() {
 		global $adsns_options, $adsns_count, $adsns_plugin_info;
-
-		if ( ! $adsns_plugin_info ) {
-			if ( ! function_exists( 'get_plugin_data' ) )
-				require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-			$adsns_plugin_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "adsense-plugin.php" );
-		}
 
 		$adsns_options_defaults = array(
 			'plugin_option_version'	=>	$adsns_plugin_info["Version"],
@@ -301,23 +250,6 @@ class adsns {
 		}
 	}
 
-	/* Function check if plugin is compatible with current WP version  */
-	function adsns_version_check() {
-		global $wp_version, $adsns_plugin_info;
-		$require_wp		=	"3.0"; /* Wordpress at least requires version */
-		$plugin			=	plugin_basename( plugin_dir_path( __FILE__ ) . "adsense-plugin.php" );
-		if ( version_compare( $wp_version, $require_wp, "<" ) ) {
-			include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-			if ( is_plugin_active( $plugin ) ) {
-				$admin_url = ( function_exists( 'get_admin_url' ) ) ? get_admin_url( null, 'plugins.php' ) : esc_url( '/wp-admin/plugins.php' );
-				if ( ! $adsns_plugin_info )
-					$adsns_plugin_info = get_plugin_data( plugin_dir_path( __FILE__ ) . "adsense-plugin.php" );
-				deactivate_plugins( $plugin );
-				wp_die( "<strong>" . $adsns_plugin_info['Name'] . " </strong> " . __( 'requires', 'adsense' ) . " <strong>WordPress " . $require_wp . "</strong> " . __( 'or higher, that is why it has been deactivated! Please upgrade WordPress and try again.', 'adsense') . "<br /><br />" . __( 'Back to the WordPress', 'adsense') . " <a href='" . $admin_url . "'>" . __( 'Plugins page', 'adsense') . "</a>." );
-			}
-		}
-	}
-
 	/* Saving settings */
 	function adsns_settings_page() {
 		global $adsns_plugin_info, $adsns_options;
@@ -432,7 +364,7 @@ class adsns {
 
 	/* Admin interface of plugin */
 	function adsns_view_options_page() {
-		global $adsns_options; ?>
+		global $adsns_options, $adsns_plugin_info; ?>
 		<div id="adsns_settings_notice" class="updated fade" style="display:none"><p><strong><?php _e( "Notice:", 'adsense' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'adsense' ); ?></p></div>
 		<h2 class="nav-tab-wrapper">
 			<a class="nav-tab nav-tab-active" href="admin.php?page=adsense-plugin.php"><?php _e( 'Settings', 'adsense' ); ?></a>
@@ -707,17 +639,8 @@ class adsns {
 				</tr>
 			</table>				
 		</form>
-		<div class="bws-plugin-reviews">
-			<div class="bws-plugin-reviews-rate">
-				<?php _e( 'If you enjoy our plugin, please give it 5 stars on WordPress', 'adsense' ); ?>:
-				<a href="http://wordpress.org/support/view/plugin-reviews/adsense-plugin" target="_blank" title="Google AdSense reviews"><?php _e( 'Rate the plugin', 'adsense' ); ?></a>
-			</div>
-			<div class="bws-plugin-reviews-support">
-				<?php _e( 'If there is something wrong about it, please contact us', 'adsense' ); ?>:
-				<a href="http://support.bestwebsoft.com">http://support.bestwebsoft.com</a>
-			</div>
-		</div>
-	<?php }
+		<?php bws_plugin_reviews_block( $adsns_plugin_info['Name'], 'adsense-plugin' );
+	}
 
 	/* Including scripts and stylesheets for admin interface of plugin */
 	public function adsns_write_admin_head() {

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adsense\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-26 15:37+0300\n"
-"PO-Revision-Date: 2014-12-26 15:37+0300\n"
+"POT-Creation-Date: 2015-04-29 13:12+0300\n"
+"PO-Revision-Date: 2015-04-29 13:12+0300\n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: Paul Göttgens <paulgottgens@gmail.com>\n"
 "Language: nl_NL\n"
@@ -20,273 +20,267 @@ msgstr ""
 "X-Loco-Target-Locale: nl_NL\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: adsense-plugin.class.php:118
-#: adsense-plugin.php:32
+#: adsense-plugin.class.php:70
+#: adsense-plugin.class.php:259
 msgid "AdSense Settings"
 msgstr "AdSense instellingen"
 
-#: adsense-plugin.class.php:118
-#: adsense-plugin.php:33
-msgid "AdSense"
-msgstr "AdSense"
-
-#: adsense-plugin.class.php:125
-#: adsense-plugin.class.php:134
-#: adsense-plugin.class.php:454
+#: adsense-plugin.class.php:77
+#: adsense-plugin.class.php:87
+#: adsense-plugin.class.php:370
 msgid "Settings"
 msgstr "Instellingen"
 
-#: adsense-plugin.class.php:135
-#: adsense-plugin.class.php:455
+#: adsense-plugin.class.php:88
+#: adsense-plugin.class.php:371
 msgid "FAQ"
 msgstr "Veel gestelde vragen"
 
-#: adsense-plugin.class.php:136
+#: adsense-plugin.class.php:89
 msgid "Support"
 msgstr "Ondersteuning"
 
-#: adsense-plugin.class.php:317
-msgid "requires"
-msgstr "benodigd"
-
-#: adsense-plugin.class.php:317
-msgid "or higher, that is why it has been deactivated! Please upgrade WordPress and try again."
-msgstr "of hoger, daarom is het gedeactiveerd! Upgrade Wordpress en prbeer het nog een keer."
-
-#: adsense-plugin.class.php:317
-msgid "Back to the WordPress"
-msgstr "terug naar Wordpress"
-
-#: adsense-plugin.class.php:317
-msgid "Plugins page"
-msgstr "Plugins pagina"
-
-#: adsense-plugin.class.php:331
+#: adsense-plugin.class.php:262
 msgid "Settings saved"
 msgstr "Instellingen opgeslagen"
 
-#: adsense-plugin.class.php:439
+#: adsense-plugin.class.php:357
 msgid "Please enter valid Publisher ID."
 msgstr "Voer je Uitgevers ID in."
 
-#: adsense-plugin.class.php:441
+#: adsense-plugin.class.php:359
 msgid "Please enter your Publisher ID."
 msgstr "Voer je Publisher ID."
 
-#: adsense-plugin.class.php:452
+#: adsense-plugin.class.php:368
 msgid "Notice:"
 msgstr "Opmerking:"
 
-#: adsense-plugin.class.php:452
+#: adsense-plugin.class.php:368
 msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
 msgstr "De instellingen van de plugin zijn gewijzigd. Vergeet niet op de knop 'Instellinge opslaan' te klikken om ze op te slaan."
 
-#: adsense-plugin.class.php:460
+#: adsense-plugin.class.php:376
 msgid "Network"
 msgstr "Netwerk"
 
-#: adsense-plugin.class.php:463
+#: adsense-plugin.class.php:379
 msgid "Publisher ID:"
 msgstr "Uitgevers-id:"
 
-#: adsense-plugin.class.php:470
+#: adsense-plugin.class.php:386
 msgid "Publisher ID is a unique identifier of"
 msgstr "Uitgevers-id is een unieke identificatie van"
 
-#: adsense-plugin.class.php:470
+#: adsense-plugin.class.php:386
 msgid "your account"
 msgstr "uw account"
 
-#: adsense-plugin.class.php:470
+#: adsense-plugin.class.php:386
 msgid "in Google AdSense."
 msgstr "bij Google AdSense."
 
-#: adsense-plugin.class.php:475
+#: adsense-plugin.class.php:391
 msgid "Ad Type &amp; Format"
 msgstr "Advertentie type &amp; formaat"
 
-#: adsense-plugin.class.php:478
+#: adsense-plugin.class.php:394
 msgid "Type:"
 msgstr "Type:"
 
-#: adsense-plugin.class.php:482
+#: adsense-plugin.class.php:398
 msgid "Ad block"
 msgstr "Voeg blok toe"
 
-#: adsense-plugin.class.php:485
+#: adsense-plugin.class.php:401
 msgid "Text and image ads"
 msgstr "Tekst en afbeelding advertenties"
 
-#: adsense-plugin.class.php:486
+#: adsense-plugin.class.php:402
 msgid "Text ads only (default)"
 msgstr "Alleen tekst advertenties"
 
-#: adsense-plugin.class.php:487
+#: adsense-plugin.class.php:403
 msgid "Image ads only"
 msgstr "Alleen afbeelding advertenties"
 
-#: adsense-plugin.class.php:491
+#: adsense-plugin.class.php:407
 msgid "Block of links"
 msgstr "Blok met links"
 
-#: adsense-plugin.class.php:495
+#: adsense-plugin.class.php:411
 msgid "Format:"
 msgstr "Formaat:"
 
-#: adsense-plugin.class.php:558
+#: adsense-plugin.class.php:474
 msgid "Position &amp; amount of ads"
 msgstr "Positie &amp; Aantal advertenties"
 
-#: adsense-plugin.class.php:561
+#: adsense-plugin.class.php:477
 msgid "Position:"
 msgstr "Positie:"
 
-#: adsense-plugin.class.php:565
+#: adsense-plugin.class.php:481
 msgid "Below the post (Single post page)"
 msgstr "Tekst na het bericht (Enkele pagina)"
 
-#: adsense-plugin.class.php:566
+#: adsense-plugin.class.php:482
 msgid "Below the post (Home page)"
 msgstr "Tekst na het bericht (Startpagina)"
 
-#: adsense-plugin.class.php:567
+#: adsense-plugin.class.php:483
 msgid "Below the post (Single post page and Home page)"
 msgstr "Tekst na het bericht (Enkele pagina en Startpagina)"
 
-#: adsense-plugin.class.php:568
+#: adsense-plugin.class.php:484
 msgid "Below the comment form"
 msgstr "Onder de reacties"
 
-#: adsense-plugin.class.php:569
+#: adsense-plugin.class.php:485
 msgid "Above the footer"
 msgstr "Voor de voettekst"
 
-#: adsense-plugin.class.php:574
+#: adsense-plugin.class.php:490
 msgid "Number of Ads:"
 msgstr "Aantal advertenties:"
 
-#: adsense-plugin.class.php:583
+#: adsense-plugin.class.php:499
 msgid "Number of ads below the posts on the home page."
 msgstr "Aantal advertenties achter de teksten op uw berichten pagina."
 
-#: adsense-plugin.class.php:588
+#: adsense-plugin.class.php:504
 msgid "Visualisation"
 msgstr "Visualisatie"
 
-#: adsense-plugin.class.php:592
+#: adsense-plugin.class.php:508
 msgid "Colors:"
 msgstr "Kleur:"
 
-#: adsense-plugin.class.php:603
+#: adsense-plugin.class.php:519
 msgid "Border"
 msgstr "Rand"
 
-#: adsense-plugin.class.php:614
-#: adsense-plugin.class.php:815
+#: adsense-plugin.class.php:530
+#: adsense-plugin.class.php:721
 msgid "Title"
 msgstr "Titel"
 
-#: adsense-plugin.class.php:625
+#: adsense-plugin.class.php:541
 msgid "Background"
 msgstr "Achtergrond"
 
-#: adsense-plugin.class.php:636
+#: adsense-plugin.class.php:552
 msgid "Text"
 msgstr "Tekst"
 
-#: adsense-plugin.class.php:647
+#: adsense-plugin.class.php:563
 msgid "URL"
 msgstr "URL"
 
-#: adsense-plugin.class.php:660
+#: adsense-plugin.class.php:576
 msgid "Palette:"
 msgstr "Palet:"
 
-#: adsense-plugin.class.php:664
+#: adsense-plugin.class.php:580
 msgid "Default Google pallete"
 msgstr "Standaard Google palette"
 
-#: adsense-plugin.class.php:667
+#: adsense-plugin.class.php:583
 msgid "Open Air"
 msgstr "Open lucht"
 
-#: adsense-plugin.class.php:668
+#: adsense-plugin.class.php:584
 msgid "Seaside"
 msgstr "Kust"
 
-#: adsense-plugin.class.php:669
+#: adsense-plugin.class.php:585
 msgid "Shadow"
 msgstr "Schaduw"
 
-#: adsense-plugin.class.php:670
+#: adsense-plugin.class.php:586
 msgid "Blue Mix"
 msgstr "Blauwe mix"
 
-#: adsense-plugin.class.php:671
+#: adsense-plugin.class.php:587
 msgid "Ink"
 msgstr "Inkt"
 
-#: adsense-plugin.class.php:672
+#: adsense-plugin.class.php:588
 msgid "Graphite"
 msgstr "Grafiet"
 
-#: adsense-plugin.class.php:676
+#: adsense-plugin.class.php:592
 msgid "These are the standard Google color palettes."
 msgstr "Dit is een standaard Google kleurenpalet."
 
-#: adsense-plugin.class.php:680
+#: adsense-plugin.class.php:596
 msgid "Corner Style:"
 msgstr "Hoek Stijl:"
 
-#: adsense-plugin.class.php:684
+#: adsense-plugin.class.php:600
 msgid "Select a corner style"
 msgstr "Selecteer hoek stijl"
 
-#: adsense-plugin.class.php:685
+#: adsense-plugin.class.php:601
 msgid "Square corners"
 msgstr "Rechte hoeken"
 
-#: adsense-plugin.class.php:686
+#: adsense-plugin.class.php:602
 msgid "Slightly rounded corners"
 msgstr "Licht afgeronde hoeken"
 
-#: adsense-plugin.class.php:687
+#: adsense-plugin.class.php:603
 msgid "Rounded corners"
 msgstr "Sterk afgeronde hoeken"
 
-#: adsense-plugin.class.php:690
+#: adsense-plugin.class.php:606
 msgid "Corner style property will help you to make your Ad corners rounded."
 msgstr "Hoekstijl instelling om afgeronde hoeken te maken."
 
-#: adsense-plugin.class.php:695
+#: adsense-plugin.class.php:611
 msgid "Donations"
 msgstr "Schenken"
 
-#: adsense-plugin.class.php:698
+#: adsense-plugin.class.php:614
 msgid "Donate:"
 msgstr "Schenken:"
 
-#: adsense-plugin.class.php:703
+#: adsense-plugin.class.php:619
 msgid "Support us by Donating Ad Space."
 msgstr "Steun ons door het doneren van Ad Space."
 
-#: adsense-plugin.class.php:705
+#: adsense-plugin.class.php:621
 msgid "Please enter a percentage value of the ad slots you are ready to share [Default: 0%]."
 msgstr "Percentage van de advertentie voor de ontwikkelaar [Standaard: 0%]."
 
-#: adsense-plugin.class.php:720
+#: adsense-plugin.class.php:636
 msgid "Save Changes"
 msgstr "Instellingen opslaan"
 
-#: adsense-plugin.class.php:728
-msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
-msgstr "Geef de plugin 5 sterren in Wordpress als je er plezier aan beleefd"
+#~ msgid "AdSense"
+#~ msgstr "AdSense"
 
-#: adsense-plugin.class.php:729
-msgid "Rate the plugin"
-msgstr "Aanbevolen plugins"
+#~ msgid "requires"
+#~ msgstr "benodigd"
 
-#: adsense-plugin.class.php:732
-msgid "If there is something wrong about it, please contact us"
-msgstr "Neem met ons contact op als er iets mis mee is"
+#~ msgid ""
+#~ "or higher, that is why it has been deactivated! Please upgrade WordPress "
+#~ "and try again."
+#~ msgstr ""
+#~ "of hoger, daarom is het gedeactiveerd! Upgrade Wordpress en prbeer het "
+#~ "nog een keer."
 
+#~ msgid "Back to the WordPress"
+#~ msgstr "terug naar Wordpress"
+
+#~ msgid "Plugins page"
+#~ msgstr "Plugins pagina"
+
+#~ msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
+#~ msgstr "Geef de plugin 5 sterren in Wordpress als je er plezier aan beleefd"
+
+#~ msgid "Rate the plugin"
+#~ msgstr "Aanbevolen plugins"
+
+#~ msgid "If there is something wrong about it, please contact us"
+#~ msgstr "Neem met ons contact op als er iets mis mee is"
