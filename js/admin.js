@@ -51,7 +51,7 @@
 			}
 		});
 
-		ad_script = '<script type="text/javascript"	src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>'
+		ad_script = '<script type="text/javascript"	src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script>'
 		if ($('#adtypesel_val').val() == 'image_only') {
 			$('#def').css("visibility", "hidden");
 			$('#img_only').css("visibility", "visible");
@@ -355,7 +355,7 @@ function arrows() {
 }
 (function($) {
 	$(document).ready( function() {
-		$( '#adsns_settings_form input' ).bind( "change click select", function() {
+		$( '#adsns_settings_form input' ).not( '#adsns_authorization_code' ).bind( "change click select", function() {
 			if ( $( this ).attr( 'type' ) != 'submit' ) {
 				$( '.updated.fade' ).css( 'display', 'none' );
 				$( '#adsns_settings_notice' ).css( 'display', 'block' );

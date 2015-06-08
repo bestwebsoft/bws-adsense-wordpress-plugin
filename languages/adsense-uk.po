@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adsense\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-29 13:18+0300\n"
+"POT-Creation-Date: 2015-06-08 15:33+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <support@bestwebsoft.com>\n"
@@ -17,241 +17,307 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: adsense-plugin.class.php:70
-#: adsense-plugin.class.php:259
+#: adsense-plugin.class.php:277
 msgid "AdSense Settings"
-msgstr "Установки AdSense"
+msgstr "Налаштування AdSense"
 
 #: adsense-plugin.class.php:77
 #: adsense-plugin.class.php:87
-#: adsense-plugin.class.php:370
+#: adsense-plugin.class.php:279
 msgid "Settings"
-msgstr "Установки"
+msgstr "Налаштування"
 
 #: adsense-plugin.class.php:88
-#: adsense-plugin.class.php:371
+#: adsense-plugin.class.php:280
 msgid "FAQ"
 msgstr "FAQ"
 
 #: adsense-plugin.class.php:89
 msgid "Support"
-msgstr "Підтримка"
+msgstr "Техпідтримка"
 
-#: adsense-plugin.class.php:262
+#: adsense-plugin.class.php:284
 msgid "Settings saved"
-msgstr "Установки збережено"
+msgstr "Налаштування збережено"
 
-#: adsense-plugin.class.php:357
+#: adsense-plugin.class.php:379
 msgid "Please enter valid Publisher ID."
-msgstr "Будь ласка, заповніть ваш Publisher ID."
+msgstr "Будь ласка, введіть вірний ID видавця."
 
-#: adsense-plugin.class.php:359
+#: adsense-plugin.class.php:381
 msgid "Please enter your Publisher ID."
-msgstr "Будь ласка, заповніть ваш Publisher ID."
+msgstr "Будь ласка, введіть ваш ID видавця."
 
-#: adsense-plugin.class.php:368
+#: adsense-plugin.class.php:424
+msgid "Success:"
+msgstr "Успішно:"
+
+#: adsense-plugin.class.php:425
+#, php-format
+msgid "Your publisher ID: %s."
+msgstr "Ваш ID видавця: %s."
+
+#: adsense-plugin.class.php:426
+msgid "Publisher ID is inserted successfully."
+msgstr "ID видавця введено вірно"
+
+#: adsense-plugin.class.php:433
+#: adsense-plugin.class.php:444
+msgid "Error:"
+msgstr "Помилка:"
+
+#: adsense-plugin.class.php:434
+msgid "Unable to get Publisher ID."
+msgstr "Не вдалося отримати ID видавця"
+
+#: adsense-plugin.class.php:435
+#, php-format
+msgid "You can find your Publisher ID in %s"
+msgstr "Ви можете знайти  ваш ID видавця в %s"
+
+#: adsense-plugin.class.php:446
+#, php-format
+msgid "Create account in %s"
+msgstr "Створити акаунт у  %s"
+
+#: adsense-plugin.class.php:454
+msgid "Invalid authorization code. Please, try again."
+msgstr "Невірний код авторизації"
+
+#: adsense-plugin.class.php:460
 msgid "Notice:"
 msgstr "Зауважте:"
 
-#: adsense-plugin.class.php:368
+#: adsense-plugin.class.php:460
 msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
-msgstr "Налаштування плагіну змінено. Будь ласка, натисніть кнопку \"Зберегти\", щоб зберегти зміни."
+msgstr "Налаштування плагіну змінено. Будь ласка, клікніть \"Зберегти\", щоб зберегти зміни."
 
-#: adsense-plugin.class.php:376
+#: adsense-plugin.class.php:464
 msgid "Network"
 msgstr "Мережа"
 
-#: adsense-plugin.class.php:379
-msgid "Publisher ID:"
-msgstr "Publisher ID:"
+#: adsense-plugin.class.php:468
+msgid "Get remote your Publisher ID:"
+msgstr "Отримати ID видавця віддалено:"
 
-#: adsense-plugin.class.php:386
+#: adsense-plugin.class.php:474
+msgid "Get Publisher ID"
+msgstr "Отримати ID видавця:"
+
+#: adsense-plugin.class.php:475
+msgid "Log out from Google AdSense"
+msgstr "Вийти з акаунту Google AdSense"
+
+#: adsense-plugin.class.php:483
+msgid "Please authorize via your Google Account."
+msgstr "Будь ласка, авторизуйтесь у своєму акаунті Google"
+
+#: adsense-plugin.class.php:485
+msgid "Get Authorization Code"
+msgstr "Отримати код авторизації"
+
+#: adsense-plugin.class.php:488
+msgid "Authorize"
+msgstr "Авторизуватись"
+
+#: adsense-plugin.class.php:495
+msgid "Specify manually your Publisher ID:"
+msgstr "Ввести ID видавця вручну:"
+
+#: adsense-plugin.class.php:502
 msgid "Publisher ID is a unique identifier of"
-msgstr "Publisher ID є унікальним номером"
+msgstr "ID видавця - це унікальний номер"
 
-#: adsense-plugin.class.php:386
+#: adsense-plugin.class.php:502
 msgid "your account"
 msgstr "вашого акаунту"
 
-#: adsense-plugin.class.php:386
+#: adsense-plugin.class.php:502
 msgid "in Google AdSense."
 msgstr "в Google AdSense."
 
-#: adsense-plugin.class.php:391
+#: adsense-plugin.class.php:507
 msgid "Ad Type &amp; Format"
 msgstr "Тип та формат рекламних блоків"
 
-#: adsense-plugin.class.php:394
+#: adsense-plugin.class.php:510
 msgid "Type:"
 msgstr "Тип:"
 
-#: adsense-plugin.class.php:398
+#: adsense-plugin.class.php:514
 msgid "Ad block"
 msgstr "Блок реклами"
 
-#: adsense-plugin.class.php:401
+#: adsense-plugin.class.php:517
 msgid "Text and image ads"
 msgstr "Текстова та візуальна реклама"
 
-#: adsense-plugin.class.php:402
+#: adsense-plugin.class.php:518
 msgid "Text ads only (default)"
-msgstr "Тільки текстова реклама (стандартна установка)"
+msgstr "Тільки текстова реклама (за замовчуванням)"
 
-#: adsense-plugin.class.php:403
+#: adsense-plugin.class.php:519
 msgid "Image ads only"
 msgstr "Тільки візуальна реклама"
 
-#: adsense-plugin.class.php:407
+#: adsense-plugin.class.php:523
 msgid "Block of links"
 msgstr "Блок посилань"
 
-#: adsense-plugin.class.php:411
+#: adsense-plugin.class.php:527
 msgid "Format:"
 msgstr "Формат:"
 
-#: adsense-plugin.class.php:474
+#: adsense-plugin.class.php:590
 msgid "Position &amp; amount of ads"
 msgstr "Розміщення та кількість рекламних блоків"
 
-#: adsense-plugin.class.php:477
+#: adsense-plugin.class.php:593
 msgid "Position:"
 msgstr "Розміщення:"
 
-#: adsense-plugin.class.php:481
+#: adsense-plugin.class.php:597
 msgid "Below the post (Single post page)"
-msgstr "Після запису (на окремій сторінці)"
+msgstr "Після посту (на окремій сторінці)"
 
-#: adsense-plugin.class.php:482
+#: adsense-plugin.class.php:598
 msgid "Below the post (Home page)"
-msgstr "Після запису (на домашній сторінці)"
+msgstr "Після посту (на домашній сторінці)"
 
-#: adsense-plugin.class.php:483
+#: adsense-plugin.class.php:599
 msgid "Below the post (Single post page and Home page)"
-msgstr "Після запису (на домашній та окремій сторінках)"
+msgstr "Після посту (на домашній та окремій сторінках)"
 
-#: adsense-plugin.class.php:484
+#: adsense-plugin.class.php:600
 msgid "Below the comment form"
-msgstr "Після форми відправки коментаря"
+msgstr "Після форми коментарів"
 
-#: adsense-plugin.class.php:485
+#: adsense-plugin.class.php:601
 msgid "Above the footer"
 msgstr "Перед футером"
 
-#: adsense-plugin.class.php:490
+#: adsense-plugin.class.php:606
 msgid "Number of Ads:"
 msgstr "Кількість блоків:"
 
-#: adsense-plugin.class.php:499
+#: adsense-plugin.class.php:615
 msgid "Number of ads below the posts on the home page."
-msgstr "Кількість рекламних блоків після записів на домашній сторінці."
+msgstr "Кількість рекламних блоків після постів на домашній сторінці."
 
-#: adsense-plugin.class.php:504
+#: adsense-plugin.class.php:620
 msgid "Visualisation"
 msgstr "Зовнішній вигляд"
 
-#: adsense-plugin.class.php:508
+#: adsense-plugin.class.php:624
 msgid "Colors:"
 msgstr "Кольори:"
 
-#: adsense-plugin.class.php:519
+#: adsense-plugin.class.php:635
 msgid "Border"
 msgstr "Рамка"
 
-#: adsense-plugin.class.php:530
-#: adsense-plugin.class.php:721
+#: adsense-plugin.class.php:646
+#: adsense-plugin.class.php:837
 msgid "Title"
 msgstr "Заголовок"
 
-#: adsense-plugin.class.php:541
+#: adsense-plugin.class.php:657
 msgid "Background"
 msgstr "Фон"
 
-#: adsense-plugin.class.php:552
+#: adsense-plugin.class.php:668
 msgid "Text"
 msgstr "Текст"
 
-#: adsense-plugin.class.php:563
+#: adsense-plugin.class.php:679
 msgid "URL"
 msgstr "Посилання"
 
-#: adsense-plugin.class.php:576
+#: adsense-plugin.class.php:692
 msgid "Palette:"
 msgstr "Палітра:"
 
-#: adsense-plugin.class.php:580
+#: adsense-plugin.class.php:696
 msgid "Default Google pallete"
-msgstr "Палітра Google (стандартна установка)"
+msgstr "Палітра Google (за замовчуванням)"
 
-#: adsense-plugin.class.php:583
+#: adsense-plugin.class.php:699
 msgid "Open Air"
 msgstr "Open Air"
 
-#: adsense-plugin.class.php:584
+#: adsense-plugin.class.php:700
 msgid "Seaside"
 msgstr "Seaside"
 
-#: adsense-plugin.class.php:585
+#: adsense-plugin.class.php:701
 msgid "Shadow"
 msgstr "Shadow"
 
-#: adsense-plugin.class.php:586
+#: adsense-plugin.class.php:702
 msgid "Blue Mix"
 msgstr "Blue Mix"
 
-#: adsense-plugin.class.php:587
+#: adsense-plugin.class.php:703
 msgid "Ink"
 msgstr "Ink"
 
-#: adsense-plugin.class.php:588
+#: adsense-plugin.class.php:704
 msgid "Graphite"
 msgstr "Graphite"
 
-#: adsense-plugin.class.php:592
+#: adsense-plugin.class.php:708
 msgid "These are the standard Google color palettes."
-msgstr "Це стандартні Google палітри."
+msgstr "Це стандартні палітри Google."
 
-#: adsense-plugin.class.php:596
+#: adsense-plugin.class.php:712
 msgid "Corner Style:"
 msgstr "Стиль кутів:"
 
-#: adsense-plugin.class.php:600
+#: adsense-plugin.class.php:716
 msgid "Select a corner style"
-msgstr "Виберіть стиль кутів"
+msgstr "Вибрати стиль кутів"
 
-#: adsense-plugin.class.php:601
+#: adsense-plugin.class.php:717
 msgid "Square corners"
-msgstr "Кути без заокруглювань"
+msgstr "Квадратні кути "
 
-#: adsense-plugin.class.php:602
+#: adsense-plugin.class.php:718
 msgid "Slightly rounded corners"
 msgstr "Дещо заокруглені кути"
 
-#: adsense-plugin.class.php:603
+#: adsense-plugin.class.php:719
 msgid "Rounded corners"
 msgstr "Дуже заокруглені кути"
 
-#: adsense-plugin.class.php:606
+#: adsense-plugin.class.php:722
 msgid "Corner style property will help you to make your Ad corners rounded."
 msgstr "За допомогою даної опції Ви можете заокруглити кути Вашого рекламного блоку."
 
-#: adsense-plugin.class.php:611
+#: adsense-plugin.class.php:727
 msgid "Donations"
 msgstr "Пожертви"
 
-#: adsense-plugin.class.php:614
+#: adsense-plugin.class.php:730
 msgid "Donate:"
-msgstr "Зробіть пожертву:"
+msgstr "Зробити пожертву:"
 
-#: adsense-plugin.class.php:619
+#: adsense-plugin.class.php:735
 msgid "Support us by Donating Ad Space."
-msgstr "Підтримайте наш проект, надаючи рекламний простір."
+msgstr "Підтримайте наш проект, надавши рекламний простір."
 
-#: adsense-plugin.class.php:621
+#: adsense-plugin.class.php:737
 msgid "Please enter a percentage value of the ad slots you are ready to share [Default: 0%]."
-msgstr "Введіть процент від перегляду реклами, яким ви можете пожертвувати [Стандартне значення: 0%]."
+msgstr "Введіть відсоток від реклами, яким ви можете пожертвувати [Стандартне значення: 0%]."
 
-#: adsense-plugin.class.php:636
+#: adsense-plugin.class.php:752
 msgid "Save Changes"
 msgstr "Зберегти зміни"
+
+#~ msgid "Please don't forget to click the 'Save Changes' button."
+#~ msgstr "Будь ласка, не забудьте клікнути 'Зберегти зміни'"
+
+#~ msgid "Publisher ID:"
+#~ msgstr "Publisher ID:"
 
 #~ msgid "requires"
 #~ msgstr "потребує"

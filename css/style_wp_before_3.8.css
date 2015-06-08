@@ -35,6 +35,7 @@
 }
 #adsns_wrap .left {
 	min-width: 95px;
+	width: 160px;
 }
 #adsns_wrap .right_img {
 	margin-top: -24px;
@@ -87,4 +88,18 @@ form#adsns_settings_form {
 #adsns_wrap .farbtastic,
 #adsns_wrap .farbtastic .wheel {
 	margin: 0 auto;
+}
+#adsns_api {
+	margin: 0 0 20px;
+}
+#adsns_authorization_button {
+	display: inline-block;
+    margin: 10px 0;
+}
+#adsns_authorization_code {
+	width: 250px;
+}
+#adsns_wrap .updated.adsns_api_notice,
+#adsns_wrap .error.adsns_api_notice {
+	font-weight: normal;
 }

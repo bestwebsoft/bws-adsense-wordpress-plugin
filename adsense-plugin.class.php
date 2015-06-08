@@ -93,6 +93,11 @@ class adsns {
 
 	function adsns_plugin_init() {
 		global $adsns_plugin_info;
+
+		if ( ! session_id() ) {
+			session_start();
+		}
+
 		/* Internationalization */
 		load_plugin_textdomain( 'adsense', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
@@ -104,8 +109,8 @@ class adsns {
 			$adsns_plugin_info = get_plugin_data( dirname(__FILE__) . '/adsense-plugin.php' );
 		}
 
-		/* Function check if plugin is compatible with current WP version  */
-		bws_wp_version_check( 'adsense-plugin/adsense-plugin.php', $adsns_plugin_info, "3.0" );
+		/* Function check if plugin is compatible with current WP version */
+		bws_wp_version_check( 'adsense-plugin/adsense-plugin.php', $adsns_plugin_info, '3.1' );
 
 		/* Call register settings function */
 		if ( ! is_admin() || ( isset( $_GET['page'] ) && "adsense-plugin.php" == $_GET['page'] ) )
@@ -198,7 +203,7 @@ class adsns {
 							google_color_link	=	"' . $this->adsns_options['title'] . '";
 							google_color_text	=	"' . $this->adsns_options['text'] . '";
 							google_color_url	=	"' . $this->adsns_options['url'] . '";
-						</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script><input type="hidden" value="Version: ' . $adsns_plugin_info["Version"] . '" />';
+						</script><script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script><input type="hidden" value="Version: ' . $adsns_plugin_info["Version"] . '" />';
 			$this->adsns_options['code'] = $don_code;
 			/* update_option( 'adsns_settings', $this->adsns_options ); */
 		} else {
@@ -244,20 +249,37 @@ class adsns {
 							google_color_text	=	"' . $this->adsns_options['text'] . '";
 							google_color_url	=	"' . $this->adsns_options['url'] . '";
 							' . $features . '
-						</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script><input type="hidden" value="Version: ' . $adsns_plugin_info["Version"] . '" />';
+						</script><script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script><input type="hidden" value="Version: ' . $adsns_plugin_info["Version"] . '" />';
 			$this->adsns_options['code'] = $don_code;
 			/* update_option( 'adsns_settings', $this->adsns_options ); */
 		}
 	}
 
+	function adsns_client() {
+		global $adsns_plugin_info;
+		require_once( dirname( __FILE__ ) . '/google_api/autoload.php' );
+		$client = new Google_Client();
+		$client->setClientId( '903234641369-4mm0lqt76r0rracrdn2on3qrk6c554aa.apps.googleusercontent.com' );
+		$client->setClientSecret( 'Twlx072svotXexK5rvqC5bb-' );
+		$client->setScopes( array( 'https://www.googleapis.com/auth/adsense' ) );
+		$client->setRedirectUri( 'urn:ietf:wg:oauth:2.0:oob' );
+		$client->setAccessType( 'offline' );
+		$client->setDeveloperKey( 'AIzaSyBa4vT_9do8e7Yxv88EXle6546nFVGLHI8' );
+		$client->setApplicationName( $adsns_plugin_info['Name'] );
+		return $client;
+	}
+
 	/* Saving settings */
 	function adsns_settings_page() {
-		global $adsns_plugin_info, $adsns_options;
-		echo '
+		global $adsns_plugin_info, $adsns_options; ?>
 		<div class="wrap" id="adsns_wrap">
 		<div class="icon32 icon32-bws" id="icon-options-general"></div>
-		<h2>' . __( 'AdSense Settings', 'adsense' ) . '</h2>';
-		if ( isset( $_REQUEST['adsns_update'] ) && check_admin_referer( plugin_basename(__FILE__), 'adsns_nonce_name' )  ) { /* if click on Save Changes button */
+		<h2><?php _e( 'AdSense Settings', 'adsense' ); ?></h2>
+		<h2 class="nav-tab-wrapper">
+			<a class="nav-tab nav-tab-active" href="admin.php?page=adsense-plugin.php"><?php _e( 'Settings', 'adsense' ); ?></a>
+			<a class="nav-tab" href="http://bestwebsoft.com/products/google-adsense/faq" target="_blank"><?php _e( 'FAQ', 'adsense' ); ?></a>
+		</h2>
+		<?php if ( isset( $_REQUEST['adsns_update'] ) && check_admin_referer( plugin_basename(__FILE__), 'adsns_nonce_name' ) ) { /* if click on Save Changes button */
 			if ( 0 < strlen( $_REQUEST['client_id'] ) ) {
 				echo "<div class='updated'><p>" . __( "Settings saved", 'adsense' ) . "</p></div>";
 				if ( 3 <= strlen( trim( $_REQUEST['clientid_prefix'] ) ) && 'pub' == substr( trim( $_REQUEST['clientid_prefix'] ) , -3, 3 ) ) {
@@ -350,7 +372,7 @@ class adsns {
 									google_color_link	=	"' . $this->adsns_options['title'] . '";
 									google_color_text	=	"' . $this->adsns_options['text'] . '";
 									google_color_url	=	"' . $this->adsns_options['url'] . '";
-								</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script><input type="hidden" value="Version: ' . $adsns_plugin_info["Version"] . '" />';
+								</script><script type="text/javascript" src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script><input type="hidden" value="Version: ' . $adsns_plugin_info["Version"] . '" />';
 					$this->adsns_options['code']					=	$don_code;
 					update_option( 'adsns_settings', $this->adsns_options );
 				} else
@@ -364,19 +386,113 @@ class adsns {
 
 	/* Admin interface of plugin */
 	function adsns_view_options_page() {
-		global $adsns_options, $adsns_plugin_info; ?>
-		<div id="adsns_settings_notice" class="updated fade" style="display:none"><p><strong><?php _e( "Notice:", 'adsense' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'adsense' ); ?></p></div>
-		<h2 class="nav-tab-wrapper">
-			<a class="nav-tab nav-tab-active" href="admin.php?page=adsense-plugin.php"><?php _e( 'Settings', 'adsense' ); ?></a>
-			<a class="nav-tab" href="http://bestwebsoft.com/products/google-adsense/faq" target="_blank"><?php _e( 'FAQ', 'adsense' ); ?></a>
-		</h2>
+		global $adsns_options, $adsns_plugin_info; 
+
+		$adsns_client = $this->adsns_client();
+		$adsns_blog_prefix = '_' . get_current_blog_id();
+
+		if ( isset( $_POST['adsns_logout'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'adsns_nonce_name' ) ) {
+			unset( $_SESSION[ 'adsns_authorization_code' . $adsns_blog_prefix ] );
+			unset( $this->adsns_options['authorization_code'] );
+			update_option( 'adsns_settings', $this->adsns_options );
+		}
+		if ( isset( $_POST['adsns_authorization_code'] ) && ! empty( $_POST['adsns_authorization_code'] ) && check_admin_referer( plugin_basename(__FILE__), 'adsns_nonce_name' ) ) {
+			try {
+				$adsns_client->authenticate( $_POST['adsns_authorization_code'] );
+				$this->adsns_options['authorization_code'] = $_SESSION[ 'adsns_authorization_code' . $adsns_blog_prefix ] = $adsns_client->getAccessToken();
+				update_option( 'adsns_settings', $this->adsns_options );
+			} catch ( Exception $e ) {}
+		}
+		if ( ! isset( $_SESSION[ 'adsns_authorization_code' . $adsns_blog_prefix ] ) && isset( $this->adsns_options['authorization_code'] ) ) {
+			$_SESSION[ 'adsns_authorization_code' . $adsns_blog_prefix ] = $this->adsns_options['authorization_code'];
+		}
+		if ( isset( $_SESSION[ 'adsns_authorization_code' . $adsns_blog_prefix ] ) ) {
+			$adsns_client->setAccessToken( $_SESSION[ 'adsns_authorization_code' . $adsns_blog_prefix ] );
+		}
+		if ( isset( $_POST['adsns_get_publisher_id'] ) && check_admin_referer( plugin_basename(__FILE__), 'adsns_nonce_name' ) ) {
+			$adsns_adsense = new Google_Service_AdSense( $adsns_client );
+			$adsns_adsense_accounts = $adsns_adsense->accounts;
+			try {
+				$adsns_list_accounts = $adsns_adsense_accounts->listAccounts()->getItems();
+				if ( isset( $adsns_list_accounts[0]['id'] ) ) {
+					$adsns_publisher_id = explode( '-', $adsns_list_accounts[0]['id'] );
+					$this->adsns_options['clientid_prefix'] = $adsns_publisher_id[0];
+					$this->adsns_options['clientid'] = $adsns_publisher_id[1];
+					$adsns_api_notice = array(
+						'class'    => 'updated adsns_api_notice',
+						'message'  => sprintf( '<strong>%s</strong> %s<br>%s',
+										__( 'Success:', 'adsense' ),
+										sprintf( __( 'Your publisher ID: %s.', 'adsense' ), sprintf( '<strong>%s</strong>', $adsns_list_accounts[0]['id'] ) ),
+										__( 'Publisher ID is inserted successfully.', 'adsense' )
+									)
+					);
+				} else {
+					$adsns_api_notice = array(
+						'class'    => 'error adsns_api_notice',
+						'message'  => sprintf( '<strong>%s</strong> %s<br>%s',
+										__( 'Error:', 'adsense' ),
+										__( 'Unable to get Publisher ID.', 'adsense' ),
+										sprintf( __( 'You can find your Publisher ID in %s', 'adsense' ), '<a href="https://www.google.com/adsense" target="_blank">Google AdSense.</a>' )
+									)
+					);
+				}
+			} catch ( Google_Service_Exception $e ) {
+				$adsns_err = $e->getErrors();
+				$adsns_api_notice = array(
+					'class'    => 'error adsns_api_notice',
+					'message'  => sprintf( '<strong>%s</strong> %s<br>%s',
+									__( 'Error:', 'adsense' ),
+									$adsns_err[0]['message'],
+									sprintf( __( 'Create account in %s', 'adsense' ), '<a href="https://www.google.com/adsense" target="_blank">Google AdSense.</a>' )
+								)
+				);
+			}
+		}
+		if ( isset( $_POST['adsns_authorization_code'] ) && isset( $_POST['adsns_authorize'] ) && ! $adsns_client->getAccessToken() && check_admin_referer( plugin_basename(__FILE__), 'adsns_nonce_name' ) ) { 
+			$adsns_api_notice = array(
+				'class' => 'error adsns_api_notice',
+				'message' => __( 'Invalid authorization code. Please, try again.', 'adsense' )
+			); ?>
+		<?php }
+		if( isset( $adsns_api_notice ) ) { ?>
+			<div class="fade <?php echo $adsns_api_notice['class']; ?>"><p><?php echo $adsns_api_notice['message']; ?></p></div>
+		<?php } ?>
+		<div id="adsns_settings_notice" class="updated fade" <?php echo ( isset( $adsns_api_notice ) && $adsns_api_notice['class'] == 'updated adsns_api_notice' ) ? '' : 'style="display:none"'; ?>><p><strong><?php _e( "Notice:", 'adsense' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'adsense' ); ?></p></div>
 		<form id="adsns_settings_form" name="option" action="" method="post">
 			<table id="adsns_main">
 				<tr class="settings_head_1">
 					<th colspan="2"><?php _e( 'Network', 'adsense' ); ?></th>
 				</tr>
 				<tr class="settings_body_1">
-					<td id="network" class="left" ><?php _e( 'Publisher ID:', 'adsense' ); ?></td>
+					<td class="left">
+						<?php _e( 'Get remote your Publisher ID:', 'adsense' ); ?>
+					</td>
+					<td class="right">
+						<div id="adsns_api">
+							<?php if ( $adsns_client->getAccessToken() ) { ?>
+								<div id="adsns_api_buttons">
+									<input class="button-primary" name="adsns_get_publisher_id" type="submit" value="<?php _e( 'Get Publisher ID', 'adsense' ); ?>" />
+									<input class="button-secondary" name="adsns_logout" type="submit" value="<?php _e( 'Log out from Google AdSense', 'adsense' ); ?>" />
+								</div>
+							<?php } else {
+								$adsns_state = mt_rand();
+								$adsns_client->setState( $adsns_state );
+								$_SESSION[ 'gglstmp_state' . $adsns_blog_prefix ] = $adsns_client; 
+								$adsns_auth_url = $adsns_client->createAuthUrl(); ?>
+								<div id="adsns_authorization_notice">
+									<?php _e( "Please authorize via your Google Account.", 'adsense' ); ?>
+								</div>
+								<a id="adsns_authorization_button" class="button-primary" href="<?php echo $adsns_auth_url; ?>" target="_blank" onclick="window.open(this.href,'','top='+(screen.height/2-560/2)+',left='+(screen.width/2-640/2)+',width=640,height=560,resizable=0,scrollbars=0,menubar=0,toolbar=0,status=1,location=0').focus(); return false;"><?php _e( 'Get Authorization Code', 'adsense' ); ?></a>
+								<div id="adsns_authorization_form">
+									<input id="adsns_authorization_code" name="adsns_authorization_code" type="text" autocomplete="off" maxlength="100">
+									<input id="adsns_authorize" class="button-primary" name="adsns_authorize" type="submit" value="<?php _e( 'Authorize', 'adsense' ); ?>">
+								</div>
+							<?php } ?>
+						</div>					
+					</td>
+				<tr>
+				<tr class="settings_body_1">
+					<td id="network" class="left"><?php _e( 'Specify manually your Publisher ID:', 'adsense' ); ?></td>
 					<td class="right">
 						<input type="text" id="clientid_prefix" name="clientid_prefix" size="8" maxlength="10" value="<?php echo $this->adsns_options['clientid_prefix'] ?>" />
 						-

@@ -1,10 +1,10 @@
 === Google AdSense by BestWebSoft ===
 Contributors: bestwebsoft
-Donate link: https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=1&product_id=94
+Donate link: http://bestwebsoft.com/donate/
 Tags: google, adsense, bestwebsoft, google adsense, google plugin, adsense plugin, ads plugin, gogle, ad, ads, adds, ad banner, ad block, ad color, ads display, ad format, ads in widgets, ad links block, add several adds, ads on website, ad parameters, ad type, advertisements, Google ads, Google AdSense, Google AddSense, Goggle AdSense, Gogle AdSense, image, insert ads, insert ads automatically, insert Google ads, text ads, text and image ads. 
-Requires at least: 3.0
-Tested up to: 4.2.1
-Stable tag: 1.33
+Requires at least: 3.1
+Tested up to: 4.2.2
+Stable tag: 1.34
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -95,6 +95,7 @@ Please make sure Adblocker (or some other similar extensions that block ads) is 
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
 Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
+
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
@@ -102,10 +103,15 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Screenshots ==
 
-1. AdSense Settings page main settings.
-2. AdSense Settings page additional settings.
+1. AdSense Settings page main settings (Unauthorized in Google AdSense).
+2. AdSense Settings page main settings (Authorized in Google AdSense).
+3. AdSense Settings page main settings (Remote reception Publisher ID from Google AdSense).
+4. AdSense Settings page additional settings.
 
 == Changelog == 
+
+= V1.34 - 08.06.2015 =
+* NEW : We added functionality for remote reception Publisher ID from Google AdSense.
 
 = V1.33 - 29.04.2015 =
 * Bugfix : Plugin optimization is done.
@@ -240,6 +246,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Changed : Usability at the settings page of the plugin was improved.
 
 == Upgrade Notice ==
+
+= V1.34 =
+We added functionality for remote reception Publisher ID from Google AdSense.
 
 = V1.33 =
 Plugin optimization is done. We updated all functionality for wordpress 4.2.1.
