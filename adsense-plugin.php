@@ -4,7 +4,7 @@ Plugin Name: Google AdSense by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: This plugin allows implementing Google AdSense to your website.
 Author: BestWebSoft
-Version: 1.34
+Version: 1.35
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -29,30 +29,6 @@ License: GPLv2 or later
 include_once( 'adsense-plugin.class.php' ); /* Including a class which contains a plugin functions */
 $adsns_plugin =	new adsns(); /* Creating a variable with type of our class */
 
-/* This function showing ads at the choosen position */
-if ( ! function_exists( 'adsns_show_ads' ) ) {
-	function adsns_show_ads() {
-		global $adsns_options, $adsns_plugin;
-		if ( empty( $adsns_plugin ) )
-			return;
-		$adsns_plugin->adsns_activate();
-		/* Checking in what position we should show an ads */
-		if ( 'postend' == $adsns_options['position'] ) { /* If we choose ad position after post(single page) */
-			add_filter( 'the_content', array( $adsns_plugin, 'adsns_end_post_ad' ) ); /* Adding ad after post */
-		} else if ( 'homepostend' == $adsns_options['position'] ) { /* If we choose ad position after post(home page) */
-			add_filter( 'the_content', array( $adsns_plugin, 'adsns_end_home_post_ad' ) ); /* Adding ad after post */
-		} else if ( 'homeandpostend' == $adsns_options['position'] ) { /* If we choose ad position after post(home page) */
-			add_filter( 'the_content', array( $adsns_plugin, 'adsns_end_home_post_ad' ) ); /* Adding ad after post */
-			add_filter( 'the_content', array( $adsns_plugin, 'adsns_end_post_ad' ) ); /* Adding ad after post */
-		} else if ( 'commentform' == $adsns_options['position'] ) { /* If we choose ad position after comment form */
-			add_filter( 'comment_id_fields', array( $adsns_plugin, 'adsns_end_comment_ad' ) ); /* Adding ad after comment form */
-		} else if ( 'footer' == $adsns_options['position'] ) { /* If we choose ad position in a footer */
-			add_filter( 'get_footer', array( $adsns_plugin, 'adsns_end_footer_ad' ) ); /* Adding footer ad */
-		}
-		/* End checking */
-	}
-}
-
 /* Function fo uninstall */
 if ( ! function_exists( 'adsns_uninstall' ) ) {
 	function adsns_uninstall() {
@@ -68,17 +44,17 @@ add_action( 'init', array( $adsns_plugin, 'adsns_plugin_init') );
 add_action( 'admin_init', array( $adsns_plugin, 'adsns_plugin_admin_init') );
 add_action( 'admin_enqueue_scripts', array( $adsns_plugin, 'adsns_write_admin_head' ) );
 /* Action for adsns_show_ads */
-add_action( 'after_setup_theme', 'adsns_show_ads' );
+add_action( 'after_setup_theme', array( $adsns_plugin, 'adsns_show_ads' ) );
 /* Display the plugin widget */
 add_action( 'widgets_init', array( $adsns_plugin, 'adsns_register_widget' ) );
 /* Adding ads stylesheets */
-add_action( 'wp_head', array( $adsns_plugin, 'adsns_head' ) );
-
+add_action( 'wp_enqueue_scripts', array( $adsns_plugin, 'adsns_head' ) );
 /* Add "Settings" link to the plugin action page */
 add_filter( 'plugin_action_links', array( $adsns_plugin, 'adsns_plugin_action_links'), 10, 2 );
 /* Additional links on the plugin page */
 add_filter( 'plugin_row_meta', array( $adsns_plugin, 'adsns_register_plugin_links'), 10, 2 );
-
+/* Display notices */
+add_action( 'admin_notices', array( $adsns_plugin, 'adsns_plugin_notice') );
 /* When uninstall plugin */
 register_uninstall_hook( __FILE__, 'adsns_uninstall' );
 ?>

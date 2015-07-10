@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: google, adsense, bestwebsoft, google adsense, google plugin, adsense plugin, ads plugin, gogle, ad, ads, adds, ad banner, ad block, ad color, ads display, ad format, ads in widgets, ad links block, add several adds, ads on website, ad parameters, ad type, advertisements, Google ads, Google AdSense, Google AddSense, Goggle AdSense, Gogle AdSense, image, insert ads, insert ads automatically, insert Google ads, text ads, text and image ads. 
-Requires at least: 3.1
+Requires at least: 3.3
 Tested up to: 4.2.2
-Stable tag: 1.34
+Stable tag: 1.35
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,17 +37,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pr
 
 = Translation =
 
-* Brazilian Portuguese (pt_BR) (thanks Rafael)
-* Dutch (nl_NL) (thanks to Paul Göttgens)
-* French (fr_FR) (thanks to <a href="mailto:phil.azza@freesbee.fr">Phil Azza</a>)
-* German (de_DE) (thanks to Psyflex)
-* Hebrew (he_IL) (thanks to Ahrale)
-* Indonesian (id_ID) (thanks to <a href="mailto:nasrulhaq81@gmail.com">Nasrulhaq Muiz</a>, www.al-badar.net)
-* Italian (it_IT) (thanks to <a href="mailto:ernesto@scaletti.net">Ernesto Scaletti</a>)
-* Polish (pl_PL) (thanks to Tomasz Łaziuk)
 * Russian (ru_RU)
-* Spanish (es_ES) (thanks to <a href="mailto:mrjosefernando@gmail.com">José Fernando De Leon</a>)
-* Turkish (tr) (thanks to Erhan KOCABUGA, www.erhankocabuga.com)
 * Ukrainian (uk)
 
 If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
@@ -72,13 +62,13 @@ http://www.youtube.com/watch?v=Nkp267vxZ84
 
 == Frequently Asked Questions ==
 
-= How to change Publisher ID =
+= How many ad blocks can be added to the page? =
 
-Go to the Settings page and change the value of the 'Publisher ID' field.
+The maximum number of ad blocks on the page cannot be more than 3 - https://support.google.com/adsense/answer/1346295?hl=en#Ad_limit_per_page.
 
-= How to change position of the ad block =
+= Why I cannot choose more than one ad block in the widget tab? =
 
-On the plugin settings page open the menu item 'Position & Numbers of Ads' and choose position from the list.
+This limitation is caused by the maximum allowable number of ad blocks to be displayed on the page. Ad blocks display can only be set in the post; in this case, it will not be displayed on the page. However, a widget is usually displayed in every post and every page.
 
 = Ads are not displayed =
 
@@ -103,15 +93,16 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Screenshots ==
 
-1. AdSense Settings page main settings (Unauthorized in Google AdSense).
-2. AdSense Settings page main settings (Authorized in Google AdSense).
-3. AdSense Settings page main settings (Remote reception Publisher ID from Google AdSense).
-4. AdSense Settings page additional settings.
+1. Google AdSense Settings page (Unauthorized in Google AdSense).
+2. Google AdSense Settings page (Authorized in Google AdSense).
 
-== Changelog == 
+== Changelog ==
+
+= V1.35 - 10.07.2015 =
+* Update : We updated the plugin to use Google AdSense API.
 
 = V1.34 - 08.06.2015 =
-* NEW : We added functionality for remote reception Publisher ID from Google AdSense.
+* NEW : We added functionality for the remote reception of Publisher ID from the Google AdSense.
 
 = V1.33 - 29.04.2015 =
 * Bugfix : Plugin optimization is done.
@@ -247,8 +238,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Upgrade Notice ==
 
+= V1.35 =
+We updated the plugin to use Google AdSense API.
+
 = V1.34 =
-We added functionality for remote reception Publisher ID from Google AdSense.
+We added functionality for the remote reception of Publisher ID from the Google AdSense.
 
 = V1.33 =
 Plugin optimization is done. We updated all functionality for wordpress 4.2.1.

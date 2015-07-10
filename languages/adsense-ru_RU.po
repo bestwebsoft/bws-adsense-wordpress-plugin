@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adsense\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-08 15:32+0300\n"
+"POT-Creation-Date: 2015-07-10 14:06+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <support@bestwebsoft.com>\n"
@@ -16,308 +16,450 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: adsense-plugin.class.php:70
-#: adsense-plugin.class.php:277
-msgid "AdSense Settings"
-msgstr "Настройки AdSense"
+#: adsense-plugin.class.php:90
+#: adsense-plugin.class.php:599
+msgid "Google AdSense Settings"
+msgstr "Настройки Google AdSense"
 
-#: adsense-plugin.class.php:77
-#: adsense-plugin.class.php:87
-#: adsense-plugin.class.php:279
+#: adsense-plugin.class.php:97
+#: adsense-plugin.class.php:107
+#: adsense-plugin.class.php:601
 msgid "Settings"
 msgstr "Настройки"
 
-#: adsense-plugin.class.php:88
-#: adsense-plugin.class.php:280
+#: adsense-plugin.class.php:108
+#: adsense-plugin.class.php:602
 msgid "FAQ"
 msgstr "FAQ"
 
-#: adsense-plugin.class.php:89
+#: adsense-plugin.class.php:109
 msgid "Support"
-msgstr "Техподдержка"
+msgstr "Поддержка"
 
-#: adsense-plugin.class.php:284
-msgid "Settings saved"
-msgstr "Настройки сохранены"
+#: adsense-plugin.class.php:327
+msgid "Home page"
+msgstr "Домашнаяя страница"
 
-#: adsense-plugin.class.php:379
-msgid "Please enter valid Publisher ID."
-msgstr "Пожалуйста, ведите верный ID издателя."
+#: adsense-plugin.class.php:331
+#: adsense-plugin.class.php:342
+#: adsense-plugin.class.php:354
+#: adsense-plugin.class.php:366
+msgid "After the content"
+msgstr "После контента"
 
-#: adsense-plugin.class.php:381
-msgid "Please enter your Publisher ID."
-msgstr "Пожалуйста, введите ваш  ID издателя."
+#: adsense-plugin.class.php:332
+#: adsense-plugin.class.php:343
+#: adsense-plugin.class.php:355
+#: adsense-plugin.class.php:367
+msgid "Before the content"
+msgstr "Перед контентом"
 
-#: adsense-plugin.class.php:424
-msgid "Success:"
-msgstr "Успешно:"
+#: adsense-plugin.class.php:338
+msgid "Pages"
+msgstr "Страницы"
 
-#: adsense-plugin.class.php:425
-#, php-format
-msgid "Your publisher ID: %s."
-msgstr "Ваш ID издателя: %s."
+#: adsense-plugin.class.php:344
+#: adsense-plugin.class.php:356
+msgid "Below the comment form"
+msgstr "После формы отправки комментария"
 
-#: adsense-plugin.class.php:426
-msgid "Publisher ID is inserted successfully."
-msgstr "ID издателя принят:"
+#: adsense-plugin.class.php:350
+msgid "Posts / Custom posts"
+msgstr "Посты / Кастомные посты"
 
-#: adsense-plugin.class.php:433
-#: adsense-plugin.class.php:444
-msgid "Error:"
-msgstr "Ошибка:"
+#: adsense-plugin.class.php:362
+msgid "Categories / Tags"
+msgstr "Категории / Теги"
 
-#: adsense-plugin.class.php:434
-msgid "Unable to get Publisher ID."
-msgstr "Не удалось получить ID издателя:"
+#: adsense-plugin.class.php:373
+#: adsense-plugin.class.php:546
+msgid "Widget"
+msgstr "Виджет"
 
-#: adsense-plugin.class.php:435
-#, php-format
-msgid "You can find your Publisher ID in %s"
-msgstr "Вы можете найти свой ID издателя в %s"
+#: adsense-plugin.class.php:384
+msgid "Text"
+msgstr "Текст"
 
-#: adsense-plugin.class.php:446
+#: adsense-plugin.class.php:385
+msgid "Image"
+msgstr "Графика"
+
+#: adsense-plugin.class.php:386
+msgid "Text/Image"
+msgstr "Текст/Графика"
+
+#: adsense-plugin.class.php:390
+msgid "New"
+msgstr "Новый"
+
+#: adsense-plugin.class.php:391
+msgid "Active"
+msgstr "Активный"
+
+#: adsense-plugin.class.php:392
+msgid "Inactive"
+msgstr "Неактивный"
+
+#: adsense-plugin.class.php:396
+msgid "Responsive"
+msgstr "Адаптивный"
+
+#: adsense-plugin.class.php:460
+msgid "AdUnits Error:"
+msgstr "AdUnits Error:"
+
+#: adsense-plugin.class.php:462
+#: adsense-plugin.class.php:473
+#: adsense-plugin.class.php:484
 #, php-format
 msgid "Create account in %s"
 msgstr "Создать аккаунт в %s"
 
-#: adsense-plugin.class.php:454
-msgid "Invalid authorization code. Please, try again."
-msgstr "Неверный код авторизации. Пожалуйста, попробуйте еще раз"
+#: adsense-plugin.class.php:471
+msgid "AdClient Error:"
+msgstr "AdClient Error:"
 
-#: adsense-plugin.class.php:460
+#: adsense-plugin.class.php:482
+msgid "Account Error:"
+msgstr "Account Error:"
+
+#: adsense-plugin.class.php:498
+msgid "Invalid authorization code. Please, try again."
+msgstr "Неверный код авторизации. Пожалуйста, попробуйте еще раз."
+
+#: adsense-plugin.class.php:533
+#, php-format
+msgid "An error occurred while obtaining the code for the block %s."
+msgstr "Произошла ошибка при получении кода для блока %s."
+
+#: adsense-plugin.class.php:533
+#: adsense-plugin.class.php:546
+#: adsense-plugin.class.php:568
+#: adsense-plugin.class.php:573
+#: adsense-plugin.class.php:593
+msgid "Settings are not saved."
+msgstr "Настройки не сохранены."
+
+#: adsense-plugin.class.php:546
+#: adsense-plugin.class.php:568
+#: adsense-plugin.class.php:573
+#, php-format
+msgid "The maximum number of ad blocks on the page cannot be more than 3 ad blocks (%s)."
+msgstr "Максимальное количество рекламных блоков на странице не может превышать больше 3х рекламных блоков (%s)."
+
+#: adsense-plugin.class.php:546
+#: adsense-plugin.class.php:568
+#: adsense-plugin.class.php:573
+#: adsense-plugin.class.php:670
+msgid "Learn more"
+msgstr "Узнать больше"
+
+#: adsense-plugin.class.php:546
+#, php-format
+msgid "Please select a smaller number of ad blocks or disable the ad block display in the %s tab."
+msgstr "Пожалуйста, выберите меньше рекламных блоков или отключите показ рекламного блока на вкладке %s."
+
+#: adsense-plugin.class.php:559
+msgid "ad blocks"
+msgstr "рекламных блока"
+
+#: adsense-plugin.class.php:568
+#, php-format
+msgid "To display the ad block in widget, please set a smaller number of ad blocks in the %s tab."
+msgstr "Для отображения рекламного блока в виджете необходимо выбрать меньше рекламных блоков на вкладе %s."
+
+#: adsense-plugin.class.php:573
+#, php-format
+msgid "To display the ad block in widget, please set a smaller number of ad blocks in tabs: %s."
+msgstr "Для отображения рекламного блока в виджете необходимо выбрать меньше рекламных блоков на вкладках: %s."
+
+#: adsense-plugin.class.php:585
+msgid "Settings saved."
+msgstr "Настройки сохранены."
+
+#: adsense-plugin.class.php:612
 msgid "Notice:"
 msgstr "Внимание:"
 
-#: adsense-plugin.class.php:460
+#: adsense-plugin.class.php:612
 msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
-msgstr "Настройки плагина изменены. Чтобы сохранить их, пожалуйста, не забудьте кликнуть \"Сохранить\"."
+msgstr "Настройки плагина были изменены. Для того, чтобы сохранить их, пожалуйста, не забудьте нажать кнопку \"Сохранить\"."
 
-#: adsense-plugin.class.php:464
-msgid "Network"
-msgstr "Сеть"
+#: adsense-plugin.class.php:617
+#: adsense-plugin.class.php:727
+msgid "Attention:"
+msgstr "Внимание:"
 
-#: adsense-plugin.class.php:468
-msgid "Get remote your Publisher ID:"
-msgstr "Получить удалённо ваш ID издателя:"
+#: adsense-plugin.class.php:617
+msgid "We updated the plugin to use Google AdSense API, which is not compatible with the old settings. At the moment, plugin use old settings. But for further plugin usage with a new Google AdSense API, you will need to re-configure the ad blocks display. Please note that the old settings and plugin ad blocks in the frontend will be removed."
+msgstr "Мы обновили плагин на использование Google AdSense API, который не совместим со старыми настройками. Сейчас плагин работает используя старые настройки. Но для дальнейшего использования плагина с новым Google AdSense API, вам необходимо будет заново настроить отображение блоков рекламы. Обратите внимание, что старые настройки плагина и блоки рекламы во фронтенде будут удалены."
 
-#: adsense-plugin.class.php:474
-msgid "Get Publisher ID"
-msgstr "Получить ID издателя:"
+#: adsense-plugin.class.php:618
+msgid "Upgrade to new functionality"
+msgstr "Перейти на новый функционал"
 
-#: adsense-plugin.class.php:475
+#: adsense-plugin.class.php:627
+msgid "Remote work with Google AdSense"
+msgstr "Удаленная работа с Google AdSense"
+
+#: adsense-plugin.class.php:631
 msgid "Log out from Google AdSense"
 msgstr "Выйти из Google AdSense"
 
-#: adsense-plugin.class.php:483
-msgid "Please authorize via your Google Account."
-msgstr "Пожалуйста, залогиньтесь в свой аккаунт Google "
+#: adsense-plugin.class.php:639
+msgid "Please authorize via your Google Account to manage ad blocks."
+msgstr "Пожалуйста, авторизируйтесь с помощью вашего Google аккаунта для управления рекламными блоками."
 
-#: adsense-plugin.class.php:485
+#: adsense-plugin.class.php:641
 msgid "Get Authorization Code"
-msgstr "Получить код авторизации"
+msgstr "Получить Код Авторизации"
 
-#: adsense-plugin.class.php:488
+#: adsense-plugin.class.php:644
 msgid "Authorize"
 msgstr "Авторизироваться"
 
-#: adsense-plugin.class.php:495
-msgid "Specify manually your Publisher ID:"
-msgstr "Укажите ваш ID издателя вручную:"
+#: adsense-plugin.class.php:651
+msgid "Your Publisher ID:"
+msgstr "Ваш  ID Издателя:"
 
-#: adsense-plugin.class.php:502
-msgid "Publisher ID is a unique identifier of"
-msgstr "ID издателя - это уникальный номер"
+#: adsense-plugin.class.php:670
+msgid "Please note:"
+msgstr "Пожалуйста, обратите внимание:"
 
-#: adsense-plugin.class.php:502
-msgid "your account"
-msgstr "Вашего аккаунта"
+#: adsense-plugin.class.php:670
+msgid "The maximum number of ad blocks on the page cannot be more than 3 ad blocks."
+msgstr "Максимальное количество рекламных блоков на странице не может превышать больше 3х рекламных блоков."
 
-#: adsense-plugin.class.php:502
-msgid "in Google AdSense."
-msgstr "в Google AdSense."
+#: adsense-plugin.class.php:672
+#, php-format
+msgid "Please don't forget to place the AdSense widget into a needed sidebar on the %s."
+msgstr "Пожалуйста, не забудьте переместить виджет \"AdSense\"  в необходимый сайдбар на %s."
 
-#: adsense-plugin.class.php:507
-msgid "Ad Type &amp; Format"
-msgstr "Тип и формат рекламных блоков"
+#: adsense-plugin.class.php:672
+msgid "widget page"
+msgstr "странице виджетов"
 
-#: adsense-plugin.class.php:510
-msgid "Type:"
-msgstr "Тип:"
+#: adsense-plugin.class.php:675
+#, php-format
+msgid "Add or mange existing ad blocks in the %s."
+msgstr "Добавить или управлять существующими рекламными блоками вы можете в %s."
 
-#: adsense-plugin.class.php:514
-msgid "Ad block"
-msgstr "Блок рекламы"
+#: adsense-plugin.class.php:675
+msgid "Google AdSense"
+msgstr "Google AdSense"
 
-#: adsense-plugin.class.php:517
-msgid "Text and image ads"
-msgstr "Текстовая и визуальная реклама"
+#: adsense-plugin.class.php:676
+#, php-format
+msgid "After adding the ad block in Google AdSense, please %s to see the new ad block in the list of plugin ad blocks."
+msgstr "После добавления рекламного блока в Google AdSense, пожалуйста, %s, чтобы увидеть новый блок в списке рекламных блоков плагина."
 
-#: adsense-plugin.class.php:518
-msgid "Text ads only (default)"
-msgstr "Только текстовая реклама (по умолчанию)"
+#: adsense-plugin.class.php:676
+msgid "reload the page"
+msgstr "обновите страницу"
 
-#: adsense-plugin.class.php:519
-msgid "Image ads only"
-msgstr "Только визуальная реклама"
-
-#: adsense-plugin.class.php:523
-msgid "Block of links"
-msgstr "Блок ссылок"
-
-#: adsense-plugin.class.php:527
-msgid "Format:"
-msgstr "Формат:"
-
-#: adsense-plugin.class.php:590
-msgid "Position &amp; amount of ads"
-msgstr "Размещение и количество рекламных блоков"
-
-#: adsense-plugin.class.php:593
-msgid "Position:"
-msgstr "Размещение:"
-
-#: adsense-plugin.class.php:597
-msgid "Below the post (Single post page)"
-msgstr "После поста (на одной странице)"
-
-#: adsense-plugin.class.php:598
-msgid "Below the post (Home page)"
-msgstr "После поста (на домашней странице)"
-
-#: adsense-plugin.class.php:599
-msgid "Below the post (Single post page and Home page)"
-msgstr "После поста (на домашней и одиночной странице)"
-
-#: adsense-plugin.class.php:600
-msgid "Below the comment form"
-msgstr "После формы комментариев"
-
-#: adsense-plugin.class.php:601
-msgid "Above the footer"
-msgstr "Перед футером"
-
-#: adsense-plugin.class.php:606
-msgid "Number of Ads:"
-msgstr "Количество блоков:"
-
-#: adsense-plugin.class.php:615
-msgid "Number of ads below the posts on the home page."
-msgstr "Количество рекламных блоков после постов на домашней странице."
-
-#: adsense-plugin.class.php:620
-msgid "Visualisation"
-msgstr "Внешний вид"
-
-#: adsense-plugin.class.php:624
-msgid "Colors:"
-msgstr "Цвета:"
-
-#: adsense-plugin.class.php:635
-msgid "Border"
-msgstr "Окантовка"
-
-#: adsense-plugin.class.php:646
-#: adsense-plugin.class.php:837
-msgid "Title"
-msgstr "Заголовок"
-
-#: adsense-plugin.class.php:657
-msgid "Background"
-msgstr "Фон"
-
-#: adsense-plugin.class.php:668
-msgid "Text"
-msgstr "Текст"
-
-#: adsense-plugin.class.php:679
-msgid "URL"
-msgstr "Ссылка"
-
-#: adsense-plugin.class.php:692
-msgid "Palette:"
-msgstr "Палитра:"
-
-#: adsense-plugin.class.php:696
-msgid "Default Google pallete"
-msgstr "Палитра Google (по умолчанию)"
-
-#: adsense-plugin.class.php:699
-msgid "Open Air"
-msgstr "Open Air"
-
-#: adsense-plugin.class.php:700
-msgid "Seaside"
-msgstr "Seaside"
-
-#: adsense-plugin.class.php:701
-msgid "Shadow"
-msgstr "Shadow"
-
-#: adsense-plugin.class.php:702
-msgid "Blue Mix"
-msgstr "Blue Mix"
-
-#: adsense-plugin.class.php:703
-msgid "Ink"
-msgstr "Ink"
-
-#: adsense-plugin.class.php:704
-msgid "Graphite"
-msgstr "Graphite"
-
-#: adsense-plugin.class.php:708
-msgid "These are the standard Google color palettes."
-msgstr "Это стандартные палитры Google."
-
-#: adsense-plugin.class.php:712
-msgid "Corner Style:"
-msgstr "Стиль углов:"
-
-#: adsense-plugin.class.php:716
-msgid "Select a corner style"
-msgstr "Выбрать стиль углов"
-
-#: adsense-plugin.class.php:717
-msgid "Square corners"
-msgstr "Квадратные углы "
-
-#: adsense-plugin.class.php:718
-msgid "Slightly rounded corners"
-msgstr "Слегка закругленные углы"
-
-#: adsense-plugin.class.php:719
-msgid "Rounded corners"
-msgstr "Закругленные углы"
-
-#: adsense-plugin.class.php:722
-msgid "Corner style property will help you to make your Ad corners rounded."
-msgstr "С помощью данной опции Вы можете закруглить углы Вашего рекламного блока."
-
-#: adsense-plugin.class.php:727
-msgid "Donations"
-msgstr "Пожертвования"
-
-#: adsense-plugin.class.php:730
-msgid "Donate:"
-msgstr "Пожертвовать:"
-
-#: adsense-plugin.class.php:735
-msgid "Support us by Donating Ad Space."
-msgstr "Поддержите наш проект, предоставляя рекламное пространство."
-
-#: adsense-plugin.class.php:737
-msgid "Please enter a percentage value of the ad slots you are ready to share [Default: 0%]."
-msgstr "Введите процент от рекламы, которым вы можете пожертвовать [По умолчанию: 0%]."
-
-#: adsense-plugin.class.php:752
+#: adsense-plugin.class.php:693
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
-#~ msgid "Please don't forget to click the 'Save Changes' button."
-#~ msgstr "Пожалуйста, не забудьте кликнуть \"Сохранить изменения\""
+#: adsense-plugin.class.php:728
+#, php-format
+msgid "Google AdSense by BestWebSoft plugin was updated to use Google AdSense API, which is not compatible with the old settings. For further plugin usage, you will need to %s"
+msgstr "Плагин Google AdSense by BestWebSoft был обновлен на использование AdSense API, который не совместим со старыми настройками. Для дальнейшего использования плагина вам необходимо заново %s"
 
-#~ msgid "Publisher ID:"
-#~ msgstr "Publisher ID:"
+#: adsense-plugin.class.php:728
+msgid "re-configure it."
+msgstr "настроить его."
+
+#: adsense-plugin.class.php:788
+msgid "Title"
+msgstr "Заголовок"
+
+#: adsense-plugin.class.php:810
+msgid "Display"
+msgstr "Показывать"
+
+#: adsense-plugin.class.php:811
+msgid "Name"
+msgstr "Название"
+
+#: adsense-plugin.class.php:812
+msgid "Id"
+msgstr "Id"
+
+#: adsense-plugin.class.php:813
+msgid "Type / Size"
+msgstr "Тип /Размер"
+
+#: adsense-plugin.class.php:814
+msgid "Status"
+msgstr "Статус"
+
+#: adsense-plugin.class.php:815
+msgid "Position"
+msgstr "Размещение"
+
+#~ msgid "Read this"
+#~ msgstr "Читать"
+
+#~ msgid "Add ad block"
+#~ msgstr "Добавить рекламный блок"
+
+#~ msgid "Continue"
+#~ msgstr "Продолжить"
+
+#~ msgid ""
+#~ "Please select a smaller number of ad blocks in the %s tab or disable the "
+#~ "ad block display in the \"Widget\" tab."
+#~ msgstr ""
+#~ "Пожалуйста, выберите меньше рекламных блоков на вкладке %s или отключите "
+#~ "показ рекламного блока на вкладке  \"Виджет\"."
+
+#~ msgid ""
+#~ "Please select a smaller number of ad blocks on tabs: %s or disable the ad "
+#~ "block display in the \"Widget\" tab."
+#~ msgstr ""
+#~ "Пожалуйста, выберите меньше рекламных блоков на вкладках: %s или "
+#~ "отключите показ рекламного блока на вкладке \"Виджет\"."
+
+#~ msgid "New ad block"
+#~ msgstr "Новый рекламный блок"
+
+#, fuzzy
+#~ msgid ""
+#~ "The maximum number of ad blocks on the page cannot be more than ad 3 "
+#~ "blocks."
+#~ msgstr ""
+#~ "Максимальное количество рекламных блоков на странице не может превышать "
+#~ "больше 3х рекламных блоков. "
+
+#~ msgid "Please enter valid Publisher ID."
+#~ msgstr "Пожалуйста, ведите валидный Publisher ID."
+
+#~ msgid "Please enter your Publisher ID."
+#~ msgstr "Пожалуйста, введите ваш Publisher ID."
+
+#~ msgid "Publisher ID is a unique identifier of"
+#~ msgstr "Publisher ID является уникальным номером"
+
+#~ msgid "your account"
+#~ msgstr "Вашего аккаунта"
+
+#~ msgid "Ad Type &amp; Format"
+#~ msgstr "Тип и формат рекламных блоков"
+
+#~ msgid "Type:"
+#~ msgstr "Тип:"
+
+#~ msgid "Text and image ads"
+#~ msgstr "Текстовая и визуальная реклама"
+
+#~ msgid "Text ads only (default)"
+#~ msgstr "Только текстовая реклама (стандартна установка)"
+
+#~ msgid "Image ads only"
+#~ msgstr "Только визуальная реклама"
+
+#~ msgid "Block of links"
+#~ msgstr "Блок ссылок"
+
+#~ msgid "Format:"
+#~ msgstr "Формат:"
+
+#~ msgid "Position &amp; amount of ads"
+#~ msgstr "Размещение и количество рекламных блоков"
+
+#~ msgid "Below the post (Single post page)"
+#~ msgstr "После поста (на single странице)"
+
+#~ msgid "Below the post (Home page)"
+#~ msgstr "После поста (на домашней странице)"
+
+#~ msgid "Below the post (Single post page and Home page)"
+#~ msgstr "После поста (на домашней и single странице)"
+
+#~ msgid "Number of Ads:"
+#~ msgstr "Количество блоков:"
+
+#~ msgid "Number of ads below the posts on the home page."
+#~ msgstr "Количество рекламных блоков после постов на домашней странице."
+
+#~ msgid "Visualisation"
+#~ msgstr "Внешний вид"
+
+#~ msgid "Colors:"
+#~ msgstr "Цвета:"
+
+#~ msgid "Border"
+#~ msgstr "Окантовка"
+
+#~ msgid "Background"
+#~ msgstr "Фон"
+
+#~ msgid "URL"
+#~ msgstr "Ссылка"
+
+#~ msgid "Palette:"
+#~ msgstr "Палитра:"
+
+#~ msgid "Default Google pallete"
+#~ msgstr "Палитра Google (стандартная установка)"
+
+#~ msgid "Open Air"
+#~ msgstr "Open Air"
+
+#~ msgid "Seaside"
+#~ msgstr "Seaside"
+
+#~ msgid "Shadow"
+#~ msgstr "Shadow"
+
+#~ msgid "Blue Mix"
+#~ msgstr "Blue Mix"
+
+#~ msgid "Ink"
+#~ msgstr "Ink"
+
+#~ msgid "Graphite"
+#~ msgstr "Graphite"
+
+#~ msgid "These are the standard Google color palettes."
+#~ msgstr "Это стандартные Google палитры."
+
+#~ msgid "Corner Style:"
+#~ msgstr "Стиль углов:"
+
+#~ msgid "Select a corner style"
+#~ msgstr "Выберите стиль углов"
+
+#~ msgid "Square corners"
+#~ msgstr "Углы без закруглений"
+
+#~ msgid "Slightly rounded corners"
+#~ msgstr "Слегка закругленные углы"
+
+#~ msgid "Rounded corners"
+#~ msgstr "Сильно закругленные углы"
+
+#~ msgid "Corner style property will help you to make your Ad corners rounded."
+#~ msgstr ""
+#~ "С помощью данного свойства Вы можете закруглить углы Вашего рекламного "
+#~ "блока."
+
+#~ msgid "Donations"
+#~ msgstr "Пожертвования"
+
+#~ msgid "Donate:"
+#~ msgstr "Пожертвуйте нам:"
+
+#~ msgid "Support us by Donating Ad Space."
+#~ msgstr "Поддержите наш проект предоставляя рекламное пространство."
+
+#~ msgid ""
+#~ "Please enter a percentage value of the ad slots you are ready to share "
+#~ "[Default: 0%]."
+#~ msgstr ""
+#~ "Введите процент от просмотра рекламы, которым вы можете пожертвовать [По "
+#~ "умолчанию: 0%]."
 
 #~ msgid "requires"
 #~ msgstr "требует"
