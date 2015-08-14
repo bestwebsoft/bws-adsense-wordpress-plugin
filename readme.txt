@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: google, adsense, bestwebsoft, google adsense, google plugin, adsense plugin, ads plugin, gogle, ad, ads, adds, ad banner, ad block, ad color, ads display, ad format, ads in widgets, ad links block, add several adds, ads on website, ad parameters, ad type, advertisements, Google ads, Google AdSense, Google AddSense, Goggle AdSense, Gogle AdSense, image, insert ads, insert ads automatically, insert Google ads, text ads, text and image ads. 
 Requires at least: 3.3
-Tested up to: 4.2.2
-Stable tag: 1.35
+Tested up to: 4.2.4
+Stable tag: 1.36
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,8 @@ http://www.youtube.com/watch?v=Z4KUyT4puSo
 <a href="http://wordpress.org/plugins/adsense-plugin/faq/" target="_blank">FAQ</a>
 
 <a href="http://support.bestwebsoft.com" target="_blank">Support</a>
+
+<a href="http://bestwebsoft.com/products/google-adsense/?k=b68fe7a44579f45545bd6e7556143e9a" target="_blank">Upgrade to Pro Version</a>
 
 = Features =
 
@@ -97,6 +99,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 2. Google AdSense Settings page (Authorized in Google AdSense).
 
 == Changelog ==
+
+= V1.36 - 14.08.2015 =
+* Bugfix : We fixed error when getting ad blocks from Google AdSense.
+* Update : BWS plugins section is updated.
 
 = V1.35 - 10.07.2015 =
 * Update : We updated the plugin to use Google AdSense API.
@@ -237,6 +243,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Changed : Usability at the settings page of the plugin was improved.
 
 == Upgrade Notice ==
+
+= V1.36 =
+We fixed error when getting ad blocks from Google AdSense. BWS plugins section is updated.
 
 = V1.35 =
 We updated the plugin to use Google AdSense API.

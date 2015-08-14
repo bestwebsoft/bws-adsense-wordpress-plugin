@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adsense\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-10 14:06+0300\n"
+"POT-Creation-Date: 2015-08-14 15:03+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <support@bestwebsoft.com>\n"
@@ -16,19 +16,16 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: adsense-plugin.class.php:90
-#: adsense-plugin.class.php:599
+#: adsense-plugin.class.php:90 adsense-plugin.class.php:667
 msgid "Google AdSense Settings"
 msgstr "Настройки Google AdSense"
 
-#: adsense-plugin.class.php:97
-#: adsense-plugin.class.php:107
-#: adsense-plugin.class.php:601
+#: adsense-plugin.class.php:97 adsense-plugin.class.php:107
+#: adsense-plugin.class.php:669
 msgid "Settings"
 msgstr "Настройки"
 
-#: adsense-plugin.class.php:108
-#: adsense-plugin.class.php:602
+#: adsense-plugin.class.php:108 adsense-plugin.class.php:670
 msgid "FAQ"
 msgstr "FAQ"
 
@@ -36,267 +33,370 @@ msgstr "FAQ"
 msgid "Support"
 msgstr "Поддержка"
 
-#: adsense-plugin.class.php:327
+#: adsense-plugin.class.php:331
 msgid "Home page"
 msgstr "Домашнаяя страница"
 
-#: adsense-plugin.class.php:331
-#: adsense-plugin.class.php:342
-#: adsense-plugin.class.php:354
-#: adsense-plugin.class.php:366
+#: adsense-plugin.class.php:335 adsense-plugin.class.php:350
+#: adsense-plugin.class.php:366 adsense-plugin.class.php:382
+#: adsense-plugin.class.php:397
 msgid "After the content"
 msgstr "После контента"
 
-#: adsense-plugin.class.php:332
-#: adsense-plugin.class.php:343
-#: adsense-plugin.class.php:355
-#: adsense-plugin.class.php:367
+#: adsense-plugin.class.php:336 adsense-plugin.class.php:351
+#: adsense-plugin.class.php:367 adsense-plugin.class.php:383
+#: adsense-plugin.class.php:398
 msgid "Before the content"
 msgstr "Перед контентом"
 
-#: adsense-plugin.class.php:338
+#: adsense-plugin.class.php:339 adsense-plugin.class.php:355
+#: adsense-plugin.class.php:371 adsense-plugin.class.php:386
+#: adsense-plugin.class.php:401
+msgid "After the first paragraph (Available in PRO)"
+msgstr "После первого абзаца (Доступно в ПРО)"
+
+#: adsense-plugin.class.php:340 adsense-plugin.class.php:356
+#: adsense-plugin.class.php:372 adsense-plugin.class.php:387
+#: adsense-plugin.class.php:402
+msgid "After a random paragraph (Available in PRO)"
+msgstr "После случайного абзаца (Доступно в ПРО)"
+
+#: adsense-plugin.class.php:346
 msgid "Pages"
 msgstr "Страницы"
 
-#: adsense-plugin.class.php:344
-#: adsense-plugin.class.php:356
+#: adsense-plugin.class.php:352 adsense-plugin.class.php:368
 msgid "Below the comment form"
 msgstr "После формы отправки комментария"
 
-#: adsense-plugin.class.php:350
+#: adsense-plugin.class.php:362
 msgid "Posts / Custom posts"
 msgstr "Посты / Кастомные посты"
 
-#: adsense-plugin.class.php:362
+#: adsense-plugin.class.php:378
 msgid "Categories / Tags"
 msgstr "Категории / Теги"
 
-#: adsense-plugin.class.php:373
-#: adsense-plugin.class.php:546
+#: adsense-plugin.class.php:393
+msgid "Search results"
+msgstr "Результаты поиска"
+
+#: adsense-plugin.class.php:408 adsense-plugin.class.php:603
 msgid "Widget"
 msgstr "Виджет"
 
-#: adsense-plugin.class.php:384
+#: adsense-plugin.class.php:412 adsense-plugin.class.php:863
+msgid "Static"
+msgstr "Статический"
+
+#: adsense-plugin.class.php:415
+msgid "Fixed (Available in PRO)"
+msgstr "Фиксированный (Доступно в ПРО)"
+
+#: adsense-plugin.class.php:424
 msgid "Text"
 msgstr "Текст"
 
-#: adsense-plugin.class.php:385
+#: adsense-plugin.class.php:425
 msgid "Image"
 msgstr "Графика"
 
-#: adsense-plugin.class.php:386
+#: adsense-plugin.class.php:426
 msgid "Text/Image"
 msgstr "Текст/Графика"
 
-#: adsense-plugin.class.php:390
+#: adsense-plugin.class.php:427
+msgid "Link"
+msgstr "Ссылка"
+
+#: adsense-plugin.class.php:431
 msgid "New"
 msgstr "Новый"
 
-#: adsense-plugin.class.php:391
+#: adsense-plugin.class.php:432
 msgid "Active"
 msgstr "Активный"
 
-#: adsense-plugin.class.php:392
+#: adsense-plugin.class.php:433
 msgid "Inactive"
 msgstr "Неактивный"
 
-#: adsense-plugin.class.php:396
+#: adsense-plugin.class.php:437
 msgid "Responsive"
 msgstr "Адаптивный"
 
-#: adsense-plugin.class.php:460
+#: adsense-plugin.class.php:516
 msgid "AdUnits Error:"
 msgstr "AdUnits Error:"
 
-#: adsense-plugin.class.php:462
-#: adsense-plugin.class.php:473
-#: adsense-plugin.class.php:484
+#: adsense-plugin.class.php:518 adsense-plugin.class.php:530
+#: adsense-plugin.class.php:541
 #, php-format
 msgid "Create account in %s"
 msgstr "Создать аккаунт в %s"
 
-#: adsense-plugin.class.php:471
+#: adsense-plugin.class.php:528
 msgid "AdClient Error:"
 msgstr "AdClient Error:"
 
-#: adsense-plugin.class.php:482
+#: adsense-plugin.class.php:539
 msgid "Account Error:"
 msgstr "Account Error:"
 
-#: adsense-plugin.class.php:498
+#: adsense-plugin.class.php:555
 msgid "Invalid authorization code. Please, try again."
 msgstr "Неверный код авторизации. Пожалуйста, попробуйте еще раз."
 
-#: adsense-plugin.class.php:533
+#: adsense-plugin.class.php:590
 #, php-format
 msgid "An error occurred while obtaining the code for the block %s."
 msgstr "Произошла ошибка при получении кода для блока %s."
 
-#: adsense-plugin.class.php:533
-#: adsense-plugin.class.php:546
-#: adsense-plugin.class.php:568
-#: adsense-plugin.class.php:573
-#: adsense-plugin.class.php:593
+#: adsense-plugin.class.php:590 adsense-plugin.class.php:603
+#: adsense-plugin.class.php:625 adsense-plugin.class.php:630
+#: adsense-plugin.class.php:650
 msgid "Settings are not saved."
 msgstr "Настройки не сохранены."
 
-#: adsense-plugin.class.php:546
-#: adsense-plugin.class.php:568
-#: adsense-plugin.class.php:573
+#: adsense-plugin.class.php:603 adsense-plugin.class.php:625
+#: adsense-plugin.class.php:630
 #, php-format
-msgid "The maximum number of ad blocks on the page cannot be more than 3 ad blocks (%s)."
-msgstr "Максимальное количество рекламных блоков на странице не может превышать больше 3х рекламных блоков (%s)."
+msgid ""
+"The maximum number of ad blocks on the page cannot be more than 3 ad blocks "
+"(%s)."
+msgstr ""
+"Максимальное количество рекламных блоков на странице не может превышать "
+"больше 3х рекламных блоков (%s)."
 
-#: adsense-plugin.class.php:546
-#: adsense-plugin.class.php:568
-#: adsense-plugin.class.php:573
-#: adsense-plugin.class.php:670
+#: adsense-plugin.class.php:603 adsense-plugin.class.php:625
+#: adsense-plugin.class.php:630 adsense-plugin.class.php:743
 msgid "Learn more"
 msgstr "Узнать больше"
 
-#: adsense-plugin.class.php:546
+#: adsense-plugin.class.php:603
 #, php-format
-msgid "Please select a smaller number of ad blocks or disable the ad block display in the %s tab."
-msgstr "Пожалуйста, выберите меньше рекламных блоков или отключите показ рекламного блока на вкладке %s."
+msgid ""
+"Please select a smaller number of ad blocks or disable the ad block display "
+"in the %s tab."
+msgstr ""
+"Пожалуйста, выберите меньше рекламных блоков или отключите показ рекламного "
+"блока на вкладке %s."
 
-#: adsense-plugin.class.php:559
+#: adsense-plugin.class.php:616
 msgid "ad blocks"
 msgstr "рекламных блока"
 
-#: adsense-plugin.class.php:568
+#: adsense-plugin.class.php:625
 #, php-format
-msgid "To display the ad block in widget, please set a smaller number of ad blocks in the %s tab."
-msgstr "Для отображения рекламного блока в виджете необходимо выбрать меньше рекламных блоков на вкладе %s."
+msgid ""
+"To display the ad block in widget, please set a smaller number of ad blocks "
+"in the %s tab."
+msgstr ""
+"Для отображения рекламного блока в виджете необходимо выбрать меньше "
+"рекламных блоков на вкладе %s."
 
-#: adsense-plugin.class.php:573
+#: adsense-plugin.class.php:630
 #, php-format
-msgid "To display the ad block in widget, please set a smaller number of ad blocks in tabs: %s."
-msgstr "Для отображения рекламного блока в виджете необходимо выбрать меньше рекламных блоков на вкладках: %s."
+msgid ""
+"To display the ad block in widget, please set a smaller number of ad blocks "
+"in tabs: %s."
+msgstr ""
+"Для отображения рекламного блока в виджете необходимо выбрать меньше "
+"рекламных блоков на вкладках: %s."
 
-#: adsense-plugin.class.php:585
+#: adsense-plugin.class.php:642
 msgid "Settings saved."
 msgstr "Настройки сохранены."
 
-#: adsense-plugin.class.php:612
+#: adsense-plugin.class.php:671 adsense-plugin.class.php:772
+msgid "Go PRO"
+msgstr "Перейти на PRO версию"
+
+#: adsense-plugin.class.php:681
 msgid "Notice:"
 msgstr "Внимание:"
 
-#: adsense-plugin.class.php:612
-msgid "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button."
-msgstr "Настройки плагина были изменены. Для того, чтобы сохранить их, пожалуйста, не забудьте нажать кнопку \"Сохранить\"."
+#: adsense-plugin.class.php:681
+msgid ""
+"The plugin's settings have been changed. In order to save them please don't "
+"forget to click the 'Save Changes' button."
+msgstr ""
+"Настройки плагина были изменены. Для того, чтобы сохранить их, пожалуйста, "
+"не забудьте нажать кнопку \"Сохранить\"."
 
-#: adsense-plugin.class.php:617
-#: adsense-plugin.class.php:727
+#: adsense-plugin.class.php:687 adsense-plugin.class.php:820
 msgid "Attention:"
 msgstr "Внимание:"
 
-#: adsense-plugin.class.php:617
-msgid "We updated the plugin to use Google AdSense API, which is not compatible with the old settings. At the moment, plugin use old settings. But for further plugin usage with a new Google AdSense API, you will need to re-configure the ad blocks display. Please note that the old settings and plugin ad blocks in the frontend will be removed."
-msgstr "Мы обновили плагин на использование Google AdSense API, который не совместим со старыми настройками. Сейчас плагин работает используя старые настройки. Но для дальнейшего использования плагина с новым Google AdSense API, вам необходимо будет заново настроить отображение блоков рекламы. Обратите внимание, что старые настройки плагина и блоки рекламы во фронтенде будут удалены."
+#: adsense-plugin.class.php:687
+msgid ""
+"We updated the plugin to use Google AdSense API, which is not compatible "
+"with the old settings. At the moment, plugin use old settings. But for "
+"further plugin usage with a new Google AdSense API, you will need to re-"
+"configure the ad blocks display. Please note that the old settings and "
+"plugin ad blocks in the frontend will be removed."
+msgstr ""
+"Мы обновили плагин на использование Google AdSense API, который не совместим "
+"со старыми настройками. Сейчас плагин работает используя старые настройки. "
+"Но для дальнейшего использования плагина с новым Google AdSense API, вам "
+"необходимо будет заново настроить отображение блоков рекламы. Обратите "
+"внимание, что старые настройки плагина и блоки рекламы во фронтенде будут "
+"удалены."
 
-#: adsense-plugin.class.php:618
+#: adsense-plugin.class.php:688
 msgid "Upgrade to new functionality"
 msgstr "Перейти на новый функционал"
 
-#: adsense-plugin.class.php:627
+#: adsense-plugin.class.php:697
 msgid "Remote work with Google AdSense"
 msgstr "Удаленная работа с Google AdSense"
 
-#: adsense-plugin.class.php:631
+#: adsense-plugin.class.php:701
 msgid "Log out from Google AdSense"
 msgstr "Выйти из Google AdSense"
 
-#: adsense-plugin.class.php:639
+#: adsense-plugin.class.php:709
 msgid "Please authorize via your Google Account to manage ad blocks."
-msgstr "Пожалуйста, авторизируйтесь с помощью вашего Google аккаунта для управления рекламными блоками."
+msgstr ""
+"Пожалуйста, авторизируйтесь с помощью вашего Google аккаунта для управления "
+"рекламными блоками."
 
-#: adsense-plugin.class.php:641
+#: adsense-plugin.class.php:711
 msgid "Get Authorization Code"
 msgstr "Получить Код Авторизации"
 
-#: adsense-plugin.class.php:644
+#: adsense-plugin.class.php:714
 msgid "Authorize"
 msgstr "Авторизироваться"
 
-#: adsense-plugin.class.php:651
+#: adsense-plugin.class.php:721
 msgid "Your Publisher ID:"
 msgstr "Ваш  ID Издателя:"
 
-#: adsense-plugin.class.php:670
+#: adsense-plugin.class.php:743 adsense-plugin.class.php:895
 msgid "Please note:"
 msgstr "Пожалуйста, обратите внимание:"
 
-#: adsense-plugin.class.php:670
-msgid "The maximum number of ad blocks on the page cannot be more than 3 ad blocks."
-msgstr "Максимальное количество рекламных блоков на странице не может превышать больше 3х рекламных блоков."
+#: adsense-plugin.class.php:743
+msgid ""
+"The maximum number of ad blocks on the page cannot be more than 3 ad blocks."
+msgstr ""
+"Максимальное количество рекламных блоков на странице не может превышать "
+"больше 3х рекламных блоков."
 
-#: adsense-plugin.class.php:672
+#: adsense-plugin.class.php:745
 #, php-format
-msgid "Please don't forget to place the AdSense widget into a needed sidebar on the %s."
-msgstr "Пожалуйста, не забудьте переместить виджет \"AdSense\"  в необходимый сайдбар на %s."
+msgid ""
+"Please don't forget to place the AdSense widget into a needed sidebar on the "
+"%s."
+msgstr ""
+"Пожалуйста, не забудьте переместить виджет \"AdSense\"  в необходимый "
+"сайдбар на %s."
 
-#: adsense-plugin.class.php:672
+#: adsense-plugin.class.php:745
 msgid "widget page"
 msgstr "странице виджетов"
 
-#: adsense-plugin.class.php:675
-#, php-format
-msgid "Add or mange existing ad blocks in the %s."
-msgstr "Добавить или управлять существующими рекламными блоками вы можете в %s."
+#: adsense-plugin.class.php:745
+msgid "An opportunity to add several widgets is available in the"
+msgstr "Возможность добавления нескольких виджетов доступна в"
 
-#: adsense-plugin.class.php:675
+#: adsense-plugin.class.php:748
+#, php-format
+msgid "Add or manage existing ad blocks in the %s."
+msgstr ""
+"Добавить или управлять существующими рекламными блоками вы можете в %s."
+
+#: adsense-plugin.class.php:748
 msgid "Google AdSense"
 msgstr "Google AdSense"
 
-#: adsense-plugin.class.php:676
+#: adsense-plugin.class.php:749
 #, php-format
-msgid "After adding the ad block in Google AdSense, please %s to see the new ad block in the list of plugin ad blocks."
-msgstr "После добавления рекламного блока в Google AdSense, пожалуйста, %s, чтобы увидеть новый блок в списке рекламных блоков плагина."
+msgid ""
+"After adding the ad block in Google AdSense, please %s to see the new ad "
+"block in the list of plugin ad blocks."
+msgstr ""
+"После добавления рекламного блока в Google AdSense, пожалуйста, %s, чтобы "
+"увидеть новый блок в списке рекламных блоков плагина."
 
-#: adsense-plugin.class.php:676
+#: adsense-plugin.class.php:749
 msgid "reload the page"
 msgstr "обновите страницу"
 
-#: adsense-plugin.class.php:693
+#: adsense-plugin.class.php:768
+msgid "Unlock premium options by upgrading to a PRO version."
+msgstr "Активируйте премиум опции обновившись до PRO версии."
+
+#: adsense-plugin.class.php:769
+msgid "Learn More"
+msgstr "Подробнее"
+
+#: adsense-plugin.class.php:782
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
-#: adsense-plugin.class.php:728
+#: adsense-plugin.class.php:821
 #, php-format
-msgid "Google AdSense by BestWebSoft plugin was updated to use Google AdSense API, which is not compatible with the old settings. For further plugin usage, you will need to %s"
-msgstr "Плагин Google AdSense by BestWebSoft был обновлен на использование AdSense API, который не совместим со старыми настройками. Для дальнейшего использования плагина вам необходимо заново %s"
+msgid ""
+"Google AdSense by BestWebSoft plugin was updated to use Google AdSense API, "
+"which is not compatible with the old settings. For further plugin usage, you "
+"will need to %s"
+msgstr ""
+"Плагин Google AdSense by BestWebSoft был обновлен на использование AdSense "
+"API, который не совместим со старыми настройками. Для дальнейшего "
+"использования плагина вам необходимо заново %s"
 
-#: adsense-plugin.class.php:728
+#: adsense-plugin.class.php:821
 msgid "re-configure it."
 msgstr "настроить его."
 
-#: adsense-plugin.class.php:788
+#: adsense-plugin.class.php:864
+msgid "Fixed"
+msgstr "Фиксированный"
+
+#: adsense-plugin.class.php:873
+msgid "Widget displays Google AdSense."
+msgstr "Виджет отображает Google AdSense."
+
+#: adsense-plugin.class.php:893
 msgid "Title"
 msgstr "Заголовок"
 
-#: adsense-plugin.class.php:810
+#: adsense-plugin.class.php:895
+msgid ""
+"Select ad block to display in the widget you can on the plugin settings page "
+"in the 'Widget' tab."
+msgstr ""
+"Выбрать рекламный блок для отображения Вы можете на странице плагина во "
+"вкладке 'Виджет'."
+
+#: adsense-plugin.class.php:919
 msgid "Display"
 msgstr "Показывать"
 
-#: adsense-plugin.class.php:811
+#: adsense-plugin.class.php:920
 msgid "Name"
 msgstr "Название"
 
-#: adsense-plugin.class.php:812
+#: adsense-plugin.class.php:921
 msgid "Id"
 msgstr "Id"
 
-#: adsense-plugin.class.php:813
+#: adsense-plugin.class.php:922
 msgid "Type / Size"
 msgstr "Тип /Размер"
 
-#: adsense-plugin.class.php:814
+#: adsense-plugin.class.php:923
 msgid "Status"
 msgstr "Статус"
 
-#: adsense-plugin.class.php:815
+#: adsense-plugin.class.php:924
 msgid "Position"
 msgstr "Размещение"
+
+#~ msgid "PRO"
+#~ msgstr "Перейти на PRO"
 
 #~ msgid "Read this"
 #~ msgstr "Читать"

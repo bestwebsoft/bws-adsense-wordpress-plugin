@@ -32,6 +32,9 @@
 	max-width: 100%;
 	width: 100%;
 }
+.adsns_adunit_position optgroup{
+	font-style: normal;
+}
 .adsns_adunit_order {
 	margin: 0;
 	max-width: 100%;
@@ -83,4 +86,10 @@
 }
 #adsns_settings_form .tablenav {
 	display: none;
+}
+.bws_pro_version_bloc.adsns_pro_version_bloc {
+	max-width: 100%;
+}
+.adsns_table_bg {
+	top: 0;
 }
