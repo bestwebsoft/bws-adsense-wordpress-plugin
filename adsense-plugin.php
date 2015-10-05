@@ -4,7 +4,9 @@ Plugin Name: Google AdSense by BestWebSoft
 Plugin URI: http://bestwebsoft.com/products/
 Description: This plugin allows implementing Google AdSense to your website.
 Author: BestWebSoft
-Version: 1.36
+Text Domain: adsense-plugin
+Domain Path: /languages
+Version: 1.37
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -32,7 +34,19 @@ $adsns_plugin =	new adsns(); /* Creating a variable with type of our class */
 /* Function fo uninstall */
 if ( ! function_exists( 'adsns_uninstall' ) ) {
 	function adsns_uninstall() {
-		delete_option( 'adsns_settings' );
+        if ( function_exists( 'is_multisite' ) && is_multisite() ) {
+            global $wpdb;
+            $old_blog = $wpdb->blogid;
+            /* Get all blog ids */
+            $blogids = $wpdb->get_col( "SELECT `blog_id` FROM $wpdb->blogs" );
+            foreach ( $blogids as $blog_id ) {
+                switch_to_blog( $blog_id );
+                delete_option( 'adsns_settings' );
+            }
+            switch_to_blog( $old_blog );
+        } else {
+            delete_option( 'adsns_settings' );
+        }
 	}
 }
 
@@ -59,4 +73,3 @@ add_filter( 'plugin_row_meta', array( $adsns_plugin, 'adsns_register_plugin_link
 add_action( 'admin_notices', array( $adsns_plugin, 'adsns_plugin_notice') );
 /* When uninstall plugin */
 register_uninstall_hook( __FILE__, 'adsns_uninstall' );
-?>

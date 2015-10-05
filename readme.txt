@@ -1,10 +1,10 @@
 === Google AdSense by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
-Tags: google, adsense, bestwebsoft, google adsense, google plugin, adsense plugin, ads plugin, gogle, ad, ads, adds, ad banner, ad block, ad color, ads display, ad format, ads in widgets, ad links block, add several adds, ads on website, ad parameters, ad type, advertisements, Google ads, Google AdSense, Google AddSense, Goggle AdSense, Gogle AdSense, image, insert ads, insert ads automatically, insert Google ads, text ads, text and image ads. 
-Requires at least: 3.3
-Tested up to: 4.2.4
-Stable tag: 1.36
+Tags: ad, ad banner, ad block, ad color, ad format, ad links block, ad manager, ad parameters, ad type, add ad banner, add ad banners, add ad block, add several ad blocks, add several adds, Adds, ads, ads display, ads in widgets, Ads on website, ads plugin, adsense, adsense plugin, advertisements, adsense insertion, advert, advert manager, advertise, adverts, advertisement, advertising, best ads plugin, best adsense plugin, block, blocks, commercial, commercial block, content, easy adsense, free, free adsense plugin, free ads plugin, Goggle AdSense, gogle, Gogle AdSense, google, Google AddSense, google ads, google adsense, google plugin, image, insert ads, insert ads automatically, insert Google ads, simple ads plugin, simple adsense plugin, text ads, text and image ads, wp ads plugin, wordpress ads plugin, wp adsense plugin, wordpress adsense plugin, responsive, responsive ad, Google AdSense API, ad in widget
+Requires at least: 3.8
+Tested up to: 4.3.1
+Stable tag: 1.37
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,19 +16,20 @@ Google AdSense Plugin creates blocks to display ads on your website. It allows t
 
 http://www.youtube.com/watch?v=Z4KUyT4puSo
 
-<a href="http://www.youtube.com/watch?v=Nkp267vxZ84" target="_blank">Video instruction on Installation</a>
+<a href="http://www.youtube.com/watch?v=Nkp267vxZ84" target="_blank">Google AdSense by BestWebSoft Video instruction on Installation</a>
 
-<a href="http://wordpress.org/plugins/adsense-plugin/faq/" target="_blank">FAQ</a>
+<a href="http://wordpress.org/plugins/adsense-plugin/faq/" target="_blank">Google AdSense by BestWebSoft FAQ</a>
 
-<a href="http://support.bestwebsoft.com" target="_blank">Support</a>
+<a href="http://support.bestwebsoft.com" target="_blank">Google AdSense by BestWebSoft Support</a>
 
-<a href="http://bestwebsoft.com/products/google-adsense/?k=b68fe7a44579f45545bd6e7556143e9a" target="_blank">Upgrade to Pro Version</a>
+<a href="http://bestwebsoft.com/products/google-adsense/?k=b68fe7a44579f45545bd6e7556143e9a" target="_blank">Upgrade to Google AdSense Pro by BestWebSoft</a>
 
 = Features =
 
-* Display: Customize the way the ads look, choose a color scheme, layout, number of ad units per page.
-* Display: Insert Google ads into the widget.
-* Actions: Insert Google ads into the website automatically.
+* Receiving the existing ad blocks from Google AdSense account using Google AdSense API.
+* Automatic insertion of ad blocks to the home page, pages, post / custom posts, categories / tags.
+* Displaying ad blocks before content, after content, after comments form.
+* Displaying ad block in the widget.
 
 = Recommended Plugins =
 
@@ -99,6 +100,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 2. Google AdSense Settings page (Authorized in Google AdSense).
 
 == Changelog ==
+
+= V1.37 - 05.10.2015 =
+* Update : Textdomain was changed.
 
 = V1.36 - 14.08.2015 =
 * Bugfix : We fixed error when getting ad blocks from Google AdSense.
@@ -243,6 +247,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Changed : Usability at the settings page of the plugin was improved.
 
 == Upgrade Notice ==
+
+= V1.37 =
+Textdomain was changed.
 
 = V1.36 =
 We fixed error when getting ad blocks from Google AdSense. BWS plugins section is updated.

@@ -28,21 +28,6 @@
 			$( '.adsns_adunit_ids' ).filter( ':not(:checked)' ).attr( 'disabled', true );
 		}
 
-		var notices = {
-			new_settings : function() {
-				$( '.adsns_settings_notice' ).hide();
-				$( '.adsns_new_settings_notice' ).show();	
-			}
-		}
-
-		$( notices ).bind( 'control', function(){
-			this.new_settings();
-		});		
-
-		$( '.wp-list-table.bws-plugins_page_adsense-plugin select' ).change( function() {
-			$( notices ).trigger( 'control' );
-		});
-
 		$( '.adsns_adunit_ids' ).change( function(e) {
 			var $cb = $( this ),
 				$row = $cb.parents( 'tr' );
@@ -56,7 +41,6 @@
 			} else {
 				$row.find( '.adsns_adunit_position, .adsns_adunit_order' ).attr( 'disabled', true );
 			}
-			$( notices ).trigger( 'control' );
 		});
 	});
 })(jQuery);

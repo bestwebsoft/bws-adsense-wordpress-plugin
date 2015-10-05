@@ -87,14 +87,14 @@ if ( ! class_exists( 'adsns' ) ) {
 		/* Add 'BWS Plugins' menu at the left side in administer panel */
 		function adsns_add_admin_menu() {
 			bws_add_general_menu( 'adsense-plugin/adsense-plugin.php' );
-			add_submenu_page( 'bws_plugins', __( 'Google AdSense Settings', 'adsense' ), 'Google AdSense', 'manage_options', "adsense-plugin.php", array( $this, 'adsns_settings_page' ) );
+			add_submenu_page( 'bws_plugins', __( 'Google AdSense Settings', 'adsense-plugin' ), 'Google AdSense', 'manage_options', "adsense-plugin.php", array( $this, 'adsns_settings_page' ) );
 		}
 
 		/* Add a link for settings page */
 		function adsns_plugin_action_links( $links, $file ) {
 			if ( ! is_network_admin() ) {
 				if ( $file == 'adsense-plugin/adsense-plugin.php' ) {
-					$settings_link = '<a href="admin.php?page=adsense-plugin.php">' . __( 'Settings', 'adsense' ) . '</a>';
+					$settings_link = '<a href="admin.php?page=adsense-plugin.php">' . __( 'Settings', 'adsense-plugin' ) . '</a>';
 					array_unshift( $links, $settings_link );
 				}
 			}
@@ -104,15 +104,17 @@ if ( ! class_exists( 'adsns' ) ) {
 		function adsns_register_plugin_links( $links, $file ) {
 			if ( $file == 'adsense-plugin/adsense-plugin.php' ) {
 				if ( ! is_network_admin() )
-					$links[]	=	'<a href="admin.php?page=adsense-plugin.php">' . __( 'Settings', 'adsense' ) . '</a>';
-				$links[]	=	'<a href="http://wordpress.org/plugins/adsense-plugin/faq/" target="_blank">' . __( 'FAQ', 'adsense' ) . '</a>';
-				$links[]	=	'<a href="http://support.bestwebsoft.com">' . __( 'Support', 'adsense' ) . '</a>';
+					$links[]	=	'<a href="admin.php?page=adsense-plugin.php">' . __( 'Settings', 'adsense-plugin' ) . '</a>';
+				$links[]	=	'<a href="http://bestwebsoft.com/products/google-adsense/faq" target="_blank">' . __( 'FAQ', 'adsense-plugin' ) . '</a>';
+				$links[]	=	'<a href="http://support.bestwebsoft.com">' . __( 'Support', 'adsense-plugin' ) . '</a>';
 			}
 			return $links;
 		}
 
 		function adsns_plugin_init() {
-			require_once( dirname( __FILE__ ) . '/bws_menu/bws_functions.php' );
+
+			require_once( dirname( __FILE__ ) . '/bws_menu/bws_include.php' );
+			bws_include_init( 'adsense-plugin/adsense-plugin.php' );
 
 			if ( empty( $this->adsns_plugin_info ) ) {
 				if ( ! function_exists( 'get_plugin_data' ) )
@@ -121,7 +123,7 @@ if ( ! class_exists( 'adsns' ) ) {
 			}
 
 			/* Function check if plugin is compatible with current WP version */
-			bws_wp_version_check( 'adsense-plugin/adsense-plugin.php', $this->adsns_plugin_info, '3.3' );
+			bws_wp_min_version_check( 'adsense-plugin/adsense-plugin.php', $this->adsns_plugin_info, '3.8', '3.3' );
 
 			/* Call register settings function */
 			if ( ! is_admin() || ( isset( $_GET['page'] ) && "adsense-plugin.php" == $_GET['page'] ) ) {
@@ -132,7 +134,7 @@ if ( ! class_exists( 'adsns' ) ) {
 		/* Plugin localization */
 		function adsns_localization() {
 			/* Internationalization */
-			load_plugin_textdomain( 'adsense', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+			load_plugin_textdomain( 'adsense-plugin', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 		}
 
 		function adsns_plugin_admin_init() {
@@ -157,10 +159,12 @@ if ( ! class_exists( 'adsns' ) ) {
 			$this->adsns_plugin_info = get_plugin_data( dirname( __FILE__ ) . '/adsense-plugin.php' );
 
 			$adsns_options_defaults = array(
-				'plugin_option_version'	=>	$this->adsns_plugin_info["Version"],
-				'widget_title'			=>	'',
-				'use_new_api'			=> false,
-				'publisher_id'          => ''
+				'plugin_option_version'		=>	$this->adsns_plugin_info["Version"],
+				'widget_title'				=>	'',
+				'use_new_api'				=> false,
+				'publisher_id'          	=> '',
+				'display_settings_notice'	=>	1,
+				'first_install'				=>	strtotime( "now" )
 			);
 
 			if ( ! get_option( 'adsns_settings' ) ) {
@@ -174,6 +178,7 @@ if ( ! class_exists( 'adsns' ) ) {
 
 			/* Array merge incase this version has added new options */
 			if ( ! isset( $this->adsns_options['plugin_option_version'] ) || $this->adsns_options['plugin_option_version'] != $this->adsns_plugin_info["Version"] ) {
+				$adsns_options_defaults['display_settings_notice'] = 0;
 				$this->adsns_options = array_merge( $adsns_options_defaults, $this->adsns_options );
 				$this->adsns_options['plugin_option_version'] = $this->adsns_plugin_info["Version"];
 				update_option( 'adsns_settings', $this->adsns_options );
@@ -328,91 +333,91 @@ if ( ! class_exists( 'adsns' ) ) {
 				$adsns_tabs = array(
 					'home' => array(
 						'tab' => array(
-							'title' => __( 'Home page', 'adsense' ),
+							'title' => __( 'Home page', 'adsense-plugin' ),
 							'url'   => sprintf( 'admin.php?page=adsense-plugin.php%s', $adsns_tab_url )
 						),
 						'adunit_positions' => array(
-							'after'       => __( 'After the content', 'adsense' ),
-							'before'      => __( 'Before the content', 'adsense' )
+							'after'       => __( 'After the content', 'adsense-plugin' ),
+							'before'      => __( 'Before the content', 'adsense-plugin' )
 						),
 						'adunit_positions_pro' => array(
-							'1st_paragraph'    => __( 'After the first paragraph (Available in PRO)', 'adsense' ),
-							'random_paragraph' => __( 'After a random paragraph (Available in PRO)', 'adsense' )
+							'1st_paragraph'    => __( 'After the first paragraph (Available in PRO)', 'adsense-plugin' ),
+							'random_paragraph' => __( 'After a random paragraph (Available in PRO)', 'adsense-plugin' )
 						),
 						'max_ads' => 3
 					),
 					'pages' => array(
 						'tab' => array(
-							'title' => __( 'Pages', 'adsense' ),
+							'title' => __( 'Pages', 'adsense-plugin' ),
 							'url'   => sprintf( 'admin.php?page=adsense-plugin.php&tab=pages%s', $adsns_tab_url )
 						),
 						'adunit_positions' => array(
-							'after'       => __( 'After the content', 'adsense' ),
-							'before'      => __( 'Before the content', 'adsense' ),
-							'commentform' => __( 'Below the comment form', 'adsense' )
+							'after'       => __( 'After the content', 'adsense-plugin' ),
+							'before'      => __( 'Before the content', 'adsense-plugin' ),
+							'commentform' => __( 'Below the comment form', 'adsense-plugin' )
 						),
 						'adunit_positions_pro' => array(
-							'1st_paragraph'    => __( 'After the first paragraph (Available in PRO)', 'adsense' ),
-							'random_paragraph' => __( 'After a random paragraph (Available in PRO)', 'adsense' )
+							'1st_paragraph'    => __( 'After the first paragraph (Available in PRO)', 'adsense-plugin' ),
+							'random_paragraph' => __( 'After a random paragraph (Available in PRO)', 'adsense-plugin' )
 						),
 						'max_ads' => 3
 					),
 					'posts+custom_posts' => array(
 						'tab' => array(
-							'title' => __( 'Posts / Custom posts', 'adsense' ),
+							'title' => __( 'Posts / Custom posts', 'adsense-plugin' ),
 							'url'   => sprintf( 'admin.php?page=adsense-plugin.php&tab=posts+custom_posts%s', $adsns_tab_url )
 						),
 						'adunit_positions' => array(
-							'after'       => __( 'After the content', 'adsense' ),
-							'before'      => __( 'Before the content', 'adsense' ),
-							'commentform' => __( 'Below the comment form', 'adsense' )
+							'after'       => __( 'After the content', 'adsense-plugin' ),
+							'before'      => __( 'Before the content', 'adsense-plugin' ),
+							'commentform' => __( 'Below the comment form', 'adsense-plugin' )
 						),
 						'adunit_positions_pro' => array(
-							'1st_paragraph'    => __( 'After the first paragraph (Available in PRO)', 'adsense' ),
-							'random_paragraph' => __( 'After a random paragraph (Available in PRO)', 'adsense' )
+							'1st_paragraph'    => __( 'After the first paragraph (Available in PRO)', 'adsense-plugin' ),
+							'random_paragraph' => __( 'After a random paragraph (Available in PRO)', 'adsense-plugin' )
 						),
 						'max_ads' => 3
 					),
 					'categories+tags' => array(
 						'tab' => array(
-							'title' => __( 'Categories / Tags', 'adsense' ),
+							'title' => __( 'Categories / Tags', 'adsense-plugin' ),
 							'url'   => sprintf( 'admin.php?page=adsense-plugin.php&tab=categories+tags%s', $adsns_tab_url )
 						),
 						'adunit_positions' => array(
-							'after'       => __( 'After the content', 'adsense' ),
-							'before'      => __( 'Before the content', 'adsense' )
+							'after'       => __( 'After the content', 'adsense-plugin' ),
+							'before'      => __( 'Before the content', 'adsense-plugin' )
 						),
 						'adunit_positions_pro' => array(
-							'1st_paragraph'    => __( 'After the first paragraph (Available in PRO)', 'adsense' ),
-							'random_paragraph' => __( 'After a random paragraph (Available in PRO)', 'adsense' )
+							'1st_paragraph'    => __( 'After the first paragraph (Available in PRO)', 'adsense-plugin' ),
+							'random_paragraph' => __( 'After a random paragraph (Available in PRO)', 'adsense-plugin' )
 						),
 						'max_ads' => 3
 					),
 					'search' => array(
 						'tab' => array(
-							'title' => __( 'Search results', 'adsense' ),
+							'title' => __( 'Search results', 'adsense-plugin' ),
 							'url'   => sprintf( 'admin.php?page=adsense-plugin.php&tab=search%s', $adsns_tab_url )
 						),
 						'adunit_positions' => array(
-							'after'            => __( 'After the content', 'adsense' ),
-							'before'           => __( 'Before the content', 'adsense' )
+							'after'            => __( 'After the content', 'adsense-plugin' ),
+							'before'           => __( 'Before the content', 'adsense-plugin' )
 						),
 						'adunit_positions_pro' => array(
-							'1st_paragraph'    => __( 'After the first paragraph (Available in PRO)', 'adsense' ),
-							'random_paragraph' => __( 'After a random paragraph (Available in PRO)', 'adsense' )
+							'1st_paragraph'    => __( 'After the first paragraph (Available in PRO)', 'adsense-plugin' ),
+							'random_paragraph' => __( 'After a random paragraph (Available in PRO)', 'adsense-plugin' )
 						),
 						'max_ads' => 3
 					),
 					'widget' => array(
 						'tab' => array(
-							'title' => __( 'Widget', 'adsense' ),
+							'title' => __( 'Widget', 'adsense-plugin' ),
 							'url'   => sprintf( 'admin.php?page=adsense-plugin.php&tab=widget%s', $adsns_tab_url )
 						),
 						'adunit_positions' => array(
-							'static'       => __( 'Static', 'adsense' )
+							'static'       => __( 'Static', 'adsense-plugin' )
 						),
 						'adunit_positions_pro' => array(
-							'fixed'    => __( 'Fixed (Available in PRO)', 'adsense' ),
+							'fixed'    => __( 'Fixed (Available in PRO)', 'adsense-plugin' ),
 						),
 						'max_ads' => 1
 					)
@@ -421,20 +426,20 @@ if ( ! class_exists( 'adsns' ) ) {
 				$adsns_tbl_data = array();
 
 				$adsns_adunit_types = array(
-					'TEXT'       => __( 'Text', 'adsense' ),
-					'IMAGE'      => __( 'Image', 'adsense' ),
-					'TEXT_IMAGE' => __( 'Text/Image', 'adsense' ),
-					'LINK'       => __( 'Link', 'adsense' )
+					'TEXT'       => __( 'Text', 'adsense-plugin' ),
+					'IMAGE'      => __( 'Image', 'adsense-plugin' ),
+					'TEXT_IMAGE' => __( 'Text/Image', 'adsense-plugin' ),
+					'LINK'       => __( 'Link', 'adsense-plugin' )
 				);
 
 				$adsns_adunit_statuses = array(
-					'NEW'      => __( 'New', 'adsense' ),
-					'ACTIVE'   => __( 'Active', 'adsense' ),
-					'INACTIVE' => __( 'Inactive', 'adsense' )
+					'NEW'      => __( 'New', 'adsense-plugin' ),
+					'ACTIVE'   => __( 'Active', 'adsense-plugin' ),
+					'INACTIVE' => __( 'Inactive', 'adsense-plugin' )
 				);
 
 				$adsns_adunit_sizes = array(
-					'RESPONSIVE' => __( 'Responsive', 'adsense' )
+					'RESPONSIVE' => __( 'Responsive', 'adsense-plugin' )
 				);
 
 				$adsns_client = $this->adsns_client();
@@ -513,9 +518,9 @@ if ( ! class_exists( 'adsns' ) ) {
 									$adsns_api_notice = array(
 										'class'    => 'error adsns_api_notice',
 										'message'  => sprintf( '<strong>%s</strong> %s %s',
-														__( 'AdUnits Error:', 'adsense' ),
+														__( 'AdUnits Error:', 'adsense-plugin' ),
 														$adsns_err[0]['message'],
-														sprintf( __( 'Create account in %s', 'adsense' ), '<a href="https://www.google.com/adsense" target="_blank">Google AdSense.</a>' )
+														sprintf( __( 'Create account in %s', 'adsense-plugin' ), '<a href="https://www.google.com/adsense" target="_blank">Google AdSense.</a>' )
 													)
 									);
 								}
@@ -525,9 +530,9 @@ if ( ! class_exists( 'adsns' ) ) {
 							$adsns_api_notice = array(
 								'class'    => 'error adsns_api_notice',
 								'message'  => sprintf( '<strong>%s</strong> %s %s',
-												__( 'AdClient Error:', 'adsense' ),
+												__( 'AdClient Error:', 'adsense-plugin' ),
 												$adsns_err[0]['message'],
-												sprintf( __( 'Create account in %s', 'adsense' ), '<a href="https://www.google.com/adsense" target="_blank">Google AdSense.</a>' )
+												sprintf( __( 'Create account in %s', 'adsense-plugin' ), '<a href="https://www.google.com/adsense" target="_blank">Google AdSense.</a>' )
 											)
 							);
 						}
@@ -536,9 +541,9 @@ if ( ! class_exists( 'adsns' ) ) {
 						$adsns_api_notice = array(
 							'class'    => 'error adsns_api_notice',
 							'message'  => sprintf( '<strong>%s</strong> %s %s',
-											__( 'Account Error:', 'adsense' ),
+											__( 'Account Error:', 'adsense-plugin' ),
 											$adsns_err[0]['message'],
-											sprintf( __( 'Create account in %s', 'adsense' ), '<a href="https://www.google.com/adsense" target="_blank">Google AdSense.</a>' )
+											sprintf( __( 'Create account in %s', 'adsense-plugin' ), '<a href="https://www.google.com/adsense" target="_blank">Google AdSense.</a>' )
 										)
 						);
 					} catch ( Exception $e ) {
@@ -552,7 +557,7 @@ if ( ! class_exists( 'adsns' ) ) {
 				if ( isset( $_POST['adsns_authorization_code'] ) && isset( $_POST['adsns_authorize'] ) && ! $adsns_client->getAccessToken() && check_admin_referer( plugin_basename( __FILE__ ), 'adsns_nonce_name' ) ) {
 					$adsns_api_notice = array(
 						'class'   => 'error adsns_api_notice',
-						'message' => __( 'Invalid authorization code. Please, try again.', 'adsense' )
+						'message' => __( 'Invalid authorization code. Please, try again.', 'adsense-plugin' )
 					);
 				}
 
@@ -586,8 +591,8 @@ if ( ! class_exists( 'adsns' ) ) {
 										$adsns_err = $e->getErrors();
 										$adsns_save_settings = false;
 										$adsns_settings_notices[] = array(
-											'class'    => 'error adsns_settings_notice',
-											'message'  => sprintf( '%s<br/>%s<br/>%s', sprintf( __( 'An error occurred while obtaining the code for the block %s.', 'adsense' ), sprintf( '<strong>%s</strong>', $adsns_adunit_id ) ), $adsns_err[0]['message'], __( "Settings are not saved.", 'adsense' ) )
+											'class'    => 'error',
+											'message'  => sprintf( '%s<br/>%s<br/>%s', sprintf( __( 'An error occurred while obtaining the code for the block %s.', 'adsense-plugin' ), sprintf( '<strong>%s</strong>', $adsns_adunit_id ) ), $adsns_err[0]['message'], __( "Settings are not saved.", 'adsense-plugin' ) )
 										);
 									}
 								}
@@ -599,8 +604,8 @@ if ( ! class_exists( 'adsns' ) ) {
 								if ( count( $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ]['widget'] ) > 0 && count( $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ][ $adsns_area ] ) > 2 ) {
 									$adsns_save_settings = false;
 									$adsns_settings_notices[] = array(
-										'class'    => 'error adsns_settings_notice',
-										'message'  => sprintf( '%s<br/>%s<br/>%s', sprintf( __( "The maximum number of ad blocks on the page cannot be more than 3 ad blocks (%s).", 'adsense' ), sprintf( '<a href="https://support.google.com/adsense/answer/1346295?hl=en#Ad_limit_per_page" target="_blank">%s</a>', __( 'Learn more', 'adsense' ) ) ), sprintf( __( 'Please select a smaller number of ad blocks or disable the ad block display in the %s tab.', 'adsense' ), sprintf( '<strong>"%s"</strong>', __( 'Widget', 'adsense' ) ) ), __( "Settings are not saved.", 'adsense' ) )
+										'class'    => 'error',
+										'message'  => sprintf( '%s<br/>%s<br/>%s', sprintf( __( "The maximum number of ad blocks on the page cannot be more than 3 ad blocks (%s).", 'adsense-plugin' ), sprintf( '<a href="https://support.google.com/adsense/answer/1346295?hl=en#Ad_limit_per_page" target="_blank">%s</a>', __( 'Learn more', 'adsense-plugin' ) ) ), sprintf( __( 'Please select a smaller number of ad blocks or disable the ad block display in the %s tab.', 'adsense-plugin' ), sprintf( '<strong>"%s"</strong>', __( 'Widget', 'adsense-plugin' ) ) ), __( "Settings are not saved.", 'adsense-plugin' ) )
 									);
 								}
 							}
@@ -613,7 +618,7 @@ if ( ! class_exists( 'adsns' ) ) {
 										continue;
 									}
 									if ( count( $adsns_adunit ) > 2 ) {
-										$adsns_crowded_tabs .= sprintf( '"%s" (%s %s), ', $adsns_tabs[ $adsns_tab ]['tab']['title'], count( $adsns_adunit ), __( 'ad blocks', 'adsense' ) );
+										$adsns_crowded_tabs .= sprintf( '"%s" (%s %s), ', $adsns_tabs[ $adsns_tab ]['tab']['title'], count( $adsns_adunit ), __( 'ad blocks', 'adsense-plugin' ) );
 										$adsns_crowded_tabs_count++;
 									}
 								}
@@ -621,13 +626,13 @@ if ( ! class_exists( 'adsns' ) ) {
 								if ( $adsns_crowded_tabs_count > 0 ) {
 									if ( $adsns_crowded_tabs_count <= 1 ) {
 										$adsns_settings_notices[] = array(
-											'class'    => 'error adsns_settings_notice',
-											'message'  => sprintf( '%s<br/>%s<br/>%s', sprintf( __( "The maximum number of ad blocks on the page cannot be more than 3 ad blocks (%s).", 'adsense' ), sprintf( '<a href="https://support.google.com/adsense/answer/1346295?hl=en#Ad_limit_per_page" target="_blank">%s</a>', __( 'Learn more', 'adsense' ) ) ), sprintf( __( 'To display the ad block in widget, please set a smaller number of ad blocks in the %s tab.', 'adsense' ), sprintf( '<strong>%s</strong>', $adsns_crowded_tabs ) ), __( "Settings are not saved.", 'adsense' ) )
+											'class'    => 'error',
+											'message'  => sprintf( '%s<br/>%s<br/>%s', sprintf( __( "The maximum number of ad blocks on the page cannot be more than 3 ad blocks (%s).", 'adsense-plugin' ), sprintf( '<a href="https://support.google.com/adsense/answer/1346295?hl=en#Ad_limit_per_page" target="_blank">%s</a>', __( 'Learn more', 'adsense-plugin' ) ) ), sprintf( __( 'To display the ad block in widget, please set a smaller number of ad blocks in the %s tab.', 'adsense-plugin' ), sprintf( '<strong>%s</strong>', $adsns_crowded_tabs ) ), __( "Settings are not saved.", 'adsense-plugin' ) )
 										);
 									} else {
 										$adsns_settings_notices[] = array(
-											'class'    => 'error adsns_settings_notice',
-											'message'  => sprintf( '%s<br/>%s<br/>%s', sprintf( __( "The maximum number of ad blocks on the page cannot be more than 3 ad blocks (%s).", 'adsense' ), sprintf( '<a href="https://support.google.com/adsense/answer/1346295?hl=en#Ad_limit_per_page" target="_blank">%s</a>', __( 'Learn more', 'adsense' ) ) ), sprintf( __( 'To display the ad block in widget, please set a smaller number of ad blocks in tabs: %s.', 'adsense' ), sprintf( '<strong>%s</strong>', $adsns_crowded_tabs ) ), __( "Settings are not saved.", 'adsense' ) )
+											'class'    => 'error',
+											'message'  => sprintf( '%s<br/>%s<br/>%s', sprintf( __( "The maximum number of ad blocks on the page cannot be more than 3 ad blocks (%s).", 'adsense-plugin' ), sprintf( '<a href="https://support.google.com/adsense/answer/1346295?hl=en#Ad_limit_per_page" target="_blank">%s</a>', __( 'Learn more', 'adsense-plugin' ) ) ), sprintf( __( 'To display the ad block in widget, please set a smaller number of ad blocks in tabs: %s.', 'adsense-plugin' ), sprintf( '<strong>%s</strong>', $adsns_crowded_tabs ) ), __( "Settings are not saved.", 'adsense-plugin' ) )
 										);
 									}
 									$adsns_save_settings = false;
@@ -638,16 +643,16 @@ if ( ! class_exists( 'adsns' ) ) {
 						if ( $adsns_save_settings ) {
 							update_option( 'adsns_settings', $this->adsns_options );
 							$adsns_settings_notices[] = array(
-								'class'    => 'updated adsns_settings_notice',
-								'message'  => __( "Settings saved.", 'adsense' )
+								'class'    => 'updated fade',
+								'message'  => __( "Settings saved.", 'adsense-plugin' )
 							);
 						} else {
 							$this->adsns_options = $adsns_old_options;
 						}
 					} else {
 						$adsns_settings_notices[] = array(
-							'class'    => 'error adsns_settings_notice',
-							'message'  => __( "Settings are not saved.", 'adsense' )
+							'class'    => 'error',
+							'message'  => __( "Settings are not saved.", 'adsense-plugin' )
 						);
 					}
 				}
@@ -657,18 +662,18 @@ if ( ! class_exists( 'adsns' ) ) {
 				$go_pro_result = bws_go_pro_tab_check( $plugin_basename );
 				if ( ! empty( $go_pro_result['error'] ) ) {
 					$adsns_settings_notices[] = array(
-						'class'    => 'error adsns_settings_notice',
+						'class'    => 'error',
 						'message'  => $go_pro_result['error']
 					);
 				}
 			} ?>
 			<div class="wrap" id="adsns_wrap">
 				<div class="icon32 icon32-bws" id="icon-options-general"></div>
-				<h2><?php _e( 'Google AdSense Settings', 'adsense' ); ?></h2>
+				<h2><?php _e( 'Google AdSense Settings', 'adsense-plugin' ); ?></h2>
 				<h2 class="nav-tab-wrapper">
-					<a class="nav-tab<?php if ( ! isset( $_GET['action'] ) ) echo ' nav-tab-active'; ?>" href="admin.php?page=adsense-plugin.php"><?php _e( 'Settings', 'adsense' ); ?></a>
-					<a class="nav-tab" href="http://bestwebsoft.com/products/google-adsense/faq" target="_blank"><?php _e( 'FAQ', 'adsense' ); ?></a>
-					<a class="nav-tab<?php if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) echo ' nav-tab-active'; ?> bws_go_pro_tab" href="admin.php?page=adsense-plugin.php&amp;action=go_pro"><?php _e( 'Go PRO', 'adsense' ); ?></a>
+					<a class="nav-tab<?php if ( ! isset( $_GET['action'] ) ) echo ' nav-tab-active'; ?>" href="admin.php?page=adsense-plugin.php"><?php _e( 'Settings', 'adsense-plugin' ); ?></a>
+					<a class="nav-tab" href="http://bestwebsoft.com/products/google-adsense/faq" target="_blank"><?php _e( 'FAQ', 'adsense-plugin' ); ?></a>
+					<a class="nav-tab<?php if ( isset( $_GET['action'] ) && 'go_pro' == $_GET['action'] ) echo ' nav-tab-active'; ?> bws_go_pro_tab" href="admin.php?page=adsense-plugin.php&amp;action=go_pro"><?php _e( 'Go PRO', 'adsense-plugin' ); ?></a>
 				</h2>
 				<?php if ( isset( $adsns_api_notice ) ) {
 					printf( '<div class="below-h2 %s"><p>%s</p></div>', $adsns_api_notice['class'], $adsns_api_notice['message'] );
@@ -677,28 +682,28 @@ if ( ! class_exists( 'adsns' ) ) {
 					foreach ( $adsns_settings_notices as $adsns_settings_notice ) {
 						printf( '<div class="below-h2 %s"><p>%s</p></div>', $adsns_settings_notice['class'], $adsns_settings_notice['message'] );
 					}
-				} ?>
-				<div class="below-h2 updated adsns_new_settings_notice" style="display:none"><p><strong><?php _e( "Notice:", 'adsense' ); ?></strong> <?php _e( "The plugin's settings have been changed. In order to save them please don't forget to click the 'Save Changes' button.", 'adsense' ); ?></p></div>
-				<?php if ( ! isset( $_GET['action'] ) ) {
+				}
+				bws_show_settings_notice();
+				if ( ! isset( $_GET['action'] ) ) {
 					if ( ! $this->adsns_adsense_api ) { ?>
 						<form id="adsns_settings_form" action="admin.php?page=adsense-plugin.php" method="post">
 							<div id="adsns_update">
 								<p>
-									<strong><?php _e( "Attention:", 'adsense' ); ?></strong> <?php _e( 'We updated the plugin to use Google AdSense API, which is not compatible with the old settings. At the moment, plugin use old settings. But for further plugin usage with a new Google AdSense API, you will need to re-configure the ad blocks display. Please note that the old settings and plugin ad blocks in the frontend will be removed.', 'adsense' ); ?>
-									<div><input class="button-primary" type="submit" name="adsns_upgrade" value="<?php _e( 'Upgrade to new functionality', 'adsense' ); ?>"></div>
+									<strong><?php _e( "Attention:", 'adsense-plugin' ); ?></strong> <?php _e( 'We updated the plugin to use Google AdSense API, which is not compatible with the old settings. At the moment, plugin use old settings. But for further plugin usage with a new Google AdSense API, you will need to re-configure the ad blocks display. Please note that the old settings and plugin ad blocks in the frontend will be removed.', 'adsense-plugin' ); ?>
+									<div><input class="button-primary" type="submit" name="adsns_upgrade" value="<?php _e( 'Upgrade to new functionality', 'adsense-plugin' ); ?>"></div>
 								</p>
 								<?php wp_nonce_field( plugin_basename( __FILE__ ), 'adsns_nonce_name' ); ?>
 							</div>
 						</form>
 					<?php } else { ?>
-						<form id="adsns_settings_form" action="admin.php?page=adsense-plugin.php<?php echo $adsns_form_action; ?>" method="post">
+						<form id="adsns_settings_form" class="bws_form" action="admin.php?page=adsense-plugin.php<?php echo $adsns_form_action; ?>" method="post">
 							<table id="adsns_api" class="form-table">
 								<tr valign="top">
-									<th scope="row"><?php _e( 'Remote work with Google AdSense', 'adsense' ); ?></th>
+									<th scope="row"><?php _e( 'Remote work with Google AdSense', 'adsense-plugin' ); ?></th>
 									<td>
 										<?php if ( $adsns_client->getAccessToken() ) { ?>
 											<div id="adsns_api_buttons">
-												<input class="button-secondary" name="adsns_logout" type="submit" value="<?php _e( 'Log out from Google AdSense', 'adsense' ); ?>" />
+												<input class="button-secondary" name="adsns_logout" type="submit" value="<?php _e( 'Log out from Google AdSense', 'adsense-plugin' ); ?>" />
 											</div>
 										<?php } else {
 											$adsns_state = mt_rand();
@@ -706,19 +711,19 @@ if ( ! class_exists( 'adsns' ) ) {
 											$_SESSION[ 'gglstmp_state' . $adsns_blog_prefix ] = $adsns_client;
 											$adsns_auth_url = $adsns_client->createAuthUrl(); ?>
 											<div id="adsns_authorization_notice">
-												<?php _e( "Please authorize via your Google Account to manage ad blocks.", 'adsense' ); ?>
+												<?php _e( "Please authorize via your Google Account to manage ad blocks.", 'adsense-plugin' ); ?>
 											</div>
-											<a id="adsns_authorization_button" class="button-primary" href="<?php echo $adsns_auth_url; ?>" target="_blank" onclick="window.open(this.href,'','top='+(screen.height/2-560/2)+',left='+(screen.width/2-640/2)+',width=640,height=560,resizable=0,scrollbars=0,menubar=0,toolbar=0,status=1,location=0').focus(); return false;"><?php _e( 'Get Authorization Code', 'adsense' ); ?></a>
+											<a id="adsns_authorization_button" class="button-primary" href="<?php echo $adsns_auth_url; ?>" target="_blank" onclick="window.open(this.href,'','top='+(screen.height/2-560/2)+',left='+(screen.width/2-640/2)+',width=640,height=560,resizable=0,scrollbars=0,menubar=0,toolbar=0,status=1,location=0').focus(); return false;"><?php _e( 'Get Authorization Code', 'adsense-plugin' ); ?></a>
 											<div id="adsns_authorization_form">
 												<input id="adsns_authorization_code" name="adsns_authorization_code" type="text" autocomplete="off" maxlength="100">
-												<input id="adsns_authorize" class="button-primary" name="adsns_authorize" type="submit" value="<?php _e( 'Authorize', 'adsense' ); ?>">
+												<input id="adsns_authorize" class="button-primary" name="adsns_authorize" type="submit" value="<?php _e( 'Authorize', 'adsense-plugin' ); ?>">
 											</div>
 										<?php } ?>
 									</td>
 								</tr>
 								<?php if ( isset( $adsns_publisher_id ) ) { ?>
 									<tr valign="top">
-										<th scope="row"><?php _e( 'Your Publisher ID:', 'adsense' ); ?></th>
+										<th scope="row"><?php _e( 'Your Publisher ID:', 'adsense-plugin' ); ?></th>
 										<td>
 											<span id="adsns_publisher_id"><?php echo $adsns_publisher_id; ?></span>
 										</td>
@@ -740,13 +745,13 @@ if ( ! class_exists( 'adsns' ) ) {
 									<div <?php if ( $adsns_current_tab == 'search' ) echo 'class="bws_pro_version_table_bloc adsns_pro_version_table_bloc"'?>>
 										<div <?php if ( $adsns_current_tab == 'search' ) echo 'class="bws_table_bg adsns_table_bg"'?>></div>
 										<div id="adsns_usage_notice">
-											<p><?php printf( '<strong>%s</strong> %s <a href="https://support.google.com/adsense/answer/1346295?hl=en#Ad_limit_per_page" target="_blank">%s</a>.', __( 'Please note:', 'adsense' ), __( 'The maximum number of ad blocks on the page cannot be more than 3 ad blocks.', 'adsense' ), __( 'Learn more', 'adsense' ) ); ?></p>
+											<p><?php printf( '<strong>%s</strong> %s <a href="https://support.google.com/adsense/answer/1346295?hl=en#Ad_limit_per_page" target="_blank">%s</a>.', __( 'Please note:', 'adsense-plugin' ), __( 'The maximum number of ad blocks on the page cannot be more than 3 ad blocks.', 'adsense-plugin' ), __( 'Learn more', 'adsense-plugin' ) ); ?></p>
 											<?php if ( $adsns_current_tab == 'widget' ) { ?>
-												<p><?php printf( __( "Please don't forget to place the AdSense widget into a needed sidebar on the %s.", 'adsense' ), sprintf( '<a href="widgets.php" target="_blank">%s</a>', __( 'widget page', 'adsense' ) ) ); printf( ' %s <a href="http://bestwebsoft.com/products/google-adsense/?k=2887beb5e9d5e26aebe6b7de9152ad1f&amp;pn=80&amp;v=%s&amp;wp_v=%s" target="_blank"><strong>PRO</strong></a>.', __( 'An opportunity to add several widgets is available in the', 'adsense' ), $this->adsns_plugin_info["Version"], $wp_version ); ?></p>
+												<p><?php printf( __( "Please don't forget to place the AdSense widget into a needed sidebar on the %s.", 'adsense-plugin' ), sprintf( '<a href="widgets.php" target="_blank">%s</a>', __( 'widget page', 'adsense-plugin' ) ) ); printf( ' %s <a href="http://bestwebsoft.com/products/google-adsense/?k=2887beb5e9d5e26aebe6b7de9152ad1f&amp;pn=80&amp;v=%s&amp;wp_v=%s" target="_blank"><strong>PRO</strong></a>.', __( 'An opportunity to add several widgets is available in the', 'adsense-plugin' ), $this->adsns_plugin_info["Version"], $wp_version ); ?></p>
 											<?php } ?>
 											<p>
-												<?php printf( __( 'Add or manage existing ad blocks in the %s.', 'adsense' ), sprintf( '<a href="https://www.google.com/adsense/app#main/myads-viewall-adunits" target="_blank">%s</a>', __( 'Google AdSense', 'adsense' ) ) ); ?><br />
-												<span class="bws_info"><?php printf( __( 'After adding the ad block in Google AdSense, please %s to see the new ad block in the list of plugin ad blocks.', 'adsense' ), sprintf( '<a href="admin.php?page=adsense-plugin.php%s">%s</a>', $adsns_form_action, __( 'reload the page', 'adsense' ) ) ) ; ?></span>
+												<?php printf( __( 'Add or manage existing ad blocks in the %s.', 'adsense-plugin' ), sprintf( '<a href="https://www.google.com/adsense/app#main/myads-viewall-adunits" target="_blank">%s</a>', __( 'Google AdSense', 'adsense-plugin' ) ) ); ?><br />
+												<span class="bws_info"><?php printf( __( 'After adding the ad block in Google AdSense, please %s to see the new ad block in the list of plugin ad blocks.', 'adsense-plugin' ), sprintf( '<a href="admin.php?page=adsense-plugin.php%s">%s</a>', $adsns_form_action, __( 'reload the page', 'adsense-plugin' ) ) ) ; ?></span>
 											</p>
 										</div>
 										<?php if ( isset( $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ][ $adsns_current_tab ] ) ) {
@@ -765,23 +770,20 @@ if ( ! class_exists( 'adsns' ) ) {
 									<?php if ( $adsns_current_tab == 'search' ) { ?>
 										<div class="bws_pro_version_tooltip">
 											<div class="bws_info">
-												<?php _e( 'Unlock premium options by upgrading to a PRO version.', 'adsense' ); ?>
-												<a href="http://bestwebsoft.com/products/google-adsense/?k=2887beb5e9d5e26aebe6b7de9152ad1f&amp;pn=80&amp;v=<?php echo $this->adsns_plugin_info["Version"]; ?>&amp;wp_v=<?php echo $wp_version; ?>" target="_blank" title="Google AdSense Pro"><?php _e( 'Learn More', 'adsense' ); ?></a>
+												<?php _e( 'Unlock premium options by upgrading to Pro version', 'adsense-plugin' ); ?>
 											</div>
-											<a class="bws_button" href="http://bestwebsoft.com/products/google-adsense/?k=2887beb5e9d5e26aebe6b7de9152ad1f&amp;pn=80&amp;v=<?php echo $this->adsns_plugin_info["Version"]; ?>&amp;wp_v=<?php echo $wp_version; ?>" target="_blank" title="Google AdSense Pro">
-												<?php printf( '<strong>%s</strong>', __( 'Go PRO', 'adsense' ) ) ?>
-											</a>
+											<a class="bws_button" href="http://bestwebsoft.com/products/google-adsense/?k=2887beb5e9d5e26aebe6b7de9152ad1f&amp;pn=80&amp;v=<?php echo $this->adsns_plugin_info["Version"]; ?>&amp;wp_v=<?php echo $wp_version; ?>" target="_blank" title="Google AdSense Pro"><?php _e( 'Learn More', 'adsense-plugin' ); ?></a>
 											<div class="clear"></div>
 										</div>
 									<?php } ?>
 								</div>
 							<?php }
 							if ( $adsns_current_tab != 'search' ) { ?>
-								<div id="adsns_save_settings">
+								<p>
 									<input type="hidden" name="adsns_area" value="<?php echo $adsns_current_tab; ?>" />
-									<input type="submit" class="button-primary" name="adsns_save_settings" id="adsns_save_settings" value="<?php _e( 'Save Changes', 'adsense' ); ?>" />
+									<input id="bws-submit-button" type="submit" class="button-primary" name="adsns_save_settings" value="<?php _e( 'Save Changes', 'adsense-plugin' ); ?>" />
 									<?php wp_nonce_field( plugin_basename( __FILE__ ), 'adsns_nonce_name' ); ?>
-								</div>
+								</p>
 							<?php } ?>
 						</form>
 					<?php }
@@ -794,14 +796,9 @@ if ( ! class_exists( 'adsns' ) ) {
 
 		/* Including scripts and stylesheets for admin interface of plugin */
 		public function adsns_write_admin_head() {
-			global $wp_version;
 			if ( isset( $_GET['page'] ) && "adsense-plugin.php" == $_GET['page'] ) {
 				wp_enqueue_script( 'adsns_admin_script', plugins_url( 'js/admin.js' , __FILE__ ) . sprintf( '?v=%s', $this->adsns_plugin_info["Version"] ) );
-				if ( $wp_version < 3.8 ) {
-					wp_enqueue_style( 'adsns_stylesheet', plugins_url( 'css/style_wp_before_3.8.css', __FILE__ ) );
-				} else {
-					wp_enqueue_style( 'adsns_stylesheet', plugins_url( 'css/style.css', __FILE__ ) . sprintf( '?v=%s', $this->adsns_plugin_info["Version"] ) );
-				}
+				wp_enqueue_style( 'adsns_stylesheet', plugins_url( 'css/style.css', __FILE__ ) . sprintf( '?v=%s', $this->adsns_plugin_info["Version"] ) );
 			}
 		}
 
@@ -817,13 +814,16 @@ if ( ! class_exists( 'adsns' ) ) {
 				ob_start();
 				printf(
 					'<div class="error adsns_update_notice"><p><strong>%s</strong> %s</p></div>',
-					__( 'Attention:', 'adsense' ),
-					sprintf( __( 'Google AdSense by BestWebSoft plugin was updated to use Google AdSense API, which is not compatible with the old settings. For further plugin usage, you will need to %s', 'adsense' ), sprintf( '<a href="admin.php?page=adsense-plugin.php">%s</a>', __( 're-configure it.', 'adsense' ) ) )
+					__( 'Attention:', 'adsense-plugin' ),
+					sprintf( __( 'Google AdSense by BestWebSoft plugin was updated to use Google AdSense API, which is not compatible with the old settings. For further plugin usage, you will need to %s', 'adsense-plugin' ), sprintf( '<a href="admin.php?page=adsense-plugin.php">%s</a>', __( 're-configure it.', 'adsense-plugin' ) ) )
 				);
 				echo ob_get_clean();
 			}
 			if ( 'plugins.php' == $hook_suffix ) {
-				bws_plugin_banner( $this->adsns_plugin_info, 'adsns', 'google-adsense', '6057da63c4951b1a7b03296e54ed6d02', '80', '//ps.w.org/adsense-plugin/assets/icon-128x128.png' );
+				if ( isset( $this->adsns_options['first_install'] ) && strtotime( '-1 week' ) > $this->adsns_options['first_install'] )
+					bws_plugin_banner( $this->adsns_plugin_info, 'adsns', 'google-adsense', '6057da63c4951b1a7b03296e54ed6d02', '80', '//ps.w.org/adsense-plugin/assets/icon-128x128.png' );
+				
+				bws_plugin_banner_to_settings( $this->adsns_plugin_info, 'adsns_settings', 'adsense-plugin', 'admin.php?page=adsense-plugin.php' );
 			}
 		}
 
@@ -858,10 +858,10 @@ if ( ! class_exists( 'adsns' ) ) {
 		*Registers widget control callback for customizing options
 		*/
 		function adsns_register_widget() {
-			if ( isset( $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ]['widget'] ) && count( $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ]['widget'] ) > 0 ) {
+			if ( isset( $this->adsns_options['publisher_id'] ) && isset( $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ]['widget'] ) && count( $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ]['widget'] ) > 0 ) {
 				$adsns_widget_positions = array(
-					'static' => __( 'Static', 'adsense' ),
-					'fixed'  => __( 'Fixed', 'adsense' ),
+					'static' => __( 'Static', 'adsense-plugin' ),
+					'fixed'  => __( 'Fixed', 'adsense-plugin' ),
 			    );
 				$adsns_widget = $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ]['widget'][0];
 				$adsns_id = substr( strstr( $adsns_widget['id'], ':' ), 1 );
@@ -870,7 +870,7 @@ if ( ! class_exists( 'adsns' ) ) {
 					'adsns_widget', /* Unique widget id */
 					sprintf( 'AdSense: ID: %s, %s', $adsns_id, $adsns_widget_positions[ $adsns_widget_position ] ),
 					array( $this, 'adsns_widget_display' ), /* Callback function */
-					array( 'description' => sprintf( '%s ID: %s, %s', __( 'Widget displays Google AdSense.', 'adsense' ), $adsns_id, $adsns_widget_positions[ $adsns_widget_position ] ) ) /* Options */
+					array( 'description' => sprintf( '%s ID: %s, %s', __( 'Widget displays Google AdSense.', 'adsense-plugin' ), $adsns_id, $adsns_widget_positions[ $adsns_widget_position ] ) ) /* Options */
 				);
 				wp_register_widget_control(
 					'adsns_widget', /* Unique widget id */
@@ -890,9 +890,9 @@ if ( ! class_exists( 'adsns' ) ) {
 				update_option( 'adsns_settings', $this->adsns_options );
 			}
 			$title = isset( $this->adsns_options['widget_title'] ) ? $this->adsns_options['widget_title'] : '' ;
-			printf( '<p><label for="adsns-widget-title">%s<input class="widefat" id="adsns-widget-title" name="adsns-widget-title" type="text" value="%s" /></label></p><input type="hidden" id="adsns-widget-submit" name="adsns-widget-submit" value="1" />', __( 'Title', 'adsense' ), $title ); ?>
+			printf( '<p><label for="adsns-widget-title">%s<input class="widefat" id="adsns-widget-title" name="adsns-widget-title" type="text" value="%s" /></label></p><input type="hidden" id="adsns-widget-submit" name="adsns-widget-submit" value="1" />', __( 'Title', 'adsense-plugin' ), $title ); ?>
 			<p>
-				<?php printf( '<strong>%s</strong> %s', __( 'Please note:', 'adsense' ), sprintf( '<a href="admin.php?page=adsense-plugin.php&tab=widget" target="_blank">%s</a>', __( "Select ad block to display in the widget you can on the plugin settings page in the 'Widget' tab.", 'adsense' ) ) ); ?>
+				<?php printf( '<strong>%s</strong> %s', __( 'Please note:', 'adsense-plugin' ), sprintf( '<a href="admin.php?page=adsense-plugin.php&tab=widget" target="_blank">%s</a>', __( "Select ad block to display in the widget you can on the plugin settings page in the 'Widget' tab.", 'adsense-plugin' ) ) ); ?>
 			</p>
 		<?php }
 	} /* Class */
@@ -916,12 +916,12 @@ if ( ! class_exists( 'Adsns_List_Table' ) ) {
 
 		function get_columns() {
 			$columns = array(
-				'id'	   => __( 'Display', 'adsense' ),
-				'name'     => __( 'Name', 'adsense' ),
-				'code'     => __( 'Id', 'adsense' ),
-				'summary'  => __( 'Type / Size', 'adsense' ),
-				'status'   => __( 'Status', 'adsense' ),
-				'position' => __( 'Position', 'adsense' )
+				'id'	   => __( 'Display', 'adsense-plugin' ),
+				'name'     => __( 'Name', 'adsense-plugin' ),
+				'code'     => __( 'Id', 'adsense-plugin' ),
+				'summary'  => __( 'Type / Size', 'adsense-plugin' ),
+				'status'   => __( 'Status', 'adsense-plugin' ),
+				'position' => __( 'Position', 'adsense-plugin' )
 			);
 			if ( ! $this->adsns_adunit_positions ) {
 				unset( $columns['position'] );
@@ -995,5 +995,3 @@ if ( ! class_exists( 'Adsns_List_Table' ) ) {
 		}
 	}
 }
-
-?>
