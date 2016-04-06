@@ -2,148 +2,149 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adsense-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-06 11:00+0300\n"
+"POT-Creation-Date: 2016-04-06 10:59+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <support@bestwebsoft.com>\n"
-"Language: ru_RU\n"
+"Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Generator: Poedit 1.5.4\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: adsense-plugin.class.php:90 adsense-plugin.class.php:652
 msgid "Google AdSense Settings"
-msgstr "Налаштування Google AdSense"
+msgstr "Google AdSense nastavení"
 
 #: adsense-plugin.class.php:317
 msgid "Home page"
-msgstr "Головна сторінка"
+msgstr "Úvodní strana"
 
 #: adsense-plugin.class.php:321 adsense-plugin.class.php:336
 #: adsense-plugin.class.php:352 adsense-plugin.class.php:368
 #: adsense-plugin.class.php:383
 msgid "After the content"
-msgstr "Після контенту"
+msgstr "Za obsahem"
 
 #: adsense-plugin.class.php:322 adsense-plugin.class.php:337
 #: adsense-plugin.class.php:353 adsense-plugin.class.php:369
 #: adsense-plugin.class.php:384
 msgid "Before the content"
-msgstr "Перед контентом"
+msgstr "Před obsahem"
 
 #: adsense-plugin.class.php:325 adsense-plugin.class.php:341
 #: adsense-plugin.class.php:357 adsense-plugin.class.php:372
 #: adsense-plugin.class.php:387
 msgid "After the first paragraph (Available in PRO)"
-msgstr "Після першого абзацу (Доступно в ПРО)"
+msgstr "Za prvním odstavcem (k dispozici v PRO)"
 
 #: adsense-plugin.class.php:326 adsense-plugin.class.php:342
 #: adsense-plugin.class.php:358 adsense-plugin.class.php:373
 #: adsense-plugin.class.php:388
 msgid "After a random paragraph (Available in PRO)"
-msgstr "Після випадкового абзацу (Доступно в ПРО)"
+msgstr "Po náhodném odstavci (k dispozici v PRO)"
 
 #: adsense-plugin.class.php:332
 msgid "Pages"
-msgstr "Сторінки"
+msgstr "Stránky"
 
 #: adsense-plugin.class.php:338 adsense-plugin.class.php:354
 msgid "Below the comment form"
-msgstr "Нижче форми коментарів"
+msgstr "Pod formulářem komentáře"
 
 #: adsense-plugin.class.php:348
 msgid "Posts / Custom posts"
-msgstr "Пости / Кастомні пости"
+msgstr "Příspěvky / vlastní příspěvky"
 
 #: adsense-plugin.class.php:364
 msgid "Categories / Tags"
-msgstr "Категорії / Теги"
+msgstr "Kategorie / štítky"
 
 #: adsense-plugin.class.php:379
 msgid "Search results"
-msgstr "Результати пошуку"
+msgstr "Výsledky vyhledávání"
 
 #: adsense-plugin.class.php:394 adsense-plugin.class.php:589
 msgid "Widget"
-msgstr "Віджет"
+msgstr "Widget"
 
 #: adsense-plugin.class.php:398 adsense-plugin.class.php:852
 msgid "Static"
-msgstr "Статичний"
+msgstr "Statický"
 
 #: adsense-plugin.class.php:401
 msgid "Fixed (Available in PRO)"
-msgstr "Фіксований  (Доступно в ПРО)"
+msgstr "Pevná (k dispozici PRO)"
 
 #: adsense-plugin.class.php:410
 msgid "Text"
-msgstr "Текст"
+msgstr "Text"
 
 #: adsense-plugin.class.php:411
 msgid "Image"
-msgstr "Графіка"
+msgstr "Obrázek"
 
 #: adsense-plugin.class.php:412
 msgid "Text/Image"
-msgstr "Текст/Графіка"
+msgstr "Text/Obrázek"
 
 #: adsense-plugin.class.php:413
 msgid "Link"
-msgstr "Посилання"
+msgstr "Odkaz"
 
 #: adsense-plugin.class.php:417
 msgid "New"
-msgstr "Новий"
+msgstr "Nové"
 
 #: adsense-plugin.class.php:418
 msgid "Active"
-msgstr "Активний"
+msgstr "Aktivní"
 
 #: adsense-plugin.class.php:419
 msgid "Inactive"
-msgstr "Неактивний"
+msgstr "Neaktivní"
 
 #: adsense-plugin.class.php:423
 msgid "Responsive"
-msgstr "Aдаптивний"
+msgstr "Responzivní"
 
 #: adsense-plugin.class.php:502
 msgid "AdUnits Error:"
-msgstr "AdUnits Error:"
+msgstr "AdUnits chyba:"
 
 #: adsense-plugin.class.php:504 adsense-plugin.class.php:516
 #: adsense-plugin.class.php:527
 #, php-format
 msgid "Create account in %s"
-msgstr "Створити аккаунт в %s"
+msgstr "Vytvořit účet v %s"
 
 #: adsense-plugin.class.php:514
 msgid "AdClient Error:"
-msgstr "AdClient Error:"
+msgstr "AdClient chyba:"
 
 #: adsense-plugin.class.php:525
 msgid "Account Error:"
-msgstr "Account Error:"
+msgstr "Účet chyba:"
 
 #: adsense-plugin.class.php:541
 msgid "Invalid authorization code. Please, try again."
-msgstr "Невірний код авторизації. Будь ласка, спробуйте ще раз."
+msgstr "Neplatný autorizační kód. Opakujte akci."
 
 #: adsense-plugin.class.php:576
 #, php-format
 msgid "An error occurred while obtaining the code for the block %s."
-msgstr "Сталася помилка при отриманні коду для блоку %s ."
+msgstr "Došlo k chybě při získávání kódu pro blok %s."
 
 #: adsense-plugin.class.php:576 adsense-plugin.class.php:589
 #: adsense-plugin.class.php:611 adsense-plugin.class.php:616
 #: adsense-plugin.class.php:636
 msgid "Settings are not saved."
-msgstr "Налаштування не збережені."
+msgstr "Nastavení se neuložilo."
 
 #: adsense-plugin.class.php:589 adsense-plugin.class.php:611
 #: adsense-plugin.class.php:616
@@ -152,13 +153,13 @@ msgid ""
 "The maximum number of ad blocks on the page cannot be more than 3 ad blocks "
 "(%s)."
 msgstr ""
-"Максимальна кількість рекламних блоків на сторінці не може бути більше, ніж "
-"3 рекламних блоків (%s)."
+"Maximální počet bloků reklamy na stránce nemůže být více než 3 reklamní "
+"bloky (%s)."
 
 #: adsense-plugin.class.php:589 adsense-plugin.class.php:611
 #: adsense-plugin.class.php:616 adsense-plugin.class.php:728
 msgid "Learn more"
-msgstr "Дізнатися більше"
+msgstr "Zjistit více"
 
 #: adsense-plugin.class.php:589
 #, php-format
@@ -166,12 +167,12 @@ msgid ""
 "Please select a smaller number of ad blocks or disable the ad block display "
 "in the %s tab."
 msgstr ""
-"Будь ласка, виберіть меншу кількість рекламних блоків або вимкніть "
-"відображення рекламного блоку на вкладці %s ."
+"Vyberte menší počet reklamní bloky nebo zakažte zobrazení reklamního bloku "
+"na záložce %s."
 
 #: adsense-plugin.class.php:602
 msgid "ad blocks"
-msgstr "рекламних блоків"
+msgstr "reklamní bloky"
 
 #: adsense-plugin.class.php:611
 #, php-format
@@ -179,8 +180,8 @@ msgid ""
 "To display the ad block in widget, please set a smaller number of ad blocks "
 "in the %s tab."
 msgstr ""
-"Для відображення рекламного блоку в віджеті, будь ласка, виберіть меншу "
-"кількість рекламних блоків на вкладці %s."
+"Chcete-li zobrazit reklamní blok ve widgetu, nastavte menší počet reklamních "
+"bloků na kartě %s."
 
 #: adsense-plugin.class.php:616
 #, php-format
@@ -188,29 +189,29 @@ msgid ""
 "To display the ad block in widget, please set a smaller number of ad blocks "
 "in tabs: %s."
 msgstr ""
-"Для відображення рекламного блоку в віджеті, будь ласка, виберіть меншу "
-"кількість рекламних блоків на вкладках: %s."
+"Chcete-li zobrazit reklamní blok ve widgetu, nastavte menší počet reklamních "
+"bloků na kartách %s."
 
 #: adsense-plugin.class.php:628
 msgid "Settings saved."
-msgstr "Налаштування збережені."
+msgstr "Nastavení bylo uloženo."
 
 #: adsense-plugin.class.php:654 adsense-plugin.class.php:892
 #: adsense-plugin.class.php:902
 msgid "Settings"
-msgstr "Налаштування"
+msgstr "Nastavení"
 
 #: adsense-plugin.class.php:655
 msgid "Custom code"
-msgstr "Користувацький код"
+msgstr ""
 
 #: adsense-plugin.class.php:656
 msgid "Go PRO"
-msgstr "Перейти на Pro версію"
+msgstr "Získat verzi Pro"
 
 #: adsense-plugin.class.php:672 adsense-plugin.class.php:802
 msgid "Attention:"
-msgstr "Увага:"
+msgstr "Upozornění"
 
 #: adsense-plugin.class.php:672
 msgid ""
@@ -220,75 +221,72 @@ msgid ""
 "configure the ad blocks display. Please note that the old settings and "
 "plugin ad blocks in the frontend will be removed."
 msgstr ""
-"Ми оновили плагін на використання Google AdSense API, який не сумісний зі "
-"старими настройками. Зараз плагін працює використовуючи старі налаштування. "
-"Але для подальшого використання плагіна з новим Google AdSense API, вам "
-"необхідно буде заново налаштувати відображення блоків реклами. Зверніть "
-"увагу, що старі налаштування плагіна і блоки реклами у фронтенді будуть "
-"видалені."
+"Byl aktualizován plugin používající Google AdSense API, který není "
+"kompatibilní se starým nastavením. V současnosti plugin používá staré "
+"nastavení. Pro další používání pluginu s novou Google AdSense API, budete "
+"muset znovu konfigurovat zobrazení bloku reklam. Mějte na paměti, že budou "
+"odstraněna stará nastavení a plugin reklamních bloků, který je zobrazován."
 
 #: adsense-plugin.class.php:673
 msgid "Upgrade to new functionality"
-msgstr "Перейти на новий функціонал"
+msgstr "Inovovat na nové funkce"
 
 #: adsense-plugin.class.php:682
 msgid "Remote work with Google AdSense"
-msgstr "Віддалена робота з Google AdSense"
+msgstr "Vzdálená práce s Google AdSense"
 
 #: adsense-plugin.class.php:686
 msgid "Log out from Google AdSense"
-msgstr "Вийти з Google AdSense"
+msgstr "Odhlásit se od Google AdSense"
 
 #: adsense-plugin.class.php:694
 msgid "Please authorize via your Google Account to manage ad blocks."
 msgstr ""
-"Будь ласка, авторизуйтесь за допомогою вашого Google аккаунта для управління "
-"рекламними блоками."
+"Prosím autorizujte prostřednictvím účtu Google a můžete spravovat reklamní "
+"bloky."
 
 #: adsense-plugin.class.php:696
 msgid "Get Authorization Code"
-msgstr "Отримати Код Авторизації"
+msgstr "Získat autorizační kód"
 
 #: adsense-plugin.class.php:699
 msgid "Authorize"
-msgstr "Авторизуватися"
+msgstr "Autorizace"
 
 #: adsense-plugin.class.php:706
 msgid "Your Publisher ID:"
-msgstr "Ваш ID Видавця:"
+msgstr "Vaše ID vydavatele:"
 
 #: adsense-plugin.class.php:728 adsense-plugin.class.php:884
 msgid "Please note:"
-msgstr "Будь ласка, зверніть увагу:"
+msgstr "Vezměte prosím na vědomí:"
 
 #: adsense-plugin.class.php:728
 msgid ""
 "The maximum number of ad blocks on the page cannot be more than 3 ad blocks."
 msgstr ""
-"Максимальна кількість рекламних блоків на сторінці не може бути більше, ніж "
-"3 рекламних блоків."
+"Maximální počet bloků reklamy na stránce nemůže být více než 3 reklamní "
+"bloky."
 
 #: adsense-plugin.class.php:730
 #, php-format
 msgid ""
 "Please don't forget to place the AdSense widget into a needed sidebar on the "
 "%s."
-msgstr ""
-"Будь ласка, не забудьте перемістити віджет  \"AdSense \" в необхідний "
-"сайдбар на %s."
+msgstr "Prosím nezapomeňte přidat AdSense widget do potřebného sidebaru na %s."
 
 #: adsense-plugin.class.php:730
 msgid "widget page"
-msgstr "сторінці віджетів"
+msgstr "Stránka widgetu"
 
 #: adsense-plugin.class.php:730
 msgid "An opportunity to add several widgets is available in the"
-msgstr "Можливість додавання декількох віджетів доступна в"
+msgstr "Možnost přidat několik widgetů je k dispozici v"
 
 #: adsense-plugin.class.php:733
 #, php-format
 msgid "Add or manage existing ad blocks in the %s."
-msgstr "Додати або керувати існуючими рекламними блоками ви можете в %s."
+msgstr "Přidání nebo správa existujících reklamních bloků v %s."
 
 #: adsense-plugin.class.php:733
 msgid "Google AdSense"
@@ -300,24 +298,24 @@ msgid ""
 "After adding the ad block in Google AdSense, please %s to see the new ad "
 "block in the list of plugin ad blocks."
 msgstr ""
-"Після додавання рекламного блоку в Google AdSense, будь ласка, %s, щоб "
-"побачити новий блок в списку рекламних блоків плагіна."
+"Po přidání reklamního bloku v Google AdSense, prosím %s zobrazíte nové "
+"reklamní bloky v seznamu pluginu reklamních bloků."
 
 #: adsense-plugin.class.php:734
 msgid "reload the page"
-msgstr "перезавантажте сторінку"
+msgstr "znovu načíst stránku"
 
 #: adsense-plugin.class.php:753
 msgid "Unlock premium options by upgrading to Pro version"
-msgstr "Зробити доступними преміум-опції, перейшовши на Pro версію"
+msgstr "Odemknout prémiové možnosti při aktualizaci na verzi Pro"
 
 #: adsense-plugin.class.php:755
 msgid "Learn More"
-msgstr "Докладніше"
+msgstr "Zjistit více"
 
 #: adsense-plugin.class.php:764
 msgid "Save Changes"
-msgstr "Зберегти зміни"
+msgstr "Uložit změny"
 
 #: adsense-plugin.class.php:803
 #, php-format
@@ -326,102 +324,110 @@ msgid ""
 "which is not compatible with the old settings. For further plugin usage, you "
 "will need to %s"
 msgstr ""
-"Плагін Google AdSense by BestWebSoft був оновлений на використання AdSense "
-"API, який не сумісний зі старими настройками. Для подальшого використання "
-"плагіна вам необхідно знову %s"
+"Google AdSense BestWebSoft plugin byl aktualizován pomocí Google AdSense "
+"API, který není kompatibilní se starým nastavením. Pro další použití v "
+"pluginu budete muset %s"
 
 #: adsense-plugin.class.php:803
 msgid "re-configure it."
-msgstr "налаштувати його."
+msgstr "znovu jej nakonfigurujte."
 
 #: adsense-plugin.class.php:853
 msgid "Fixed"
-msgstr "Фіксований"
+msgstr "Fixní"
 
 #: adsense-plugin.class.php:862
 msgid "Widget displays Google AdSense."
-msgstr "Віджет відображає Google AdSense."
+msgstr "Widget zobrazuje Google AdSense."
 
 #: adsense-plugin.class.php:882
 msgid "Title"
-msgstr "Назва"
+msgstr "Název"
 
 #: adsense-plugin.class.php:884
 msgid ""
 "Select ad block to display in the widget you can on the plugin settings page "
 "in the 'Widget' tab."
 msgstr ""
-"Вибрати рекламний блок для відображення Ви можете на сторінці плагіна у "
-"вкладці 'Віджет'."
+"Vybrat reklamní blok k zobrazení ve widgetu můžete na stránce nastavení "
+"pluginu na záložce 'Widget'."
 
 #: adsense-plugin.class.php:903
 msgid "FAQ"
-msgstr "FAQ"
+msgstr "Často kladené otázky"
 
 #: adsense-plugin.class.php:904
 msgid "Support"
-msgstr "Підтримка"
+msgstr "Podpora"
 
 #: adsense-plugin.class.php:939
 msgid "Display"
-msgstr "Показувати"
+msgstr "Zobrazit"
 
 #: adsense-plugin.class.php:940
 msgid "Name"
-msgstr "Назва"
+msgstr "Název"
 
 #: adsense-plugin.class.php:941
 msgid "Id"
-msgstr "Id"
+msgstr "ID"
 
 #: adsense-plugin.class.php:942
 msgid "Type / Size"
-msgstr "Тип / Розмір"
+msgstr "Typ / velikost"
 
 #: adsense-plugin.class.php:943
 msgid "Status"
-msgstr "Статус"
+msgstr "Stav"
 
 #: adsense-plugin.class.php:944
 msgid "Position"
-msgstr "Позиція"
-
-#~ msgid "Notice:"
-#~ msgstr "Зверніть увагу:"
+msgstr "Pozice"
 
 #~ msgid ""
 #~ "The plugin's settings have been changed. In order to save them please "
 #~ "don't forget to click the 'Save Changes' button."
 #~ msgstr ""
-#~ "Налаштування плагіна були змінені. Для того, щоб зберегти їх, будь ласка, "
-#~ "не забудьте натиснути кнопку  \"Зберегти \"."
+#~ "Настройки плагина были изменены. Для того, чтобы сохранить их, "
+#~ "пожалуйста, не забудьте нажать кнопку \"Сохранить\"."
 
-#~ msgid "Read this"
-#~ msgstr "Читати"
+#~ msgid ""
+#~ "Please select a smaller number of ad blocks in the %s tab or disable the "
+#~ "ad block display in the \"Widget\" tab."
+#~ msgstr ""
+#~ "Пожалуйста, выберите меньше рекламных блоков на вкладке %s или отключите "
+#~ "показ рекламного блока на вкладке  \"Виджет\"."
 
-#~ msgid "Add ad block"
-#~ msgstr "Додати рекламний блок"
+#~ msgid ""
+#~ "Please select a smaller number of ad blocks on tabs: %s or disable the ad "
+#~ "block display in the \"Widget\" tab."
+#~ msgstr ""
+#~ "Пожалуйста, выберите меньше рекламных блоков на вкладках: %s или "
+#~ "отключите показ рекламного блока на вкладке \"Виджет\"."
+
+#, fuzzy
+#~ msgid ""
+#~ "The maximum number of ad blocks on the page cannot be more than ad 3 "
+#~ "blocks."
+#~ msgstr ""
+#~ "Максимальное количество рекламных блоков на странице не может превышать "
+#~ "больше 3х рекламных блоков. "
 
 #~ msgid "Corner style property will help you to make your Ad corners rounded."
 #~ msgstr ""
-#~ "За допомогою даної опції Ви можете заокруглити кути Вашого рекламного "
-#~ "блоку."
+#~ "С помощью данного свойства Вы можете закруглить углы Вашего рекламного "
+#~ "блока."
 
 #~ msgid ""
 #~ "Please enter a percentage value of the ad slots you are ready to share "
 #~ "[Default: 0%]."
 #~ msgstr ""
-#~ "Введіть процент від перегляду реклами, яким ви можете пожертвувати "
-#~ "[Стандартне значення: 0%]."
+#~ "Введите процент от просмотра рекламы, которым вы можете пожертвовать [По "
+#~ "умолчанию: 0%]."
 
 #~ msgid ""
 #~ "or higher, that is why it has been deactivated! Please upgrade WordPress "
 #~ "and try again."
 #~ msgstr ""
-#~ "чи вище, тому він був деактивований! Будь ласка оновіть WordPress та "
-#~ "спробуйте ще раз."
-
-#~ msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
-#~ msgstr ""
-#~ "Якщо вам подобається наш плагін, будь ласка, поставте нам п’ять зірочок "
-#~ "на WordPress"
+#~ "или выше, поэтому он был деактивирован! Пожалуйста, обновите WordPress и "
+#~ "попробуйте еще раз."

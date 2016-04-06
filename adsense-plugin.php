@@ -6,13 +6,13 @@ Description: This plugin allows implementing Google AdSense to your website.
 Author: BestWebSoft
 Text Domain: adsense-plugin
 Domain Path: /languages
-Version: 1.37
+Version: 1.39
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
 
 /*
-	© Copyright 2015  BestWebSoft  ( http://support.bestwebsoft.com )
+	© Copyright 2016  BestWebSoft  ( http://support.bestwebsoft.com )
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as
@@ -47,6 +47,10 @@ if ( ! function_exists( 'adsns_uninstall' ) ) {
         } else {
             delete_option( 'adsns_settings' );
         }
+        
+        require_once( dirname( __FILE__ ) . '/bws_menu/bws_include.php' );
+        bws_include_init( plugin_basename( __FILE__ ) );
+        bws_delete_plugin( plugin_basename( __FILE__ ) );
 	}
 }
 

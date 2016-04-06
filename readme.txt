@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: ad, ad banner, ad block, ad color, ad format, ad links block, ad manager, ad parameters, ad type, add ad banner, add ad banners, add ad block, add several ad blocks, add several adds, Adds, ads, ads display, ads in widgets, Ads on website, ads plugin, adsense, adsense plugin, advertisements, adsense insertion, advert, advert manager, advertise, adverts, advertisement, advertising, best ads plugin, best adsense plugin, block, blocks, commercial, commercial block, content, easy adsense, free, free adsense plugin, free ads plugin, Goggle AdSense, gogle, Gogle AdSense, google, Google AddSense, google ads, google adsense, google plugin, image, insert ads, insert ads automatically, insert Google ads, simple ads plugin, simple adsense plugin, text ads, text and image ads, wp ads plugin, wordpress ads plugin, wp adsense plugin, wordpress adsense plugin, responsive, responsive ad, Google AdSense API, ad in widget
 Requires at least: 3.8
-Tested up to: 4.3.1
-Stable tag: 1.37
+Tested up to: 4.4.2
+Stable tag: 1.39
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,7 @@ This plugin allows Google AdSense implementation into your website.
 
 Google AdSense Plugin creates blocks to display ads on your website. It allows to customize the ads displaying, such as format (text ad, image, text with an image or link), size, color of the elements in the ad block, rounded corners and the ad block position on the website. It provides possibility to make ads unique and original.
 
-http://www.youtube.com/watch?v=Z4KUyT4puSo
+http://www.youtube.com/watch?v=wWaEGbR5Lz0
 
 <a href="http://www.youtube.com/watch?v=Nkp267vxZ84" target="_blank">Google AdSense by BestWebSoft Video instruction on Installation</a>
 
@@ -31,6 +31,8 @@ http://www.youtube.com/watch?v=Z4KUyT4puSo
 * Displaying ad blocks before content, after content, after comments form.
 * Displaying ad block in the widget.
 
+If you have a feature, suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">Suggest a Feature</a>
+
 = Recommended Plugins =
 
 The author of the Google AdSense also recommends the following plugins:
@@ -40,6 +42,7 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pr
 
 = Translation =
 
+* Czech (cs_CZ) (thanks to <a href="mailto:info@pamadessoft.cz">PaMaDeSSoft</a>, www.pamadessoft.cz)
 * Russian (ru_RU)
 * Ukrainian (uk)
 
@@ -100,6 +103,13 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 2. Google AdSense Settings page (Authorized in Google AdSense).
 
 == Changelog ==
+
+= V1.39 - 06.04.2016 =
+* NEW : The Czech language file was added.
+* NEW : Ability to add custom styles.
+
+= V1.38 - 01.12.2015 =
+* Bugfix : The bug with plugin menu duplicating was fixed.
 
 = V1.37 - 05.10.2015 =
 * Update : Textdomain was changed.
@@ -247,6 +257,12 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Changed : Usability at the settings page of the plugin was improved.
 
 == Upgrade Notice ==
+
+= V1.39 =
+The Czech language file was added. Ability to add custom styles.
+
+= V1.38 =
+The bug with plugin menu duplicating was fixed.
 
 = V1.37 =
 Textdomain was changed.
