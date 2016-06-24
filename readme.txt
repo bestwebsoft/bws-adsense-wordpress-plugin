@@ -1,10 +1,10 @@
 === Google AdSense by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
-Tags: ad, ad banner, ad block, ad color, ad format, ad links block, ad manager, ad parameters, ad type, add ad banner, add ad banners, add ad block, add several ad blocks, add several adds, Adds, ads, ads display, ads in widgets, Ads on website, ads plugin, adsense, adsense plugin, advertisements, adsense insertion, advert, advert manager, advertise, adverts, advertisement, advertising, best ads plugin, best adsense plugin, block, blocks, commercial, commercial block, content, easy adsense, free, free adsense plugin, free ads plugin, Goggle AdSense, gogle, Gogle AdSense, google, Google AddSense, google ads, google adsense, google plugin, image, insert ads, insert ads automatically, insert Google ads, simple ads plugin, simple adsense plugin, text ads, text and image ads, wp ads plugin, wordpress ads plugin, wp adsense plugin, wordpress adsense plugin, responsive, responsive ad, Google AdSense API, ad in widget
+Tags: ad, ad banner, ad format, ad parameters, google adsense, ads display, ads widgets, google plugin, insert ads, text ads, adsense plugin, advertisements
 Requires at least: 3.8
-Tested up to: 4.4.2
-Stable tag: 1.39
+Tested up to: 4.5.3
+Stable tag: 1.40
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,14 +46,15 @@ There is also a premium version of the plugin <a href="http://bestwebsoft.com/pr
 * Russian (ru_RU)
 * Ukrainian (uk)
 
-If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+Some of these translations are not complete. We are constantly adding new features which should be translated.
+If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
 = Technical support =
 
-Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in another languages won't be accepted.
+Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in other languages won't be accepted.
 
 If you notice any bugs in the plugins, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.
-Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then. 
+Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then.
 We can fix some things for free for the users who provide translation of our plugin into their native language (this should be a new translation of a certain plugin, you can check available translations on the official plugin page).
 
 == Installation ==
@@ -83,9 +84,9 @@ This limitation is caused by the maximum allowable number of ad blocks to be dis
 If you do not know how to do it please install a standard WordPress theme and check if the ads will be displayed or not, if yes it means that there aren't the necessary hooks in your theme.
 3. Probably you did not set up 'google ads' account
 
-= What should i do if the plugin is not displayed in the plugins list or the tab with the settings page is not displayed either? =
+= What should I do if the plugin is not displayed in the plugins list or the tab with the settings page is not displayed either? =
 
-If you have an extention in your browser that hides ads (e.g. AdBlock or something like that) - it can hide AdSense displaying on this page, as it is set to search by words like AdSense and similar. 
+If you have an extention in your browser that hides ads (e.g. AdBlock or something like that) - it can hide AdSense displaying on this page, as it is set to search by words like AdSense and similar.
 Please make sure Adblocker (or some other similar extensions that block ads) is disabled in the browser
 
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
@@ -99,10 +100,15 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 
 == Screenshots ==
 
-1. Google AdSense Settings page (Unauthorized in Google AdSense).
-2. Google AdSense Settings page (Authorized in Google AdSense).
+1. Google AdSense Ads in the front-end (Before the content and in the widget).
+2. Google AdSense Settings page (Unauthorized in Google AdSense).
+3. Google AdSense Settings page (Authorized in Google AdSense).
 
 == Changelog ==
+
+= V1.40 - 24.06.2016 =
+* NEW : Option for hiding idle blocks in the ad blocks list was added.
+* Bugfix : The bug with ads on the home page was fixed.
 
 = V1.39 - 06.04.2016 =
 * NEW : The Czech language file was added.
@@ -184,7 +190,7 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Update : We updated all functionality for wordpress 3.5.2.
 
 = V1.19 - 29.05.2013 =
-* Update : BWS plugins section is updated. 
+* Update : BWS plugins section is updated.
 
 = V1.18 - 25.04.2013 =
 * Update : The French language is updated in the plugin.
@@ -216,11 +222,11 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : Polish and Spanish language files are added to the plugin.
 
 = V1.9 - 24.07.2012 =
-* Bugfix : Cross Site Request Forgery bug was fixed. 
+* Bugfix : Cross Site Request Forgery bug was fixed.
 
 = V1.8 - 09.07.2012 =
 * NEW : The Hebrew language file is added to the plugin.
-* Bugfix : Ads displaying on the frontend with Single page and Home page option was fixed. 
+* Bugfix : Ads displaying on the frontend with Single page and Home page option was fixed.
 
 = V1.7 - 27.06.2012 =
 * Update : We updated all functionality for wordpress 3.4.
@@ -238,10 +244,10 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * NEW : The Dutch language file is added.
 
 = V1.2 - 27.01.2012 =
-* Bugfix : Settings and ads displaying are saved on the frontend. 
+* Bugfix : Settings and ads displaying are saved on the frontend.
 
 = V1.1 - 29.12.2011 =
-* Changed : BWS plugin's section. 
+* Changed : BWS plugin's section.
 * Changed : Default plugin's settings.
 
 = V1.0 - 27.12.2011 =
@@ -257,6 +263,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Changed : Usability at the settings page of the plugin was improved.
 
 == Upgrade Notice ==
+
+= V1.40 =
+New option for hiding idle blocks in the ad blocks list was added. The bug with ads on the home page was fixed.
 
 = V1.39 =
 The Czech language file was added. Ability to add custom styles.
@@ -349,10 +358,10 @@ The option for the displaying of google ads has been implemented using the widge
 Polish and Spanish language files was added to the plugin.
 
 = V1.9 - 24.07.2012 =
-Cross Site Request Forgery bug was fixed. 
+Cross Site Request Forgery bug was fixed.
 
 = V1.8 =
-The Hebrew language file is added to the plugin. Ads displaying on the frontend with Single page and Home page option was fixed. 
+The Hebrew language file is added to the plugin. Ads displaying on the frontend with Single page and Home page option was fixed.
 
 = V1.7 =
 We updated all functionality for wordpress 3.4.
@@ -373,7 +382,7 @@ The Dutch language file is added.
 A bug with saving settings and ads displaying on the frontend was fixed in this version. Please upgrade plugin immediately. Thank you
 
 = V1.1 - 29.12.2011 =
-BWS plugin's section was changed. Default plugin's settings were changed. 
+BWS plugin's section was changed. Default plugin's settings were changed.
 
 = V1.0 - 27.12.2011 =
 All words are added in language file.

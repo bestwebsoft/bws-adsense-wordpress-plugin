@@ -1,9 +1,9 @@
 <?php
 
-if ( ! class_exists( 'adsns' ) ) {
+if ( ! class_exists( 'Adsns' ) ) {
 	/* Class of Google AdSense functions */
-	class adsns {
-		var $adsns_plugin_info, $adsns_options, $adsns_adsense_api;
+	class Adsns {
+		var $adsns_plugin_info, $adsns_options, $adsns_adsense_api, $adsns_is_main_query;
 
 		function adsns_show_ads() {
 			if ( ! $this->adsns_options ) {
@@ -87,9 +87,9 @@ if ( ! class_exists( 'adsns' ) ) {
 		/* Add 'BWS Plugins' menu at the left side in administer panel */
 		function adsns_add_admin_menu() {
 			bws_general_menu();
-			$settings = add_submenu_page( 'bws_plugins', __( 'Google AdSense Settings', 'adsense-plugin' ), 'Google AdSense', 'manage_options', "adsense-plugin.php", array( $this, 'adsns_settings_page' ) );
+			$settings = add_submenu_page( 'bws_panel', __( 'Google AdSense Settings', 'adsense-plugin' ), 'Google AdSense', 'manage_options', "adsense-plugin.php", array( $this, 'adsns_settings_page' ) );
 			add_action( 'load-' . $settings, array( $this, 'adsns_add_tabs' ) );
-		}	
+		}
 
 		function adsns_plugin_init() {
 
@@ -142,7 +142,8 @@ if ( ! class_exists( 'adsns' ) ) {
 				'plugin_option_version'		=> $this->adsns_plugin_info["Version"],
 				'widget_title'				=> '',
 				'use_new_api'				=> false,
-				'publisher_id'          	=> '',
+				'publisher_id'				=> '',
+				'include_inactive_ads'		=> 1,
 				'display_settings_notice'	=> 1,
 				'first_install'				=> strtotime( "now" ),
 				'suggest_feature_banner'	=> 1
@@ -186,7 +187,7 @@ if ( ! class_exists( 'adsns' ) ) {
 		function adsns_content( $content ) {
 			global $adsns_count;
 
-			if ( ! is_feed() && ( is_home() || is_front_page() || is_category() || is_tag() ) ) {
+			if ( $this->adsns_is_main_query && ! is_feed() && ( is_home() || is_front_page() || is_category() || is_tag() ) ) {
 				$adsns_count = empty( $adsns_count ) ? 0 : $adsns_count;
 				if ( $adsns_count > 2 ) {
 					return $content;
@@ -220,8 +221,9 @@ if ( ! class_exists( 'adsns' ) ) {
 							break;
 					}
 				}
+				return $content;
 			}
-			if ( ! is_feed() && ( is_single() || is_page() ) ) {
+			if ( $this->adsns_is_main_query && ! is_feed() && ( is_single() || is_page() ) ) {
 				if ( is_single() ) {
 					$adsns_area = 'posts+custom_posts';
 				}
@@ -318,8 +320,8 @@ if ( ! class_exists( 'adsns' ) ) {
 							'url'   => sprintf( 'admin.php?page=adsense-plugin.php%s', $adsns_tab_url )
 						),
 						'adunit_positions' => array(
-							'after'       => __( 'After the content', 'adsense-plugin' ),
-							'before'      => __( 'Before the content', 'adsense-plugin' )
+							'before'      => __( 'Before the content', 'adsense-plugin' ),
+							'after'       => __( 'After the content', 'adsense-plugin' )
 						),
 						'adunit_positions_pro' => array(
 							'1st_paragraph'    => __( 'After the first paragraph (Available in PRO)', 'adsense-plugin' ),
@@ -333,8 +335,8 @@ if ( ! class_exists( 'adsns' ) ) {
 							'url'   => sprintf( 'admin.php?page=adsense-plugin.php&tab=pages%s', $adsns_tab_url )
 						),
 						'adunit_positions' => array(
-							'after'       => __( 'After the content', 'adsense-plugin' ),
 							'before'      => __( 'Before the content', 'adsense-plugin' ),
+							'after'       => __( 'After the content', 'adsense-plugin' ),
 							'commentform' => __( 'Below the comment form', 'adsense-plugin' )
 						),
 						'adunit_positions_pro' => array(
@@ -349,8 +351,8 @@ if ( ! class_exists( 'adsns' ) ) {
 							'url'   => sprintf( 'admin.php?page=adsense-plugin.php&tab=posts+custom_posts%s', $adsns_tab_url )
 						),
 						'adunit_positions' => array(
-							'after'       => __( 'After the content', 'adsense-plugin' ),
 							'before'      => __( 'Before the content', 'adsense-plugin' ),
+							'after'       => __( 'After the content', 'adsense-plugin' ),
 							'commentform' => __( 'Below the comment form', 'adsense-plugin' )
 						),
 						'adunit_positions_pro' => array(
@@ -365,8 +367,8 @@ if ( ! class_exists( 'adsns' ) ) {
 							'url'   => sprintf( 'admin.php?page=adsense-plugin.php&tab=categories+tags%s', $adsns_tab_url )
 						),
 						'adunit_positions' => array(
-							'after'       => __( 'After the content', 'adsense-plugin' ),
-							'before'      => __( 'Before the content', 'adsense-plugin' )
+							'before'      => __( 'Before the content', 'adsense-plugin' ),
+							'after'       => __( 'After the content', 'adsense-plugin' )
 						),
 						'adunit_positions_pro' => array(
 							'1st_paragraph'    => __( 'After the first paragraph (Available in PRO)', 'adsense-plugin' ),
@@ -380,8 +382,8 @@ if ( ! class_exists( 'adsns' ) ) {
 							'url'   => sprintf( 'admin.php?page=adsense-plugin.php&tab=search%s', $adsns_tab_url )
 						),
 						'adunit_positions' => array(
-							'after'            => __( 'After the content', 'adsense-plugin' ),
-							'before'           => __( 'Before the content', 'adsense-plugin' )
+							'before'           => __( 'Before the content', 'adsense-plugin' ),
+							'after'            => __( 'After the content', 'adsense-plugin' )
 						),
 						'adunit_positions_pro' => array(
 							'1st_paragraph'    => __( 'After the first paragraph (Available in PRO)', 'adsense-plugin' ),
@@ -404,7 +406,7 @@ if ( ! class_exists( 'adsns' ) ) {
 					)
 				);
 
-				$adsns_tbl_data = array();
+				$adsns_table_data = array();
 
 				$adsns_adunit_types = array(
 					'TEXT'       => __( 'Text', 'adsense-plugin' ),
@@ -416,7 +418,7 @@ if ( ! class_exists( 'adsns' ) ) {
 				$adsns_adunit_statuses = array(
 					'NEW'      => __( 'New', 'adsense-plugin' ),
 					'ACTIVE'   => __( 'Active', 'adsense-plugin' ),
-					'INACTIVE' => __( 'Inactive', 'adsense-plugin' )
+					'INACTIVE' => __( 'Idle', 'adsense-plugin' )
 				);
 
 				$adsns_adunit_sizes = array(
@@ -486,12 +488,13 @@ if ( ! class_exists( 'adsns' ) ) {
 										if ( array_key_exists( $adsns_adunit_status, $adsns_adunit_statuses ) ) {
 											$adsns_adunit_status = $adsns_adunit_statuses[ $adsns_adunit_status ];
 										}
-										$adsns_tbl_data[ $adsns_adunit->getName() ] = array(
+										$adsns_table_data[ $adsns_adunit->getName() ] = array(
 											'id'      => $adsns_adunit->getId(),
 											'name'    => $adsns_adunit->getName(),
 											'code'    => $adsns_adunit->getCode(),
 											'summary' => sprintf( '%s, %s', $adsns_adunit_type, $adsns_adunit_size ),
-											'status'  => $adsns_adunit_status
+											'status'  => $adsns_adunit_status,
+											'status_value' => $adsns_adunit['status']
 										);
 									}
 								} catch ( Google_Service_Exception $e ) {
@@ -549,6 +552,8 @@ if ( ! class_exists( 'adsns' ) ) {
 					if ( array_key_exists( $adsns_area, $adsns_tabs ) ) {
 
 						$adsns_save_settings = true;
+
+						$this->adsns_options['include_inactive_ads'] = ( ! empty( $_POST['adsns_include_inactive_id'] ) ) ? 1 : 0;
 
 						if ( isset( $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ][ $adsns_area ] ) ) {
 							$this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ][ $adsns_area ] = array();
@@ -647,6 +652,24 @@ if ( ! class_exists( 'adsns' ) ) {
 						'message'  => $go_pro_result['error']
 					);
 				}
+			}
+			$adsns_hidden_idle_notice = false;
+			$current_tab = ( isset( $_GET['tab'] ) ) ? urlencode( $_GET['tab'] ) : 'home';
+			if ( 1 != $this->adsns_options['include_inactive_ads'] && isset( $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ][ $current_tab ] ) ) {
+				$current_ads = $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ][ $current_tab ];
+				if ( ! empty( $current_ads ) ){
+					foreach ( $adsns_table_data as $adname => $addata ) {
+						foreach ($current_ads as $current_ad) {
+							if ( $current_ad['id'] == $addata['id'] ) {
+								if ('INACTIVE' == $addata['status_value'] ) {
+									$adsns_hidden_idle_notice = true;
+									break(2);
+								}
+								break;
+							}
+						}
+					}
+				}
 			} ?>
 			<div class="wrap" id="adsns_wrap">
 				<h1><?php _e( 'Google AdSense Settings', 'adsense-plugin' ); ?></h1>
@@ -663,8 +686,12 @@ if ( ! class_exists( 'adsns' ) ) {
 						printf( '<div class="below-h2 %s"><p>%s</p></div>', $adsns_settings_notice['class'], $adsns_settings_notice['message'] );
 					}
 				}
-				bws_show_settings_notice();
-				if ( ! isset( $_GET['action'] ) ) {
+				bws_show_settings_notice(); ?>
+				<div class="updated notice notice-warning below-h2 adsns-hidden-idle-notice<?php echo ( $adsns_hidden_idle_notice ) ? '' : ' hidden'; ?>">
+					<p><?php _e( 'Some of hidden idle ad blocks still set to be displayed', 'adsense-plugin' ); ?></p>
+				</div>
+
+				<?php if ( ! isset( $_GET['action'] ) ) {
 					if ( ! $this->adsns_adsense_api ) { ?>
 						<form id="adsns_settings_form" action="admin.php?page=adsense-plugin.php" method="post">
 							<div id="adsns_update">
@@ -695,7 +722,7 @@ if ( ! class_exists( 'adsns' ) ) {
 											</div>
 											<a id="adsns_authorization_button" class="button-primary" href="<?php echo $adsns_auth_url; ?>" target="_blank" onclick="window.open(this.href,'','top='+(screen.height/2-560/2)+',left='+(screen.width/2-640/2)+',width=640,height=560,resizable=0,scrollbars=0,menubar=0,toolbar=0,status=1,location=0').focus(); return false;"><?php _e( 'Get Authorization Code', 'adsense-plugin' ); ?></a>
 											<div id="adsns_authorization_form">
-												<input id="adsns_authorization_code" name="adsns_authorization_code" type="text" autocomplete="off" maxlength="100">
+												<input id="adsns_authorization_code" class="bws_no_bind_notice" name="adsns_authorization_code" type="text" autocomplete="off" maxlength="100">
 												<input id="adsns_authorize" class="button-primary" name="adsns_authorize" type="submit" value="<?php _e( 'Authorize', 'adsense-plugin' ); ?>">
 											</div>
 										<?php } ?>
@@ -706,6 +733,14 @@ if ( ! class_exists( 'adsns' ) ) {
 										<th scope="row"><?php _e( 'Your Publisher ID:', 'adsense-plugin' ); ?></th>
 										<td>
 											<span id="adsns_publisher_id"><?php echo $adsns_publisher_id; ?></span>
+										</td>
+									</tr>
+								<?php }
+								if ( isset( $adsns_publisher_id ) ) {?>
+									<tr valign="top">
+										<th scope="row"><label for="adsns_include_inactive_id"><?php _e( 'Show idle ad blocks', 'adsense-plugin' ); ?>:</label></th>
+										<td>
+											<input id="adsns_include_inactive_id" type="checkbox" name="adsns_include_inactive_id" <?php if ( isset( $this->adsns_options['include_inactive_ads'] ) && 1 == $this->adsns_options['include_inactive_ads'] ) echo 'checked="checked"'; ?> value="1">
 										</td>
 									</tr>
 								<?php } ?>
@@ -735,17 +770,19 @@ if ( ! class_exists( 'adsns' ) ) {
 											</p>
 										</div>
 										<?php if ( isset( $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ][ $adsns_current_tab ] ) ) {
-											foreach ( $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ][ $adsns_current_tab ] as $adsns_tbl_adunit ) {
-												$adsns_tbl_adunits[ $adsns_tbl_adunit['id'] ] = $adsns_tbl_adunit['position'];
+											foreach ( $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ][ $adsns_current_tab ] as $adsns_table_adunit ) {
+												$adsns_table_adunits[ $adsns_table_adunit['id'] ] = $adsns_table_adunit['position'];
 											}
 										}
-										$adsns_lt = new Adsns_List_Table();
-										$adsns_lt->adsns_tbl_data = $adsns_tbl_data;
-										$adsns_lt->adsns_tbl_adunits = ( isset( $adsns_tbl_adunits ) && is_array( $adsns_tbl_adunits ) ) ? $adsns_tbl_adunits : array();
+										$adsns_lt = new Adsns_List_Table( $this->adsns_options );
+										$adsns_lt->adsns_table_data = $adsns_table_data;
+										$adsns_lt->adsns_table_adunits = ( isset( $adsns_table_adunits ) && is_array( $adsns_table_adunits ) ) ? $adsns_table_adunits : array();
 										$adsns_lt->adsns_adunit_positions = $adsns_tabs[ $adsns_current_tab ]['adunit_positions'];
 										$adsns_lt->adsns_adunit_positions_pro = $adsns_tabs[ $adsns_current_tab ]['adunit_positions_pro'];
 										$adsns_lt->prepare_items();
-										$adsns_lt->display(); ?>
+										echo '<div class="adsns-ads-list">';
+											$adsns_lt->display();
+										echo "</div>"; ?>
 									</div>
 									<?php if ( $adsns_current_tab == 'search' ) { ?>
 										<div class="bws_pro_version_tooltip">
@@ -758,20 +795,20 @@ if ( ! class_exists( 'adsns' ) ) {
 									<?php } ?>
 								</div>
 							<?php }
-							if ( $adsns_current_tab != 'search' ) { ?>
+							if ( isset( $adsns_publisher_id ) ) { ?>
 								<p>
 									<input type="hidden" name="adsns_area" value="<?php echo $adsns_current_tab; ?>" />
 									<input id="bws-submit-button" type="submit" class="button-primary" name="adsns_save_settings" value="<?php _e( 'Save Changes', 'adsense-plugin' ); ?>" />
-									<?php wp_nonce_field( plugin_basename( __FILE__ ), 'adsns_nonce_name' ); ?>
 								</p>
 							<?php } ?>
+							<?php wp_nonce_field( plugin_basename( __FILE__ ), 'adsns_nonce_name' ); ?>
 						</form>
-					<?php }					
+					<?php }
 				} elseif ( 'custom_code' == $_GET['action'] ) {
 					bws_custom_code_tab();
 				} elseif ( 'go_pro' == $_GET['action'] ) {
 					bws_go_pro_tab( $this->adsns_plugin_info, $plugin_basename, 'adsense-plugin.php', 'adsense-pro.php', 'adsense-pro/adsense-pro.php', 'google-adsense', '2887beb5e9d5e26aebe6b7de9152ad1f', '80', isset( $go_pro_result['pro_plugin_is_activated'] ) );
-				} 
+				}
 				bws_plugin_reviews_block( $this->adsns_plugin_info['Name'], 'adsense-plugin' ); ?>
 			</div>
 		<?php }
@@ -807,7 +844,7 @@ if ( ! class_exists( 'adsns' ) ) {
 			if ( 'plugins.php' == $hook_suffix ) {
 				if ( isset( $this->adsns_options['first_install'] ) && strtotime( '-1 week' ) > $this->adsns_options['first_install'] )
 					bws_plugin_banner( $this->adsns_plugin_info, 'adsns', 'google-adsense', '6057da63c4951b1a7b03296e54ed6d02', '80', '//ps.w.org/adsense-plugin/assets/icon-128x128.png' );
-				
+
 				bws_plugin_banner_to_settings( $this->adsns_plugin_info, 'adsns_settings', 'adsense-plugin', 'admin.php?page=adsense-plugin.php' );
 			}
 
@@ -834,7 +871,7 @@ if ( ! class_exists( 'adsns' ) ) {
 				}
 				echo "</aside>";
 			} else {
-				if ( isset( $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ]['widget'] ) && ! empty( $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ]['widget'] ) ) {
+				if ( ! empty( $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ]['widget'] ) ) {
 					$adsns_ad_unit_id = $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ]['widget'][0]['id'];
 					$adsns_ad_unit_code = htmlspecialchars_decode( $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ]['widget'][0]['code'] );
 					printf( '<aside class="widget widget-container adsns_widget"><h1 class="widget-title">%s</h1><div id="%s" class="ads ads_widget">%s</div></aside>', $title, $adsns_ad_unit_id, $adsns_ad_unit_code );
@@ -851,7 +888,7 @@ if ( ! class_exists( 'adsns' ) ) {
 				$adsns_widget_positions = array(
 					'static' => __( 'Static', 'adsense-plugin' ),
 					'fixed'  => __( 'Fixed', 'adsense-plugin' ),
-			    );
+				);
 				$adsns_widget = $this->adsns_options['adunits'][ $this->adsns_options['publisher_id'] ]['widget'][0];
 				$adsns_id = substr( strstr( $adsns_widget['id'], ':' ), 1 );
 				$adsns_widget_position = isset( $adsns_widget['position'] ) ? $adsns_widget['position'] : 'static';
@@ -887,7 +924,7 @@ if ( ! class_exists( 'adsns' ) ) {
 
 		/* Add a link for settings page */
 		function adsns_plugin_action_links( $links, $file ) {
-			if ( ! is_network_admin() ) {
+			if ( ! is_network_admin() && ! is_plugin_active( 'adsense-pro/adsense-pro.php' ) ) {
 				if ( $file == 'adsense-plugin/adsense-plugin.php' ) {
 					$settings_link = '<a href="admin.php?page=adsense-plugin.php">' . __( 'Settings', 'adsense-plugin' ) . '</a>';
 					array_unshift( $links, $settings_link );
@@ -915,6 +952,18 @@ if ( ! class_exists( 'adsns' ) ) {
 			);
 			bws_help_tab( $screen, $args );
 		}
+
+		function adsns_loop_start( $content ) {
+			global $wp_query;
+			if ( is_main_query() && $content === $wp_query ) {
+				$this->adsns_is_main_query = true;
+			}
+		}
+
+		function adsns_loop_end( $content ) {
+			$this->adsns_is_main_query = false;
+		}
+
 	} /* Class */
 }
 
@@ -932,11 +981,23 @@ if ( ! class_exists( 'Adsns_List_Table' ) ) {
 
 	class Adsns_List_Table extends WP_List_Table {
 
-		public $adsns_tbl_data, $adsns_tbl_adunits, $adsns_adunit_positions, $adsns_adunit_positions_pro;
+		public $adsns_table_data, $adsns_table_adunits, $adsns_adunit_positions, $adsns_adunit_positions_pro;
+		private $include_inactive_ads, $adsns_options, $item_counter;
+
+		function __construct( $options ) {
+			$this->include_inactive_ads = $options['include_inactive_ads'];
+			$this->item_counter = 0;
+			parent::__construct( array(
+				'singular'  => __( 'item', 'adsense-plugin' ),
+				'plural'    => __( 'items', 'adsense-plugin' ),
+				'ajax'      => false,
+				)
+			);
+		}
 
 		function get_columns() {
 			$columns = array(
-				'id'	   => __( 'Display', 'adsense-plugin' ),
+				'cb'	   => __( 'Display', 'adsense-plugin' ),
 				'name'     => __( 'Name', 'adsense-plugin' ),
 				'code'     => __( 'Id', 'adsense-plugin' ),
 				'summary'  => __( 'Type / Size', 'adsense-plugin' ),
@@ -951,7 +1012,7 @@ if ( ! class_exists( 'Adsns_List_Table' ) ) {
 
 		function usort_reorder( $a, $b ) {
 			$orderby = ( ! empty( $_GET['orderby'] ) ) ? $_GET['orderby'] : 'name';
-			$order = ( ! empty($_GET['order'] ) ) ? $_GET['order'] : 'asc';
+			$order = ( ! empty( $_GET['order'] ) ) ? $_GET['order'] : 'asc';
 			$result = strcmp( $a[$orderby], $b[$orderby] );
 			return ( $order === 'asc' ) ? $result : -$result;
 		}
@@ -966,19 +1027,48 @@ if ( ! class_exists( 'Adsns_List_Table' ) ) {
 			return $sortable_columns;
 		}
 
+		/**
+		 * Add necessary css classes depending on item status
+		 * @param     array     $item        The current item data.
+		 * @return    void
+		 */
+		function single_row( $item ) {
+			$row_class = isset( $item['status_value'] ) && 'INACTIVE' == $item['status_value'] ? 'adsns_inactive' : '';
+			if ( '1' != $this->include_inactive_ads ) {
+				if ( isset( $item['status_value'] ) && 'INACTIVE' != $item['status_value'] ) {
+					if ( $this->item_counter%2 == 0 ) {
+						$row_class .= ( '' == $row_class ) ? 'adsns_table_row_odd' : ' adsns_table_row_odd';
+					}
+					$this->item_counter++;
+				} elseif ( isset( $item['status_value'] ) && 'INACTIVE' == $item['status_value'] ) {
+						$row_class .= ( '' == $row_class ) ? 'hidden' : ' hidden';
+				}
+			} else {
+				if ( $this->item_counter%2 == 0 ) {
+					$row_class .= ( '' == $row_class ) ? 'adsns_table_row_odd' : ' adsns_table_row_odd';
+				}
+				$this->item_counter++;
+			}
+			$row_class = ( '' != $row_class ) ? ' class="' . $row_class . '"' : '';
+			echo "<tr{$row_class}>";
+				$this->single_row_columns( $item );
+			echo '</tr>';
+		}
+
 		function prepare_items() {
-			global $adsns_tbl_rows;
+			global $adsns_table_rows;
 			$columns = $this->get_columns();
 			$hidden = array();
 			$sortable = $this->get_sortable_columns();
-			$this->_column_headers = array( $columns, $hidden, $sortable );
-			usort( $this->adsns_tbl_data, array( &$this, 'usort_reorder' ) );
-			$this->items = $this->adsns_tbl_data;
+			$primary = 'name';
+			$this->_column_headers = array( $columns, $hidden, $sortable, $primary );
+			usort( $this->adsns_table_data, array( &$this, 'usort_reorder' ) );
+			$this->items = $this->adsns_table_data;
 		}
 
 		function column_default( $item, $column_name ) {
 			switch( $column_name ) {
-				case 'id':
+				case 'cb':
 				case 'name':
 				case 'code':
 				case 'summary':
@@ -990,16 +1080,18 @@ if ( ! class_exists( 'Adsns_List_Table' ) ) {
 			}
 		}
 
-		function column_id( $item ) {
-			return sprintf( '<input class="adsns_adunit_ids" type="checkbox" name="adsns_adunit_ids[]" value="%s" %s/>', $item['id'], ( array_key_exists( $item['id'], $this->adsns_tbl_adunits ) ) ? 'checked="checked"' : '' );
+		function column_cb( $item ) {
+			return sprintf( '<input class="adsns_adunit_ids" type="checkbox" name="adsns_adunit_ids[]" value="%s" %s/>', $item['id'], ( array_key_exists( $item['id'], $this->adsns_table_adunits ) ) ? 'checked="checked"' : '' );
 		}
 
 		function column_position( $item ) {
+			$disabled = ( ! array_key_exists( $item['id'], $this->adsns_table_adunits ) ) ? 'disabled="disabled"' : '';
+
 			$adsns_adunit_positions = is_array( $this->adsns_adunit_positions ) ? $this->adsns_adunit_positions : array();
 			$adsns_adunit_positions_pro = is_array( $this->adsns_adunit_positions_pro ) ? $this->adsns_adunit_positions_pro : array();
 			$adsns_position = $adsns_position_pro = '';
 			foreach ( $adsns_adunit_positions as $value => $name ) {
-				$adsns_position .= sprintf( '<option value="%s" %s>%s</option>', $value, ( array_key_exists( $item['id'], $this->adsns_tbl_adunits ) && $this->adsns_tbl_adunits[ $item['id'] ] == $value ) ? 'selected="selected"' : '', $name );
+				$adsns_position .= sprintf( '<option value="%s" %s>%s</option>', $value, ( array_key_exists( $item['id'], $this->adsns_table_adunits ) && $this->adsns_table_adunits[ $item['id'] ] == $value ) ? 'selected="selected"' : '', $name );
 			}
 			if ( $adsns_adunit_positions_pro ) {
 				foreach ( $adsns_adunit_positions_pro as $value_pro => $name_pro ) {
@@ -1008,8 +1100,9 @@ if ( ! class_exists( 'Adsns_List_Table' ) ) {
 				$adsns_position .= $adsns_position_pro;
 			}
 			return sprintf(
-				'<select class="adsns_adunit_position" name="adsns_adunit_position[%s]">%s</select>',
+				'<select class="adsns_adunit_position" name="adsns_adunit_position[%s]" %s>%s</select>',
 				$item['id'],
+				$disabled,
 				$adsns_position
 			);
 		}

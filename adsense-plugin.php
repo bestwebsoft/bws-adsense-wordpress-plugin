@@ -6,7 +6,7 @@ Description: This plugin allows implementing Google AdSense to your website.
 Author: BestWebSoft
 Text Domain: adsense-plugin
 Domain Path: /languages
-Version: 1.39
+Version: 1.40
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -14,43 +14,43 @@ License: GPLv2 or later
 /*
 	© Copyright 2016  BestWebSoft  ( http://support.bestwebsoft.com )
 
-    This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License, version 2, as
-    published by the Free Software Foundation.
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License, version 2, as
+	published by the Free Software Foundation.
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with this program; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+	You should have received a copy of the GNU General Public License
+	along with this program; if not, write to the Free Software
+	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 include_once( 'adsense-plugin.class.php' ); /* Including a class which contains a plugin functions */
-$adsns_plugin =	new adsns(); /* Creating a variable with type of our class */
+$adsns_plugin =	new Adsns(); /* Creating a variable with type of our class */
 
 /* Function fo uninstall */
 if ( ! function_exists( 'adsns_uninstall' ) ) {
 	function adsns_uninstall() {
-        if ( function_exists( 'is_multisite' ) && is_multisite() ) {
-            global $wpdb;
-            $old_blog = $wpdb->blogid;
-            /* Get all blog ids */
-            $blogids = $wpdb->get_col( "SELECT `blog_id` FROM $wpdb->blogs" );
-            foreach ( $blogids as $blog_id ) {
-                switch_to_blog( $blog_id );
-                delete_option( 'adsns_settings' );
-            }
-            switch_to_blog( $old_blog );
-        } else {
-            delete_option( 'adsns_settings' );
-        }
-        
-        require_once( dirname( __FILE__ ) . '/bws_menu/bws_include.php' );
-        bws_include_init( plugin_basename( __FILE__ ) );
-        bws_delete_plugin( plugin_basename( __FILE__ ) );
+		if ( function_exists( 'is_multisite' ) && is_multisite() ) {
+			global $wpdb;
+			$old_blog = $wpdb->blogid;
+			/* Get all blog ids */
+			$blogids = $wpdb->get_col( "SELECT `blog_id` FROM $wpdb->blogs" );
+			foreach ( $blogids as $blog_id ) {
+				switch_to_blog( $blog_id );
+				delete_option( 'adsns_settings' );
+			}
+			switch_to_blog( $old_blog );
+		} else {
+			delete_option( 'adsns_settings' );
+		}
+
+		require_once( dirname( __FILE__ ) . '/bws_menu/bws_include.php' );
+		bws_include_init( plugin_basename( __FILE__ ) );
+		bws_delete_plugin( plugin_basename( __FILE__ ) );
 	}
 }
 
@@ -75,5 +75,8 @@ add_filter( 'plugin_action_links', array( $adsns_plugin, 'adsns_plugin_action_li
 add_filter( 'plugin_row_meta', array( $adsns_plugin, 'adsns_register_plugin_links'), 10, 2 );
 /* Display notices */
 add_action( 'admin_notices', array( $adsns_plugin, 'adsns_plugin_notice') );
+/* Adding actions to define variable as true inside the main loop and as false outside of it */
+add_action( 'loop_start', array( $adsns_plugin, 'adsns_loop_start' ) );
+add_action( 'loop_end', array( $adsns_plugin, 'adsns_loop_end' ) );
 /* When uninstall plugin */
 register_uninstall_hook( __FILE__, 'adsns_uninstall' );
