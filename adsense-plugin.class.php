@@ -6,34 +6,35 @@ if ( ! class_exists( 'Adsns' ) ) {
 		var $adsns_plugin_info, $adsns_options, $adsns_adsense_api, $adsns_is_main_query;
 
 		function adsns_show_ads() {
-			if ( ! $this->adsns_options ) {
-				$this->adsns_activate();
-			}
-			/* Use Google AdSense API? */
-			if ( $this->adsns_adsense_api == true ) {
-				add_filter( 'the_content', array( $this, 'adsns_content' ) );
-				add_filter( 'comment_id_fields', array( $this, 'adsns_comments' ) );
-			} else {
+			if ( ! is_admin() ) {			
+				if ( ! $this->adsns_options )
+					$this->adsns_activate();
 
-				$this->adsns_options['code'] =	stripslashes( $this->adsns_options['code'] );
-				$this->adsns_options['num_show'] = 0;
-				update_option( 'adsns_settings', $this->adsns_options );
+				/* Use Google AdSense API? */
+				if ( $this->adsns_adsense_api == true ) {
+					add_filter( 'the_content', array( $this, 'adsns_content' ) );
+					add_filter( 'comment_id_fields', array( $this, 'adsns_comments' ) );
+				} else {
 
-				/* Checking in what position we should show an ads */
-				if ( 'postend' == $this->adsns_options['position'] ) { /* If we choose ad position after post(single page) */
-					add_filter( 'the_content', array( $this, 'adsns_end_post_ad' ) ); /* Adding ad after post */
-				} else if ( 'homepostend' == $this->adsns_options['position'] ) { /* If we choose ad position after post(home page) */
-					add_filter( 'the_content', array( $this, 'adsns_end_home_post_ad' ) ); /* Adding ad after post */
-				} else if ( 'homeandpostend' == $this->adsns_options['position'] ) { /* If we choose ad position after post(home page) */
-					add_filter( 'the_content', array( $this, 'adsns_end_home_post_ad' ) ); /* Adding ad after post */
-					add_filter( 'the_content', array( $this, 'adsns_end_post_ad' ) ); /* Adding ad after post */
-				} else if ( 'commentform' == $this->adsns_options['position'] ) { /* If we choose ad position after comment form */
-					add_filter( 'comment_id_fields', array( $this, 'adsns_end_comment_ad' ) ); /* Adding ad after comment form */
-				} else if ( 'footer' == $this->adsns_options['position'] ) { /* If we choose ad position in a footer */
-					add_filter( 'get_footer', array( $this, 'adsns_end_footer_ad' ) ); /* Adding footer ad */
+					$this->adsns_options['code'] =	stripslashes( $this->adsns_options['code'] );
+					$this->adsns_options['num_show'] = 0;
+					update_option( 'adsns_settings', $this->adsns_options );
+
+					/* Checking in what position we should show an ads */
+					if ( 'postend' == $this->adsns_options['position'] ) { /* If we choose ad position after post(single page) */
+						add_filter( 'the_content', array( $this, 'adsns_end_post_ad' ) ); /* Adding ad after post */
+					} else if ( 'homepostend' == $this->adsns_options['position'] ) { /* If we choose ad position after post(home page) */
+						add_filter( 'the_content', array( $this, 'adsns_end_home_post_ad' ) ); /* Adding ad after post */
+					} else if ( 'homeandpostend' == $this->adsns_options['position'] ) { /* If we choose ad position after post(home page) */
+						add_filter( 'the_content', array( $this, 'adsns_end_home_post_ad' ) ); /* Adding ad after post */
+						add_filter( 'the_content', array( $this, 'adsns_end_post_ad' ) ); /* Adding ad after post */
+					} else if ( 'commentform' == $this->adsns_options['position'] ) { /* If we choose ad position after comment form */
+						add_filter( 'comment_id_fields', array( $this, 'adsns_end_comment_ad' ) ); /* Adding ad after comment form */
+					} else if ( 'footer' == $this->adsns_options['position'] ) { /* If we choose ad position in a footer */
+						add_filter( 'get_footer', array( $this, 'adsns_end_footer_ad' ) ); /* Adding footer ad */
+					}
 				}
 			}
-			/* End checking */
 		}
 
 		/* Show ads after comment form */
@@ -103,10 +104,10 @@ if ( ! class_exists( 'Adsns' ) ) {
 			}
 
 			/* Function check if plugin is compatible with current WP version */
-			bws_wp_min_version_check( 'adsense-plugin/adsense-plugin.php', $this->adsns_plugin_info, '3.8', '3.3' );
+			bws_wp_min_version_check( 'adsense-plugin/adsense-plugin.php', $this->adsns_plugin_info, '3.8' );
 
 			/* Call register settings function */
-			if ( ! is_admin() || ( isset( $_GET['page'] ) && "adsense-plugin.php" == $_GET['page'] ) ) {
+			if ( ! is_admin() || ( isset( $_GET['page'] ) && 'adsense-plugin.php' == $_GET['page'] ) ) {
 				$this->adsns_activate();
 			}
 		}
@@ -126,7 +127,7 @@ if ( ! class_exists( 'Adsns' ) ) {
 				}
 			}
 
-			if ( ! isset( $bws_plugin_info ) || empty( $bws_plugin_info ) )
+			if ( empty( $bws_plugin_info ) )
 				$bws_plugin_info = array( 'id' => '80', 'version' => $this->adsns_plugin_info["Version"] );
 		}
 

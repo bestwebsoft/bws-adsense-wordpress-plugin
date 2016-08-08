@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: Google AdSense by BestWebSoft
-Plugin URI: http://bestwebsoft.com/products/
-Description: This plugin allows implementing Google AdSense to your website.
+Plugin URI: http://bestwebsoft.com/products/google-adsense/
+Description: Add Adsense ads to pages, posts, custom posts, search results, categories, tags, pages, and widgets.
 Author: BestWebSoft
 Text Domain: adsense-plugin
 Domain Path: /languages
-Version: 1.40
+Version: 1.41
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */

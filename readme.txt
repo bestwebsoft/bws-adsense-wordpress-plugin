@@ -3,12 +3,12 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: ad, ad banner, ad format, ad parameters, google adsense, ads display, ads widgets, google plugin, insert ads, text ads, adsense plugin, advertisements
 Requires at least: 3.8
-Tested up to: 4.5.3
-Stable tag: 1.40
+Tested up to: 4.6
+Stable tag: 1.41
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin allows Google AdSense implementation into your website.
+Add Adsense ads to pages, posts, custom posts, search results, categories, tags, pages, and widgets.
 
 == Description ==
 
@@ -61,7 +61,7 @@ We can fix some things for free for the users who provide translation of our plu
 
 1. Upload the folder `adsense-plugin` to the directory `/wp-content/plugins/`.
 2. Activate the plugin via the 'Plugins' menu in WordPress.
-3. The plugin settings are located in "BWS Plugins"->"AdSense".
+3. The plugin settings are located in "BWS Panel"->"AdSense".
 
 <a href="https://docs.google.com/document/d/1P-Jb5oYadIAsJz63wbsppxhOnCX-Z27S3XzE6HNcrbI/edit" target="_blank">View a Step-by-step Instruction on AdSense Installation</a>.
 
@@ -80,13 +80,13 @@ This limitation is caused by the maximum allowable number of ad blocks to be dis
 = Ads are not displayed =
 
 1. Please make sure Adblocker (or some other similar extensions that block ads) is disabled in the browser
-2. Please make sure that your theme contains the hooks 'the_content' for the ads displaying. The plugin will not wok without such hooks.
+2. Please make sure that your theme contains the hooks 'the_content' for the ads displaying. The plugin will not work without such hooks.
 If you do not know how to do it please install a standard WordPress theme and check if the ads will be displayed or not, if yes it means that there aren't the necessary hooks in your theme.
 3. Probably you did not set up 'google ads' account
 
 = What should I do if the plugin is not displayed in the plugins list or the tab with the settings page is not displayed either? =
 
-If you have an extention in your browser that hides ads (e.g. AdBlock or something like that) - it can hide AdSense displaying on this page, as it is set to search by words like AdSense and similar.
+If you have an extension in your browser that hides ads (e.g. AdBlock or something like that) - it can hide AdSense displaying on this page, as it is set to search by words like AdSense and similar.
 Please make sure Adblocker (or some other similar extensions that block ads) is disabled in the browser
 
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
@@ -105,6 +105,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 3. Google AdSense Settings page (Authorized in Google AdSense).
 
 == Changelog ==
+
+= V1.41 - 08.08.2016 =
+* Update : All functionality for wordpress 4.6 was updated.
 
 = V1.40 - 24.06.2016 =
 * NEW : Option for hiding idle blocks in the ad blocks list was added.
@@ -263,6 +266,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Changed : Usability at the settings page of the plugin was improved.
 
 == Upgrade Notice ==
+
+= V1.41 =
+* The compatibility with new WordPress version updated.
 
 = V1.40 =
 New option for hiding idle blocks in the ad blocks list was added. The bug with ads on the home page was fixed.
