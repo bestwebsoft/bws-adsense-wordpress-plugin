@@ -6,10 +6,10 @@ if ( ! class_exists( 'Adsns' ) ) {
 		var $adsns_plugin_info, $adsns_options, $adsns_adsense_api, $adsns_is_main_query;
 
 		function adsns_show_ads() {
-			if ( ! is_admin() ) {			
-				if ( ! $this->adsns_options )
-					$this->adsns_activate();
+			if ( ! $this->adsns_options )
+				$this->adsns_activate();
 
+			if ( ! is_admin() ) {
 				/* Use Google AdSense API? */
 				if ( $this->adsns_adsense_api == true ) {
 					add_filter( 'the_content', array( $this, 'adsns_content' ) );
