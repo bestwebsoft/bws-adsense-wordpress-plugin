@@ -3,59 +3,83 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: ad, ad banner, ad format, ad parameters, google adsense, ads display, ads widgets, google plugin, insert ads, text ads, adsense plugin, advertisements
 Requires at least: 3.8
-Tested up to: 4.6
-Stable tag: 1.41
+Tested up to: 4.6.1
+Stable tag: 1.42
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add Adsense ads to pages, posts, custom posts, search results, categories, tags, pages, and widgets.
+Add Adsense ads to WordPress website pages, posts, custom posts, search results, categories, tags, and widgets.
 
 == Description ==
 
-Google AdSense Plugin creates blocks to display ads on your website. It allows to customize the ads displaying, such as format (text ad, image, text with an image or link), size, color of the elements in the ad block, rounded corners and the ad block position on the website. It provides possibility to make ads unique and original.
+Google Adsense plugin is a superb solution to earn money by placing ads to WordPress website pages, posts, custom posts, search results, categories, tags, and widgets. Link your website to Google AdSense account and manage available ads easily right from your admin dashboard!
 
 http://www.youtube.com/watch?v=wWaEGbR5Lz0
 
-<a href="http://www.youtube.com/watch?v=Nkp267vxZ84" target="_blank">Google AdSense by BestWebSoft Video instruction on Installation</a>
+= Free Features =
 
-<a href="http://wordpress.org/plugins/adsense-plugin/faq/" target="_blank">Google AdSense by BestWebSoft FAQ</a>
+* Automatically insert ads to:
+	* Home page
+	* Pages
+	* Posts/Custom post types
+	* Categories/Tags
+	* Search results
+	* Widgets
+* Change ads position:
+	* Before content
+	* After content
+	* Below comments form
+* Show idle ads 
+* Receive the existing ads from your Google AdSense account
+* Add custom code via plugin settings page
+* Compatible with latest WordPress version
+* Incredibly simple settings for fast setup without modifying code
+* Detailed step-by-step documentation and videos
 
-<a href="http://support.bestwebsoft.com" target="_blank">Google AdSense by BestWebSoft Support</a>
+> **Pro Features**
+>
+> All features from Free version included plus:
+>
+> * Insert ads to search results automatically 
+> * Display ads after:
+> 	* First paragraph
+> 	* Random paragraph
+> * Choose ads position in widgets:
+> 	* Static
+> 	* Fixed
+> * Get answer to your support question within one business day ([Support Policy](http://bestwebsoft.com/support-policy/))
+>
+> [Upgrade to Pro Now](http://bestwebsoft.com/products/wordpress/plugins/google-adsense/?k=b68fe7a44579f45545bd6e7556143e9a)
 
-<a href="http://bestwebsoft.com/products/google-adsense/?k=b68fe7a44579f45545bd6e7556143e9a" target="_blank">Upgrade to Google AdSense Pro by BestWebSoft</a>
+If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](http://support.bestwebsoft.com/hc/en-us/requests/new)
 
-= Features =
+= Documentation & Videos =
 
-* Receiving the existing ad blocks from Google AdSense account using Google AdSense API.
-* Automatic insertion of ad blocks to the home page, pages, post / custom posts, categories / tags.
-* Displaying ad blocks before content, after content, after comments form.
-* Displaying ad block in the widget.
+* [[Doc] Installation](https://docs.google.com/document/d/1P-Jb5oYadIAsJz63wbsppxhOnCX-Z27S3XzE6HNcrbI/)
+* [[Video] Installation Instruction](http://www.youtube.com/watch?v=Nkp267vxZ84)
 
-If you have a feature, suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">Suggest a Feature</a>
+= Help & Support =
 
-= Recommended Plugins =
-
-The author of the Google AdSense also recommends the following plugins:
-
-* <a href="http://wordpress.org/plugins/updater/">Updater</a> - This plugin updates WordPress core and the plugins to the recent versions. You can also use the auto mode or manual mode for updating and set email notifications.
-There is also a premium version of the plugin <a href="http://bestwebsoft.com/products/updater-pro/?k=9bfbc38d14047beca03dbc74f96cc135">Updater Pro</a> with more useful features available. It can make backup of all your files and database before updating. Also it can forbid some plugins or WordPress Core update.
+Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <http://support.bestwebsoft.com/>
 
 = Translation =
 
-* Czech (cs_CZ) (thanks to <a href="mailto:info@pamadessoft.cz">PaMaDeSSoft</a>, www.pamadessoft.cz)
+* Czech (cs_CZ) (thanks to [PaMaDeSSoft](mailto:info@pamadessoft.cz), www.pamadessoft.cz)
 * Russian (ru_RU)
+* Spanish (es_ES)
 * Ukrainian (uk)
 
-Some of these translations are not complete. We are constantly adding new features which should be translated.
-If you create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text in PO and MO files</a> for <a href="http://support.bestwebsoft.com/hc/en-us/requests/new" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](http://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](http://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](http://www.poedit.net/download.php).
 
-= Technical support =
+= Recommended Plugins =
 
-Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in other languages won't be accepted.
+* [Updater](http://bestwebsoft.com/products/wordpress/plugins/updater/?k=9bfbc38d14047beca03dbc74f96cc135) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
 
-If you notice any bugs in the plugins, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.
-Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then.
-We can fix some things for free for the users who provide translation of our plugin into their native language (this should be a new translation of a certain plugin, you can check available translations on the official plugin page).
+= Donate =
+
+Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.
+
+[Donate Now](http://bestwebsoft.com/donate/)
 
 == Installation ==
 
@@ -63,7 +87,7 @@ We can fix some things for free for the users who provide translation of our plu
 2. Activate the plugin via the 'Plugins' menu in WordPress.
 3. The plugin settings are located in "BWS Panel"->"AdSense".
 
-<a href="https://docs.google.com/document/d/1P-Jb5oYadIAsJz63wbsppxhOnCX-Z27S3XzE6HNcrbI/edit" target="_blank">View a Step-by-step Instruction on AdSense Installation</a>.
+[View a Step-by-step Instruction on AdSense Installation](https://docs.google.com/document/d/1P-Jb5oYadIAsJz63wbsppxhOnCX-Z27S3XzE6HNcrbI/)
 
 http://www.youtube.com/watch?v=Nkp267vxZ84
 
@@ -91,12 +115,12 @@ Please make sure Adblocker (or some other similar extensions that block ads) is 
 
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
-Please make sure that the problem hasn't been discussed yet on our forum (<a href="http://support.bestwebsoft.com" target="_blank">http://support.bestwebsoft.com</a>). If no, please provide the following data along with your problem's description:
+Please make sure that the problem hasn't been discussed yet on our forum (<http://support.bestwebsoft.com>). If no, please provide the following data along with your problem's description:
 
 1. the link to the page where the problem occurs
 2. the name of the plugin and its version. If you are using a pro version - your order number.
 3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: <a href="https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit" target="_blank">Instuction on System Status</a>
+4. copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit)
 
 == Screenshots ==
 
@@ -105,6 +129,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 3. Google AdSense Settings page (Authorized in Google AdSense).
 
 == Changelog ==
+
+= V1.42 - 04.10.2016 =
+* NEW : The Spanish language file was added.
 
 = V1.41 - 08.08.2016 =
 * Update : All functionality for wordpress 4.6 was updated.
@@ -266,6 +293,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<a hre
 * Changed : Usability at the settings page of the plugin was improved.
 
 == Upgrade Notice ==
+
+= V1.42 =
+* New languages added.
 
 = V1.41 =
 * The compatibility with new WordPress version updated.

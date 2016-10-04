@@ -1,39 +1,101 @@
 <a href="http://bestwebsoft.com/products/google-adsense/" target=_blank>Google AdSense WordPress Plugin</a>
 ========================
 
-Google AdSense Plugin creates blocks to display ads on your website. It allows to customize the ads displaying, such as format (text ad, image, text with an image or link), size, color of the elements in the ad block, rounded corners and the ad block position on the website. It provides possibility to make ads unique and original.
+Add Adsense ads to WordPress website pages, posts, custom posts, search results, categories, tags, and widgets.
 
 <img src="http://bestwebsoft.com/wp-content/uploads/2014/09/adsense-banner-website1.jpg" />
 
-<a href="http://bestwebsoft.com/products/google-adsense/description/" target=_blank>Description</a> | 
-<a href="http://bestwebsoft.com/products/google-adsense/installation/" target=_blank>Installation</a> | 
-<a href="http://bestwebsoft.com/products/google-adsense/faq/" target=_blank>FAQ</a> | 
-<a href="http://bestwebsoft.com/products/google-adsense/screenshots/" target=_blank>Screenshots</a> | 
-<a href="http://bestwebsoft.com/products/google-adsense/changelog/" target=_blank>Changelog</a> | 
-<a href="http://bestwebsoft.com/products/google-adsense/download/" target=_blank>Download</a>
+<p>Google Adsense plugin is a superb solution to earn money by placing ads to WordPress website pages, posts, custom posts, search results, categories, tags, and widgets. Link your website to Google AdSense account and manage available ads easily right from your admin dashboard!</p>
 
 
-Features
------------------------------
-* Receiving the existing ad blocks from Google AdSense account using Google AdSense API.
-* Automatic insertion of ad blocks to the home page, pages, post / custom posts, categories / tags.
-* Displaying ad blocks before content, after content, after comments form.
-* Displaying ad block in the widget.
+<div class='video'></div>
 
 
-Translation
------------------------------
-* Czech (cs_CZ) (thanks to PaMaDeSSoft, www.pamadessoft.cz)
-* Russian (ru_RU)
-* Ukrainian (uk)
+<h4>Free Features</h4>
 
-If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> for <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+<ul>
+<li>Automatically insert ads to:
 
+<ul>
+<li>Home page</li>
+<li>Pages</li>
+<li>Posts/Custom post types</li>
+<li>Categories/Tags</li>
+<li>Search results</li>
+<li>Widgets</li>
+</ul></li>
+<li>Change ads position:
 
-Technical support
------------------------------
-Dear users, our plugins are available for free download. If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us. Please note that we accept requests in English only. All messages in other languages won't be accepted.
+<ul>
+<li>Before content</li>
+<li>After content</li>
+<li>Below comments form</li>
+</ul></li>
+<li>Show idle ads </li>
+<li>Receive the existing ads from your Google AdSense account</li>
+<li>Add custom code via plugin settings page</li>
+<li>Compatible with latest WordPress version</li>
+<li>Incredibly simple settings for fast setup without modifying code</li>
+<li>Detailed step-by-step documentation and videos</li>
+</ul>
 
-If you notice any bugs in the plugins, you can notify us about it and we'll investigate and fix the issue then. Your request should contain URL of the website, issues description and WordPress admin panel credentials.
-Moreover we can customize the plugin according to your requirements. It's a paid service (as a rule it costs $40, but the price can vary depending on the amount of the necessary changes and their complexity). Please note that we could also include this or that feature (developed for you) in the next release and share with the other users then.
-We can fix some things for free for the users who provide translation of our plugin into their native language (this should be a new translation of a certain plugin, you can check available translations on the official plugin page).
+<blockquote>
+  <p><strong>Pro Features</strong></p>
+  
+  <p>All features from Free version included plus:</p>
+  
+  <ul>
+  <li>Insert ads to search results automatically </li>
+  <li>Display ads after:
+  
+  <ul>
+  <li>First paragraph</li>
+  <li>Random paragraph</li>
+  </ul></li>
+  <li>Choose ads position in widgets:
+  
+  <ul>
+  <li>Static</li>
+  <li>Fixed</li>
+  </ul></li>
+  <li>Get answer to your support question within one business day (<a href="http://bestwebsoft.com/support-policy/">Support Policy</a>)</li>
+  </ul>
+  
+  <p><a href="http://bestwebsoft.com/products/wordpress/plugins/google-adsense/?k=b68fe7a44579f45545bd6e7556143e9a">Upgrade to Pro Now</a></p>
+</blockquote>
+
+<p>If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! <a href="http://support.bestwebsoft.com/hc/en-us/requests/new">Suggest a Feature</a></p>
+
+<h4>Documentation &#38; Videos</h4>
+
+<ul>
+<li><a href="https://docs.google.com/document/d/1P-Jb5oYadIAsJz63wbsppxhOnCX-Z27S3XzE6HNcrbI/">[Doc] Installation</a></li>
+<li><a href="http://www.youtube.com/watch?v=Nkp267vxZ84">[Video] Installation Instruction</a></li>
+</ul>
+
+<h4>Help &#38; Support</h4>
+
+<p>Visit our Help Center if you have any questions, our friendly Support Team is happy to help &#8212; <a href="http://support.bestwebsoft.com/">http://support.bestwebsoft.com/</a></p>
+
+<h4>Translation</h4>
+
+<ul>
+<li>Czech (cs_CZ) (thanks to <a href="mailto:info@pamadessoft.cz">PaMaDeSSoft</a>, <a href="http://www.pamadessoft.cz" rel="nofollow">http://www.pamadessoft.cz</a>)</li>
+<li>Russian (ru_RU)</li>
+<li>Spanish (es_ES)</li>
+<li>Ukrainian (uk)</li>
+</ul>
+
+<p>Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress">the text of PO and MO files</a> to <a href="http://support.bestwebsoft.com/hc/en-us/requests/new">BestWebSoft</a> and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO <a href="http://www.poedit.net/download.php">files Poedit</a>.</p>
+
+<h4>Recommended Plugins</h4>
+
+<ul>
+<li><a href="http://bestwebsoft.com/products/wordpress/plugins/updater/?k=9bfbc38d14047beca03dbc74f96cc135">Updater</a> - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.</li>
+</ul>
+
+<h4>Donate</h4>
+
+<p>Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.</p>
+
+<p><a href="http://bestwebsoft.com/donate/">Donate Now</a></p>
