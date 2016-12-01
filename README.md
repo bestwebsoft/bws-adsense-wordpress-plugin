@@ -1,9 +1,7 @@
-<a href="http://bestwebsoft.com/products/google-adsense/" target=_blank>Google AdSense WordPress Plugin</a>
+<a href="http://bestwebsoft.com/products/wordpress/plugins/google-adsense/" target=_blank>Google AdSense WordPress Plugin</a>
 ========================
 
 Add Adsense ads to WordPress website pages, posts, custom posts, search results, categories, tags, and widgets.
-
-<img src="http://bestwebsoft.com/wp-content/uploads/2014/09/adsense-banner-website1.jpg" />
 
 <p>Google Adsense plugin is a superb solution to earn money by placing ads to WordPress website pages, posts, custom posts, search results, categories, tags, and widgets. Link your website to Google AdSense account and manage available ads easily right from your admin dashboard!</p>
 
