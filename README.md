@@ -3,7 +3,9 @@
 
 Add Adsense ads to WordPress website pages, posts, custom posts, search results, categories, tags, and widgets.
 
-<p>Google Adsense plugin is a superb solution to earn money by placing ads to WordPress website pages, posts, custom posts, search results, categories, tags, and widgets. Link your website to Google AdSense account and manage available ads easily right from your admin dashboard!</p>
+<p>Google Adsense plugin is a superb solution to earn money by placing ads to WordPress website pages, posts, custom posts, search results, categories, tags, and widgets.</p>
+
+<p>Link your website to Google AdSense account and manage available ads easily right from your admin dashboard!</p>
 
 
 <div class='video'></div>
@@ -35,6 +37,7 @@ Add Adsense ads to WordPress website pages, posts, custom posts, search results,
 <li>Compatible with latest WordPress version</li>
 <li>Incredibly simple settings for fast setup without modifying code</li>
 <li>Detailed step-by-step documentation and videos</li>
+<li>Multilingual and RTL ready</li>
 </ul>
 
 <blockquote>

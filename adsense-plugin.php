@@ -6,13 +6,13 @@ Description: Add Adsense ads to pages, posts, custom posts, search results, cate
 Author: BestWebSoft
 Text Domain: adsense-plugin
 Domain Path: /languages
-Version: 1.42
+Version: 1.43
 Author URI: http://bestwebsoft.com/
 License: GPLv2 or later
 */
 
 /*
-	© Copyright 2016  BestWebSoft  ( http://support.bestwebsoft.com )
+	© Copyright 2017  BestWebSoft  ( http://support.bestwebsoft.com )
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -34,18 +34,27 @@ $adsns_plugin =	new Adsns(); /* Creating a variable with type of our class */
 /* Function fo uninstall */
 if ( ! function_exists( 'adsns_uninstall' ) ) {
 	function adsns_uninstall() {
-		if ( function_exists( 'is_multisite' ) && is_multisite() ) {
-			global $wpdb;
-			$old_blog = $wpdb->blogid;
-			/* Get all blog ids */
-			$blogids = $wpdb->get_col( "SELECT `blog_id` FROM $wpdb->blogs" );
-			foreach ( $blogids as $blog_id ) {
-				switch_to_blog( $blog_id );
+		global $wpdb;
+
+		if ( ! function_exists( 'get_plugins' ) )
+			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
+		$all_plugins = get_plugins();
+
+		if ( ! array_key_exists( 'adsense-pro/adsense-pro.php', $all_plugins ) ) {
+			if ( is_multisite() ) {
+				global $wpdb;
+				$old_blog = $wpdb->blogid;
+				/* Get all blog ids */
+				$blogids = $wpdb->get_col( "SELECT `blog_id` FROM $wpdb->blogs" );
+				foreach ( $blogids as $blog_id ) {
+					switch_to_blog( $blog_id );
+					delete_option( 'adsns_settings' );
+				}
+				switch_to_blog( $old_blog );
+			} else {
 				delete_option( 'adsns_settings' );
 			}
-			switch_to_blog( $old_blog );
-		} else {
-			delete_option( 'adsns_settings' );
 		}
 
 		require_once( dirname( __FILE__ ) . '/bws_menu/bws_include.php' );

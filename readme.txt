@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: http://bestwebsoft.com/donate/
 Tags: ad, ad banner, ad format, ad parameters, google adsense, ads display, ads widgets, google plugin, insert ads, text ads, adsense plugin, advertisements
 Requires at least: 3.8
-Tested up to: 4.6.1
-Stable tag: 1.42
+Tested up to: 4.7
+Stable tag: 1.43
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,9 @@ Add Adsense ads to WordPress website pages, posts, custom posts, search results,
 
 == Description ==
 
-Google Adsense plugin is a superb solution to earn money by placing ads to WordPress website pages, posts, custom posts, search results, categories, tags, and widgets. Link your website to Google AdSense account and manage available ads easily right from your admin dashboard!
+Google Adsense plugin is a superb solution to earn money by placing ads to WordPress website pages, posts, custom posts, search results, categories, tags, and widgets.
+
+Link your website to Google AdSense account and manage available ads easily right from your admin dashboard!
 
 http://www.youtube.com/watch?v=wWaEGbR5Lz0
 
@@ -35,6 +37,7 @@ http://www.youtube.com/watch?v=wWaEGbR5Lz0
 * Compatible with latest WordPress version
 * Incredibly simple settings for fast setup without modifying code
 * Detailed step-by-step documentation and videos
+* Multilingual and RTL ready
 
 > **Pro Features**
 >
@@ -85,7 +88,7 @@ Donations play an important role in supporting open-source projects. We greatly 
 
 1. Upload the folder `adsense-plugin` to the directory `/wp-content/plugins/`.
 2. Activate the plugin via the 'Plugins' menu in WordPress.
-3. The plugin settings are located in "BWS Panel"->"AdSense".
+3. The plugin settings are located in "BWS Panel"->"Google AdSense".
 
 [View a Step-by-step Instruction on AdSense Installation](https://docs.google.com/document/d/1P-Jb5oYadIAsJz63wbsppxhOnCX-Z27S3XzE6HNcrbI/)
 
@@ -129,6 +132,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 3. Google AdSense Settings page (Authorized in Google AdSense).
 
 == Changelog ==
+
+= V1.43 - 03.01.2017 =
+* Update : BWS panel section was updated.
 
 = V1.42 - 04.10.2016 =
 * NEW : The Spanish language file was added.
@@ -293,6 +299,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * Changed : Usability at the settings page of the plugin was improved.
 
 == Upgrade Notice ==
+
+= V1.43 =
+* Plugin optimization completed.
 
 = V1.42 =
 * New languages added.
