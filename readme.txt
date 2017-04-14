@@ -1,10 +1,10 @@
 === Google AdSense by BestWebSoft ===
 Contributors: bestwebsoft
-Donate link: http://bestwebsoft.com/donate/
+Donate link: https://bestwebsoft.com/donate/
 Tags: ad, ad banner, ad format, ad parameters, google adsense, ads display, ads widgets, google plugin, insert ads, text ads, adsense plugin, advertisements
 Requires at least: 3.8
-Tested up to: 4.7
-Stable tag: 1.43
+Tested up to: 4.7.3
+Stable tag: 1.44
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,7 @@ Google Adsense plugin is a superb solution to earn money by placing ads to WordP
 
 Link your website to Google AdSense account and manage available ads easily right from your admin dashboard!
 
-http://www.youtube.com/watch?v=wWaEGbR5Lz0
+https://www.youtube.com/watch?v=wWaEGbR5Lz0
 
 = Free Features =
 
@@ -50,20 +50,21 @@ http://www.youtube.com/watch?v=wWaEGbR5Lz0
 > * Choose ads position in widgets:
 > 	* Static
 > 	* Fixed
-> * Get answer to your support question within one business day ([Support Policy](http://bestwebsoft.com/support-policy/))
+> * Get answer to your support question within one business day ([Support Policy](https://bestwebsoft.com/support-policy/))
 >
-> [Upgrade to Pro Now](http://bestwebsoft.com/products/wordpress/plugins/google-adsense/?k=b68fe7a44579f45545bd6e7556143e9a)
+> [Upgrade to Pro Now](https://bestwebsoft.com/products/wordpress/plugins/google-adsense/?k=b68fe7a44579f45545bd6e7556143e9a)
 
-If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](http://support.bestwebsoft.com/hc/en-us/requests/new)
+If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](https://support.bestwebsoft.com/hc/en-us/requests/new)
 
 = Documentation & Videos =
 
-* [[Doc] Installation](https://docs.google.com/document/d/1P-Jb5oYadIAsJz63wbsppxhOnCX-Z27S3XzE6HNcrbI/)
-* [[Video] Installation Instruction](http://www.youtube.com/watch?v=Nkp267vxZ84)
+* [[Doc] Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
+* [[Doc] Purchase](https://docs.google.com/document/d/1EUdBVvnm7IHZ6y0DNyldZypUQKpB8UVPToSc_LdOYQI/)
+* [[Video] Installation Instruction](https://www.youtube.com/watch?v=Nkp267vxZ84)
 
 = Help & Support =
 
-Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <http://support.bestwebsoft.com/>
+Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <https://support.bestwebsoft.com/>
 
 = Translation =
 
@@ -72,17 +73,11 @@ Visit our Help Center if you have any questions, our friendly Support Team is ha
 * Spanish (es_ES)
 * Ukrainian (uk)
 
-Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](http://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](http://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](http://www.poedit.net/download.php).
+Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](https://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](https://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](https://www.poedit.net/download.php).
 
 = Recommended Plugins =
 
-* [Updater](http://bestwebsoft.com/products/wordpress/plugins/updater/?k=9bfbc38d14047beca03dbc74f96cc135) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
-
-= Donate =
-
-Donations play an important role in supporting open-source projects. We greatly appreciate any donation you can make to help us continue further development of free products.
-
-[Donate Now](http://bestwebsoft.com/donate/)
+* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=9bfbc38d14047beca03dbc74f96cc135) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
 
 == Installation ==
 
@@ -90,40 +85,49 @@ Donations play an important role in supporting open-source projects. We greatly 
 2. Activate the plugin via the 'Plugins' menu in WordPress.
 3. The plugin settings are located in "BWS Panel"->"Google AdSense".
 
-[View a Step-by-step Instruction on AdSense Installation](https://docs.google.com/document/d/1P-Jb5oYadIAsJz63wbsppxhOnCX-Z27S3XzE6HNcrbI/)
+[View a Step-by-step Instruction on AdSense Installation](https://docs.google.com/document/d/1-hvn6WRvWnOqj5v5pLUk7Awyu87lq5B_dO-Tv-MC9JQ/)
 
-http://www.youtube.com/watch?v=Nkp267vxZ84
+https://www.youtube.com/watch?v=Nkp267vxZ84
 
 == Frequently Asked Questions ==
 
-= How many ad blocks can be added to the page? =
+= Google Adsense plugin installed, but it does not appear in the list of plugins in the Wordpress admin dashboard. Why? =
 
-The maximum number of ad blocks on the page cannot be more than 3 - https://support.google.com/adsense/answer/1346295?hl=en#Ad_limit_per_page.
+It is possible that you have AdBlock browser extension (or similar software) installed in your browser and it blocks ads. Disable AdBlock extension to see the Adsense plugin and make necessary changes.
+
+= Adsense plugin doesn't work (ads not displaying). What should I do? =
+
+Please complete the following steps:
+1. Setup your Google Adsense account.
+2. Make sure that your Wordpress theme contains necessary hooks for ads displaying (the_content, wp_footer, etc). If you don't know how to check that, just install any official Wordpress theme (for example, [Twenty Sixteen](https://wordpress.org/themes/twentysixteen/)) and check if the ads are displayed. If yes, it means that the necessary hooks are missing in your theme.
+3. Make sure Adblock (or similar browser extensions) is disabled in your browser.
+
+= What is the maximum number of Google ads displayed on a single page? =
+
+The max number of ads allowed by Google is three (per one page). That is why you can post three ads on the home page if the page is represented as posts with pagination. If it's a static page with content, the ad will be displayed once and not in the widget, but below the page text. [More info](https://support.google.com/adsense/answer/1346295?hl=en#Ad_limit_per_page)
 
 = Why I cannot choose more than one ad block in the widget tab? =
 
 This limitation is caused by the maximum allowable number of ad blocks to be displayed on the page. Ad blocks display can only be set in the post; in this case, it will not be displayed on the page. However, a widget is usually displayed in every post and every page.
 
-= Ads are not displayed =
+= How to add Google Adsense block to the sidebar? =
 
-1. Please make sure Adblocker (or some other similar extensions that block ads) is disabled in the browser
-2. Please make sure that your theme contains the hooks 'the_content' for the ads displaying. The plugin will not work without such hooks.
-If you do not know how to do it please install a standard WordPress theme and check if the ads will be displayed or not, if yes it means that there aren't the necessary hooks in your theme.
-3. Probably you did not set up 'google ads' account
+Follow the next steps in order to add the Google Adsense block to the sidebar:
+1. Open your Wordpress admin dashboard.
+2. Make sure that Google Adsense plugin is installed and activated.
+3. Navigate to the Appearance > Widgets section and add the Google Adsense widget to the available sidebar.
 
-= What should I do if the plugin is not displayed in the plugins list or the tab with the settings page is not displayed either? =
+= How do I see my reporting/stats? Will it show up on my Google Adsense account? When? =
 
-If you have an extension in your browser that hides ads (e.g. AdBlock or something like that) - it can hide AdSense displaying on this page, as it is set to search by words like AdSense and similar.
-Please make sure Adblocker (or some other similar extensions that block ads) is disabled in the browser
+If everything is correct, you will see it in your Google Adsense account.
 
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
-Please make sure that the problem hasn't been discussed yet on our forum (<http://support.bestwebsoft.com>). If no, please provide the following data along with your problem's description:
-
-1. the link to the page where the problem occurs
-2. the name of the plugin and its version. If you are using a pro version - your order number.
-3. the version of your WordPress installation
-4. copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/edit)
+Please make sure that the problem hasn't been discussed yet on our forum (<https://support.bestwebsoft.com>). If no, please provide the following data along with your problem's description:
+- The link to the page where the problem occurs
+- The name of the plugin and its version. If you are using a pro version - your order number.
+- The version of your WordPress installation
+- Copy and paste into the message your system status report. Please read more here: [Instruction on System Status](https://docs.google.com/document/d/1Wi2X8RdRGXk9kMszQy1xItJrpN0ncXgioH935MaBKtc/)
 
 == Screenshots ==
 
@@ -132,6 +136,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 3. Google AdSense Settings page (Authorized in Google AdSense).
 
 == Changelog ==
+
+= V1.44 - 14.04.2017 =
+* Bugfix : Multiple Cross-Site Scripting (XSS) vulnerability was fixed.
 
 = V1.43 - 03.01.2017 =
 * Update : BWS panel section was updated.
@@ -299,6 +306,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<http:
 * Changed : Usability at the settings page of the plugin was improved.
 
 == Upgrade Notice ==
+
+= V1.44 =
+* Bugs fixed.
 
 = V1.43 =
 * Plugin optimization completed.

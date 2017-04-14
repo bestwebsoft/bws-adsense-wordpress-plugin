@@ -724,7 +724,7 @@ if ( ! class_exists( 'Adsns' ) ) {
 									<div id="adsns_usage_notice">
 										<p><?php printf( '<strong>%s</strong> %s <a href="https://support.google.com/adsense/answer/1346295?hl=en#Ad_limit_per_page" target="_blank">%s</a>.', __( 'Please note:', 'adsense-plugin' ), __( 'The maximum number of ad blocks on the page cannot be more than 3 ad blocks.', 'adsense-plugin' ), __( 'Learn more', 'adsense-plugin' ) ); ?></p>
 										<?php if ( $adsns_current_tab == 'widget' ) { ?>
-											<p><?php printf( __( "Please don't forget to place the AdSense widget into a needed sidebar on the %s.", 'adsense-plugin' ), sprintf( '<a href="widgets.php" target="_blank">%s</a>', __( 'widget page', 'adsense-plugin' ) ) ); printf( ' %s <a href="http://bestwebsoft.com/products/wordpress/plugins/google-adsense/?k=2887beb5e9d5e26aebe6b7de9152ad1f&amp;pn=80&amp;v=%s&amp;wp_v=%s" target="_blank"><strong>Pro</strong></a>.', __( 'An opportunity to add several widgets is available in the', 'adsense-plugin' ), $this->adsns_plugin_info["Version"], $wp_version ); ?></p>
+											<p><?php printf( __( "Please don't forget to place the AdSense widget into a needed sidebar on the %s.", 'adsense-plugin' ), sprintf( '<a href="widgets.php" target="_blank">%s</a>', __( 'widget page', 'adsense-plugin' ) ) ); printf( ' %s <a href="https://bestwebsoft.com/products/wordpress/plugins/google-adsense/?k=2887beb5e9d5e26aebe6b7de9152ad1f&amp;pn=80&amp;v=%s&amp;wp_v=%s" target="_blank"><strong>Pro</strong></a>.', __( 'An opportunity to add several widgets is available in the', 'adsense-plugin' ), $this->adsns_plugin_info["Version"], $wp_version ); ?></p>
 										<?php } ?>
 										<p>
 											<?php printf( __( 'Add or manage existing ad blocks in the %s.', 'adsense-plugin' ), sprintf( '<a href="https://www.google.com/adsense/app#main/myads-viewall-adunits" target="_blank">%s</a>', __( 'Google AdSense', 'adsense-plugin' ) ) ); ?><br />
@@ -751,7 +751,7 @@ if ( ! class_exists( 'Adsns' ) ) {
 										<div class="bws_info">
 											<?php _e( 'Unlock premium options by upgrading to Pro version', 'adsense-plugin' ); ?>
 										</div>
-										<a class="bws_button" href="http://bestwebsoft.com/products/wordpress/plugins/google-adsense/?k=2887beb5e9d5e26aebe6b7de9152ad1f&amp;pn=80&amp;v=<?php echo $this->adsns_plugin_info["Version"]; ?>&amp;wp_v=<?php echo $wp_version; ?>" target="_blank" title="Google AdSense Pro"><?php _e( 'Learn More', 'adsense-plugin' ); ?></a>
+										<a class="bws_button" href="https://bestwebsoft.com/products/wordpress/plugins/google-adsense/?k=2887beb5e9d5e26aebe6b7de9152ad1f&amp;pn=80&amp;v=<?php echo $this->adsns_plugin_info["Version"]; ?>&amp;wp_v=<?php echo $wp_version; ?>" target="_blank" title="Google AdSense Pro"><?php _e( 'Learn More', 'adsense-plugin' ); ?></a>
 										<div class="clear"></div>
 									</div>
 								<?php } ?>
@@ -881,8 +881,8 @@ if ( ! class_exists( 'Adsns' ) ) {
 			if ( $file == 'adsense-plugin/adsense-plugin.php' ) {
 				if ( ! is_network_admin() )
 					$links[]	=	'<a href="admin.php?page=adsense-plugin.php">' . __( 'Settings', 'adsense-plugin' ) . '</a>';
-				$links[]	=	'<a href="http://support.bestwebsoft.com/hc/en-us/sections/200538919" target="_blank" target="_blank">' . __( 'FAQ', 'adsense-plugin' ) . '</a>';
-				$links[]	=	'<a href="http://support.bestwebsoft.com">' . __( 'Support', 'adsense-plugin' ) . '</a>';
+				$links[]	=	'<a href="https://support.bestwebsoft.com/hc/en-us/sections/200538919" target="_blank" target="_blank">' . __( 'FAQ', 'adsense-plugin' ) . '</a>';
+				$links[]	=	'<a href="https://support.bestwebsoft.com">' . __( 'Support', 'adsense-plugin' ) . '</a>';
 			}
 			return $links;
 		}
