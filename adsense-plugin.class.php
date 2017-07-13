@@ -780,6 +780,8 @@ if ( ! class_exists( 'Adsns' ) ) {
 				wp_enqueue_script( 'adsns_admin_js', plugins_url( 'js/admin.js' , __FILE__ ), array( 'jquery' ), $this->adsns_plugin_info["Version"] );
 				wp_enqueue_style( 'adsns_admin_css', plugins_url( 'css/style.css', __FILE__ ), false, $this->adsns_plugin_info["Version"] );
 
+				bws_enqueue_settings_scripts();
+
 				if ( isset( $_GET['action'] ) && 'custom_code' == $_GET['action'] )
 					bws_plugins_include_codemirror();
 			}
@@ -912,12 +914,6 @@ if ( ! class_exists( 'Adsns' ) ) {
 }
 
 if ( ! class_exists( 'Adsns_List_Table' ) ) {
-
-	global $wp_version;
-
-	if ( $wp_version <= 3.0 ) {
-		return;
-	}
 
 	if ( ! class_exists( 'WP_List_Table' ) ) {
 		require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );

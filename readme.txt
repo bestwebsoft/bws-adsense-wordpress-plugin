@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: ad, ad banner, ad format, ad parameters, google adsense, ads display, ads widgets, google plugin, insert ads, text ads, adsense plugin, advertisements
-Requires at least: 3.8
-Tested up to: 4.7.3
-Stable tag: 1.44
+Requires at least: 3.9
+Tested up to: 4.8
+Stable tag: 1.45
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,7 +25,6 @@ https://www.youtube.com/watch?v=wWaEGbR5Lz0
 	* Pages
 	* Posts/Custom post types
 	* Categories/Tags
-	* Search results
 	* Widgets
 * Change ads position:
 	* Before content
@@ -43,7 +42,7 @@ https://www.youtube.com/watch?v=wWaEGbR5Lz0
 >
 > All features from Free version included plus:
 >
-> * Insert ads to search results automatically 
+> * Automatically insert ad units to the search results
 > * Display ads after:
 > 	* First paragraph
 > 	* Random paragraph
@@ -77,7 +76,7 @@ Some of these translations are not complete. We are constantly adding new featur
 
 = Recommended Plugins =
 
-* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=9bfbc38d14047beca03dbc74f96cc135) - Automatically check and update WordPress core with all installed plugins to the latest versions. Manual mode, email notifications and backups of all your files and database before updating.
+* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=9bfbc38d14047beca03dbc74f96cc135) - Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
 
 == Installation ==
 
@@ -136,6 +135,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 3. Google AdSense Settings page (Authorized in Google AdSense).
 
 == Changelog ==
+
+= V1.45 - 13.07.2017 =
+* Update : We updated all functionality for wordpress 4.8.
 
 = V1.44 - 14.04.2017 =
 * Bugfix : Multiple Cross-Site Scripting (XSS) vulnerability was fixed.
@@ -306,6 +308,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Changed : Usability at the settings page of the plugin was improved.
 
 == Upgrade Notice ==
+
+= V1.45 =
+* The compatibility with new WordPress version updated.
 
 = V1.44 =
 * Bugs fixed.
