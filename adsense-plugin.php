@@ -3,10 +3,10 @@
 Plugin Name: Google AdSense by BestWebSoft
 Plugin URI: https://bestwebsoft.com/products/wordpress/plugins/google-adsense/
 Description: Add Adsense ads to pages, posts, custom posts, search results, categories, tags, pages, and widgets.
-Author: BestWebSoft
+Author: BestWebSoft, gasplugin
 Text Domain: adsense-plugin
 Domain Path: /languages
-Version: 1.45
+Version: 1.46
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
@@ -84,6 +84,9 @@ add_filter( 'plugin_action_links', array( $adsns_plugin, 'adsns_plugin_action_li
 add_filter( 'plugin_row_meta', array( $adsns_plugin, 'adsns_register_plugin_links'), 10, 2 );
 /* Display notices */
 add_action( 'admin_notices', array( $adsns_plugin, 'adsns_plugin_notice') );
+add_action( 'network_admin_admin_notices', array( $adsns_plugin, 'adsns_plugin_notice' ) );
+/* Hide banner with cooperation notice using AJAX */
+add_action( 'wp_ajax_adsns_hide_coop_start_banner', array( $adsns_plugin, 'adsns_hide_coop_start_banner' ) );
 /* Adding actions to define variable as true inside the main loop and as false outside of it */
 add_action( 'loop_start', array( $adsns_plugin, 'adsns_loop_start' ) );
 add_action( 'loop_end', array( $adsns_plugin, 'adsns_loop_end' ) );

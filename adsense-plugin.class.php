@@ -778,13 +778,14 @@ if ( ! class_exists( 'Adsns' ) ) {
 		public function adsns_write_admin_head() {
 			if ( isset( $_GET['page'] ) && "adsense-plugin.php" == $_GET['page'] ) {
 				wp_enqueue_script( 'adsns_admin_js', plugins_url( 'js/admin.js' , __FILE__ ), array( 'jquery' ), $this->adsns_plugin_info["Version"] );
-				wp_enqueue_style( 'adsns_admin_css', plugins_url( 'css/style.css', __FILE__ ), false, $this->adsns_plugin_info["Version"] );
 
 				bws_enqueue_settings_scripts();
 
 				if ( isset( $_GET['action'] ) && 'custom_code' == $_GET['action'] )
 					bws_plugins_include_codemirror();
 			}
+			wp_enqueue_style( 'adsns_admin_css', plugins_url( 'css/style.css', __FILE__ ), false, $this->adsns_plugin_info["Version"] );
+			wp_enqueue_script( 'adsns_admin_notice_js', plugins_url( 'js/admin-notice.js' , __FILE__ ), array( 'jquery' ), $this->adsns_plugin_info["Version"] );
 		}
 
 		/* Stylesheets for ads */
@@ -794,7 +795,7 @@ if ( ! class_exists( 'Adsns' ) ) {
 
 		/* Display notice in the main dashboard page / plugins page */
 		function adsns_plugin_notice() {
-			global $hook_suffix;
+			global $hook_suffix, $current_user;
 			if ( 'plugins.php' == $hook_suffix ) {
 				if ( isset( $this->adsns_options['first_install'] ) && strtotime( '-1 week' ) > $this->adsns_options['first_install'] )
 					bws_plugin_banner( $this->adsns_plugin_info, 'adsns', 'google-adsense', '6057da63c4951b1a7b03296e54ed6d02', '80', '//ps.w.org/adsense-plugin/assets/icon-128x128.png' );
@@ -804,6 +805,76 @@ if ( ! class_exists( 'Adsns' ) ) {
 
 			if ( isset( $_GET['page'] ) && 'adsense-plugin.php' == $_GET['page'] ) {
 				bws_plugin_suggest_feature_banner( $this->adsns_plugin_info, 'adsns_settings', 'adsense-plugin' );
+			}
+
+			/* No JS: on Form submit */
+			if ( isset( $_POST['adsns_hide_coop_start_banner'] ) && ! defined( 'DOING_AJAX' ) ) {
+				$this->adsns_hide_coop_start_banner();
+			}
+
+			if (
+				current_user_can( 'manage_options' ) &&
+				! get_user_meta( $current_user->ID, 'adsns_hide_coop_start_banner' )
+			) { ?>
+				<div class="updated adsns-banner adsns-coop-start-banner" style="padding: 0; margin: 0; border: none; background: none;">
+					<div class="adsns_coop_message">
+						<form class="adsns-banner-form" action="" method="post">
+							<input type="hidden" id="adsns_settings_nonce" name="adsns_settings_nonce" value="<?php echo wp_create_nonce( 'adsns-settings-nonce' ); ?>">
+							<input type="hidden" id="adsns_hide_coop_start_banner" name="adsns_hide_coop_start_banner" value="1" />
+							<button class="notice-dismiss adsns-banner-dismiss" title="<?php _e( 'Close notice', 'adsense-plugin' ); ?>"></button>
+							<div class="clear"></div>
+						</form>
+						<div class="adsns_logos">
+							<div class="adsns_icon">
+								<img title="" src="//ps.w.org/adsense-plugin/assets/icon-128x128.png" alt="" />
+							</div>
+							<div class="adsns_banner_dashicon">
+								<span class="dashicons dashicons-plus"></span>
+							</div>
+							<a class="adsns_icon" target="_blank" href="https://www.vi.ai/publisher-video-monetization/">
+								<img title="" src="<?php echo plugins_url( 'images/vi_logo_on_white.svg', __FILE__ ); ?>" alt="" />
+							</a>
+						</div>
+						<div class="text adsns_banner_text">
+							<span>
+								<?php printf(
+									_x(
+										'Coming soon: the next update to %1$s - vi stories from %2$s. A video player that will supply both video content and video advertising. It increases the time-on-page, and your revenue thanks to high CPMs.',
+										'%1$s - %plugin_name%, %2$s - video intelligence',
+										'adsense-plugin'
+									),
+									'<strong>' . $this->adsns_plugin_info["Name"] . '</strong>',
+									'video intelligence'
+								); ?>
+							</span><br />
+							<a href="https://www.vi.ai/frequently-asked-questions-vi-stories-for-wordpress/?utm_source=WordPress&utm_medium=Plugin%20FAQ&utm_campaign=WP%20gas" target="_blank"><?php _e( 'FAQ', 'adsense-plugin' ); ?></a>
+						</div>
+						<div class="adsns_button_div">
+							<a class="button" target="_blank" href="https://www.vi.ai/publisher-video-monetization/"><?php _e( 'Learn More', 'adsense-plugin' ); ?></a>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			<?php }
+		}
+
+		/* Write user metadata to hide notification about cooperation start on "cross" button click */
+		function adsns_hide_coop_start_banner() {
+			global $current_user;
+
+			$update = false;
+			if (
+				isset( $_POST['adsns_settings_nonce'] ) &&
+				!! wp_verify_nonce( $_POST['adsns_settings_nonce'], 'adsns-settings-nonce' )
+			) {
+				update_user_meta( $current_user->ID, 'adsns_hide_coop_start_banner', 1 );
+				$update = true;
+			}
+
+			if ( defined( 'DOING_AJAX' ) && DOING_AJAX && $update ) {
+				echo "1";
+				wp_die();
 			}
 		}
 

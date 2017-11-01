@@ -1,10 +1,10 @@
 === Google AdSense by BestWebSoft ===
-Contributors: bestwebsoft
+Contributors: bestwebsoft, gasplugin
 Donate link: https://bestwebsoft.com/donate/
 Tags: ad, ad banner, ad format, ad parameters, google adsense, ads display, ads widgets, google plugin, insert ads, text ads, adsense plugin, advertisements
 Requires at least: 3.9
-Tested up to: 4.8
-Stable tag: 1.45
+Tested up to: 4.8.3
+Stable tag: 1.46
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,7 +30,7 @@ https://www.youtube.com/watch?v=wWaEGbR5Lz0
 	* Before content
 	* After content
 	* Below comments form
-* Show idle ads 
+* Show idle ads
 * Receive the existing ads from your Google AdSense account
 * Add custom code via plugin settings page
 * Compatible with latest WordPress version
@@ -135,6 +135,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 3. Google AdSense Settings page (Authorized in Google AdSense).
 
 == Changelog ==
+
+= V1.46 - 01.11.2017 =
+* Update : We updated all functionality for wordpress 4.8.3.
 
 = V1.45 - 13.07.2017 =
 * Update : We updated all functionality for wordpress 4.8.
@@ -308,6 +311,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Changed : Usability at the settings page of the plugin was improved.
 
 == Upgrade Notice ==
+
+= V1.46 =
+* The compatibility with new WordPress version updated.
 
 = V1.45 =
 * The compatibility with new WordPress version updated.

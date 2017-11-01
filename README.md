@@ -22,7 +22,7 @@
 <li>Below comments form</li>
 </ul>
 </li>
-<li>Show idle ads </li>
+<li>Show idle ads</li>
 <li>Receive the existing ads from your Google AdSense account</li>
 <li>Add custom code via plugin settings page</li>
 <li>Compatible with latest WordPress version</li>
