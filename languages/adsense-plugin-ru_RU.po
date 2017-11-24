@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: adsense-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-23 15:40+0300\n"
+"POT-Creation-Date: 2017-11-23 16:19+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: bestwebsoft.com <plugins@bestwebsoft.com>\n"
 "Language-Team: BestWebSoft <support@bestwebsoft.com>\n"
@@ -16,244 +16,342 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: adsense-plugin.class.php:69 adsense-plugin.class.php:649
+#: adsense-plugin.class.php:26 adsense-plugin.class.php:633
 msgid "Google AdSense Settings"
 msgstr "Настройки Google AdSense"
 
-#: adsense-plugin.class.php:293
+#: adsense-plugin.class.php:313
 msgid "Home page"
 msgstr "Домашная страница"
 
-#: adsense-plugin.class.php:297 adsense-plugin.class.php:312
-#: adsense-plugin.class.php:328 adsense-plugin.class.php:344
-#: adsense-plugin.class.php:359
+#: adsense-plugin.class.php:317 adsense-plugin.class.php:331
+#: adsense-plugin.class.php:346 adsense-plugin.class.php:361
+#: adsense-plugin.class.php:375
 msgid "Before the content"
 msgstr "Перед контентом"
 
-#: adsense-plugin.class.php:298 adsense-plugin.class.php:313
-#: adsense-plugin.class.php:329 adsense-plugin.class.php:345
-#: adsense-plugin.class.php:360
+#: adsense-plugin.class.php:318 adsense-plugin.class.php:332
+#: adsense-plugin.class.php:347 adsense-plugin.class.php:362
+#: adsense-plugin.class.php:376
 msgid "After the content"
 msgstr "После контента"
 
-#: adsense-plugin.class.php:301 adsense-plugin.class.php:317
-#: adsense-plugin.class.php:333 adsense-plugin.class.php:348
-#: adsense-plugin.class.php:363
+#: adsense-plugin.class.php:321 adsense-plugin.class.php:336
+#: adsense-plugin.class.php:351 adsense-plugin.class.php:365
+#: adsense-plugin.class.php:379
 msgid "After the first paragraph (Available in Pro)"
 msgstr "После первого абзаца (Доступно в Pro)"
 
-#: adsense-plugin.class.php:302 adsense-plugin.class.php:318
-#: adsense-plugin.class.php:334 adsense-plugin.class.php:349
-#: adsense-plugin.class.php:364
+#: adsense-plugin.class.php:322 adsense-plugin.class.php:337
+#: adsense-plugin.class.php:352 adsense-plugin.class.php:366
+#: adsense-plugin.class.php:380
 msgid "After a random paragraph (Available in Pro)"
 msgstr "После случайного абзаца (Доступно в Pro)"
 
-#: adsense-plugin.class.php:308
+#: adsense-plugin.class.php:327
 msgid "Pages"
 msgstr "Страницы"
 
-#: adsense-plugin.class.php:314 adsense-plugin.class.php:330
+#: adsense-plugin.class.php:333 adsense-plugin.class.php:348
 msgid "Below the comment form"
 msgstr "После формы отправки комментария"
 
-#: adsense-plugin.class.php:324
+#: adsense-plugin.class.php:342
 msgid "Posts / Custom posts"
 msgstr "Записи / Пользовательские типы записей"
 
-#: adsense-plugin.class.php:340
+#: adsense-plugin.class.php:357
 msgid "Categories / Tags"
 msgstr "Рубрики / Метки"
 
-#: adsense-plugin.class.php:355
+#: adsense-plugin.class.php:371
 msgid "Search results"
 msgstr "Результаты поиска"
 
-#: adsense-plugin.class.php:370 adsense-plugin.class.php:568
+#: adsense-plugin.class.php:385
 msgid "Widget"
 msgstr "Виджет"
 
-#: adsense-plugin.class.php:374 adsense-plugin.class.php:902
+#: adsense-plugin.class.php:389 adsense-plugin.class.php:2500
 msgid "Static"
 msgstr "Статический"
 
-#: adsense-plugin.class.php:377
+#: adsense-plugin.class.php:392
 msgid "Fixed (Available in Pro)"
 msgstr "Фиксированный (Доступно в Pro)"
 
-#: adsense-plugin.class.php:386
+#: adsense-plugin.class.php:399
 msgid "Text"
 msgstr "Текст"
 
-#: adsense-plugin.class.php:387
+#: adsense-plugin.class.php:400
 msgid "Image"
 msgstr "Графика"
 
-#: adsense-plugin.class.php:388
+#: adsense-plugin.class.php:401
 msgid "Text/Image"
 msgstr "Текст/Графика"
 
-#: adsense-plugin.class.php:389
+#: adsense-plugin.class.php:402
 msgid "Link"
 msgstr "Ссылка"
 
-#: adsense-plugin.class.php:393
+#: adsense-plugin.class.php:406
 msgid "New"
 msgstr "Новый"
 
-#: adsense-plugin.class.php:394
+#: adsense-plugin.class.php:407
 msgid "Active"
 msgstr "Активный"
 
-#: adsense-plugin.class.php:395
+#: adsense-plugin.class.php:408
 msgid "Idle"
 msgstr "Не активный"
 
-#: adsense-plugin.class.php:399
+#: adsense-plugin.class.php:412
 msgid "Responsive"
 msgstr "Адаптивный"
 
-#: adsense-plugin.class.php:479
+#: adsense-plugin.class.php:492
 msgid "AdUnits Error:"
 msgstr "AdUnits Error:"
 
-#: adsense-plugin.class.php:481 adsense-plugin.class.php:493
-#: adsense-plugin.class.php:504
+#: adsense-plugin.class.php:494 adsense-plugin.class.php:506
+#: adsense-plugin.class.php:517
 #, php-format
 msgid "Create account in %s"
 msgstr "Создать аккаунт в %s"
 
-#: adsense-plugin.class.php:491
+#: adsense-plugin.class.php:504
 msgid "AdClient Error:"
 msgstr "AdClient Error:"
 
-#: adsense-plugin.class.php:502
+#: adsense-plugin.class.php:515
 msgid "Account Error:"
 msgstr "Account Error:"
 
-#: adsense-plugin.class.php:518
+#: adsense-plugin.class.php:531
 msgid "Invalid authorization code. Please, try again."
 msgstr "Неверный код авторизации. Пожалуйста, попробуйте еще раз."
 
-#: adsense-plugin.class.php:555
+#: adsense-plugin.class.php:580
 #, php-format
 msgid "An error occurred while obtaining the code for the block %s."
 msgstr "Произошла ошибка при получении кода для блока %s."
 
-#: adsense-plugin.class.php:555 adsense-plugin.class.php:568
-#: adsense-plugin.class.php:590 adsense-plugin.class.php:595
-#: adsense-plugin.class.php:615
+#: adsense-plugin.class.php:580 adsense-plugin.class.php:599
 msgid "Settings are not saved."
 msgstr "Настройки не сохранены."
 
-#: adsense-plugin.class.php:568 adsense-plugin.class.php:590
-#: adsense-plugin.class.php:595
-#, php-format
-msgid ""
-"The maximum number of ad blocks on the page cannot be more than 3 ad blocks "
-"(%s)."
-msgstr ""
-"Максимальное количество рекламных блоков на странице не может превышать "
-"больше 3х рекламных блоков (%s)."
-
-#: adsense-plugin.class.php:568 adsense-plugin.class.php:590
-#: adsense-plugin.class.php:595 adsense-plugin.class.php:725
-msgid "Learn more"
-msgstr "Узнать больше"
-
-#: adsense-plugin.class.php:568
-#, php-format
-msgid ""
-"Please select a smaller number of ad blocks or disable the ad block display "
-"in the %s tab."
-msgstr ""
-"Пожалуйста, выберите меньше рекламных блоков или отключите показ рекламного "
-"блока на вкладке %s."
-
-#: adsense-plugin.class.php:581
-msgid "ad blocks"
-msgstr "рекламных блока"
-
-#: adsense-plugin.class.php:590
-#, php-format
-msgid ""
-"To display the ad block in widget, please set a smaller number of ad blocks "
-"in the %s tab."
-msgstr ""
-"Для отображения рекламного блока в виджете необходимо выбрать меньше "
-"рекламных блоков на вкладе %s."
-
-#: adsense-plugin.class.php:595
-#, php-format
-msgid ""
-"To display the ad block in widget, please set a smaller number of ad blocks "
-"in tabs: %s."
-msgstr ""
-"Для отображения рекламного блока в виджете необходимо выбрать меньше "
-"рекламных блоков на вкладках: %s."
-
-#: adsense-plugin.class.php:607
+#: adsense-plugin.class.php:591
 msgid "Settings saved."
 msgstr "Настройки сохранены."
 
-#: adsense-plugin.class.php:651 adsense-plugin.class.php:946
-#: adsense-plugin.class.php:956
+#: adsense-plugin.class.php:635 adsense-plugin.class.php:2544
+#: adsense-plugin.class.php:2554
 msgid "Settings"
 msgstr "Настройки"
 
-#: adsense-plugin.class.php:652
+#: adsense-plugin.class.php:636
 msgid "Custom code"
 msgstr "Пользовательский код"
 
-#: adsense-plugin.class.php:653
+#: adsense-plugin.class.php:637
 msgid "Go PRO"
 msgstr "Обновить до PRO"
 
-#: adsense-plugin.class.php:666
+#: adsense-plugin.class.php:641 adsense-plugin.class.php:646
+#: adsense-plugin.class.php:1580
+msgid "WARNING"
+msgstr "ВНИМАНИЕ"
+
+#: adsense-plugin.class.php:641
+msgid "The plugin works correctly only if JavaScript is enabled."
+msgstr "Плагин работает корректно, только если включен JavaScript."
+
+#: adsense-plugin.class.php:660
 msgid "Some of hidden idle ad blocks still set to be displayed"
 msgstr "Для отображения отмечены некоторые из скрытых неактивных блоков"
 
-#: adsense-plugin.class.php:671
+#: adsense-plugin.class.php:675
+msgid "ADS.TXT couldn't be added"
+msgstr "Не удалось добавить ADS.TXT"
+
+#: adsense-plugin.class.php:677
+msgid ""
+"Important note: Google AdSense by BestWebSoft hasn't been able to update "
+"your ads.txt file. Please make sure that you enter the following lines "
+"manually:"
+msgstr ""
+"Важное примечание: Google AdSense by BestWebSoft не смог обновить файл ads."
+"txt. Пожалуйста, убедитесь, что вы ввели следующие строки вручную:"
+
+#: adsense-plugin.class.php:679
+msgid ""
+"Only by doing so, you'll be able to make more money through video "
+"intelligence (vi.ai)."
+msgstr ""
+"Только сделав это, вы сможете зарабатывать больше денег с video intelligence "
+"(vi.ai)."
+
+#: adsense-plugin.class.php:681
+msgid ""
+"If the file is missing, you won't be able to make more money through video "
+"intelligence (vi.ai)."
+msgstr ""
+"Если файл отсутствует, вы не сможете зарабатывать больше денег с помощью  "
+"video intelligence (vi.ai)."
+
+#: adsense-plugin.class.php:692
 msgid "Remote work with Google AdSense"
 msgstr "Удаленная работа с Google AdSense"
 
-#: adsense-plugin.class.php:675
+#: adsense-plugin.class.php:696
 msgid "Log out from Google AdSense"
 msgstr "Выйти из Google AdSense"
 
-#: adsense-plugin.class.php:683
+#: adsense-plugin.class.php:701
 msgid "Please authorize via your Google Account to manage ad blocks."
 msgstr ""
 "Пожалуйста, авторизируйтесь с помощью вашего Google аккаунта для управления "
 "рекламными блоками."
 
-#: adsense-plugin.class.php:685
+#: adsense-plugin.class.php:703
 msgid "Get Authorization Code"
 msgstr "Получить Код Авторизации"
 
-#: adsense-plugin.class.php:688
+#: adsense-plugin.class.php:706
 msgid "Authorize"
 msgstr "Авторизироваться"
 
-#: adsense-plugin.class.php:695
+#: adsense-plugin.class.php:713
 msgid "Your Publisher ID:"
 msgstr "Ваш  ID Издателя:"
 
-#: adsense-plugin.class.php:703
+#: adsense-plugin.class.php:721
 msgid "Show idle ad blocks"
 msgstr "Отображать неактивные рекламные блоки"
 
-#: adsense-plugin.class.php:725 adsense-plugin.class.php:938
-msgid "Please note:"
-msgstr "Пожалуйста, обратите внимание:"
+#: adsense-plugin.class.php:737
+msgid "Video content and video advertising – powered by video intelligence"
+msgstr "Видеоконтент и видеореклама - от video intelligence"
 
-#: adsense-plugin.class.php:725
+#: adsense-plugin.class.php:739
+msgid "vi stories - video content and video advertising"
+msgstr "vi stories - видеоконтент и видеореклама"
+
+#: adsense-plugin.class.php:746
 msgid ""
-"The maximum number of ad blocks on the page cannot be more than 3 ad blocks."
+"Advertisers pay more for video advertising when it's matched with video "
+"content. This new video player will insert both on your page. It increases "
+"time on site, and commands a higher CPM than display advertising."
 msgstr ""
-"Максимальное количество рекламных блоков на странице не может превышать "
-"больше 3х рекламных блоков."
+"Рекламодатели платят больше за видеорекламу, когда она совпадает с "
+"видеоконтентом. Этот новый видеоплеер будет добавлен на вашу страницу. Это "
+"увеличивает время на сайте и дает более высокий CPM, чем показ рекламы."
 
-#: adsense-plugin.class.php:727
+#: adsense-plugin.class.php:750
+msgid ""
+"You'll see video content that is matched to your sites keywords straight "
+"away. A few days after activation you'll begin to receive revenue from "
+"advertising served before this video content."
+msgstr ""
+"Вы сразу же увидите видеоконтент, который совпадает с ключевыми словами на "
+"вашем сайте. Через несколько дней после активации, вы начнете получать доход "
+"от рекламы, которая отображается перед этим видеоконтентом."
+
+#: adsense-plugin.class.php:753
+msgid "The set up takes only a few minutes"
+msgstr "Настройка занимает всего несколько минут"
+
+#: adsense-plugin.class.php:754
+msgid "Up to 10x higher CPM than traditional display advertising"
+msgstr "CPM до 10 раз выше, в отличии от традиционного отображения рекламы"
+
+#: adsense-plugin.class.php:755
+msgid "Users spend longer on your site thanks to professional video content"
+msgstr ""
+"Пользователи проводят больше времени на вашем сайте, благодаря "
+"профессиональному видеоконтенту"
+
+#: adsense-plugin.class.php:756
+msgid "The video player is customizable to match your site"
+msgstr "Видеопроигрыватель настраивается в соответствии с вашим сайтом"
+
+#: adsense-plugin.class.php:759
+#, php-format
+msgid "Watch a %s of how vi stories work."
+msgstr "Смотрите %s о том, как работают vi stories."
+
+#: adsense-plugin.class.php:759
+msgid "demo"
+msgstr "демо"
+
+#: adsense-plugin.class.php:764
+msgid "There was an error processing your request, our team was notified."
+msgstr ""
+"Произошла ошибка при обработке вашего запроса, наша команда была уведомлена."
+
+#: adsense-plugin.class.php:767
+msgid "Please try again later."
+msgstr "Пожалуйста, попробуйте еще раз позже."
+
+#: adsense-plugin.class.php:771
+msgid "Below you can see your current revenues."
+msgstr "Ниже вы можете увидеть ваши текущие доходы."
+
+#: adsense-plugin.class.php:774
+#, php-format
+msgid "Don’t see anything? Consult the %s."
+msgstr "Ничего не видите? Проконсультируйтесь в %s"
+
+#: adsense-plugin.class.php:774
+msgid "FAQs"
+msgstr "FAQs"
+
+#: adsense-plugin.class.php:779
+msgid "Total earnings"
+msgstr "Общий заработок"
+
+#: adsense-plugin.class.php:785
+msgid "Chart"
+msgstr "Диаграмма"
+
+#: adsense-plugin.class.php:790
+msgid "Please enable JavaScript."
+msgstr "Пожалуйста, включите JavaScript."
+
+#: adsense-plugin.class.php:820
+#, php-format
+msgid ""
+"By clicking Sign Up button you agree to send current domain, email and "
+"affiliate ID to %s."
+msgstr ""
+"Нажимая кнопку Зарегистрироваться, вы соглашаетесь на отправку текущего "
+"домена, электронной почты и аффилированного идентификатора в %s."
+
+#: adsense-plugin.class.php:821
+msgid "video intelligence"
+msgstr "video intelligence"
+
+#: adsense-plugin.class.php:824 adsense-plugin.class.php:931
+#: adsense-plugin.class.php:960 adsense-plugin.class.php:1565
+msgid "Log In"
+msgstr "Войти"
+
+#: adsense-plugin.class.php:825 adsense-plugin.class.php:994
+msgid "Sign Up"
+msgstr "Зарегистрируйтесь"
+
+#: adsense-plugin.class.php:830
+msgid "Publisher Dashboard"
+msgstr "Панель Управления"
+
+#: adsense-plugin.class.php:832
+msgid "Log Out"
+msgstr "Выйти"
+
+#: adsense-plugin.class.php:869
 #, php-format
 msgid ""
 "Please don't forget to place the AdSense widget into a needed sidebar on the "
@@ -262,25 +360,25 @@ msgstr ""
 "Пожалуйста, не забудьте переместить виджет \"AdSense\"  в необходимый "
 "сайдбар на %s."
 
-#: adsense-plugin.class.php:727
+#: adsense-plugin.class.php:869
 msgid "widget page"
 msgstr "странице виджетов"
 
-#: adsense-plugin.class.php:727
+#: adsense-plugin.class.php:869
 msgid "An opportunity to add several widgets is available in the"
 msgstr "Возможность добавления нескольких виджетов доступна в"
 
-#: adsense-plugin.class.php:730
+#: adsense-plugin.class.php:872
 #, php-format
 msgid "Add or manage existing ad blocks in the %s."
 msgstr ""
 "Добавить или управлять существующими рекламными блоками вы можете в %s."
 
-#: adsense-plugin.class.php:730
+#: adsense-plugin.class.php:872
 msgid "Google AdSense"
 msgstr "Google AdSense"
 
-#: adsense-plugin.class.php:731
+#: adsense-plugin.class.php:873
 #, php-format
 msgid ""
 "After adding the ad block in Google AdSense, please %s to see the new ad "
@@ -289,56 +387,294 @@ msgstr ""
 "После добавления рекламного блока в Google AdSense, пожалуйста, %s, чтобы "
 "увидеть новый блок в списке рекламных блоков плагина."
 
-#: adsense-plugin.class.php:731
+#: adsense-plugin.class.php:873
 msgid "reload the page"
 msgstr "обновите страницу"
 
-#: adsense-plugin.class.php:752
-msgid "Unlock premium options by upgrading to Pro version"
-msgstr "Активируйте премиум опции обновившись до Pro версии"
+#: adsense-plugin.class.php:878
+msgid "Add New vi story"
+msgstr "Добавить новую vi story"
 
-#: adsense-plugin.class.php:754 adsense-plugin.class.php:853
+#: adsense-plugin.class.php:878
+msgid "Edit vi story"
+msgstr "Редактировать vi story"
+
+#: adsense-plugin.class.php:900
 msgid "Learn More"
 msgstr "Подробнее"
 
-#: adsense-plugin.class.php:763
+#: adsense-plugin.class.php:909 adsense-plugin.class.php:1841
 msgid "Save Changes"
 msgstr "Сохранить изменения"
 
-#: adsense-plugin.class.php:824
-msgid "Close notice"
-msgstr "Закрыть уведомление"
+#: adsense-plugin.class.php:947 adsense-plugin.class.php:999
+msgid "vi stories: customize your video player"
+msgstr "vi story: настройте ваш видеоплеер"
 
-#: adsense-plugin.class.php:842
+#: adsense-plugin.class.php:978 adsense-plugin.class.php:986
+msgid "You are logged in."
+msgstr "Вы вошли. "
+
+#: adsense-plugin.class.php:979 adsense-plugin.class.php:987
+msgid "Go back"
+msgstr "Вернуться назад"
+
+#: adsense-plugin.class.php:980 adsense-plugin.class.php:988
+msgid "to the settings page."
+msgstr "на страницу настроек."
+
+#: adsense-plugin.class.php:1017
+msgid "Like the plugin?"
+msgstr "Понравился плагин?"
+
+#: adsense-plugin.class.php:1018
 #, php-format
-msgctxt "%1$s - %plugin_name%, %2$s - video intelligence"
-msgid ""
-"Coming soon: the next update to %1$s - vi stories from %2$s. A video player "
-"that will supply both video content and video advertising. It increases the "
-"time-on-page, and your revenue thanks to high CPMs."
-msgstr ""
-"Скоро: в следующем обновлении %1$s - vi stories от %2$s. Видеопроигрыватель, "
-"который поддерживает как видеоконтент, так и видеорекламу. Он повышает "
-"продолжительность пребывания пользователя на сайте и Вашу прибыль благодаря "
-"более высокому уровню CPM."
+msgid "%s reviews"
+msgstr "%s отзывы"
 
-#: adsense-plugin.class.php:850 adsense-plugin.class.php:957
+#: adsense-plugin.class.php:1019
+msgid "Rate it"
+msgstr "Оценить"
+
+#: adsense-plugin.class.php:1028
+msgid "Need help?"
+msgstr "Нужна помощь?"
+
+#: adsense-plugin.class.php:1032
+msgid "Want to support the plugin?"
+msgstr "Хотите поддержать плагин?"
+
+#: adsense-plugin.class.php:1033
+msgid "Donate"
+msgstr "Пожертвовать"
+
+#: adsense-plugin.class.php:1059 adsense-plugin.class.php:1950
+#: adsense-plugin.class.php:2070 adsense-plugin.class.php:2143
+msgid "Something went wrong."
+msgstr "Что-то пошло не так."
+
+#: adsense-plugin.class.php:1557
+msgid "Email"
+msgstr "Емейл"
+
+#: adsense-plugin.class.php:1561
+msgid "Password"
+msgstr "Пароль"
+
+#: adsense-plugin.class.php:1622
+msgid ""
+"Use this form to customize the look of the video unit. Use the same "
+"parameters as your WordPress theme for a natural look on your site."
+msgstr ""
+"Используйте эту форму для настройки внешнего вида видеоплеера. Используйте "
+"те же параметры, что и ваша тема WordPress, для более натурального внешнего "
+"вида с вашим сайтом."
+
+#: adsense-plugin.class.php:1628
+msgid "Ad unit"
+msgstr "Рекламный блок"
+
+#: adsense-plugin.class.php:1642
+msgid "vi stories (video advertising + video content)."
+msgstr "vi stories (видеореклама + видеоконтент)."
+
+#: adsense-plugin.class.php:1649
+msgid "Keywords"
+msgstr "Ключевые слова"
+
+#: adsense-plugin.class.php:1655
+msgid "Max length 200 chars."
+msgstr "Максимальная длина 200 символов."
+
+#: adsense-plugin.class.php:1655
+msgid "a-z, A-Z, numbers, dashes, umlauts and accents are allowed."
+msgstr "Разрешены a-z, A-Z, числа, тире, умлауты и акценты."
+
+#: adsense-plugin.class.php:1659
+msgid ""
+"Comma separated values describing the content of the page e.g. 'cooking, "
+"grilling, pulled pork'."
+msgstr ""
+"Значения, разделенные запятыми, описывающие содержимое страницы, например: "
+"'приготовление еды, приготовление на гриле, приготовление свинины'."
+
+#: adsense-plugin.class.php:1666
+msgid "IAB Category"
+msgstr "IAB Категория"
+
+#: adsense-plugin.class.php:1673
+msgid "Select tier 1 category"
+msgstr "Выберите категорию 1 уровня"
+
+#: adsense-plugin.class.php:1683
+msgid "Select tier 2 category"
+msgstr "Выберите категорию 2 уровня"
+
+#: adsense-plugin.class.php:1693
+msgid "See complete list"
+msgstr "Смотреть полный список"
+
+#: adsense-plugin.class.php:1700
+msgid "Language"
+msgstr "Язык"
+
+#: adsense-plugin.class.php:1706
+msgid "Select language"
+msgstr "Выберите язык"
+
+#: adsense-plugin.class.php:1716
+msgid "Native background color"
+msgstr "Родной цвет фона"
+
+#: adsense-plugin.class.php:1721 adsense-plugin.class.php:1732
+msgid "Select color"
+msgstr "Выберите цвет"
+
+#: adsense-plugin.class.php:1727
+msgid "Native text color"
+msgstr "Родной цвет текста"
+
+#: adsense-plugin.class.php:1738
+msgid "Native text font family"
+msgstr "Родное семейство шрифтов"
+
+#: adsense-plugin.class.php:1744
+msgid "Select font family"
+msgstr "Выберите семейство шрифта"
+
+#: adsense-plugin.class.php:1754
+msgid "Native text font size"
+msgstr "Родной размер шрифта"
+
+#: adsense-plugin.class.php:1760
+msgid "Select font size"
+msgstr "Выберите размер шрифта"
+
+#: adsense-plugin.class.php:1762
+msgid "px"
+msgstr "пикс"
+
+#: adsense-plugin.class.php:1774 adsense-plugin.class.php:1792
+#: adsense-plugin.class.php:1810
+msgid "Optional"
+msgstr "Опционально"
+
+#: adsense-plugin.class.php:1779 adsense-plugin.class.php:1797
+#: adsense-plugin.class.php:1815
+msgid "Max length 200 chars"
+msgstr "Максимальная длина 200 символов"
+
+#: adsense-plugin.class.php:1785
+msgid "Add field"
+msgstr "Добавить поле"
+
+#: adsense-plugin.class.php:1803 adsense-plugin.class.php:1821
+msgid "Remove field"
+msgstr "Удалить поле"
+
+#: adsense-plugin.class.php:1837
+msgid "vi Ad Changes might take some time to take into effect"
+msgstr "Изменения могут занять некоторое время, чтобы вступить в силу"
+
+#: adsense-plugin.class.php:1842
+msgid "Cancel"
+msgstr "Отмена"
+
+#: adsense-plugin.class.php:1949 adsense-plugin.class.php:2069
+#: adsense-plugin.class.php:2142
+msgid "Request error"
+msgstr "Ошибка запроса"
+
+#: adsense-plugin.class.php:2050
+msgid "This field is required."
+msgstr "Это поле обязательное."
+
+#: adsense-plugin.class.php:2051 adsense-plugin.class.php:2052
+msgid "Please select a correct value."
+msgstr "Пожалуйста, выберите правильное значение."
+
+#: adsense-plugin.class.php:2053
+msgid "Please enter a correct HEX value."
+msgstr "Пожалуйста, выберите правильное HEX значение."
+
+#: adsense-plugin.class.php:2054
+msgid "Allowed only a-z, A-Z, numbers, dashes, umlauts and accents."
+msgstr "Разрешены только a-z, A-Z, числа, тире, умлауты и акценты."
+
+#: adsense-plugin.class.php:2123 adsense-plugin.class.php:2287
+msgid "Some errors occurred."
+msgstr "Произошли некоторые ошибки."
+
+#: adsense-plugin.class.php:2374
+#, php-format
+msgid ""
+"This update features vi stories from %s. This video player will supply both "
+"video content and video advertising."
+msgstr ""
+"Это обновление содержит vi stories от %s . Этот видеоплеер будет отображать "
+"как видеоконтент, так и видеорекламу."
+
+#: adsense-plugin.class.php:2379
+#, php-format
+msgid ""
+"To begin earning, visit the BestWebSoft plugin page, %s to %s and %s! Read "
+"the %s."
+msgstr ""
+"Чтобы начать зарабатывать, посетите страницу плагина BestWebSoft, %s в %s и "
+"%s! Читать %s."
+
+#: adsense-plugin.class.php:2380
+msgid "sign up"
+msgstr "зарегистрируйтесь"
+
+#: adsense-plugin.class.php:2382
+msgid "place the ad live now"
+msgstr "разместите рекламу прямо сейчас"
+
+#: adsense-plugin.class.php:2383 adsense-plugin.class.php:2555
+#: adsense-plugin.class.php:2573
 msgid "FAQ"
 msgstr "FAQ"
 
-#: adsense-plugin.class.php:903
+#: adsense-plugin.class.php:2390 adsense-plugin.class.php:2453
+msgid "Close notice"
+msgstr "Закрыть уведомление"
+
+#: adsense-plugin.class.php:2448
+#, php-format
+msgid "Thank you for choosing %s plugin!"
+msgstr "Спасибо за выбор плагина %s!"
+
+#: adsense-plugin.class.php:2449
+msgid ""
+"If you have a feature, suggestion or idea you'd like to see in the plugin, "
+"we'd love to hear about it!"
+msgstr ""
+"Если у вас есть предложения по добавлению нового или улучшению текущего "
+"функционала плагина, пожалуйста, присылайте их нам! Мы вседа открыты для "
+"новых идей!"
+
+#: adsense-plugin.class.php:2450
+msgid "Suggest a Feature"
+msgstr "Предложить функционал"
+
+#: adsense-plugin.class.php:2501
 msgid "Fixed"
 msgstr "Фиксированный"
 
-#: adsense-plugin.class.php:916
+#: adsense-plugin.class.php:2514
 msgid "Widget displays Google AdSense."
 msgstr "Виджет отображает Google AdSense."
 
-#: adsense-plugin.class.php:936
+#: adsense-plugin.class.php:2534
 msgid "Title"
 msgstr "Заголовок"
 
-#: adsense-plugin.class.php:938
+#: adsense-plugin.class.php:2536
+msgid "Please note:"
+msgstr "Пожалуйста, обратите внимание:"
+
+#: adsense-plugin.class.php:2536
 msgid ""
 "Select ad block to display in the widget you can on the plugin settings page "
 "in the 'Widget' tab."
@@ -346,41 +682,132 @@ msgstr ""
 "Выбрать рекламный блок для отображения Вы можете на странице плагина во "
 "вкладке 'Виджет'."
 
-#: adsense-plugin.class.php:958
+#: adsense-plugin.class.php:2556
 msgid "Support"
 msgstr "Поддержка"
 
-#: adsense-plugin.class.php:1002
+#: adsense-plugin.class.php:2564
+msgid "Have a problem? Contact us"
+msgstr "Имеются проблемы? Свяжитесь с нами"
+
+#: adsense-plugin.class.php:2579
+msgid "For more information:"
+msgstr "Для дополнительной информации:"
+
+#: adsense-plugin.class.php:2580
+msgid "Documentation"
+msgstr "Документация"
+
+#: adsense-plugin.class.php:2581
+msgid "Video Instructions"
+msgstr "Видео инструкции"
+
+#: adsense-plugin.class.php:2582
+msgid "Contact us"
+msgstr "Связаться с нами"
+
+#: adsense-plugin.class.php:2627
 msgid "item"
 msgstr "элемент"
 
-#: adsense-plugin.class.php:1003
+#: adsense-plugin.class.php:2628
 msgid "items"
 msgstr "элементы"
 
-#: adsense-plugin.class.php:1011
+#: adsense-plugin.class.php:2640
 msgid "Display"
 msgstr "Показывать"
 
-#: adsense-plugin.class.php:1012
+#: adsense-plugin.class.php:2641
 msgid "Name"
 msgstr "Название"
 
-#: adsense-plugin.class.php:1013
+#: adsense-plugin.class.php:2642
 msgid "Id"
 msgstr "Id"
 
-#: adsense-plugin.class.php:1014
+#: adsense-plugin.class.php:2643
 msgid "Type / Size"
 msgstr "Тип /Размер"
 
-#: adsense-plugin.class.php:1015
+#: adsense-plugin.class.php:2644
 msgid "Status"
 msgstr "Статус"
 
-#: adsense-plugin.class.php:1016
+#: adsense-plugin.class.php:2645
 msgid "Position"
 msgstr "Размещение"
+
+#~ msgid ""
+#~ "The maximum number of ad blocks on the page cannot be more than 3 ad "
+#~ "blocks (%s)."
+#~ msgstr ""
+#~ "Максимальное количество рекламных блоков на странице не может превышать "
+#~ "больше 3х рекламных блоков (%s)."
+
+#~ msgid "Learn more"
+#~ msgstr "Узнать больше"
+
+#~ msgid ""
+#~ "Please select a smaller number of ad blocks or disable the ad block "
+#~ "display in the %s tab."
+#~ msgstr ""
+#~ "Пожалуйста, выберите меньше рекламных блоков или отключите показ "
+#~ "рекламного блока на вкладке %s."
+
+#~ msgid "ad blocks"
+#~ msgstr "рекламных блока"
+
+#~ msgid ""
+#~ "To display the ad block in widget, please set a smaller number of ad "
+#~ "blocks in the %s tab."
+#~ msgstr ""
+#~ "Для отображения рекламного блока в виджете необходимо выбрать меньше "
+#~ "рекламных блоков на вкладе %s."
+
+#~ msgid ""
+#~ "To display the ad block in widget, please set a smaller number of ad "
+#~ "blocks in tabs: %s."
+#~ msgstr ""
+#~ "Для отображения рекламного блока в виджете необходимо выбрать меньше "
+#~ "рекламных блоков на вкладках: %s."
+
+#~ msgid ""
+#~ "The maximum number of ad blocks on the page cannot be more than 3 ad "
+#~ "blocks."
+#~ msgstr ""
+#~ "Максимальное количество рекламных блоков на странице не может превышать "
+#~ "больше 3х рекламных блоков."
+
+#~ msgid "Unlock premium options by upgrading to Pro version"
+#~ msgstr "Активируйте премиум опции обновившись до Pro версии"
+
+#~ msgid "Thank you for updating %s."
+#~ msgstr "Благодарим за обновление %s."
+
+#~ msgid ""
+#~ "This update features %s from video intelligence. A video player that will "
+#~ "supply both video content and video advertising. Install it now to "
+#~ "increase time-on-page, and your revenue thanks to high CPMs. Read the %s."
+#~ msgstr ""
+#~ "Это обновляет возможности %s от video intelligence. Видеоплеер, который "
+#~ "будет поставлять как видеоконтент, так и видеорекламу. Установите его "
+#~ "сейчас, чтобы увеличить время посещения на страницах и ваш доход, "
+#~ "благодаря высоким CPMs. Читать %s."
+
+#~ msgid "Watch a %s of how vi story works."
+#~ msgstr "Смотрите %s о том, как работает vi story."
+
+#~ msgctxt "%1$s - %plugin_name%, %2$s - video intelligence"
+#~ msgid ""
+#~ "Coming soon: the next update to %1$s - vi stories from %2$s. A video "
+#~ "player that will supply both video content and video advertising. It "
+#~ "increases the time-on-page, and your revenue thanks to high CPMs."
+#~ msgstr ""
+#~ "Скоро: в следующем обновлении %1$s - vi stories от %2$s. "
+#~ "Видеопроигрыватель, который поддерживает как видеоконтент, так и "
+#~ "видеорекламу. Он повышает продолжительность пребывания пользователя на "
+#~ "сайте и Вашу прибыль благодаря более высокому уровню CPM."
 
 #~ msgid "Available soon"
 #~ msgstr "Скоро"

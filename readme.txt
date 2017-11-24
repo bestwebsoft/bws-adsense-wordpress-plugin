@@ -1,10 +1,9 @@
 === Google AdSense by BestWebSoft ===
 Contributors: bestwebsoft, gasplugin
-Donate link: https://bestwebsoft.com/donate/
 Tags: ad, ad banner, ad format, ad parameters, google adsense, ads display, ads widgets, google plugin, insert ads, text ads, adsense plugin, advertisements
 Requires at least: 3.9
-Tested up to: 4.8.3
-Stable tag: 1.46
+Tested up to: 4.9
+Stable tag: 1.47
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +19,7 @@ https://www.youtube.com/watch?v=wWaEGbR5Lz0
 
 = Free Features =
 
+* [video intelligence](https://www.vi.ai/) integration [NEW]
 * Automatically insert ads to:
 	* Home page
 	* Pages
@@ -63,7 +63,7 @@ If you have a feature suggestion or idea you'd like to see in the plugin, we'd l
 
 = Help & Support =
 
-Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <https://support.bestwebsoft.com/>
+Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <support@gasplugin.com>
 
 = Translation =
 
@@ -71,8 +71,6 @@ Visit our Help Center if you have any questions, our friendly Support Team is ha
 * Russian (ru_RU)
 * Spanish (es_ES)
 * Ukrainian (uk)
-
-Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](https://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](https://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](https://www.poedit.net/download.php).
 
 = Recommended Plugins =
 
@@ -101,14 +99,6 @@ Please complete the following steps:
 2. Make sure that your Wordpress theme contains necessary hooks for ads displaying (the_content, wp_footer, etc). If you don't know how to check that, just install any official Wordpress theme (for example, [Twenty Sixteen](https://wordpress.org/themes/twentysixteen/)) and check if the ads are displayed. If yes, it means that the necessary hooks are missing in your theme.
 3. Make sure Adblock (or similar browser extensions) is disabled in your browser.
 
-= What is the maximum number of Google ads displayed on a single page? =
-
-The max number of ads allowed by Google is three (per one page). That is why you can post three ads on the home page if the page is represented as posts with pagination. If it's a static page with content, the ad will be displayed once and not in the widget, but below the page text. [More info](https://support.google.com/adsense/answer/1346295?hl=en#Ad_limit_per_page)
-
-= Why I cannot choose more than one ad block in the widget tab? =
-
-This limitation is caused by the maximum allowable number of ad blocks to be displayed on the page. Ad blocks display can only be set in the post; in this case, it will not be displayed on the page. However, a widget is usually displayed in every post and every page.
-
 = How to add Google Adsense block to the sidebar? =
 
 Follow the next steps in order to add the Google Adsense block to the sidebar:
@@ -122,7 +112,7 @@ If everything is correct, you will see it in your Google Adsense account.
 
 = I have some problems with the plugin's work. What Information should I provide to receive proper support? =
 
-Please make sure that the problem hasn't been discussed yet on our forum (<https://support.bestwebsoft.com>). If no, please provide the following data along with your problem's description:
+Please provide the following data along with your problem's description to support@gasplugin.com:
 - The link to the page where the problem occurs
 - The name of the plugin and its version. If you are using a pro version - your order number.
 - The version of your WordPress installation
@@ -130,11 +120,17 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 == Screenshots ==
 
-1. Google AdSense Ads in the front-end (Before the content and in the widget).
-2. Google AdSense Settings page (Unauthorized in Google AdSense).
-3. Google AdSense Settings page (Authorized in Google AdSense).
+1. Google AdSense Settings page (Unauthorized in Google AdSense and vi stories).
+2. vi stories Sign Up form.
+3. vi stories Log In form.
+4. Google AdSense Settings page (Authorized in Google AdSense vi stories ).
+5. vi stories Player customization form.
+6. Google AdSense Ads and vi stories Ads in the front-end (Before the content).
 
 == Changelog ==
+
+= V1.47 - 24.11.2017 =
+* NEW : Integration with video intelligence AG.
 
 = V1.46 - 01.11.2017 =
 * Update : We updated all functionality for wordpress 4.8.3.
@@ -311,6 +307,9 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * Changed : Usability at the settings page of the plugin was improved.
 
 == Upgrade Notice ==
+
+= V1.47 =
+* New features added.
 
 = V1.46 =
 * The compatibility with new WordPress version updated.

@@ -6,13 +6,13 @@ Description: Add Adsense ads to pages, posts, custom posts, search results, cate
 Author: BestWebSoft, gasplugin
 Text Domain: adsense-plugin
 Domain Path: /languages
-Version: 1.46
+Version: 1.47
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
 */
 
 /*
-	© Copyright 2017  BestWebSoft  ( https://support.bestwebsoft.com )
+	© Copyright 2017  BestWebSoft, gasplugin ( support@gasplugin.com )
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -57,12 +57,19 @@ if ( ! function_exists( 'adsns_uninstall' ) ) {
 			}
 		}
 
+		/* Delete ads.txt file */
+		$home_path = get_home_path();
+		$ads_txt = $home_path . "ads.txt";
+
+		if ( file_exists( $ads_txt ) ) {
+			unlink( $ads_txt );
+		}
+
 		require_once( dirname( __FILE__ ) . '/bws_menu/bws_include.php' );
 		bws_include_init( plugin_basename( __FILE__ ) );
 		bws_delete_plugin( plugin_basename( __FILE__ ) );
 	}
 }
-
 /* Activation hook */
 register_activation_hook( __FILE__, array( $adsns_plugin, 'adsns_activate' ) );
 /* Adding 'BWS Plugins' admin menu */
@@ -86,9 +93,14 @@ add_filter( 'plugin_row_meta', array( $adsns_plugin, 'adsns_register_plugin_link
 add_action( 'admin_notices', array( $adsns_plugin, 'adsns_plugin_notice') );
 add_action( 'network_admin_admin_notices', array( $adsns_plugin, 'adsns_plugin_notice' ) );
 /* Hide banner with cooperation notice using AJAX */
-add_action( 'wp_ajax_adsns_hide_coop_start_banner', array( $adsns_plugin, 'adsns_hide_coop_start_banner' ) );
+add_action( 'wp_ajax_adsns_hide_banner_vi_wellcome', array( $adsns_plugin, 'adsns_hide_banner_vi_wellcome' ) );
+/* AJAX vi actions */
+add_action( 'wp_ajax_adsns_vi_login', array( $adsns_plugin, 'adsns_vi_login' ) );
+add_action( 'wp_ajax_adsns_vi_story_save', array( $adsns_plugin, 'adsns_vi_story_save' ) );
 /* Adding actions to define variable as true inside the main loop and as false outside of it */
 add_action( 'loop_start', array( $adsns_plugin, 'adsns_loop_start' ) );
 add_action( 'loop_end', array( $adsns_plugin, 'adsns_loop_end' ) );
+/* Adding dashboard body class */
+add_filter('admin_body_class', array( $adsns_plugin, 'adsns_body_classes' ) );
 /* When uninstall plugin */
 register_uninstall_hook( __FILE__, 'adsns_uninstall' );
