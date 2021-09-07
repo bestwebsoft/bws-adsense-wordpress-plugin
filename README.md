@@ -62,7 +62,7 @@
 <h4>Help &amp; Support</h4>
 <p>Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <a href="mailto:&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#x40;&#103;&#097;&#x73;p&#108;&#x75;g&#105;&#x6e;&#x2e;&#099;&#x6f;&#x6d;" rel="nofollow">&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#x40;&#103;&#097;&#x73;p&#108;&#x75;g&#105;&#x6e;&#x2e;&#099;&#x6f;&#x6d;</a></p>
 <h4>Affiliate Program<h4>
-<p>Earn 20% commission by selling the premium WordPress plugins and themes by BestWebSoft — <a href="https://bestwebsoft.com/affiliate/" rel="nofollow"></a></p>
+<p>Earn 20% commission by selling the premium WordPress plugins and themes by BestWebSoft — <a href="https://bestwebsoft.com/affiliate/" rel="nofollow">https://bestwebsoft.com/affiliate/</a></p>
 <h4>Translation</h4>
 <ul>
 <li>Czech (cs_CZ) (thanks to <a href="mailto:&#105;&#110;&#102;&#111;&#064;&#x70;&#x61;&#x6d;&#x61;&#x64;&#x65;&#115;&#115;&#111;&#102;&#116;.&#x63;&#x7a;" rel="nofollow">PaMaDeSSoft</a>, www.pamadessoft.cz)</li>
