@@ -1,26 +1,13 @@
 ( function( $ ){
 	$(document).ready( function() {
-		$( '#adsns_include_inactive_id' ).on( 'click', function() {
-			$( '.adsns_table_row_odd' ).removeClass( 'adsns_table_row_odd' );
-			if ( $( this ).is( ':checked' ) ) {
-				$( '.adsns_inactive' ).show();
-				$( '.adsns-hidden-idle-notice' ).hide();
-			} else {
-				$( '.adsns_inactive' ).hide();
-				if ( $( '.adsns_inactive input:checkbox:checked' ).length > 0 ) {
-					$( '.adsns-hidden-idle-notice' ).show();
-				}
-			}
-				$( '#adsns_tab_content .wp-list-table tbody tr:visible:even' ).addClass( 'adsns_table_row_odd' );
-		} );
 
 		$( '.adsns-list-table tbody .adsns_adunit_ids' ).each( function() {
 			var $adsns_checkbox = $( this );
 				$adsns_checkbox.trigger( 'availability' );
-		}).on( 'change', function() {
+		} ).on( 'change', function() {
 			var $adsns_checkbox = $( this );
 				$adsns_checkbox.trigger( 'availability' );
-		}).on( 'availability', function() {
+		} ).on( 'availability', function() {
 			var $adsns_checkbox = $( this ),
 				$adsns_tr = $adsns_checkbox.closest( 'tr' ),
 				$adsns_position = $adsns_tr.find( '.adsns_adunit_position' );
@@ -33,7 +20,7 @@
 		});
 
 		$( '.adsns-list-table tbody tr' ).on( 'click', function( e ) {
-			if ( ! $( e.target ).is( 'input[type="checkbox"], select' ) ) {
+			if ( ! $( e.target ).is( 'input[type="checkbox"], select, option' ) ) {
 				var $adsns_tr = $( this ),
 					$adsns_checkbox = $adsns_tr.find( '.adsns_adunit_ids' );
 
@@ -45,18 +32,7 @@
 			$( '.adsns-list-table tbody .adsns_adunit_ids' ).trigger( 'availability' );
 		});
 
-		var $viModalSignUp = $( '#adsns_modal_signup' ),
-			$viModalLogIn = $( '#adsns_modal_login' ),
-			$viModalStory = $( '#adsns_modal_new_story' );
-
-		/* vi Log In modal */
-		$viModalSignUp.adsns_modal({
-			maxWidth: '850px',
-			onClose: function( $this ) {
-				$viSignUpIframe = $this.find( '#adsns_vi_signup_iframe' );
-				$viSignUpIframe.attr( 'src', $viSignUpIframe.attr( 'src' ) );
-			}
-		});
+		var $viModalLogIn = $( '#adsns_modal_login' );
 
 		/* vi Sign Up modal */
 		$viModalLogIn.adsns_modal({
@@ -71,44 +47,10 @@
 			}
 		});
 
-		/* vi Story modal */
-		$viModalStory.adsns_modal({
-			maxWidth: '1110px',
-			onClose: function( $this ) {
-				var	$viStoryForm = $this.find( '.adsns_vi_story_form' ),
-					$viLogInError = $this.find( '.adsns_vi_story_error' );
-
-				$viLogInError
-					.removeClass( 'adsns_vi_story_error_visible' )
-					.html( '' );
-
-				$viStoryForm.find( '[data-field-id]' ).trigger( 'hideError' );
-
-			}
-		});
-
-		/* On click sign up button */
-		$( '#adsns_vi_widget_button_signup' ).on( 'click', function( e ) {
-			e.preventDefault();
-			$viModalSignUp.adsns_modal( 'open' );
-		});
-
 		/* On click log in button */
 		$( '#adsns_vi_widget_button_login' ).on( 'click', function( e ) {
 			e.preventDefault();
 			$viModalLogIn.adsns_modal( 'open' );
-		});
-
-		/* Open vi story form */
-		$( '#adsns_vi_story_new' ).on( 'click', function( e ) {
-			e.preventDefault();
-			$viModalStory.adsns_modal( 'open' );
-		});
-
-		/* Close vi story form */
-		$( '#adsns_vi_story_cancel' ).on( 'click', function( e ) {
-			e.preventDefault();
-			$viModalStory.adsns_modal( 'close' );
 		});
 
 		/* On submit vi login form */
@@ -173,69 +115,6 @@
 				$viLogInError = $viLogInForm.find( '.adsns_vi_login_error' );
 
 			$viLogInError.filter( '.adsns_vi_login_error_visible' ).removeClass( 'adsns_vi_login_error_visible' );
-		});
-
-		/* On submit vi story form */
-		$( '.adsns_vi_story_form' ).on( 'submit', function ( e ) {
-			e.preventDefault();
-			var $viStoryForm = $( this ),
-				$viStoryError = $viStoryForm.find( '.adsns_vi_story_error' ),
-				$viStoryBlocker = $viStoryForm.next( '.adsns_vi_story_blocker' ),
-				formData = $viStoryForm.serialize();
-
-				$.ajax( {
-					type		: 'POST',
-					url			: ajaxurl,
-					data		: formData + '&action=adsns_vi_story_save',
-					dataType	: 'json',
-					timeout		: 30000,
-					beforeSend: function() {
-						$( '[data-field-id]' ).trigger( 'hideError' );
-
-						$viStoryError
-							.removeClass( 'adsns_vi_story_error_visible' )
-							.html( '' );
-
-						$viModalStory
-							.adsns_modal( 'pending', true )
-							.adsns_modal( 'resize' );
-
-						$viStoryBlocker.addClass( 'adsns_vi_story_blocker_visible' );
-					},
-					success: function( response ) {
-						if ( response.status == 'error' ) {
-							if ( response.error.description ) {
-								$viStoryError
-									.addClass( 'adsns_vi_story_error_visible' )
-									.html( response.error.description );
-							}
-
-							if ( response.data.hasOwnProperty( 'errors' ) && typeof( response.data.errors ) == 'object' ) {
-								var errors = response.data.errors;
-								for ( var field in errors ) {
-									var $errorField = $( '.adsns_vi_story_field_error[data-error-id="' + field + '"]' ),
-										errorText = errors[ field ];
-
-									$errorField
-										.html( errorText )
-										.addClass('adsns_vi_story_field_error_visible');
-								}
-							}
-						} else {
-							$viModalStory.adsns_modal( 'close', true );
-							window.location.reload( true );
-						}
-					},
-					complete: function() {
-						$viModalStory
-							.adsns_modal( 'pending', false )
-							.adsns_modal( 'resize' );
-
-							$viStoryBlocker.removeClass( 'adsns_vi_story_blocker_visible' );
-					}
-				} );
-
-			return false;
 		});
 
 		/* On change value in the vi story field that has an error */
@@ -392,6 +271,13 @@
 
 			$ ( '.adsns_vi_story_tooltip' ).toggleClass( 'adsns_vi_story_tooltip_mirrored', $window.width() <= 600 );
 		} ).trigger( 'resize' );
+		var windowObjectReference = null;
+		$( '#adsns_authorization_button' ).on( 'click', function(){
+			windowObjectReference = window.open(
+				$( this ).attr( 'href' ),'','top='+(screen.height/2-560/2)+',left='+(screen.width/2-640/2)+',width=640,height=560,resizable=0,scrollbars=0,menubar=0,toolbar=0,status=1,location=1'
+			).focus();
+			return false;
+		});
 	} );
 } )( jQuery );
 

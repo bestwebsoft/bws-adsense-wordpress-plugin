@@ -1,0 +1,8 @@
+/* Pinterest icon */
+.menu-top.toplevel_page_bws-adsense .wp-menu-image {
+	font-family: 'bwsicons' !important;
+}
+.menu-top.toplevel_page_bws-adsense .wp-menu-image:before {
+	content: "\e900";
+	font-family: 'bwsicons' !important;
+}
