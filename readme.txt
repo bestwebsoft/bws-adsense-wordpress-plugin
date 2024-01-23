@@ -2,9 +2,9 @@
 Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: google, adsense, bestwebsoft, google adsense, google plugin, adsense plugin, ads plugin, gogle, ad, ads, adds, ad banner, ad block, ad color, ads display, ad format, ads in widgets, ad links block, add several adds, ads on website, ad parameters, ad type, advertisements, Google ads, Google AdSense, Google AddSense, Goggle AdSense, Gogle AdSense, image, insert ads, insert ads automatically, insert Google ads, text ads, text and image ads.
-Requires at least: 4.5
-Tested up to: 6.0
-Stable tag: 1.52
+Requires at least: 5.6
+Tested up to: 6.4.2
+Stable tag: 1.54
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,7 +20,6 @@ https://www.youtube.com/watch?v=wWaEGbR5Lz0
 
 = Free Features =
 
-* [video intelligence](https://www.vi.ai/) integration
 * Automatically insert ads to:
 	* Home page
 	* Pages
@@ -118,22 +117,35 @@ Please provide the following data along with your problem's description to suppo
 
 == Screenshots ==
 
-1. AdS Settings page (Unauthorized in Google AdSense and vi stories).
+1. AdS Settings page (Unauthorized in Google AdSense).
 2. AdS Settings page (Authorized in Google AdSense).
-3. vi stories Page.
-4. AdS Settings page (Authorized in Google AdSense).
-5. Google AdSense Ads and vi stories Ads in the front-end (Before the content).
+3. AdS Settings page (Authorized in Google AdSense).
+4. Google AdSense Ads in the front-end (Before the content).
 
 == Changelog ==
 
+= V1.54 - 15.01.2024 =
+* Update : All functionality was updated for WordPress 6.4.2.
+* Update : BWS panel section was updated.
+* Remove: Removed Vi functionality from plugin.
+
+= V1.53 - 10.01.2024 =
+* Update : Notice about update library.
+
 = V1.52 - 11.08.2022 =
 * Update : BWS panel section was updated.
-
 
 = V1.51 - 09.06.2022 =
 * New : Added library for working with Google AdSense.
 
 == Upgrade Notice ==
+
+= V1.54 =
+* The compatibility with new WordPress version updated.
+* Plugin optimization completed.
+
+= V1.52 - =
+* Update : BWS panel section was updated.
 
 = V1.51 =
 * Plugin Release
