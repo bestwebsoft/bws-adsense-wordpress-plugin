@@ -1,0 +1,468 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2024-05-23 19:10+0300\n"
+"PO-Revision-Date: 2024-05-23 19:30+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: esc_html__;esc_html_e;__;_e;esc_attr__;esc_attr_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: bws_menu\n"
+
+#: bws-adsense.php:52 bws-adsense.php:1138 bws-adsense.php:1157
+#: includes/class-adsns-settings.php:42
+#, fuzzy
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: bws-adsense.php:61
+msgid "AdS"
+msgstr "AdS"
+
+#: bws-adsense.php:79 bws-adsense.php:849 includes/class-adsns-settings.php:299
+msgid "Upgrade to Pro"
+msgstr "الترقية إلى الاصدار المدفوع"
+
+#: bws-adsense.php:411
+msgid "AdS Settings"
+msgstr "إعدادات AdS"
+
+#: bws-adsense.php:414
+msgid "WARNING"
+msgstr "تحذير"
+
+#: bws-adsense.php:414
+msgid "The plugin works correctly only if JavaScript is enabled."
+msgstr "لا تعمل الإضافة بشكل صحيح إلا إذا تم تمكين JavaScript."
+
+#: bws-adsense.php:459
+msgid "Home page"
+msgstr "الصفحة الرئيسية"
+
+#: bws-adsense.php:463 bws-adsense.php:477 bws-adsense.php:492
+#: bws-adsense.php:507 bws-adsense.php:521
+msgid "Before the content"
+msgstr "قبل المحتوى"
+
+#: bws-adsense.php:464 bws-adsense.php:478 bws-adsense.php:493
+#: bws-adsense.php:508 bws-adsense.php:522
+msgid "After the content"
+msgstr "بعد المحتوى"
+
+#: bws-adsense.php:467 bws-adsense.php:482 bws-adsense.php:497
+#: bws-adsense.php:511 bws-adsense.php:525
+msgid "After the first paragraph (Available in Pro)"
+msgstr "بعد الفقرة الأولى (متوفر في Pro)"
+
+#: bws-adsense.php:468 bws-adsense.php:483 bws-adsense.php:498
+#: bws-adsense.php:512 bws-adsense.php:526
+msgid "After a random paragraph (Available in Pro)"
+msgstr "بعد فقرة عشوائية (متوفر في Pro)"
+
+#: bws-adsense.php:473
+msgid "Pages"
+msgstr "الصفحات"
+
+#: bws-adsense.php:479 bws-adsense.php:494
+msgid "Below the comment form"
+msgstr "أسفل نموذج التعليق"
+
+#: bws-adsense.php:488
+msgid "Posts / Custom posts"
+msgstr "المنشورات / المنشورات المخصصة"
+
+#: bws-adsense.php:503
+msgid "Categories / Tags"
+msgstr "التصنيفات / الوسوم"
+
+#: bws-adsense.php:517
+msgid "Search results"
+msgstr "نتائج البحث"
+
+#: bws-adsense.php:531
+msgid "Widget"
+msgstr "ويدجات"
+
+#: bws-adsense.php:535 bws-adsense.php:1079
+msgid "Static"
+msgstr "ثابت"
+
+#: bws-adsense.php:538
+msgid "Fixed (Available in Pro)"
+msgstr "ثابت (متوفر في Pro)"
+
+#: bws-adsense.php:545
+msgid "Text"
+msgstr "نص"
+
+#: bws-adsense.php:546
+msgid "Image"
+msgstr "صورة"
+
+#: bws-adsense.php:547
+msgid "Text/Image"
+msgstr "نص/صورة"
+
+#: bws-adsense.php:548
+msgid "Link"
+msgstr "رابط"
+
+#: bws-adsense.php:552
+msgid "New"
+msgstr "جديد"
+
+#: bws-adsense.php:553
+msgid "Active"
+msgstr "نشط"
+
+#: bws-adsense.php:554
+msgid "Idle"
+msgstr "Idle"
+
+#: bws-adsense.php:555
+msgid "Archived"
+msgstr "مؤرشف"
+
+#: bws-adsense.php:559
+msgid "Responsive"
+msgstr "متجاوب"
+
+#: bws-adsense.php:626
+msgid "AdUnit Error:"
+msgstr "خطأ في وحدة الإعلانات:"
+
+#: bws-adsense.php:628
+#, php-format
+msgid "Check Unit in %s"
+msgstr "تحقق من الوحدة في %s"
+
+#: bws-adsense.php:639
+msgid "AdUnits Error:"
+msgstr "خطأ في الوحدات الإعلانية:"
+
+#: bws-adsense.php:641
+#, php-format
+msgid "Check Units in %s"
+msgstr "تحقق من الوحدات في %s"
+
+#: bws-adsense.php:652
+msgid "AdClient Error:"
+msgstr "خطأ في عميل الإعلانات:"
+
+#: bws-adsense.php:654
+#, php-format
+msgid "Check Clients in in %s"
+msgstr "تحقق من العملاء في %s"
+
+#: bws-adsense.php:665 includes/class-adsns-settings.php:110
+msgid "Account Error:"
+msgstr "خطأ في الحساب:"
+
+#: bws-adsense.php:667 includes/class-adsns-settings.php:112
+#, php-format
+msgid "Create account in %s"
+msgstr "إنشاء حساب في %s"
+
+#: bws-adsense.php:717
+#, php-format
+msgid "An error occurred while obtaining the code for the block %s."
+msgstr "حدث خطأ أثناء الحصول على الرمز الخاص بالكتلة %s."
+
+#: bws-adsense.php:717 bws-adsense.php:736
+msgid "Settings are not saved."
+msgstr "لم يتم حفظ الإعدادات."
+
+#: bws-adsense.php:728 includes/class-adsns-settings.php:179
+msgid "Settings saved."
+msgstr "تم حفظ الإعدادات."
+
+#: bws-adsense.php:773
+msgid "Some of hidden idle ad blocks still set to be displayed."
+msgstr "لا يزال يتم تعيين بعض الكتل الإعلانية الخاملة المخفية ليتم عرضها."
+
+#: bws-adsense.php:821
+#, php-format
+msgid ""
+"Please don't forget to place the AdSense widget into a needed sidebar on the "
+"%s."
+msgstr "من فضلك لا تنسى وضع أداة AdSense في الشريط الجانبي المطلوب على %s."
+
+#: bws-adsense.php:821
+msgid "widget page"
+msgstr "صفحة عنصر واجهة المستخدم"
+
+#: bws-adsense.php:822
+msgid "An opportunity to add several widgets is available in the"
+msgstr "تتوفر فرصة لإضافة عدة عناصر واجهة مستخدم في"
+
+#: bws-adsense.php:828
+#, php-format
+msgid "Add or manage existing ad blocks in the %s."
+msgstr "إضافة أو إدارة الكتل الإعلانية الموجودة في %s."
+
+#: bws-adsense.php:828
+msgid "Google AdSense"
+msgstr "جوجل AdSense"
+
+#: bws-adsense.php:829
+#, php-format
+msgid ""
+"After adding the ad block in Google AdSense, please %s to see the new ad "
+"block in the list of plugin ad blocks."
+msgstr ""
+"بعد إضافة كتلة الإعلانات في Google AdSense، يُرجى %s لرؤية كتلة الإعلانات "
+"الجديدة في قائمة كتل إعلانات المكوّنات الإضافية."
+
+#: bws-adsense.php:829
+msgid "reload the page"
+msgstr "إعادة تحميل الصفحة"
+
+#: bws-adsense.php:856
+#, php-format
+msgid "Please authorize via your Google Account in %s to manage ad blocks."
+msgstr "يُرجى التفويض عبر حساب Google الخاص بك في %s لإدارة حظر الإعلانات."
+
+#: bws-adsense.php:856
+msgid "the AdS  settings page"
+msgstr "صفحة إعدادات AdS"
+
+#: bws-adsense.php:864
+msgid "Save Changes"
+msgstr "حفظ التغييرات"
+
+#: bws-adsense.php:888
+msgid "Like the plugin?"
+msgstr "مثل المكون الإضافي؟"
+
+#: bws-adsense.php:889
+#, php-format
+msgid "%s reviews"
+msgstr "‫%s التقييمات"
+
+#: bws-adsense.php:890
+msgid "Rate it"
+msgstr "قيمها"
+
+#: bws-adsense.php:899
+msgid "Need help?"
+msgstr "بحاجة لمساعدة؟"
+
+#: bws-adsense.php:903
+msgid "Want to support the plugin?"
+msgstr "هل تريد دعم المكون الإضافي؟"
+
+#: bws-adsense.php:904
+msgid "Donate"
+msgstr "تبرع"
+
+#: bws-adsense.php:1038
+#, php-format
+msgid "Thank you for choosing %s plugin!"
+msgstr "شكرًا لاختيارك المكون الإضافي %s!"
+
+#: bws-adsense.php:1039
+msgid ""
+"If you have a feature, suggestion or idea you'd like to see in the plugin, "
+"we'd love to hear about it!"
+msgstr ""
+"إذا كانت لديك ميزة أو اقتراح أو فكرة تود أن تراها في المكون الإضافي، نود أن "
+"نسمع عنها!"
+
+#: bws-adsense.php:1040
+msgid "Suggest a Feature"
+msgstr "اقترح ميزة"
+
+#: bws-adsense.php:1043
+msgid "Close notice"
+msgstr "إغلاق الإشعار"
+
+#: bws-adsense.php:1080
+msgid "Fixed"
+msgstr "ثابت"
+
+#: bws-adsense.php:1096
+msgid "Widget displays AdS ."
+msgstr "تعرض الأداة عرض AdS ."
+
+#: bws-adsense.php:1118
+msgid "Title"
+msgstr "العنوان"
+
+#: bws-adsense.php:1121
+msgid "Please note:"
+msgstr "الرجاء الإنتباه إلى:"
+
+#: bws-adsense.php:1121
+msgid ""
+"Select ad block to display in the widget you can on the plugin settings page "
+"in the 'Widget' tab."
+msgstr ""
+"حدد كتلة إعلانية لعرضها في الأداة التي يمكنك عرضها في صفحة إعدادات الإضافة "
+"في علامة التبويب \"الأداة\"."
+
+#: bws-adsense.php:1159 bws-adsense.php:1182
+msgid "FAQ"
+msgstr "الأسئلة الشائعة"
+
+#: bws-adsense.php:1160
+msgid "Support"
+msgstr "الدعم"
+
+#: bws-adsense.php:1173
+msgid "Have a problem? Contact us"
+msgstr "هل لديك مشكلة؟ اتصل بنا"
+
+#: bws-adsense.php:1188
+msgid "For more information:"
+msgstr "للمزيد من المعلومات:"
+
+#: bws-adsense.php:1189
+msgid "Documentation"
+msgstr "الوثائق"
+
+#: bws-adsense.php:1190
+msgid "Video Instructions"
+msgstr "تعليمات الفيديو"
+
+#: bws-adsense.php:1191
+msgid "Contact us"
+msgstr "اتصل بنا"
+
+#: includes/adsns-list-table.php:81
+msgid "item"
+msgstr "عنصر"
+
+#: includes/adsns-list-table.php:82
+msgid "items"
+msgstr "العناصر"
+
+#: includes/adsns-list-table.php:100
+msgid "Display"
+msgstr "عرض"
+
+#: includes/adsns-list-table.php:101
+msgid "Name"
+msgstr "الاسم"
+
+#: includes/adsns-list-table.php:102
+msgid "Id"
+msgstr "المعرف"
+
+#: includes/adsns-list-table.php:103
+msgid "Type / Size"
+msgstr "النوع/الحجم"
+
+#: includes/adsns-list-table.php:104
+msgid "Status"
+msgstr "الحالة"
+
+#: includes/adsns-list-table.php:105
+msgid "Position"
+msgstr "الموضع"
+
+#: includes/class-adsns-settings.php:43
+msgid "Misc"
+msgstr "متفرقات"
+
+#: includes/class-adsns-settings.php:44
+msgid "Custom Code"
+msgstr "كود مخصص"
+
+#: includes/class-adsns-settings.php:45
+msgid "License Key"
+msgstr "مفتاح الترخيص"
+
+#: includes/class-adsns-settings.php:119
+msgid "Error"
+msgstr "خطأ"
+
+#: includes/class-adsns-settings.php:146
+msgid "Google AdSense data has been removed from site"
+msgstr "تمت إزالة بيانات Google AdSense من الموقع الإلكتروني"
+
+#: includes/class-adsns-settings.php:148
+msgid ""
+"The error was occured. Google AdSense data has not been removed from site"
+msgstr "حدث الخطأ. لم تتم إزالة بيانات Google AdSense من الموقع"
+
+#: includes/class-adsns-settings.php:152
+msgid "You are logged out from Google Account"
+msgstr "تم تسجيل خروجك من حساب Google"
+
+#: includes/class-adsns-settings.php:175
+msgid "Sorry, your nonce did not verify."
+msgstr "عذرا، لم يتم التأكيد."
+
+#: includes/class-adsns-settings.php:190
+msgid "General Settings"
+msgstr "الاعدادات العامة"
+
+#: includes/class-adsns-settings.php:195
+msgid "Remote work with Google AdSense"
+msgstr "العمل عن بُعد مع Google AdSense"
+
+#: includes/class-adsns-settings.php:199
+msgid "Log out from Google AdSense"
+msgstr "تسجيل الخروج من Google AdSense"
+
+#: includes/class-adsns-settings.php:208
+msgid "Please authorize via your Google Account to manage ad blocks."
+msgstr "يُرجى التفويض عبر حسابك على Google لإدارة حظر الإعلانات."
+
+#: includes/class-adsns-settings.php:210
+msgid "Login To Google Adsense"
+msgstr "تسجيل الدخول إلى Google Adsense"
+
+#: includes/class-adsns-settings.php:212
+msgid "Remove AdSense data from site"
+msgstr "إزالة بيانات AdSense من الموقع"
+
+#: includes/class-adsns-settings.php:216
+msgid ""
+"Please enter your Client ID and Client Secret from your Google Account to "
+"work with Google AdSense API."
+msgstr ""
+"يُرجى إدخال معرّف العميل وسر العميل من حسابك على Google للعمل مع واجهة برمجة "
+"تطبيقات Google AdSense."
+
+#: includes/class-adsns-settings.php:216
+msgid "Read more"
+msgstr "اقرأ المزيد"
+
+#: includes/class-adsns-settings.php:222
+msgid "Client ID"
+msgstr "المُعرّف (Client ID)"
+
+#: includes/class-adsns-settings.php:232
+msgid "Client Secret"
+msgstr "مفتاح الأمان السرّي (Client Secret)"
+
+#: includes/class-adsns-settings.php:250
+msgid "Your Publisher ID"
+msgstr "معرف الناشر الخاص بك"
+
+#: includes/class-adsns-settings.php:261
+msgid "Show idle ad blocks"
+msgstr "إظهار الكتل الإعلانية الخاملة"
+
+#: includes/class-adsns-settings.php:270
+msgid "Close"
+msgstr "إغلاق"
+
+#: includes/class-adsns-settings.php:274
+msgid "Add HTML code in head"
+msgstr "إضافة كود HTML في الرأس"
+
+#: includes/class-adsns-settings.php:277
+msgid ""
+"Paste the code you provided when you created your AdSense account. This will "
+"add your code between the <head> and </head> tags."
+msgstr ""
+"الصق الرمز الذي قدمته عند إنشاء حسابك على AdSense. سيضيف هذا الرمز الخاص بك "
+"بين العلامات <head> و </head>."

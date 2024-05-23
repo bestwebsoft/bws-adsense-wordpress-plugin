@@ -8,6 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! class_exists( 'Adsns_Settings_Tabs' ) ) {
+	/**
+	 * Class for display the content on the plugin settings page
+	 */
 	class Adsns_Settings_Tabs extends Bws_Settings_Tabs {
 
 		/**

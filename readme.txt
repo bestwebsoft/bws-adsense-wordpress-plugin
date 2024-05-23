@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: google, adsense, bestwebsoft, google adsense, google plugin, adsense plugin, ads plugin, gogle, ad, ads, adds, ad banner, ad block, ad color, ads display, ad format, ads in widgets, ad links block, add several adds, ads on website, ad parameters, ad type, advertisements, Google ads, Google AdSense, Google AddSense, Goggle AdSense, Gogle AdSense, image, insert ads, insert ads automatically, insert Google ads, text ads, text and image ads.
 Requires at least: 5.6
-Tested up to: 6.4.2
-Stable tag: 1.54
+Tested up to: 6.5
+Stable tag: 1.55
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -124,6 +124,9 @@ Please provide the following data along with your problem's description to suppo
 
 == Changelog ==
 
+= V1.55 - 23.05.2024 =
+* Update : Security update.
+
 = V1.54 - 15.01.2024 =
 * Update : All functionality was updated for WordPress 6.4.2.
 * Update : BWS panel section was updated.
@@ -139,6 +142,9 @@ Please provide the following data along with your problem's description to suppo
 * New : Added library for working with Google AdSense.
 
 == Upgrade Notice ==
+
+= V1.55 =
+* Plugin optimization completed.
 
 = V1.54 =
 * The compatibility with new WordPress version updated.

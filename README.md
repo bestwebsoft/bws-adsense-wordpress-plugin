@@ -6,7 +6,6 @@
 <p><span class="embed-youtube" style="text-align:center; display: block;"></span></p>
 <h4>Free Features</h4>
 <ul>
-<li><a href="https://www.vi.ai/" rel="nofollow ugc">video intelligence</a> integration</li>
 <li>Automatically insert ads to:
 <ul>
 <li>Home page</li>

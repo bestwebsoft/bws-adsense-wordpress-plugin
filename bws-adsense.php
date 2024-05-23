@@ -6,7 +6,7 @@ Description: Add Adsense ads to pages, posts, custom posts, search results, cate
 Author: BestWebSoft
 Text Domain: bws-adsense-plugin
 Domain Path: /languages
-Version: 1.54
+Version: 1.55
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
  */
