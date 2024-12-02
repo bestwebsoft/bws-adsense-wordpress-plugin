@@ -3,7 +3,7 @@
 
 <p>AdS by BestWebSoft plugin is a superb solution to earn money by placing ads to WordPress website pages, posts, custom posts, search results, categories, tags, and widgets.</p>
 <p>Link your website to Google AdSense account and manage available ads easily right from your admin dashboard!</p>
-<p><span class="embed-youtube" style="text-align:center; display: block;"></span></p>
+<p></p>
 <h4>Free Features</h4>
 <ul>
 <li>Automatically insert ads to:
